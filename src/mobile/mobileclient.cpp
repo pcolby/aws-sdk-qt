@@ -54,10 +54,10 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::MobileClient
- *
  * \brief The MobileClient class provides access to the AWS Mobile service.
  *
- * \ingroup Mobile
+ * \ingroup aws-clients
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -118,13 +118,12 @@ MobileClient::MobileClient(
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * CreateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS Mobile Hub project.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &request)
 {
@@ -132,13 +131,12 @@ CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * DeleteProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delets a project in AWS Mobile Hub.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -146,13 +144,12 @@ DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * DescribeBundleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the bundle details for the requested bundle id.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleRequest &request)
 {
@@ -160,13 +157,12 @@ DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleReques
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * DescribeProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets details about a project in AWS Mobile Hub.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectRequest &request)
 {
@@ -174,14 +170,13 @@ DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectReq
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * ExportBundleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app
  * clients with backend AWS resources.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &request)
 {
@@ -189,14 +184,13 @@ ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &req
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * ExportProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials
  * are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &request)
 {
@@ -204,13 +198,12 @@ ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * ListBundlesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all available bundles.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &request)
 {
@@ -218,13 +211,12 @@ ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &reques
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * ListProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists projects in AWS Mobile Hub.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &request)
 {
@@ -232,13 +224,12 @@ ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &req
 }
 
 /*!
+ * Sends \a request to the MobileClient service, and returns a pointer to an
+ * UpdateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update an existing project.
- *
- * @param  request Request to send to AWS Mobile.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &request)
 {
@@ -246,19 +237,16 @@ UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::MobileClientPrivate
+ * \brief The MobileClientPrivate class provides private implementation for MobileClient.
+ * \internal
  *
- * @class  MobileClientPrivate
- *
- * @brief  Private implementation for MobileClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileClientPrivate object.
- *
- * @param  q  Pointer to this object's public MobileClient instance.
+ * Constructs a MobileClientPrivate object with public implementation \a q.
  */
 MobileClientPrivate::MobileClientPrivate(MobileClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

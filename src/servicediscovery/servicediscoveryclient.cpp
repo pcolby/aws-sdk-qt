@@ -72,10 +72,10 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryClient
- *
  * \brief The ServiceDiscoveryClient class provides access to the Amazon Route 53 Auto Naming (ServiceDiscovery) service.
  *
- * \ingroup ServiceDiscovery
+ * \ingroup aws-clients
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -137,18 +137,17 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * CreatePrivateDnsNamespaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC. The namespace
  * defines your service naming scheme. For example, if you name your namespace <code>example.com</code> and name your
  * service <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the
  * current limit on the number of namespaces that you can create using the same AWS account, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsNamespace(const CreatePrivateDnsNamespaceRequest &request)
 {
@@ -156,18 +155,17 @@ CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsName
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * CreatePublicDnsNamespaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a public namespace based on DNS, which will be visible on the internet. The namespace defines your service
  * naming scheme. For example, if you name your namespace <code>example.com</code> and name your service
  * <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the current
  * limit on the number of namespaces that you can create using the same AWS account, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamespace(const CreatePublicDnsNamespaceRequest &request)
 {
@@ -175,6 +173,11 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * CreateServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a service, which defines the configuration for the following
  *
  * entities> <ul> <li>
@@ -196,12 +199,6 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
  * service, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServiceRequest &request)
 {
@@ -209,13 +206,12 @@ CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServic
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * DeleteNamespaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a namespace from the current account. If the namespace still contains one or more services, the request
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNamespaceRequest &request)
 {
@@ -223,13 +219,12 @@ DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNa
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * DeleteServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a specified service. If the service still contains one or more registered instances, the request
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServiceRequest &request)
 {
@@ -237,13 +232,12 @@ DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServic
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * DeregisterInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the records and the health check, if any, that Amazon Route 53 created for the specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const DeregisterInstanceRequest &request)
 {
@@ -251,13 +245,12 @@ DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const De
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * GetInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceRequest &request)
 {
@@ -265,18 +258,17 @@ GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceReque
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * GetInstancesHealthStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the current health status (<code>Healthy</code>, <code>Unhealthy</code>, or <code>Unknown</code>) of one or more
  * instances that are associated with a specified
  *
  * service> <note>
  *
  * There is a brief delay between when you register an instance and when the health status for the instance is available.
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthStatus(const GetInstancesHealthStatusRequest &request)
 {
@@ -284,13 +276,12 @@ GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthSta
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * GetNamespaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRequest &request)
 {
@@ -298,17 +289,16 @@ GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRe
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * GetOperationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about any operation that returns an operation ID in the response, such as a <code>CreateService</code>
  *
  * request> <note>
  *
  * To get a list of operations that match specified criteria, see
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRequest &request)
 {
@@ -316,13 +306,12 @@ GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRe
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * GetServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the settings for a specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest &request)
 {
@@ -330,13 +319,12 @@ GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest 
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * ListInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists summary information about the instances that you registered by using a specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstancesRequest &request)
 {
@@ -344,13 +332,12 @@ ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstance
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * ListNamespacesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists summary information about the namespaces that were created by the current AWS
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamespacesRequest &request)
 {
@@ -358,13 +345,12 @@ ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamesp
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * ListOperationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists operations that match the criteria that you
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperationsRequest &request)
 {
@@ -372,13 +358,12 @@ ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperat
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * ListServicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists summary information for all the services that are associated with one or more specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRequest &request)
 {
@@ -386,6 +371,11 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * RegisterInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates one or more records and optionally a health check based on the settings in a specified service. When
  * you submit a <code>RegisterInstance</code> request, Amazon Route 53 does the
  *
@@ -434,12 +424,6 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  * service, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const RegisterInstanceRequest &request)
 {
@@ -447,12 +431,11 @@ RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const Regist
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * UpdateInstanceCustomHealthStatusResponse object to track the result.
  *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request)
 {
@@ -460,6 +443,11 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
 }
 
 /*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * UpdateServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Submits a request to perform the following
  *
  * operations> <ul> <li>
@@ -484,12 +472,6 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
  *
  * When you update the TTL setting for a service, Amazon Route 53 also updates the corresponding settings in all the
  * records and health checks that were created by using the specified
- *
- * @param  request Request to send to Amazon Route 53 Auto Naming.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServiceRequest &request)
 {
@@ -497,19 +479,16 @@ UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServic
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryClientPrivate
+ * \brief The ServiceDiscoveryClientPrivate class provides private implementation for ServiceDiscoveryClient.
+ * \internal
  *
- * @class  ServiceDiscoveryClientPrivate
- *
- * @brief  Private implementation for ServiceDiscoveryClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceDiscoveryClientPrivate object.
- *
- * @param  q  Pointer to this object's public ServiceDiscoveryClient instance.
+ * Constructs a ServiceDiscoveryClientPrivate object with public implementation \a q.
  */
 ServiceDiscoveryClientPrivate::ServiceDiscoveryClientPrivate(ServiceDiscoveryClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

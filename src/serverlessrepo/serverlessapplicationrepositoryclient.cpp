@@ -56,10 +56,10 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryClient
- *
  * \brief The ServerlessApplicationRepositoryClient class provides access to the AWSServerlessApplicationRepository service.
  *
- * \ingroup ServerlessApplicationRepository
+ * \ingroup aws-clients
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -138,13 +138,12 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * CreateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an application, optionally including an AWS SAM file to create the first application version in the same
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -152,13 +151,12 @@ CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplica
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * CreateApplicationVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an application
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
 {
@@ -166,13 +164,12 @@ CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::create
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * CreateCloudFormationChangeSetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS CloudFormation ChangeSet for the given
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::createCloudFormationChangeSet(const CreateCloudFormationChangeSetRequest &request)
 {
@@ -180,13 +177,12 @@ CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::c
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * DeleteApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -194,13 +190,12 @@ DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplica
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * GetApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(const GetApplicationRequest &request)
 {
@@ -208,13 +203,12 @@ GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(c
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * GetApplicationPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the policy for the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplicationPolicy(const GetApplicationPolicyRequest &request)
 {
@@ -222,13 +216,12 @@ GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplica
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * ListApplicationVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists versions for the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApplicationVersions(const ListApplicationVersionsRequest &request)
 {
@@ -236,13 +229,12 @@ ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApp
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * ListApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists applications owned by the
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -250,13 +242,12 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * PutApplicationPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Puts the policy for the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {
@@ -264,13 +255,12 @@ PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplica
 }
 
 /*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * UpdateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
- *
- * @param  request Request to send to AWSServerlessApplicationRepository.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -278,19 +268,16 @@ UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplica
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryClientPrivate
+ * \brief The ServerlessApplicationRepositoryClientPrivate class provides private implementation for ServerlessApplicationRepositoryClient.
+ * \internal
  *
- * @class  ServerlessApplicationRepositoryClientPrivate
- *
- * @brief  Private implementation for ServerlessApplicationRepositoryClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServerlessApplicationRepositoryClientPrivate object.
- *
- * @param  q  Pointer to this object's public ServerlessApplicationRepositoryClient instance.
+ * Constructs a ServerlessApplicationRepositoryClientPrivate object with public implementation \a q.
  */
 ServerlessApplicationRepositoryClientPrivate::ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

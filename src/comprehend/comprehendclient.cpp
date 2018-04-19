@@ -58,10 +58,10 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::ComprehendClient
- *
  * \brief The ComprehendClient class provides access to the Amazon Comprehend service.
  *
- * \ingroup Comprehend
+ * \ingroup aws-clients
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -122,15 +122,14 @@ ComprehendClient::ComprehendClient(
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * BatchDetectDominantLanguageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
  * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
  * Comprehend Supported Languages</a>.
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLanguage(const BatchDetectDominantLanguageRequest &request)
 {
@@ -138,14 +137,13 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * BatchDetectEntitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Inspects the text of a batch of documents and returns information about them. For more information about entities, see
  * <a>how-entities</a>
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchDetectEntitiesRequest &request)
 {
@@ -153,13 +151,12 @@ BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchD
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * BatchDetectKeyPhrasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detects the key noun phrases found in a batch of
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const BatchDetectKeyPhrasesRequest &request)
 {
@@ -167,14 +164,13 @@ BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const Ba
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * BatchDetectSentimentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>,
  * <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const BatchDetectSentimentRequest &request)
 {
@@ -182,13 +178,12 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeTopicsDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJob(const DescribeTopicsDetectionJobRequest &request)
 {
@@ -196,14 +191,13 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectDominantLanguageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
  * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const DetectDominantLanguageRequest &request)
 {
@@ -211,14 +205,13 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectEntitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Inspects text for entities, and returns information about them. For more information, about entities, see
  * <a>how-entities</a>.
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRequest &request)
 {
@@ -226,13 +219,12 @@ DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRe
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectKeyPhrasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detects the key noun phrases found in the text.
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhrasesRequest &request)
 {
@@ -240,14 +232,13 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectSentimentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>,
  * <code>MIXED</code>, or <code>NEGATIVE</code>).
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimentRequest &request)
 {
@@ -255,13 +246,12 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListTopicsDetectionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of the topic detection jobs that you have
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request)
 {
@@ -269,14 +259,13 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
 }
 
 /*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StartTopicsDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status
  * of a
- *
- * @param  request Request to send to Amazon Comprehend.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(const StartTopicsDetectionJobRequest &request)
 {
@@ -284,19 +273,16 @@ StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(cons
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::ComprehendClientPrivate
+ * \brief The ComprehendClientPrivate class provides private implementation for ComprehendClient.
+ * \internal
  *
- * @class  ComprehendClientPrivate
- *
- * @brief  Private implementation for ComprehendClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ComprehendClientPrivate object.
- *
- * @param  q  Pointer to this object's public ComprehendClient instance.
+ * Constructs a ComprehendClientPrivate object with public implementation \a q.
  */
 ComprehendClientPrivate::ComprehendClientPrivate(ComprehendClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

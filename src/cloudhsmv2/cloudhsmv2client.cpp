@@ -56,10 +56,10 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Client
- *
  * \brief The CloudHSMV2Client class provides access to the AWS CloudHSM V2 service.
  *
- * \ingroup CloudHSMV2
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -119,13 +119,12 @@ CloudHSMV2Client::CloudHSMV2Client(
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * CreateClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new AWS CloudHSM
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterRequest &request)
 {
@@ -133,13 +132,12 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * CreateHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 {
@@ -147,14 +145,13 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * DeleteClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
  * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -162,15 +159,14 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * DeleteHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified HSM. To specify an HSM, you can use its identifier (ID), the IP address of the HSM's elastic
  * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
  * use
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
 {
@@ -178,6 +174,11 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * DescribeBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about backups of AWS CloudHSM
  *
  * clusters>
@@ -186,12 +187,6 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
  * response contains only a subset of backups, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or
  * an empty or null value), that means there are no more backups to
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackupsRequest &request)
 {
@@ -199,6 +194,11 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * DescribeClustersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about AWS CloudHSM
  *
  * clusters>
@@ -207,12 +207,6 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
  * response contains only a subset of clusters, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code>
  * (or an empty or null value), that means there are no more clusters to
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClustersRequest &request)
 {
@@ -220,15 +214,14 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * InitializeClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Claims an AWS CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA)
  * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
  * (CSR) with your issuing CA. To get the cluster's CSR, use
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const InitializeClusterRequest &request)
 {
@@ -236,6 +229,11 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of tags for the specified AWS CloudHSM
  *
  * cluster>
@@ -244,12 +242,6 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
  * response contains only a subset of tags, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty
  * or null value), that means there are no more tags to
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 {
@@ -257,13 +249,12 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or overwrites one or more tags for the specified AWS CloudHSM
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &request)
 {
@@ -271,13 +262,12 @@ TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &re
 }
 
 /*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the specified tag or tags from the specified AWS CloudHSM
- *
- * @param  request Request to send to AWS CloudHSM V2.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceRequest &request)
 {
@@ -285,19 +275,16 @@ UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceReque
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::CloudHSMV2ClientPrivate
+ * \brief The CloudHSMV2ClientPrivate class provides private implementation for CloudHSMV2Client.
+ * \internal
  *
- * @class  CloudHSMV2ClientPrivate
- *
- * @brief  Private implementation for CloudHSMV2Client.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMV2ClientPrivate object.
- *
- * @param  q  Pointer to this object's public CloudHSMV2Client instance.
+ * Constructs a CloudHSMV2ClientPrivate object with public implementation \a q.
  */
 CloudHSMV2ClientPrivate::CloudHSMV2ClientPrivate(CloudHSMV2Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

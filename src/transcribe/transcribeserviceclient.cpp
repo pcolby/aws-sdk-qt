@@ -52,10 +52,10 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceClient
- *
  * \brief The TranscribeServiceClient class provides access to the Amazon Transcribe Service service.
  *
- * \ingroup TranscribeService
+ * \ingroup aws-clients
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  */
@@ -114,13 +114,12 @@ TranscribeServiceClient::TranscribeServiceClient(
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * CreateVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVocabularyResponse * TranscribeServiceClient::createVocabulary(const CreateVocabularyRequest &request)
 {
@@ -128,13 +127,12 @@ CreateVocabularyResponse * TranscribeServiceClient::createVocabulary(const Creat
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * DeleteVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a vocabulary from Amazon Transcribe.
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVocabularyResponse * TranscribeServiceClient::deleteVocabulary(const DeleteVocabularyRequest &request)
 {
@@ -142,15 +140,14 @@ DeleteVocabularyResponse * TranscribeServiceClient::deleteVocabulary(const Delet
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * GetTranscriptionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a transcription job. To see the status of the job, check the
  * <code>TranscriptionJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you can find
  * the results at the location specified in the <code>TranscriptionFileUri</code>
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const GetTranscriptionJobRequest &request)
 {
@@ -158,13 +155,12 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * GetVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVocabularyResponse * TranscribeServiceClient::getVocabulary(const GetVocabularyRequest &request)
 {
@@ -172,13 +168,12 @@ GetVocabularyResponse * TranscribeServiceClient::getVocabulary(const GetVocabula
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * ListTranscriptionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists transcription jobs with the specified
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(const ListTranscriptionJobsRequest &request)
 {
@@ -186,14 +181,13 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * ListVocabulariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of vocabularies that match the specified criteria. If no criteria are specified, returns the entire list
  * of
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVocabulariesResponse * TranscribeServiceClient::listVocabularies(const ListVocabulariesRequest &request)
 {
@@ -201,13 +195,12 @@ ListVocabulariesResponse * TranscribeServiceClient::listVocabularies(const ListV
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * StartTranscriptionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts an asynchronous job to transcribe speech to
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
 {
@@ -215,13 +208,12 @@ StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(c
 }
 
 /*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * UpdateVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing vocabulary with new
- *
- * @param  request Request to send to Amazon Transcribe Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const UpdateVocabularyRequest &request)
 {
@@ -229,19 +221,16 @@ UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const Updat
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::TranscribeServiceClientPrivate
+ * \brief The TranscribeServiceClientPrivate class provides private implementation for TranscribeServiceClient.
+ * \internal
  *
- * @class  TranscribeServiceClientPrivate
- *
- * @brief  Private implementation for TranscribeServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranscribeServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public TranscribeServiceClient instance.
+ * Constructs a TranscribeServiceClientPrivate object with public implementation \a q.
  */
 TranscribeServiceClientPrivate::TranscribeServiceClientPrivate(TranscribeServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

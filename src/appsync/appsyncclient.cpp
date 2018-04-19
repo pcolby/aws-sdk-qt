@@ -90,10 +90,10 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::AppSyncClient
- *
  * \brief The AppSyncClient class provides access to the AWS AppSync service.
  *
- * \ingroup AppSync
+ * \ingroup aws-clients
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  */
@@ -152,13 +152,12 @@ AppSyncClient::AppSyncClient(
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a unique key that you can distribute to clients who are executing your
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -166,13 +165,12 @@ CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &re
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <code>DataSource</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourceRequest &request)
 {
@@ -180,13 +178,12 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateGraphqlApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <code>GraphqlApi</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlApiRequest &request)
 {
@@ -194,18 +191,17 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateResolverResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <code>Resolver</code>
  *
  * object>
  *
  * A resolver converts incoming requests into a format that a data source can understand and converts the data source's
  * responses into
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverRequest &request)
 {
@@ -213,13 +209,12 @@ CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverReque
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <code>Type</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 {
@@ -227,13 +222,12 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an API
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
@@ -241,13 +235,12 @@ DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &re
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <code>DataSource</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
@@ -255,13 +248,12 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteGraphqlApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <code>GraphqlApi</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlApiRequest &request)
 {
@@ -269,13 +261,12 @@ DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlAp
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteResolverResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <code>Resolver</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverRequest &request)
 {
@@ -283,13 +274,12 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <code>Type</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 {
@@ -297,13 +287,12 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a <code>DataSource</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
 {
@@ -311,13 +300,12 @@ GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest 
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetGraphqlApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a <code>GraphqlApi</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest &request)
 {
@@ -325,13 +313,12 @@ GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest 
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetIntrospectionSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the introspection schema for a GraphQL
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const GetIntrospectionSchemaRequest &request)
 {
@@ -339,13 +326,12 @@ GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const Get
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetResolverResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a <code>Resolver</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &request)
 {
@@ -353,13 +339,12 @@ GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &reque
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetSchemaCreationStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current status of a schema creation
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const GetSchemaCreationStatusRequest &request)
 {
@@ -367,13 +352,12 @@ GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const G
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a <code>Type</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 {
@@ -381,13 +365,12 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListApiKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the API keys for a given
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &request)
 {
@@ -395,13 +378,12 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListDataSourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the data sources for a given
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRequest &request)
 {
@@ -409,13 +391,12 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListGraphqlApisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your GraphQL
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRequest &request)
 {
@@ -423,13 +404,12 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListResolversResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the resolvers for a given API and
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest &request)
 {
@@ -437,13 +417,12 @@ ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest 
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the types for a given
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
 {
@@ -451,17 +430,16 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * StartSchemaCreationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a new schema to your GraphQL
  *
  * API>
  *
  * This operation is asynchronous. Use to determine when it has
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSchemaCreationRequest &request)
 {
@@ -469,13 +447,12 @@ StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSche
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an API
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
@@ -483,13 +460,12 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <code>DataSource</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
@@ -497,13 +473,12 @@ UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourc
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateGraphqlApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <code>GraphqlApi</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlApiRequest &request)
 {
@@ -511,13 +486,12 @@ UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlAp
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateResolverResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <code>Resolver</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverRequest &request)
 {
@@ -525,13 +499,12 @@ UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverReque
 }
 
 /*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <code>Type</code>
- *
- * @param  request Request to send to AWS AppSync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
 {
@@ -539,19 +512,16 @@ UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::AppSync::AppSyncClientPrivate
+ * \brief The AppSyncClientPrivate class provides private implementation for AppSyncClient.
+ * \internal
  *
- * @class  AppSyncClientPrivate
- *
- * @brief  Private implementation for AppSyncClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AppSyncClientPrivate object.
- *
- * @param  q  Pointer to this object's public AppSyncClient instance.
+ * Constructs a AppSyncClientPrivate object with public implementation \a q.
  */
 AppSyncClientPrivate::AppSyncClientPrivate(AppSyncClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -68,10 +68,10 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::CloudWatchClient
- *
  * \brief The CloudWatchClient class provides access to the Amazon CloudWatch service.
  *
- * \ingroup CloudWatch
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -143,13 +143,12 @@ CloudWatchClient::CloudWatchClient(
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DeleteAlarmsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified alarms. In the event of an error, no alarms are
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest &request)
 {
@@ -157,14 +156,13 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DeleteDashboardsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes all dashboards that you specify. You may specify up to 100 dashboards to delete. If there is an error during
  * this call, no dashboards are
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashboardsRequest &request)
 {
@@ -172,18 +170,17 @@ DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashbo
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DescribeAlarmHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the history for the specified alarm. You can filter the results by date range or item type. If an alarm name
  * is not specified, the histories for all alarms are
  *
  * returned>
  *
  * CloudWatch retains the history of an alarm even if you delete the
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const DescribeAlarmHistoryRequest &request)
 {
@@ -191,14 +188,13 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DescribeAlarmsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the specified alarms. If no alarms are specified, all alarms are returned. Alarms can be retrieved by using
  * only a prefix for the alarm name, the alarm state, or a prefix for any
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRequest &request)
 {
@@ -206,13 +202,12 @@ DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRe
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DescribeAlarmsForMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the alarms for the specified metric. To filter the results, specify a statistic, period, or
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request)
 {
@@ -220,14 +215,13 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DisableAlarmActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables the actions for the specified alarms. When an alarm's actions are disabled, the alarm actions do not execute
  * when the alarm state
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const DisableAlarmActionsRequest &request)
 {
@@ -235,13 +229,12 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * EnableAlarmActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables the actions for the specified
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAlarmActionsRequest &request)
 {
@@ -249,18 +242,17 @@ EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAl
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetDashboardResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Displays the details of the dashboard that you
  *
  * specify>
  *
  * To copy an existing dashboard, use <code>GetDashboard</code>, and then use the data returned within
  * <code>DashboardBody</code> as the template for the new dashboard when you call <code>PutDashboard</code> to create the
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest &request)
 {
@@ -268,6 +260,11 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetMetricDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can use the <code>GetMetricData</code> API to retrieve as many as 100 different metrics in a single request, with a
  * total of as many as 100,800 datapoints. You can also optionally perform math expressions on the values of the returned
  * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
@@ -281,12 +278,6 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  * Calls to the <code>GetMetricData</code> API have a different pricing structure than calls to
  * <code>GetMetricStatistics</code>. For more information about pricing, see <a
  * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataRequest &request)
 {
@@ -294,6 +285,11 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetMetricStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets statistics for the specified
  *
  * metric>
@@ -359,12 +355,6 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
  * For information about metrics and dimensions supported by AWS services, see the <a
  * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">Amazon CloudWatch Metrics
  * and Dimensions Reference</a> in the <i>Amazon CloudWatch User
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMetricStatisticsRequest &request)
 {
@@ -372,14 +362,13 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * ListDashboardsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of the dashboards for your account. If you include <code>DashboardNamePrefix</code>, only those
  * dashboards with names starting with the prefix are listed. Otherwise, all dashboards in your account are listed.
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRequest &request)
 {
@@ -387,6 +376,11 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * ListMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List the specified metrics. You can use the returned metrics with <a>GetMetricStatistics</a> to obtain statistical
  *
  * data>
@@ -397,12 +391,6 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  *
  * After you create a metric, allow up to fifteen minutes before the metric appears. Statistics about the metric, however,
  * are available sooner using
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &request)
 {
@@ -410,6 +398,11 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutDashboardResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a dashboard if it does not already exist, or updates an existing dashboard. If you update a dashboard, the
  * entire contents are replaced with what you specify
  *
@@ -430,12 +423,6 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  * dashboard with a message that the dashboard was created by script and should not be changed in the console. This message
  * could also point console users to the location of the <code>DashboardBody</code> script or the CloudFormation template
  * used to create the
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest &request)
 {
@@ -443,6 +430,11 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutMetricAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates an alarm and associates it with the specified metric. Optionally, this operation can associate one or
  * more Amazon SNS resources with the
  *
@@ -502,12 +494,6 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  * You must create at least one stop, terminate, or reboot alarm using either the Amazon EC2 or CloudWatch consoles to
  * create the <b>EC2ActionsAccess</b> IAM role. After this IAM role is created, you can create stop, terminate, or reboot
  * alarms using a command-line interface or
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRequest &request)
 {
@@ -515,6 +501,11 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutMetricDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified metric. If
  * the specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric, it can take up to
  * fifteen minutes for the metric to appear in calls to
@@ -553,12 +544,6 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  * > </li> <li>
  *
  * The Min and the Max values of the statistic set are
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataRequest &request)
 {
@@ -566,17 +551,16 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
 }
 
 /*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * SetAlarmStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Temporarily sets the state of an alarm for testing purposes. When the updated state differs from the previous value, the
  * action configured for the appropriate state is invoked. For example, if your alarm is configured to send an Amazon SNS
  * message when an alarm is triggered, temporarily changing the alarm state to <code>ALARM</code> sends an SNS message. The
  * alarm returns to its actual state (often within seconds). Because the alarm state change happens quickly, it is
  * typically only visible in the alarm's <b>History</b> tab in the Amazon CloudWatch console or through
- *
- * @param  request Request to send to Amazon CloudWatch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateRequest &request)
 {
@@ -584,19 +568,16 @@ SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateReque
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::CloudWatchClientPrivate
+ * \brief The CloudWatchClientPrivate class provides private implementation for CloudWatchClient.
+ * \internal
  *
- * @class  CloudWatchClientPrivate
- *
- * @brief  Private implementation for CloudWatchClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchClientPrivate object.
- *
- * @param  q  Pointer to this object's public CloudWatchClient instance.
+ * Constructs a CloudWatchClientPrivate object with public implementation \a q.
  */
 CloudWatchClientPrivate::CloudWatchClientPrivate(CloudWatchClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

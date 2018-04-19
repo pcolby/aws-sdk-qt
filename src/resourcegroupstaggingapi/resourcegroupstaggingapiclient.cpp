@@ -46,10 +46,10 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient
- *
  * \brief The ResourceGroupsTaggingAPIClient class provides access to the AWS Resource Groups Tagging API service.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \ingroup aws-clients
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -162,16 +162,15 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
 }
 
 /*!
+ * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * GetResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified
  * region for the AWS account. The tags and the resource types that you specify in the request are known as <i>filters</i>.
  * The response includes all tags that are associated with the requested resources. If no filter is provided, this action
  * returns a paginated resource list with the associated
- *
- * @param  request Request to send to AWS Resource Groups Tagging API.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetResourcesRequest &request)
 {
@@ -179,13 +178,12 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
 }
 
 /*!
+ * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * GetTagKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all tag keys in the specified region for the AWS
- *
- * @param  request Request to send to AWS Resource Groups Tagging API.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeysRequest &request)
 {
@@ -193,13 +191,12 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
 }
 
 /*!
+ * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * GetTagValuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all tag values for the specified key in the specified region for the AWS
- *
- * @param  request Request to send to AWS Resource Groups Tagging API.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTagValuesRequest &request)
 {
@@ -207,6 +204,11 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
 }
 
 /*!
+ * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * TagResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Applies one or more tags to the specified resources. Note the
  *
  * following> <ul> <li>
@@ -231,12 +233,6 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
  * permissions for adding tags. For more information, see <a
  * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
  * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
- *
- * @param  request Request to send to AWS Resource Groups Tagging API.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagResourcesRequest &request)
 {
@@ -244,6 +240,11 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
 }
 
 /*!
+ * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * UntagResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the specified tags from the specified resources. When you specify a tag key, the action removes both that key
  * and its associated value. The operation succeeds even if you attempt to remove tags from a resource that were already
  * removed. Note the
@@ -258,12 +259,6 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
  * Guide</i>> </li> <li>
  *
  * You can only tag resources that are located in the specified region for the AWS
- *
- * @param  request Request to send to AWS Resource Groups Tagging API.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const UntagResourcesRequest &request)
 {
@@ -271,19 +266,16 @@ UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const Un
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClientPrivate
+ * \brief The ResourceGroupsTaggingAPIClientPrivate class provides private implementation for ResourceGroupsTaggingAPIClient.
+ * \internal
  *
- * @class  ResourceGroupsTaggingAPIClientPrivate
- *
- * @brief  Private implementation for ResourceGroupsTaggingAPIClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResourceGroupsTaggingAPIClientPrivate object.
- *
- * @param  q  Pointer to this object's public ResourceGroupsTaggingAPIClient instance.
+ * Constructs a ResourceGroupsTaggingAPIClientPrivate object with public implementation \a q.
  */
 ResourceGroupsTaggingAPIClientPrivate::ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

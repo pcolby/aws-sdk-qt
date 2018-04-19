@@ -70,10 +70,10 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::CognitoSyncClient
- *
  * \brief The CognitoSyncClient class provides access to the Amazon Cognito Sync service.
  *
- * \ingroup CognitoSync
+ * \ingroup aws-clients
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -151,6 +151,11 @@ CognitoSyncClient::CognitoSyncClient(
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * BulkPublishResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited
  * to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of
  * the request via the GetBulkPublishDetails
@@ -159,12 +164,6 @@ CognitoSyncClient::CognitoSyncClient(
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &request)
 {
@@ -172,18 +171,17 @@ BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &r
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * DeleteDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specific dataset. The dataset will be deleted permanently, and the action can't be undone. Datasets that
  * this dataset was merged with will no longer report the merge. Any subsequent operation on this dataset will result in a
  *
  * ResourceNotFoundException>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequest &request)
 {
@@ -191,6 +189,11 @@ DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequ
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * DescribeDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets meta data about a dataset by identity and dataset name. With Amazon Cognito Sync, each identity has access only to
  * its own data. Thus, the credentials used to make this API call need to have access to the identity
  *
@@ -198,12 +201,6 @@ DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequ
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You
  * should use Cognito Identity credentials to make this API
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatasetRequest &request)
 {
@@ -211,18 +208,17 @@ DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatas
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * DescribeIdentityPoolUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets usage details (for example, data storage) about a particular identity
  *
  * pool>
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage(const DescribeIdentityPoolUsageRequest &request)
 {
@@ -230,17 +226,16 @@ DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * DescribeIdentityUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets usage information for an identity, including number of datasets and data
  *
  * usage>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const DescribeIdentityUsageRequest &request)
 {
@@ -248,18 +243,17 @@ DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const D
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * GetBulkPublishDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the status of the last BulkPublish operation for an identity
  *
  * pool>
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const GetBulkPublishDetailsRequest &request)
 {
@@ -267,18 +261,17 @@ GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const G
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * GetCognitoEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the events and the corresponding Lambda functions associated with an identity
  *
  * pool>
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoEventsRequest &request)
 {
@@ -286,18 +279,17 @@ GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoE
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * GetIdentityPoolConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the configuration settings of an identity
  *
  * pool>
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfiguration(const GetIdentityPoolConfigurationRequest &request)
 {
@@ -305,6 +297,11 @@ GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfigu
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * ListDatasetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists datasets for an identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the
  * credentials used to make this API call need to have access to the identity
  *
@@ -312,12 +309,6 @@ GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfigu
  *
  * ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use the Cognito Identity credentials to make this API
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest &request)
 {
@@ -325,18 +316,17 @@ ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * ListIdentityPoolUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of identity pools registered with
  *
  * Cognito>
  *
  * ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary
  * user credentials provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const ListIdentityPoolUsageRequest &request)
 {
@@ -344,6 +334,11 @@ ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const L
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * ListRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets paginated records, optionally changed after a particular sync count for a dataset and identity. With Amazon Cognito
  * Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have
  * access to the identity
@@ -352,12 +347,6 @@ ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const L
  *
  * ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use Cognito Identity credentials to make this API
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &request)
 {
@@ -365,18 +354,17 @@ ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &r
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * RegisterDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a device to receive push sync
  *
  * notifications>
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceRequest &request)
 {
@@ -384,6 +372,11 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * SetCognitoEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair
  * specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular
  *
@@ -391,12 +384,6 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoEventsRequest &request)
 {
@@ -404,18 +391,17 @@ SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoE
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * SetIdentityPoolConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the necessary configuration for push
  *
  * sync>
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfiguration(const SetIdentityPoolConfigurationRequest &request)
 {
@@ -423,18 +409,17 @@ SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfigu
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * SubscribeToDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Subscribes to receive notifications when a dataset is modified by another
  *
  * device>
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const SubscribeToDatasetRequest &request)
 {
@@ -442,18 +427,17 @@ SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const Subscri
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * UnsubscribeFromDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unsubscribes from receiving notifications when a dataset is modified by another
  *
  * device>
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request)
 {
@@ -461,6 +445,11 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
 }
 
 /*!
+ * Sends \a request to the CognitoSyncClient service, and returns a pointer to an
+ * UpdateRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Posts updates to records and adds and deletes records for a dataset and
  *
  * user>
@@ -478,12 +467,6 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
  * 0>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
- *
- * @param  request Request to send to Amazon Cognito Sync.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequest &request)
 {
@@ -491,19 +474,16 @@ UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequ
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::CognitoSyncClientPrivate
+ * \brief The CognitoSyncClientPrivate class provides private implementation for CognitoSyncClient.
+ * \internal
  *
- * @class  CognitoSyncClientPrivate
- *
- * @brief  Private implementation for CognitoSyncClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoSyncClientPrivate object.
- *
- * @param  q  Pointer to this object's public CognitoSyncClient instance.
+ * Constructs a CognitoSyncClientPrivate object with public implementation \a q.
  */
 CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

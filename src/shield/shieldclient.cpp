@@ -56,10 +56,10 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::ShieldClient
- *
  * \brief The ShieldClient class provides access to the AWS Shield service.
  *
- * \ingroup Shield
+ * \ingroup aws-clients
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -123,14 +123,13 @@ ShieldClient::ShieldClient(
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * CreateProtectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic
  * Load Balancing load balancer, Elastic IP Address, or an Amazon Route 53 hosted
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProtectionResponse * ShieldClient::createProtection(const CreateProtectionRequest &request)
 {
@@ -138,13 +137,12 @@ CreateProtectionResponse * ShieldClient::createProtection(const CreateProtection
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * CreateSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Activates AWS Shield Advanced for an
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscriptionRequest &request)
 {
@@ -152,13 +150,12 @@ CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscr
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DeleteProtectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS Shield Advanced
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtectionRequest &request)
 {
@@ -166,14 +163,13 @@ DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtection
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DeleteSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot
  * delete a subscription prior to the completion of that commitment.
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscriptionRequest &request)
 {
@@ -181,13 +177,12 @@ DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscr
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DescribeAttackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the details of a DDoS attack.
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackRequest &request)
 {
@@ -195,13 +190,12 @@ DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackReques
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DescribeProtectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the details of a <a>Protection</a>
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProtectionRequest &request)
 {
@@ -209,13 +203,12 @@ DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProt
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DescribeSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides details about the AWS Shield Advanced subscription for an
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubscriptionResponse * ShieldClient::describeSubscription(const DescribeSubscriptionRequest &request)
 {
@@ -223,13 +216,12 @@ DescribeSubscriptionResponse * ShieldClient::describeSubscription(const Describe
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * GetSubscriptionStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the <code>SubscriptionState</code>, either <code>Active</code> or
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubscriptionStateRequest &request)
 {
@@ -237,13 +229,12 @@ GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubsc
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * ListAttacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all ongoing DDoS attacks or all DDoS attacks during a specified time
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &request)
 {
@@ -251,13 +242,12 @@ ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &reques
 }
 
 /*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * ListProtectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all <a>Protection</a> objects for the
- *
- * @param  request Request to send to AWS Shield.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsRequest &request)
 {
@@ -265,19 +255,16 @@ ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsReq
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::ShieldClientPrivate
+ * \brief The ShieldClientPrivate class provides private implementation for ShieldClient.
+ * \internal
  *
- * @class  ShieldClientPrivate
- *
- * @brief  Private implementation for ShieldClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ShieldClientPrivate object.
- *
- * @param  q  Pointer to this object's public ShieldClient instance.
+ * Constructs a ShieldClientPrivate object with public implementation \a q.
  */
 ShieldClientPrivate::ShieldClientPrivate(ShieldClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

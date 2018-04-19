@@ -104,10 +104,10 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::SageMakerClient
- *
  * \brief The SageMakerClient class provides access to the Amazon SageMaker Service service.
  *
- * \ingroup SageMaker
+ * \ingroup aws-clients
+ * \inmodule QtAwsSageMaker
  *
  */
 
@@ -165,6 +165,11 @@ SageMakerClient::SageMakerClient(
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * AddTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
  * training jobs, models, endpoint configurations, and endpoints.
  *
@@ -173,12 +178,6 @@ SageMakerClient::SageMakerClient(
  * Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags,
  * see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what">Using
  * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
 {
@@ -186,6 +185,11 @@ AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an endpoint using the endpoint configuration specified in the request. Amazon SageMaker uses the endpoint to
  * provision resources and deploy models. You create the endpoint configuration with the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html">CreateEndpointConfig</a> API.
@@ -214,12 +218,6 @@ AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
  *
  * For an example, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/ex1.html">Exercise 1: Using the K-Means
  * Algorithm Provided by Amazon SageMaker</a>.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointRequest &request)
 {
@@ -227,6 +225,11 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateEndpointConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models. In the configuration,
  * you identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that you
  * want Amazon SageMaker to provision. Then you call the <a
@@ -248,12 +251,6 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
  * allocate to each model. For example, suppose that you want to host two models, A and B, and you assign traffic weight 2
  * for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model A, and one-third to model
  * B.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const CreateEndpointConfigRequest &request)
 {
@@ -261,6 +258,11 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a model in Amazon SageMaker. In the request, you name the model and describe one or more containers. For each
  * container, you specify the docker image containing inference code, artifacts (from prior training), and custom
  * environment map that the inference code uses when you deploy the model into production.
@@ -285,12 +287,6 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
  * for deployment on ML compute hosting instances. In addition, you also use the IAM role to manage permissions the
  * inference code needs. For example, if the inference code access any other AWS resources, you grant necessary permissions
  * via this
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &request)
 {
@@ -298,6 +294,11 @@ CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &req
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Amazon SageMaker notebook instance. A notebook instance is a machine learning (ML) compute instance running
  * on a Jupyter notebook.
  *
@@ -345,12 +346,6 @@ CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &req
  * </p
  *
  * For more information, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const CreateNotebookInstanceRequest &request)
 {
@@ -358,6 +353,11 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateNotebookInstanceLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a lifecycle configuration that you can associate with a notebook instance. A <i>lifecycle configuration</i> is a
  * collection of shell scripts that run when you create or start a notebook
  *
@@ -382,12 +382,6 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
  * started>
  *
  * For information about notebook instance lifestyle configurations, see
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookInstanceLifecycleConfig(const CreateNotebookInstanceLifecycleConfigRequest &request)
 {
@@ -395,15 +389,14 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreatePresignedNotebookInstanceUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a URL that you can use to connect to the Juypter server from a notebook instance. In the Amazon SageMaker
  * console, when you choose <code>Open</code> next to a notebook instance, Amazon SageMaker opens a new tab showing the
  * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNotebookInstanceUrl(const CreatePresignedNotebookInstanceUrlRequest &request)
 {
@@ -411,6 +404,11 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateTrainingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts a model training job. After training completes, Amazon SageMaker saves the resulting model artifacts to an Amazon
  * S3 location that you specify.
  *
@@ -462,12 +460,6 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
  *
  * For more information about Amazon SageMaker, see <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrainingJobRequest &request)
 {
@@ -475,13 +467,12 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an endpoint. Amazon SageMaker frees up all of the resources that were deployed when the endpoint was created.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -489,14 +480,13 @@ DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointReq
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteEndpointConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an endpoint configuration. The <code>DeleteEndpoingConfig</code> API deletes only the specified configuration.
  * It does not delete endpoints created using the configuration.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const DeleteEndpointConfigRequest &request)
 {
@@ -504,15 +494,14 @@ DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const Delet
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in Amazon SageMaker when
  * you called the <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a> API. It
  * does not delete model artifacts, inference code, or the IAM role that you specified when creating the model.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &request)
 {
@@ -520,6 +509,11 @@ DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &req
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an Amazon SageMaker notebook instance. Before you can delete a notebook instance, you must call the
  * <code>StopNotebookInstance</code> API.
  *
@@ -527,12 +521,6 @@ DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &req
  *
  * When you delete a notebook instance, you lose all of your data. Amazon SageMaker removes the ML compute instance, and
  * deletes the ML storage volume and the network interface associated with the notebook instance.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const DeleteNotebookInstanceRequest &request)
 {
@@ -540,13 +528,12 @@ DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const D
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteNotebookInstanceLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a notebook instance lifecycle
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookInstanceLifecycleConfig(const DeleteNotebookInstanceLifecycleConfigRequest &request)
 {
@@ -554,17 +541,16 @@ DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookI
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified tags from an Amazon SageMaker
  *
  * resource>
  *
  * To list a resource's tags, use the <code>ListTags</code> API.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -572,13 +558,12 @@ DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &reques
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the description of an
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointResponse * SageMakerClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
@@ -586,13 +571,12 @@ DescribeEndpointResponse * SageMakerClient::describeEndpoint(const DescribeEndpo
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeEndpointConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the description of an endpoint configuration created using the <code>CreateEndpointConfig</code>
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const DescribeEndpointConfigRequest &request)
 {
@@ -600,13 +584,12 @@ DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const D
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a model that you created using the <code>CreateModel</code>
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelRequest &request)
 {
@@ -614,13 +597,12 @@ DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelReques
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a notebook
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(const DescribeNotebookInstanceRequest &request)
 {
@@ -628,17 +610,16 @@ DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(con
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeNotebookInstanceLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a description of a notebook instance lifecycle
  *
  * configuration>
  *
  * For information about notebook instance lifestyle configurations, see
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNotebookInstanceLifecycleConfig(const DescribeNotebookInstanceLifecycleConfigRequest &request)
 {
@@ -646,13 +627,12 @@ DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNoteb
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeTrainingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a training
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const DescribeTrainingJobRequest &request)
 {
@@ -660,13 +640,12 @@ DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const Describ
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListEndpointConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists endpoint
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEndpointConfigsResponse * SageMakerClient::listEndpointConfigs(const ListEndpointConfigsRequest &request)
 {
@@ -674,13 +653,12 @@ ListEndpointConfigsResponse * SageMakerClient::listEndpointConfigs(const ListEnd
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsRequest &request)
 {
@@ -688,14 +666,13 @@ ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsReques
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListModelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists models created with the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a>
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &request)
 {
@@ -703,13 +680,12 @@ ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &reques
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListNotebookInstanceLifecycleConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists notebook instance lifestyle configurations created with the
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInstanceLifecycleConfigs(const ListNotebookInstanceLifecycleConfigsRequest &request)
 {
@@ -717,13 +693,12 @@ ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInst
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListNotebookInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of the Amazon SageMaker notebook instances in the requester's account in an AWS Region.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const ListNotebookInstancesRequest &request)
 {
@@ -731,13 +706,12 @@ ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const Lis
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the tags for the specified Amazon SageMaker
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
 {
@@ -745,13 +719,12 @@ ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListTrainingJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists training
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJobsRequest &request)
 {
@@ -759,15 +732,14 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StartNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After
  * configuring the notebook instance, Amazon SageMaker sets the notebook instance status to <code>InService</code>. A
  * notebook instance's status must be <code>InService</code> before you can connect to your Jupyter notebook.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const StartNotebookInstanceRequest &request)
 {
@@ -775,6 +747,11 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Terminates the ML compute instance. Before terminating the instance, Amazon SageMaker disconnects the ML storage volume
  * from it. Amazon SageMaker preserves the ML storage volume.
  *
@@ -783,12 +760,6 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
  * To access data on the ML storage volume for a notebook instance that has been terminated, call the
  * <code>StartNotebookInstance</code> API. <code>StartNotebookInstance</code> launches another ML compute instance,
  * configures it, and attaches the preserved ML storage volume so you can continue your work.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopNotebookInstanceRequest &request)
 {
@@ -796,6 +767,11 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopTrainingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops a training job. To stop a job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays
  * job termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results
  * of the training is not lost.
@@ -810,12 +786,6 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
  *
  * When it receives a <code>StopTrainingJob</code> request, Amazon SageMaker changes the status of the job to
  * <code>Stopping</code>. After Amazon SageMaker stops the job, it sets the status to
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJobRequest &request)
 {
@@ -823,6 +793,11 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deploys the new <code>EndpointConfig</code> specified in the request, switches to using newly created endpoint, and then
  * deletes resources provisioned for the endpoint using the previous <code>EndpointConfig</code> (there is no availability
  * loss).
@@ -832,12 +807,6 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
  * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the
  * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -845,17 +814,16 @@ UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointReq
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateEndpointWeightsAndCapacitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant
  * associated with an existing endpoint. When it receives the request, Amazon SageMaker sets the endpoint status to
  * <code>Updating</code>. After updating the endpoint, it sets the status to <code>InService</code>. To check the status of
  * an endpoint, use the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeightsAndCapacities(const UpdateEndpointWeightsAndCapacitiesRequest &request)
 {
@@ -863,14 +831,13 @@ UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeig
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateNotebookInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for
  * your notebook instance to accommodate changes in your workload requirements. You can also update the VPC security
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const UpdateNotebookInstanceRequest &request)
 {
@@ -878,13 +845,12 @@ UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const U
 }
 
 /*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateNotebookInstanceLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a notebook instance lifecycle configuration created with the
- *
- * @param  request Request to send to Amazon SageMaker Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookInstanceLifecycleConfig(const UpdateNotebookInstanceLifecycleConfigRequest &request)
 {
@@ -892,19 +858,16 @@ UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookI
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::SageMakerClientPrivate
+ * \brief The SageMakerClientPrivate class provides private implementation for SageMakerClient.
+ * \internal
  *
- * @class  SageMakerClientPrivate
- *
- * @brief  Private implementation for SageMakerClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerClientPrivate object.
- *
- * @param  q  Pointer to this object's public SageMakerClient instance.
+ * Constructs a SageMakerClientPrivate object with public implementation \a q.
  */
 SageMakerClientPrivate::SageMakerClientPrivate(SageMakerClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

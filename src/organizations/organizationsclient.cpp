@@ -117,10 +117,10 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::OrganizationsClient
- *
  * \brief The OrganizationsClient class provides access to the AWS Organizations service.
  *
- * \ingroup Organizations
+ * \ingroup aws-clients
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -320,6 +320,11 @@ OrganizationsClient::OrganizationsClient(
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * AcceptHandshakeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends a response to the originator of a handshake agreeing to the action proposed by the handshake request.
  *
  * </p
@@ -355,12 +360,6 @@ OrganizationsClient::OrganizationsClient(
  * Guide</i>> </li> </ul>
  *
  * After you accept a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHandshakeRequest &request)
 {
@@ -368,6 +367,11 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * AttachPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches a policy to a root, an organizational unit, or an individual account. How the policy affects accounts depends
  * on the type of
  *
@@ -415,12 +419,6 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  * Guide</i>> </li> </ul>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -428,6 +426,11 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CancelHandshakeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a handshake. Canceling a handshake sets the handshake state to <code>CANCELED</code>.
  *
  * </p
@@ -439,12 +442,6 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
  * handshake>
  *
  * After you cancel a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHandshakeRequest &request)
 {
@@ -452,6 +449,11 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CreateAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS account that is automatically a member of the organization whose credentials made the request. This is an
  * asynchronous request that AWS performs in the background. If you want to check the status of the request later, you need
  * the <code>OperationId</code> response element from this operation to provide as a parameter to the
@@ -512,12 +514,6 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRequest &request)
 {
@@ -525,6 +521,11 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CreateOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS organization. The account whose user is calling the CreateOrganization operation automatically becomes
  * the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/orgs_getting-started_concepts.html#account">master
  * account</a> of the new
@@ -541,12 +542,6 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
  * create the organization supporting only the consolidated billing features by setting the <code>FeatureSet</code>
  * parameter to <code>CONSOLIDATED_BILLING"</code>, then no policy types are enabled by default and you cannot use
  * organization
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOrganizationResponse * OrganizationsClient::createOrganization(const CreateOrganizationRequest &request)
 {
@@ -554,6 +549,11 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CreateOrganizationalUnitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an organizational unit (OU) within a root or parent OU. An OU is a container for accounts that enables you to
  * organize your accounts to apply policies according to your business requirements. The number of levels deep that you can
  * nest OUs is dependent upon the policy types enabled for that root. For service control policies, the limit is five.
@@ -567,12 +567,6 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit(const CreateOrganizationalUnitRequest &request)
 {
@@ -580,6 +574,11 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CreatePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a policy of a specified type that you can attach to a root, an organizational unit (OU), or an individual AWS
  *
  * account>
@@ -590,12 +589,6 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
  * Policies</a>>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -603,6 +596,11 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DeclineHandshakeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Declines a handshake request. This sets the handshake state to <code>DECLINED</code> and effectively deactivates the
  *
  * request>
@@ -614,12 +612,6 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
  * request>
  *
  * After you decline a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHandshakeRequest &request)
 {
@@ -627,14 +619,13 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DeleteOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the organization. You can delete an organization only by using credentials from the master account. The
  * organization must be empty of member accounts, OUs, and
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 {
@@ -642,18 +633,17 @@ DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DeleteOrganizationalUnitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an organizational unit from a root or another OU. You must first remove all accounts and child OUs from the OU
  * that you want to
  *
  * delete>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit(const DeleteOrganizationalUnitRequest &request)
 {
@@ -661,18 +651,17 @@ DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DeletePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified policy from your organization. Before you perform this operation, you must first detach the policy
  * from all OUs, roots, and
  *
  * accounts>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -680,17 +669,16 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves Organizations-related information about the specified
  *
  * account>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAccountRequest &request)
 {
@@ -698,17 +686,16 @@ DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAcc
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeCreateAccountStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current status of an asynchronous request to create an
  *
  * account>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccountStatus(const DescribeCreateAccountStatusRequest &request)
 {
@@ -716,6 +703,11 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeHandshakeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about a previously requested handshake. The handshake ID comes from the response to the original
  * <a>InviteAccountToOrganization</a> operation that generated the
  *
@@ -727,12 +719,6 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
  * accessible>
  *
  * This operation can be called from any account in the
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const DescribeHandshakeRequest &request)
 {
@@ -740,6 +726,11 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about the organization that the user's account belongs
  *
  * to>
@@ -750,12 +741,6 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  *
  * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
  * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 {
@@ -763,17 +748,16 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeOrganizationalUnitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about an organizational unit
  *
  * (OU)>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizationalUnit(const DescribeOrganizationalUnitRequest &request)
 {
@@ -781,17 +765,16 @@ DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizational
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about a
  *
  * policy>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolicyRequest &request)
 {
@@ -799,6 +782,11 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DetachPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches a policy from a target root, organizational unit, or account. If the policy being detached is a service control
  * policy (SCP), the changes to permissions for IAM users and roles in affected accounts are
  *
@@ -816,12 +804,6 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
  * </p
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -829,6 +811,11 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DisableAWSServiceAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS
  * Organizations. When you disable integration, the specified service no longer can create a <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in
@@ -859,12 +846,6 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(const DisableAWSServiceAccessRequest &request)
 {
@@ -872,6 +853,11 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DisablePolicyTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables an organizational control policy type in a root. A policy of a certain type can be attached to entities in a
  * root only if that type is enabled in the root. After you perform this operation, you no longer can attach policies of
  * the specified type to that root or to any OU or account in that root. You can undo this by using the
@@ -886,12 +872,6 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
  * If you disable a policy type for a root, it still shows as enabled for the organization if all features are enabled in
  * that organization. Use <a>ListRoots</a> to see the status of policy types for a specified root. Use
  * <a>DescribeOrganization</a> to see the status of policy types in the
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const DisablePolicyTypeRequest &request)
 {
@@ -899,6 +879,11 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * EnableAWSServiceAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS
  * Organizations. When you enable integration, you allow the specified service to create a <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in all
@@ -922,12 +907,6 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  *
  * This operation can be called only from the organization's master account and only if the organization has <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled all
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(const EnableAWSServiceAccessRequest &request)
 {
@@ -935,6 +914,11 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * EnableAllFeaturesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables all features in an organization. This enables the use of organization policies that can restrict the services
  * and actions that can be called in each account. Until you enable all features, you have access only to consolidated
  * billing, and you can't use any of the advanced account administration features that AWS Organizations supports. For more
@@ -970,12 +954,6 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  * this>
  *
  * This operation can be called only from the organization's master account.
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableAllFeaturesRequest &request)
 {
@@ -983,6 +961,11 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * EnablePolicyTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables a policy type in a root. After you enable a policy type in a root, you can attach policies of that type to the
  * root, any OU, or account in that root. You can undo this by using the <a>DisablePolicyType</a>
  *
@@ -998,12 +981,6 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
  * organization>
  *
  * To view the status of policy type in a root, use
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePolicyTypeRequest &request)
 {
@@ -1011,6 +988,11 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * InviteAccountToOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends an invitation to another account to join your organization as a member account. Organizations sends email on your
  * behalf to the email address that is associated with the other account's owner. The invitation is implemented as a
  * <a>Handshake</a> whose details are in the
@@ -1033,12 +1015,6 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrganization(const InviteAccountToOrganizationRequest &request)
 {
@@ -1046,6 +1022,11 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * LeaveOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a member account from its parent organization. This version of the operation is performed by the account that
  * wants to leave. To remove a member account as a user in the master account, use <a>RemoveAccountFromOrganization</a>
  *
@@ -1078,12 +1059,6 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  * see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
@@ -1091,6 +1066,11 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListAWSServiceAccessForOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of the AWS services that you enabled to integrate with your organization. After a service on this list
  * creates the resources that it requires for the integration, it can perform operations on your organization and its
  *
@@ -1104,12 +1084,6 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServiceAccessForOrganization(const ListAWSServiceAccessForOrganizationRequest &request)
 {
@@ -1117,6 +1091,11 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListAccountsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all the accounts in the organization. To request only the accounts in a specified root or OU, use the
  * <a>ListAccountsForParent</a> operation
  *
@@ -1130,12 +1109,6 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsRequest &request)
 {
@@ -1143,6 +1116,11 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListAccountsForParentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the accounts in an organization that are contained by the specified target root or organizational unit (OU). If
  * you specify the root, you get a list of all the accounts that are not in any OU. If you specify an OU, you get a list of
  * all the accounts in only that OU, and not in any child OUs. To get a list of all accounts in the organization, use the
@@ -1158,12 +1136,6 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const ListAccountsForParentRequest &request)
 {
@@ -1171,6 +1143,11 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListChildrenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the OUs or accounts that are contained in the specified parent OU or root. This operation, along with
  * <a>ListParents</a> enables you to traverse the tree structure that makes up this
  *
@@ -1184,12 +1161,6 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenRequest &request)
 {
@@ -1197,6 +1168,11 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListCreateAccountStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the account creation requests that match the specified status that is currently being tracked for the
  *
  * organization> <note>
@@ -1209,12 +1185,6 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(const ListCreateAccountStatusRequest &request)
 {
@@ -1222,6 +1192,11 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListHandshakesForAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the current handshakes that are associated with the account of the requesting
  *
  * user>
@@ -1239,12 +1214,6 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
  * display> </note>
  *
  * This operation can be called from any account in the
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount(const ListHandshakesForAccountRequest &request)
 {
@@ -1252,6 +1221,11 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListHandshakesForOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the handshakes that are associated with the organization that the requesting user is part of. The
  * <code>ListHandshakesForOrganization</code> operation returns a list of handshake structures. Each structure contains
  * details and status about a
@@ -1271,12 +1245,6 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOrganization(const ListHandshakesForOrganizationRequest &request)
 {
@@ -1284,6 +1252,11 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListOrganizationalUnitsForParentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the organizational units (OUs) in a parent organizational unit or
  *
  * root> <note>
@@ -1296,12 +1269,6 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganizationalUnitsForParent(const ListOrganizationalUnitsForParentRequest &request)
 {
@@ -1309,6 +1276,11 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListParentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the root or organizational units (OUs) that serve as the immediate parent of the specified child OU or account.
  * This operation, along with <a>ListChildren</a> enables you to traverse the tree structure that makes up this
  *
@@ -1326,12 +1298,6 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
  * account> <note>
  *
  * In the current release, a child can have only a single parent.
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest &request)
 {
@@ -1339,6 +1305,11 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the list of all policies in an organization of a specified
  *
  * type> <note>
@@ -1351,12 +1322,6 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -1364,6 +1329,11 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListPoliciesForTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the policies that are directly attached to the specified target root, organizational unit (OU), or account. You
  * must specify the policy type that you want included in the returned
  *
@@ -1377,12 +1347,6 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const ListPoliciesForTargetRequest &request)
 {
@@ -1390,6 +1354,11 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListRootsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the roots that are defined in the current
  *
  * organization> <note>
@@ -1408,12 +1377,6 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
  * Policy types can be enabled and disabled in roots. This is distinct from whether they are available in the organization.
  * When you enable all features, you make policy types available for use in that organization. Individual policy types can
  * then be enabled and disabled in a root. To see the availability of a policy type in an organization, use
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &request)
 {
@@ -1421,6 +1384,11 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListTargetsForPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all the roots, OUs, and accounts to which the specified policy is
  *
  * attached> <note>
@@ -1433,12 +1401,6 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
  * display> </note>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
@@ -1446,17 +1408,16 @@ ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const L
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * MoveAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Moves an account from its current source parent root or OU to the specified destination parent root or
  *
  * OU>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest &request)
 {
@@ -1464,6 +1425,11 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * RemoveAccountFromOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the specified account from the
  *
  * organization>
@@ -1497,12 +1463,6 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  * information, see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOrganization(const RemoveAccountFromOrganizationRequest &request)
 {
@@ -1510,18 +1470,17 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * UpdateOrganizationalUnitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Renames the specified organizational unit (OU). The ID and ARN do not change. The child OUs and accounts remain in
  * place, and any attached policies of the OU remain attached.
  *
  * </p
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit(const UpdateOrganizationalUnitRequest &request)
 {
@@ -1529,18 +1488,17 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * UpdatePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing policy with a new name, description, or content. If any parameter is not supplied, that value
  * remains unchanged. Note that you cannot change a policy's
  *
  * type>
  *
  * This operation can be called only from the organization's master
- *
- * @param  request Request to send to AWS Organizations.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyRequest &request)
 {
@@ -1548,19 +1506,16 @@ UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyReque
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::OrganizationsClientPrivate
+ * \brief The OrganizationsClientPrivate class provides private implementation for OrganizationsClient.
+ * \internal
  *
- * @class  OrganizationsClientPrivate
- *
- * @brief  Private implementation for OrganizationsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OrganizationsClientPrivate object.
- *
- * @param  q  Pointer to this object's public OrganizationsClient instance.
+ * Constructs a OrganizationsClientPrivate object with public implementation \a q.
  */
 OrganizationsClientPrivate::OrganizationsClientPrivate(OrganizationsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

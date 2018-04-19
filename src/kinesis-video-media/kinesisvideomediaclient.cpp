@@ -38,10 +38,10 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaClient
- *
  * \brief The KinesisVideoMediaClient class provides access to the Amazon Kinesis Video Streams Media (Kinesis Video Media) service.
  *
- * \ingroup KinesisVideoMedia
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideoMedia
  *
  */
 
@@ -99,6 +99,11 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
 }
 
 /*!
+ * Sends \a request to the KinesisVideoMediaClient service, and returns a pointer to an
+ * GetMediaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Use this API to retrieve media content from a Kinesis video stream. In the request, you identify stream name or stream
  * Amazon Resource Name (ARN), and the starting chunk. Kinesis Video Streams then returns a stream of chunks in order by
  * fragment
@@ -126,12 +131,6 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
  *
  * Kinesis Video Streams sends media data at a rate of up to 25 megabytes per second (or 200 megabits per second) during a
  * <code>GetMedia</code> session.
- *
- * @param  request Request to send to Amazon Kinesis Video Streams Media.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &request)
 {
@@ -139,19 +138,16 @@ GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &requ
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoMedia::KinesisVideoMediaClientPrivate
+ * \brief The KinesisVideoMediaClientPrivate class provides private implementation for KinesisVideoMediaClient.
+ * \internal
  *
- * @class  KinesisVideoMediaClientPrivate
- *
- * @brief  Private implementation for KinesisVideoMediaClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoMediaClientPrivate object.
- *
- * @param  q  Pointer to this object's public KinesisVideoMediaClient instance.
+ * Constructs a KinesisVideoMediaClientPrivate object with public implementation \a q.
  */
 KinesisVideoMediaClientPrivate::KinesisVideoMediaClientPrivate(KinesisVideoMediaClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

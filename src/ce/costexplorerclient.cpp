@@ -48,10 +48,10 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::CostExplorerClient
- *
  * \brief The CostExplorerClient class provides access to the AWS Cost Explorer Service service.
  *
- * \ingroup CostExplorer
+ * \ingroup aws-clients
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -122,18 +122,17 @@ CostExplorerClient::CostExplorerClient(
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetCostAndUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as
  * <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and
  * group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. For a
  * complete list of valid dimensions, see the <code> <a
  * href="http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html">GetDimensionValues</a>
  * </code> operation. Master accounts in an organization in AWS Organizations have access to all member
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUsageRequest &request)
 {
@@ -141,14 +140,13 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetDimensionValuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves all available filter values for a specific filter over a period of time. You can search the dimension values
  * for an arbitrary string.
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDimensionValuesRequest &request)
 {
@@ -156,6 +154,11 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetReservationCoverageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the reservation coverage for your account. This allows you to see how much of your Amazon Elastic Compute
  * Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An
  * organization's master account can see the coverage of the associated member accounts. For any time period, you can
@@ -176,12 +179,6 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  * TENANC> </li> </ul>
  *
  * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(const GetReservationCoverageRequest &request)
 {
@@ -189,6 +186,11 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetReservationPurchaseRecommendationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets recommendations for which reservations to purchase. These recommendations could help you reduce your costs.
  * Reservations provide a discounted hourly rate (up to 75%) compared to On-Demand
  *
@@ -206,12 +208,6 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
  * the smallest size instance in an instance family. This makes it easier to purchase a size-flexible RI. AWS also shows
  * the equal number of normalized units so that you can purchase any instance size that you want. For this example, your RI
  * recommendation would be for <code>c4.large</code>, because that is the smallest size instance in the c4 instance
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservationPurchaseRecommendationResponse * CostExplorerClient::getReservationPurchaseRecommendation(const GetReservationPurchaseRecommendationRequest &request)
 {
@@ -219,16 +215,15 @@ GetReservationPurchaseRecommendationResponse * CostExplorerClient::getReservatio
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetReservationUtilizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can retrieve the reservation utilization for your account. Master accounts in an organization in AWS Organizations
  * have access to their associated member accounts. You can filter data by dimensions in a time period. You can use
  * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
  * <code>SUBSCRIPTION_ID</code>.
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilization(const GetReservationUtilizationRequest &request)
 {
@@ -236,14 +231,13 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
 }
 
 /*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
  * arbitrary string.
- *
- * @param  request Request to send to AWS Cost Explorer Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 {
@@ -251,19 +245,16 @@ GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::CostExplorerClientPrivate
+ * \brief The CostExplorerClientPrivate class provides private implementation for CostExplorerClient.
+ * \internal
  *
- * @class  CostExplorerClientPrivate
- *
- * @brief  Private implementation for CostExplorerClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostExplorerClientPrivate object.
- *
- * @param  q  Pointer to this object's public CostExplorerClient instance.
+ * Constructs a CostExplorerClientPrivate object with public implementation \a q.
  */
 CostExplorerClientPrivate::CostExplorerClientPrivate(CostExplorerClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

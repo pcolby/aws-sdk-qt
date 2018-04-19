@@ -572,10 +572,10 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::Ec2Client
- *
  * \brief The Ec2Client class provides access to the Amazon Elastic Compute Cloud ( EC2) service.
  *
- * \ingroup EC2
+ * \ingroup aws-clients
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -637,13 +637,12 @@ Ec2Client::Ec2Client(
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AcceptReservedInstancesExchangeQuoteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accepts the Convertible Reserved Instance exchange quote described in the <a>GetReservedInstancesExchangeQuote</a>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstancesExchangeQuote(const AcceptReservedInstancesExchangeQuoteRequest &request)
 {
@@ -651,13 +650,12 @@ AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstance
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AcceptVpcEndpointConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accepts one or more interface VPC endpoint connection requests to your VPC endpoint
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(const AcceptVpcEndpointConnectionsRequest &request)
 {
@@ -665,6 +663,11 @@ AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AcceptVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accept a VPC peering connection request. To accept a request, the VPC peering connection must be in the
  * <code>pending-acceptance</code> state, and you must be the owner of the peer VPC. Use
  * <a>DescribeVpcPeeringConnections</a> to view your outstanding VPC peering connection
@@ -673,12 +676,6 @@ AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(c
  *
  * For an inter-region VPC peering connection request, you must accept the VPC peering connection in the region of the
  * accepter
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const AcceptVpcPeeringConnectionRequest &request)
 {
@@ -686,6 +683,11 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AllocateAddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Allocates an Elastic IP
  *
  * address>
@@ -704,12 +706,6 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressRequest &request)
 {
@@ -717,14 +713,13 @@ AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AllocateHostsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Allocates a Dedicated Host to your account. At minimum you need to specify the instance size type, Availability Zone,
  * and quantity of hosts you want to
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &request)
 {
@@ -732,18 +727,17 @@ AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssignIpv6AddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Assigns one or more IPv6 addresses to the specified network interface. You can specify one or more specific IPv6
  * addresses, or you can specify the number of IPv6 addresses to be automatically assigned from within the subnet's IPv6
  * CIDR block range. You can assign as many IPv6 addresses to a network interface as you can assign private IPv4 addresses,
  * and the limit varies per instance type. For information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI">IP Addresses Per Network
  * Interface Per Instance Type</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6AddressesRequest &request)
 {
@@ -751,6 +745,11 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssignPrivateIpAddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Assigns one or more secondary private IP addresses to the specified network interface. You can specify one or more
  * specific secondary IP addresses, or you can specify the number of secondary IP addresses to be automatically assigned
  * within the subnet's CIDR block range. The number of secondary IP addresses that you can assign to an instance varies by
@@ -763,12 +762,6 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
  * Guide</i>>
  *
  * AssignPrivateIpAddresses is available only in
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const AssignPrivateIpAddressesRequest &request)
 {
@@ -776,6 +769,11 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateAddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates an Elastic IP address with an instance or a network
  *
  * interface>
@@ -803,12 +801,6 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
  * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and
  * you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the
  * <i>Elastic IP Addresses</i> section of <a href="http://aws.amazon.com/ec2/pricing/">Amazon EC2
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressRequest &request)
 {
@@ -816,6 +808,11 @@ AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateDhcpOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a set of DHCP options (that you've previously created) with the specified VPC, or associates no DHCP options
  * with the
  *
@@ -830,12 +827,6 @@ AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressReq
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP
  * Options Sets</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDhcpOptionsRequest &request)
 {
@@ -843,14 +834,13 @@ AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDh
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateIamInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates an IAM instance profile with a running or stopped instance. You cannot associate more than one IAM instance
  * profile with an
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(const AssociateIamInstanceProfileRequest &request)
 {
@@ -858,6 +848,11 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a subnet with a route table. The subnet and route table must be in the same VPC. This association causes
  * traffic originating from the subnet to be routed according to the routes in the route table. The action returns an
  * association ID, which you need in order to disassociate the route table from the subnet later. A route table can be
@@ -868,12 +863,6 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
  * For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRouteTableRequest &request)
 {
@@ -881,14 +870,13 @@ AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRout
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateSubnetCidrBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An IPv6 CIDR
  * block must have a prefix length of
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const AssociateSubnetCidrBlockRequest &request)
 {
@@ -896,6 +884,11 @@ AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const Ass
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateVpcCidrBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, or you can associate an
  * Amazon-provided IPv6 CIDR block. The IPv6 CIDR block size is fixed at
  *
@@ -904,12 +897,6 @@ AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const Ass
  * For more information about associating CIDR blocks with your VPC and applicable restrictions, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html#VPC_Sizing">VPC and Subnet Sizing</a> in
  * the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const AssociateVpcCidrBlockRequest &request)
 {
@@ -917,6 +904,11 @@ AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const Associate
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AttachClassicLinkVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Links an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups. You cannot
  * link an EC2-Classic instance to more than one VPC at a time. You can only link an instance that's in the
  * <code>running</code> state. An instance is automatically unlinked from a VPC when it's stopped - you can link it to the
@@ -930,12 +922,6 @@ AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const Associate
  * again>
  *
  * Linking your instance to a VPC is sometimes referred to as <i>attaching</i> your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClassicLinkVpcRequest &request)
 {
@@ -943,15 +929,14 @@ AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClass
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AttachInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches an Internet gateway to a VPC, enabling connectivity between the Internet and the VPC. For more information
  * about your VPC and Internet gateway, see the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInternetGatewayRequest &request)
 {
@@ -959,13 +944,12 @@ AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInt
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AttachNetworkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches a network interface to an
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachNetworkInterfaceRequest &request)
 {
@@ -973,6 +957,11 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AttachVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device
  *
  * name>
@@ -1019,12 +1008,6 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  * For more information about EBS volumes, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attaching Amazon EBS Volumes</a> in
  * the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &request)
 {
@@ -1032,18 +1015,17 @@ AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AttachVpnGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches a virtual private gateway to a VPC. You can attach one virtual private gateway to one VPC at a
  *
  * time>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN
  * Connections</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayRequest &request)
 {
@@ -1051,6 +1033,11 @@ AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AuthorizeSecurityGroupEgressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [EC2-VPC only] Adds one or more egress rules to a security group for use with a VPC. Specifically, this action permits
  * instances to send traffic to one or more destination IPv4 or IPv6 CIDR address ranges, or to one or more destination
  * security groups for the same VPC. This action doesn't apply to security groups for use in EC2-Classic. For more
@@ -1068,12 +1055,6 @@ AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayReq
  * rule>
  *
  * Rule changes are propagated to affected instances as quickly as possible. However, a small delay might
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(const AuthorizeSecurityGroupEgressRequest &request)
 {
@@ -1081,6 +1062,11 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AuthorizeSecurityGroupIngressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more ingress rules to a security
  *
  * group>
@@ -1104,12 +1090,6 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
  * Limits</a>>
  *
  * You can optionally specify a description for the security group
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress(const AuthorizeSecurityGroupIngressRequest &request)
 {
@@ -1117,6 +1097,11 @@ AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * BundleInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Bundles an Amazon instance store-backed Windows
  *
  * instance>
@@ -1132,12 +1117,6 @@ AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_InstanceStoreBacked_WinAMI.html">Creating an
  * Instance Store-Backed Windows
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &request)
 {
@@ -1145,13 +1124,12 @@ BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelBundleTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a bundling operation for an instance store-backed Windows
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskRequest &request)
 {
@@ -1159,6 +1137,11 @@ CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelConversionTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels an active conversion task. The task can be the import of an instance or volume. The action removes all artifacts
  * of the conversion, including a partially uploaded volume or instance. If the conversion is complete or is in the process
  * of transferring the final disk image, the command fails and returns an
@@ -1168,12 +1151,6 @@ CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskReq
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ec2-cli-vmimport-export.html">Importing a Virtual
  * Machine Using the Amazon EC2
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelConversionTaskResponse * Ec2Client::cancelConversionTask(const CancelConversionTaskRequest &request)
 {
@@ -1181,15 +1158,14 @@ CancelConversionTaskResponse * Ec2Client::cancelConversionTask(const CancelConve
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelExportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels an active export task. The request removes all artifacts of the export, including any partially-created Amazon
  * S3 objects. If the export task is complete or is in the process of transferring the final disk image, the command fails
  * and returns an
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelExportTaskResponse * Ec2Client::cancelExportTask(const CancelExportTaskRequest &request)
 {
@@ -1197,13 +1173,12 @@ CancelExportTaskResponse * Ec2Client::cancelExportTask(const CancelExportTaskReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelImportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels an in-process import virtual machine or import snapshot
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelImportTaskResponse * Ec2Client::cancelImportTask(const CancelImportTaskRequest &request)
 {
@@ -1211,18 +1186,17 @@ CancelImportTaskResponse * Ec2Client::cancelImportTask(const CancelImportTaskReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelReservedInstancesListingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels the specified Reserved Instance listing in the Reserved Instance
  *
  * Marketplace>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
  * Instance Marketplace</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListing(const CancelReservedInstancesListingRequest &request)
 {
@@ -1230,6 +1204,11 @@ CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListi
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelSpotFleetRequestsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels the specified Spot Fleet
  *
  * requests>
@@ -1238,12 +1217,6 @@ CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListi
  * Fleet should also terminate its Spot Instances. If you terminate the instances, the Spot Fleet request enters the
  * <code>cancelled_terminating</code> state. Otherwise, the Spot Fleet request enters the <code>cancelled_running</code>
  * state and the instances continue to run until they are interrupted or you terminate them
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const CancelSpotFleetRequestsRequest &request)
 {
@@ -1251,6 +1224,11 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelSpotInstanceRequestsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels one or more Spot Instance requests. Spot Instances are instances that Amazon EC2 starts on your behalf when the
  * maximum price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
@@ -1259,12 +1237,6 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
  * Guide</i>> <b>
  *
  * Canceling a Spot Instance request does not terminate running Spot Instances associated with the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelSpotInstanceRequestsResponse * Ec2Client::cancelSpotInstanceRequests(const CancelSpotInstanceRequestsRequest &request)
 {
@@ -1272,14 +1244,13 @@ CancelSpotInstanceRequestsResponse * Ec2Client::cancelSpotInstanceRequests(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ConfirmProductInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Determines whether a product code is associated with an instance. This action can only be used by the owner of the
  * product code. It is useful when a product code owner must verify whether another user's instance is eligible for
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConfirmProductInstanceResponse * Ec2Client::confirmProductInstance(const ConfirmProductInstanceRequest &request)
 {
@@ -1287,13 +1258,12 @@ ConfirmProductInstanceResponse * Ec2Client::confirmProductInstance(const Confirm
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CopyFpgaImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Copies the specified Amazon FPGA Image (AFI) to the current
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &request)
 {
@@ -1301,6 +1271,11 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CopyImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates the copy of an AMI from the specified source region to the current region. You specify the destination region
  * by using its endpoint when making the
  *
@@ -1309,12 +1284,6 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
  * For more information about the prerequisites and limits when copying an AMI, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/CopyingAMIs.html">Copying an AMI</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
 {
@@ -1322,6 +1291,11 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CopySnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same
  * region or from one region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs).
  * The snapshot is copied to the regional endpoint that you send the HTTP request
@@ -1346,12 +1320,6 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copying an
  * Amazon EBS Snapshot</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &request)
 {
@@ -1359,6 +1327,11 @@ CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateCustomerGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of
  * the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide
  * the Internet-routable IP address of the customer gateway's external interface. The IP address must be static and may be
@@ -1386,12 +1359,6 @@ CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &reques
  * You cannot create more than one customer gateway with the same VPN type, IP address, and BGP ASN parameter values. If
  * you run an identical request more than one time, the first request creates the customer gateway, and subsequent requests
  * return information about the existing customer gateway. The subsequent requests do not create new customer gateway
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCustomerGatewayRequest &request)
 {
@@ -1399,16 +1366,15 @@ CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCus
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateDefaultSubnetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a default subnet with a size <code>/20</code> IPv4 CIDR block in the specified Availability Zone in your default
  * VPC. You can have only one default subnet per Availability Zone. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#create-default-subnet">Creating a Default
  * Subnet</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefaultSubnetRequest &request)
 {
@@ -1416,6 +1382,11 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateDefaultVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a default VPC with a size <code>/16</code> IPv4 CIDR block and a default subnet in each Availability Zone. For
  * more information about the components of a default VPC, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">Default VPC and Default Subnets</a> in the
@@ -1431,12 +1402,6 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
  * If your account supports EC2-Classic, you cannot use this action to create a default VPC in a region that supports
  * EC2-Classic. If you want a default VPC in a region that supports EC2-Classic, see "I really want a default VPC for my
  * existing EC2 account. Is that possible?" in the <a href="http://aws.amazon.com/vpc/faqs/#Default_VPCs">Default VPCs
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcRequest &request)
 {
@@ -1444,6 +1409,11 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateDhcpOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a set of DHCP options for your VPC. After creating the set, you must associate it with the VPC, causing all
  * existing and new instances that you launch in the VPC to use this set of DHCP options. The following are the individual
  * DHCP options you can specify. For more information about the options, see <a
@@ -1488,12 +1458,6 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
  * choice. For more information about DHCP options, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptionsRequest &request)
 {
@@ -1501,15 +1465,14 @@ CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptions
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateEgressOnlyInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [IPv6 only] Creates an egress-only Internet gateway for your VPC. An egress-only Internet gateway is used to enable
  * outbound communication over IPv6 from instances in your VPC to the Internet, and prevents hosts outside of your VPC from
  * initiating an IPv6 connection with your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGateway(const CreateEgressOnlyInternetGatewayRequest &request)
 {
@@ -1517,6 +1480,11 @@ CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGat
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateFlowLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates one or more flow logs to capture IP traffic for a specific network interface, subnet, or VPC. Flow logs are
  * delivered to a specified log group in Amazon CloudWatch Logs. If you specify a VPC or subnet in the request, a log
  * stream is created in CloudWatch Logs for each network interface in the subnet or VPC. Log streams can include
@@ -1531,12 +1499,6 @@ CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGat
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/flow-logs.html">VPC Flow
  * Logs</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &request)
 {
@@ -1544,6 +1506,11 @@ CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateFpgaImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Amazon FPGA Image (AFI) from the specified design checkpoint
  *
  * (DCP)>
@@ -1555,12 +1522,6 @@ CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &
  * An AFI contains the FPGA bitstream that is ready to download to an FPGA. You can securely deploy an AFI on one or more
  * FPGA-accelerated instances. For more information, see the <a href="https://github.com/aws/aws-fpga/">AWS FPGA Hardware
  * Development
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageRequest &request)
 {
@@ -1568,6 +1529,11 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or
  *
  * stopped>
@@ -1580,12 +1546,6 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html">Creating
  * Amazon EBS-Backed Linux AMIs</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
 {
@@ -1593,6 +1553,11 @@ CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateInstanceExportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Exports a running or stopped instance to an S3
  *
  * bucket>
@@ -1600,12 +1565,6 @@ CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
  * For information about the supported operating systems, image formats, and known limitations for the types of instances
  * you can export, see <a href="http://docs.aws.amazon.com/vm-import/latest/userguide/vmexport.html">Exporting an Instance
  * as a VM Using VM Import/Export</a> in the <i>VM Import/Export User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const CreateInstanceExportTaskRequest &request)
 {
@@ -1613,18 +1572,17 @@ CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const Cre
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Internet gateway for use with a VPC. After creating the Internet gateway, you attach it to a VPC using
  *
  * <a>AttachInternetGateway</a>>
  *
  * For more information about your VPC and Internet gateway, see the <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInternetGatewayRequest &request)
 {
@@ -1632,6 +1590,11 @@ CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInt
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateKeyPairResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and displays the private key
  * for you to save to a file. The private key is returned as an unencrypted PEM encoded PKCS#1 private key. If a key with
  * the specified name already exists, Amazon EC2 returns an
@@ -1649,12 +1612,6 @@ CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInt
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a>
  * in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &request)
 {
@@ -1662,14 +1619,13 @@ CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateLaunchTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance
  * using <a>RunInstances</a>, you can specify a launch template instead of providing the launch parameters in the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunchTemplateRequest &request)
 {
@@ -1677,6 +1633,11 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateLaunchTemplateVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new version for a launch template. You can specify an existing version of launch template from which to base
  * the new
  *
@@ -1684,12 +1645,6 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
  *
  * Launch template versions are numbered in the order in which they are created. You cannot specify, change, or replace the
  * numbering of launch template
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(const CreateLaunchTemplateVersionRequest &request)
 {
@@ -1697,17 +1652,16 @@ CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNatGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a NAT gateway in the specified subnet. A NAT gateway can be used to enable instances in a private subnet to
  * connect to the Internet. This action creates a network interface in the specified subnet with a private IP address from
  * the IP address range of the subnet. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-nat-gateway.html">NAT Gateways</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayRequest &request)
 {
@@ -1715,6 +1669,11 @@ CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNetworkAclResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a network ACL in a VPC. Network ACLs provide an optional layer of security (in addition to security groups) for
  * the instances in your
  *
@@ -1723,12 +1682,6 @@ CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayReq
  * For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclRequest &request)
 {
@@ -1736,6 +1689,11 @@ CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNetworkAclEntryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an entry (a rule) in a network ACL with the specified rule number. Each network ACL has a set of numbered
  * ingress rules and a separate set of numbered egress rules. When determining whether a packet should be allowed in or out
  * of a subnet associated with the ACL, we process the entries in the ACL according to the rule numbers, in ascending
@@ -1756,12 +1714,6 @@ CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclReq
  * For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNetworkAclEntryRequest &request)
 {
@@ -1769,6 +1721,11 @@ CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNet
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNetworkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a network interface in the specified
  *
  * subnet>
@@ -1776,12 +1733,6 @@ CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNet
  * For more information about network interfaces, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateNetworkInterfaceRequest &request)
 {
@@ -1789,17 +1740,16 @@ CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateN
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNetworkInterfacePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Grants an AWS authorized partner account permission to attach the specified network interface to an instance in their
  *
  * account>
  *
  * You can grant permission to a single AWS account only, and only one account at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePermission(const CreateNetworkInterfacePermissionRequest &request)
 {
@@ -1807,6 +1757,11 @@ CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePerm
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreatePlacementGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a placement group in which to launch instances. The strategy of the placement group determines how the instances
  * are organized within the group.
  *
@@ -1819,12 +1774,6 @@ CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePerm
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement
  * Groups</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlacementGroupRequest &request)
 {
@@ -1832,6 +1781,11 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateReservedInstancesListingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a listing for Amazon EC2 Standard Reserved Instances to be sold in the Reserved Instance Marketplace. You can
  * submit one Standard Reserved Instance listing at a time. To get a list of your Standard Reserved Instances, you can use
  * the <a>DescribeReservedInstances</a>
@@ -1859,12 +1813,6 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
  * Instance Marketplace</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListing(const CreateReservedInstancesListingRequest &request)
 {
@@ -1872,6 +1820,11 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a route in a route table within a
  *
  * VPC>
@@ -1902,12 +1855,6 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
  * For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
 {
@@ -1915,6 +1862,11 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a route table for the specified VPC. After you create a route table, you can add routes and associate the table
  * with a
  *
@@ -1923,12 +1875,6 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
  * For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableRequest &request)
 {
@@ -1936,6 +1882,11 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateSecurityGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a security
  *
  * group>
@@ -1970,12 +1921,6 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  *
  * You can add or remove rules from your security groups using <a>AuthorizeSecurityGroupIngress</a>,
  * <a>AuthorizeSecurityGroupEgress</a>, <a>RevokeSecurityGroupIngress</a>, and
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurityGroupRequest &request)
 {
@@ -1983,6 +1928,11 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS
  * volumes, and to save data before shutting down an
  *
@@ -2019,12 +1969,6 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon Elastic
  * Block Store</a> and <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
  * Encryption</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &request)
 {
@@ -2032,16 +1976,15 @@ CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateSpotDatafeedSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a data feed for Spot Instances, enabling you to view Spot Instance usage logs. You can create one data feed per
  * AWS account. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscription(const CreateSpotDatafeedSubscriptionRequest &request)
 {
@@ -2049,6 +1992,11 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateSubnetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a subnet in an existing
  *
  * VPC>
@@ -2083,12 +2031,6 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
  * For more information about subnets, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &request)
 {
@@ -2096,6 +2038,11 @@ CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or overwrites one or more tags for the specified Amazon EC2 resource or resources. Each resource can have a maximum
  * of 50 tags. Each tag consists of a key and optional value. Tag keys must be unique per
  *
@@ -2107,12 +2054,6 @@ CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &reques
  * resources based on tags, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-iam-actions-resources.html">Supported
  * Resource-Level Permissions for Amazon EC2 API Actions</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
 {
@@ -2120,6 +2061,11 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the
  * regional endpoint that you send the HTTP request to. For more information see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and
@@ -2146,12 +2092,6 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Creating
  * an Amazon EBS Volume</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &request)
 {
@@ -2159,6 +2099,11 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a VPC with the specified IPv4 CIDR block. The smallest VPC you can create uses a /28 netmask (16 IPv4
  * addresses), and the largest uses a /16 netmask (65,536 IPv4 addresses). To help you decide how big to make your VPC, see
  * <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the
@@ -2182,12 +2127,6 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  * you create it. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html">Dedicated Instances</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
 {
@@ -2195,6 +2134,11 @@ CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpcEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC
  * and the service. The service may be provided by AWS, an AWS Marketplace partner, or another AWS account. For more
  * information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html">VPC Endpoints</a> in
@@ -2215,12 +2159,6 @@ CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
  * interface>
  *
  * Use <a>DescribeVpcEndpointServices</a> to get a list of supported
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpointRequest &request)
 {
@@ -2228,6 +2166,11 @@ CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpoint
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpcEndpointConnectionNotificationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a connection notification for a specified VPC endpoint or VPC endpoint service. A connection notification
  * notifies you of specific endpoint events. You must create an SNS topic to receive notifications. For more information,
  * see <a href="http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create a Topic</a> in the <i>Amazon Simple
@@ -2236,12 +2179,6 @@ CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpoint
  * Guide</i>>
  *
  * You can create a connection notification for interface endpoints
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointConnectionNotification(const CreateVpcEndpointConnectionNotificationRequest &request)
 {
@@ -2249,6 +2186,11 @@ CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointCo
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpcEndpointServiceConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can
  * connect. Service consumers can create an interface VPC endpoint to connect to your
  *
@@ -2257,12 +2199,6 @@ CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointCo
  * To create an endpoint service configuration, you must first create a Network Load Balancer for your service. For more
  * information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html">VPC Endpoint
  * Services</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServiceConfiguration(const CreateVpcEndpointServiceConfigurationRequest &request)
 {
@@ -2270,6 +2206,11 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter VPC with which to
  * create the connection. The accepter VPC can belong to another AWS account and can be in a different region to the
  * requester VPC. The requester VPC and accepter VPC cannot have overlapping CIDR
@@ -2289,12 +2230,6 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
  *
  * If you create a VPC peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has
  * a status of
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
@@ -2302,6 +2237,11 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpnConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a VPN connection between an existing virtual private gateway and a VPN customer gateway. The only supported
  * connection type is
  *
@@ -2327,12 +2267,6 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN
  * Connections</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConnectionRequest &request)
 {
@@ -2340,6 +2274,11 @@ CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConn
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpnConnectionRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a static route associated with a VPN connection between an existing virtual private gateway and a VPN customer
  * gateway. The static route allows traffic to be routed from the virtual private gateway to the VPN customer
  *
@@ -2348,12 +2287,6 @@ CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConn
  * For more information about VPN connections, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const CreateVpnConnectionRouteRequest &request)
 {
@@ -2361,6 +2294,11 @@ CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const Cre
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateVpnGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a virtual private gateway. A virtual private gateway is the endpoint on the VPC side of your VPN connection. You
  * can create a virtual private gateway before creating the VPC
  *
@@ -2369,12 +2307,6 @@ CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const Cre
  * For more information about virtual private gateways, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayRequest &request)
 {
@@ -2382,13 +2314,12 @@ CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteCustomerGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified customer gateway. You must delete the VPN connection before you can delete the customer
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCustomerGatewayResponse * Ec2Client::deleteCustomerGateway(const DeleteCustomerGatewayRequest &request)
 {
@@ -2396,15 +2327,14 @@ DeleteCustomerGatewayResponse * Ec2Client::deleteCustomerGateway(const DeleteCus
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteDhcpOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified set of DHCP options. You must disassociate the set of DHCP options before you can delete it. You
  * can disassociate the set of DHCP options by associating either a new set of options or the default set of options with
  * the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptionsRequest &request)
 {
@@ -2412,13 +2342,12 @@ DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptions
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteEgressOnlyInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an egress-only Internet
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGateway(const DeleteEgressOnlyInternetGatewayRequest &request)
 {
@@ -2426,13 +2355,12 @@ DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGat
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteFlowLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more flow
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFlowLogsResponse * Ec2Client::deleteFlowLogs(const DeleteFlowLogsRequest &request)
 {
@@ -2440,13 +2368,12 @@ DeleteFlowLogsResponse * Ec2Client::deleteFlowLogs(const DeleteFlowLogsRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteFpgaImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Amazon FPGA Image
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageRequest &request)
 {
@@ -2454,13 +2381,12 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Internet gateway. You must detach the Internet gateway from the VPC before you can delete
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInternetGatewayRequest &request)
 {
@@ -2468,13 +2394,12 @@ DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInt
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteKeyPairResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified key pair, by removing the public key from Amazon
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteKeyPairResponse * Ec2Client::deleteKeyPair(const DeleteKeyPairRequest &request)
 {
@@ -2482,13 +2407,12 @@ DeleteKeyPairResponse * Ec2Client::deleteKeyPair(const DeleteKeyPairRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteLaunchTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a launch template. Deleting a launch template deletes all of its
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLaunchTemplateResponse * Ec2Client::deleteLaunchTemplate(const DeleteLaunchTemplateRequest &request)
 {
@@ -2496,15 +2420,14 @@ DeleteLaunchTemplateResponse * Ec2Client::deleteLaunchTemplate(const DeleteLaunc
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteLaunchTemplateVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more versions of a launch template. You cannot delete the default version of a launch template; you must
  * first assign a different version as the default. If the default version is the only version for the launch template, you
  * must delete the entire launch template using
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(const DeleteLaunchTemplateVersionsRequest &request)
 {
@@ -2512,14 +2435,13 @@ DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNatGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified NAT gateway. Deleting a NAT gateway disassociates its Elastic IP address, but does not release the
  * address from your account. Deleting a NAT gateway does not delete any NAT gateway routes in your route
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNatGatewayResponse * Ec2Client::deleteNatGateway(const DeleteNatGatewayRequest &request)
 {
@@ -2527,14 +2449,13 @@ DeleteNatGatewayResponse * Ec2Client::deleteNatGateway(const DeleteNatGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkAclResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified network ACL. You can't delete the ACL if it's associated with any subnets. You can't delete the
  * default network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclRequest &request)
 {
@@ -2542,13 +2463,12 @@ DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkAclEntryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified ingress or egress entry (rule) from the specified network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNetworkAclEntryRequest &request)
 {
@@ -2556,13 +2476,12 @@ DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNet
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified network interface. You must detach the network interface before you can delete
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkInterfaceResponse * Ec2Client::deleteNetworkInterface(const DeleteNetworkInterfaceRequest &request)
 {
@@ -2570,15 +2489,14 @@ DeleteNetworkInterfaceResponse * Ec2Client::deleteNetworkInterface(const DeleteN
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkInterfacePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a permission for a network interface. By default, you cannot delete the permission if the account for which
  * you're removing the permission has attached the network interface to an instance. However, you can force delete the
  * permission, regardless of any
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkInterfacePermissionResponse * Ec2Client::deleteNetworkInterfacePermission(const DeleteNetworkInterfacePermissionRequest &request)
 {
@@ -2586,16 +2504,15 @@ DeleteNetworkInterfacePermissionResponse * Ec2Client::deleteNetworkInterfacePerm
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeletePlacementGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified placement group. You must terminate all instances in the placement group before you can delete the
  * placement group. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlacementGroupRequest &request)
 {
@@ -2603,13 +2520,12 @@ DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlace
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified route from the specified route
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRouteResponse * Ec2Client::deleteRoute(const DeleteRouteRequest &request)
 {
@@ -2617,14 +2533,13 @@ DeleteRouteResponse * Ec2Client::deleteRoute(const DeleteRouteRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified route table. You must disassociate the route table from any subnets before you can delete it. You
  * can't delete the main route
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableRequest &request)
 {
@@ -2632,18 +2547,17 @@ DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteSecurityGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a security
  *
  * group>
  *
  * If you attempt to delete a security group that is associated with an instance, or is referenced by another security
  * group, the operation fails with <code>InvalidGroup.InUse</code> in EC2-Classic or <code>DependencyViolation</code> in
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurityGroupRequest &request)
 {
@@ -2651,6 +2565,11 @@ DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurit
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * snapshot>
@@ -2670,12 +2589,6 @@ DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurit
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html">Deleting an Amazon EBS Snapshot</a>
  * in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
@@ -2683,13 +2596,12 @@ DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteSpotDatafeedSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the data feed for Spot
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSpotDatafeedSubscriptionResponse * Ec2Client::deleteSpotDatafeedSubscription(const DeleteSpotDatafeedSubscriptionRequest &request)
 {
@@ -2697,13 +2609,12 @@ DeleteSpotDatafeedSubscriptionResponse * Ec2Client::deleteSpotDatafeedSubscripti
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteSubnetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified subnet. You must terminate all running instances in the subnet before you can delete the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &request)
 {
@@ -2711,6 +2622,11 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified set of tags from the specified set of
  *
  * resources>
@@ -2718,12 +2634,6 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
  * To list the current tags, use <a>DescribeTags</a>. For more information about tags, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
 {
@@ -2731,6 +2641,11 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified EBS volume. The volume must be in the <code>available</code> state (not attached to an
  *
  * instance)> <note>
@@ -2741,12 +2656,6 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Deleting
  * an Amazon EBS Volume</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &request)
 {
@@ -2754,16 +2663,15 @@ DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified VPC. You must detach or delete all gateways and resources that are associated with the VPC before
  * you can delete it. For example, you must terminate all instances running in the VPC, delete all security groups
  * associated with the VPC (except the default one), delete all route tables associated with the VPC (except the default
  * one), and so
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcResponse * Ec2Client::deleteVpc(const DeleteVpcRequest &request)
 {
@@ -2771,13 +2679,12 @@ DeleteVpcResponse * Ec2Client::deleteVpc(const DeleteVpcRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpcEndpointConnectionNotificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more VPC endpoint connection
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcEndpointConnectionNotificationsResponse * Ec2Client::deleteVpcEndpointConnectionNotifications(const DeleteVpcEndpointConnectionNotificationsRequest &request)
 {
@@ -2785,15 +2692,14 @@ DeleteVpcEndpointConnectionNotificationsResponse * Ec2Client::deleteVpcEndpointC
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpcEndpointServiceConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more VPC endpoint service configurations in your account. Before you delete the endpoint service
  * configuration, you must reject any <code>Available</code> or <code>PendingAcceptance</code> interface endpoint
  * connections that are attached to the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcEndpointServiceConfigurationsResponse * Ec2Client::deleteVpcEndpointServiceConfigurations(const DeleteVpcEndpointServiceConfigurationsRequest &request)
 {
@@ -2801,14 +2707,13 @@ DeleteVpcEndpointServiceConfigurationsResponse * Ec2Client::deleteVpcEndpointSer
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpcEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route
  * tables that were associated with the endpoint. Deleting an interface endpoint deletes the endpoint network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcEndpointsResponse * Ec2Client::deleteVpcEndpoints(const DeleteVpcEndpointsRequest &request)
 {
@@ -2816,16 +2721,15 @@ DeleteVpcEndpointsResponse * Ec2Client::deleteVpcEndpoints(const DeleteVpcEndpoi
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a VPC peering connection. Either the owner of the requester VPC or the owner of the accepter VPC can delete the
  * VPC peering connection if it's in the <code>active</code> state. The owner of the requester VPC can delete a VPC peering
  * connection in the <code>pending-acceptance</code> state. You cannot delete a VPC peering connection that's in the
  * <code>failed</code>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
@@ -2833,6 +2737,11 @@ DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpnConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified VPN
  *
  * connection>
@@ -2842,12 +2751,6 @@ DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const
  * connection have been compromised, you can delete the VPN connection and create a new one that has new keys, without
  * needing to delete the VPC or virtual private gateway. If you create a new VPN connection, you must reconfigure the
  * customer gateway using the new configuration information returned with the new VPN connection
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConnectionRequest &request)
 {
@@ -2855,14 +2758,13 @@ DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConn
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpnConnectionRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified static route associated with a VPN connection between an existing virtual private gateway and a
  * VPN customer gateway. The static route allows traffic to be routed from the virtual private gateway to the VPN customer
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const DeleteVpnConnectionRouteRequest &request)
 {
@@ -2870,15 +2772,14 @@ DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const Del
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteVpnGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified virtual private gateway. We recommend that before you delete a virtual private gateway, you detach
  * it from the VPC and delete the VPN connection. Note that you don't need to delete the virtual private gateway if you
  * plan to delete and recreate the VPN connection between your VPC and your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayRequest &request)
 {
@@ -2886,6 +2787,11 @@ DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeregisterImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
  * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for those
  * instances until you terminate
@@ -2895,12 +2801,6 @@ DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayReq
  * When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot that was created for the root volume of the
  * instance during the AMI creation process. When you deregister an instance store-backed AMI, it doesn't affect the files
  * that you uploaded to Amazon S3 when you created the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageRequest &request)
 {
@@ -2908,6 +2808,11 @@ DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeAccountAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes attributes of your AWS account. The following are the supported account
  *
  * attributes> <ul> <li>
@@ -2935,12 +2840,6 @@ DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageReques
  * </p </li> <li>
  *
  * <code>vpc-max-elastic-ips</code>: The maximum number of Elastic IP addresses that you can allocate for use with
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -2948,6 +2847,11 @@ DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeAddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your Elastic IP
  *
  * addresses>
@@ -2955,12 +2859,6 @@ DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const D
  * An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddressesRequest &request)
 {
@@ -2968,6 +2866,11 @@ DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddresses
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeAggregateIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the longer ID format settings for all resource types in a specific region. This request is useful for
  * performing a quick audit to determine whether a specific region is fully opted in for longer IDs (17-character
  *
@@ -2986,12 +2889,6 @@ DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddresses
  * <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> |
  * <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> |
  * <code>vpc-peering-connection</code> | <code>vpn-connection</code> |
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const DescribeAggregateIdFormatRequest &request)
 {
@@ -2999,6 +2896,11 @@ DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeAvailabilityZonesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the Availability Zones that are available to you. The results include zones only for the region
  * you're currently using. If there is an event impacting an Availability Zone, you can use this request to view the state
  * and any provided message for that Availability
@@ -3008,12 +2910,6 @@ DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const D
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and Availability
  * Zones</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const DescribeAvailabilityZonesRequest &request)
 {
@@ -3021,6 +2917,11 @@ DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeBundleTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your bundling
  *
  * tasks> <note>
@@ -3028,12 +2929,6 @@ DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const D
  * Completed bundle tasks are listed for only a limited time. If your bundle task is no longer in the list, you can still
  * register an AMI from it. Just use <code>RegisterImage</code> with the Amazon S3 bucket name and image manifest name you
  * provided to the bundle
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundleTasksRequest &request)
 {
@@ -3041,14 +2936,13 @@ DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundl
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClassicLinkInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your linked EC2-Classic instances. This request only returns information about EC2-Classic
  * instances linked to a VPC through ClassicLink; you cannot use this request to return information about other
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(const DescribeClassicLinkInstancesRequest &request)
 {
@@ -3056,6 +2950,11 @@ DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeConversionTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your conversion tasks. For more information, see the <a
  * href="http://docs.aws.amazon.com/vm-import/latest/userguide/">VM Import/Export User
  *
@@ -3063,12 +2962,6 @@ DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(c
  *
  * For information about the import manifest referenced by this API action, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/manifest.html">VM Import
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const DescribeConversionTasksRequest &request)
 {
@@ -3076,6 +2969,11 @@ DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const Descr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeCustomerGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your VPN customer
  *
  * gateways>
@@ -3083,12 +2981,6 @@ DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const Descr
  * For more information about VPN customer gateways, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const DescribeCustomerGatewaysRequest &request)
 {
@@ -3096,6 +2988,11 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeDhcpOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your DHCP options
  *
  * sets>
@@ -3103,12 +3000,6 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
  * For more information about DHCP options sets, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpOptionsRequest &request)
 {
@@ -3116,13 +3007,12 @@ DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpO
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeEgressOnlyInternetGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your egress-only Internet
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyInternetGateways(const DescribeEgressOnlyInternetGatewaysRequest &request)
 {
@@ -3130,14 +3020,13 @@ DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyIntern
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeElasticGpusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the Elastic GPUs associated with your instances. For more information about Elastic GPUs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html">Amazon EC2 Elastic
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElasticGpusRequest &request)
 {
@@ -3145,13 +3034,12 @@ DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElast
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeExportTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your export
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExportTasksRequest &request)
 {
@@ -3159,14 +3047,13 @@ DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExpor
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFlowLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more flow logs. To view the information in your flow logs (the log streams for the network interfaces),
  * you must use the CloudWatch Logs console or the CloudWatch Logs
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsRequest &request)
 {
@@ -3174,13 +3061,12 @@ DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFpgaImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified Amazon FPGA Image
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const DescribeFpgaImageAttributeRequest &request)
 {
@@ -3188,14 +3074,13 @@ DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFpgaImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more available Amazon FPGA Images (AFIs). These include public AFIs, private AFIs that you own, and
  * AFIs owned by other AWS accounts for which you have load
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaImagesRequest &request)
 {
@@ -3203,6 +3088,11 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeHostReservationOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the Dedicated Host Reservations that are available to
  *
  * purchase>
@@ -3212,12 +3102,6 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
  * of the offering matches that of the Dedicated Host/s it will be associated with. For an overview of supported instance
  * types, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html">Dedicated Hosts
  * Overview</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOfferings(const DescribeHostReservationOfferingsRequest &request)
 {
@@ -3225,13 +3109,12 @@ DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOff
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeHostReservationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes Dedicated Host Reservations which are associated with Dedicated Hosts in your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const DescribeHostReservationsRequest &request)
 {
@@ -3239,18 +3122,17 @@ DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeHostsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your Dedicated
  *
  * Hosts>
  *
  * The results describe only the Dedicated Hosts in the region you're currently using. All listed instances consume
  * capacity on your Dedicated Host. Dedicated Hosts that have recently been released will be listed with the state
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &request)
 {
@@ -3258,13 +3140,12 @@ DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIamInstanceProfileAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your IAM instance profile
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceProfileAssociations(const DescribeIamInstanceProfileAssociationsRequest &request)
 {
@@ -3272,6 +3153,11 @@ DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceP
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the ID format settings for your resources on a per-region basis, for example, to view which resource types are
  * enabled for longer IDs. This request only returns information about resource types whose ID formats can be modified; it
  * does not return information about other resource
@@ -3294,12 +3180,6 @@ DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceP
  * IAM user defaults to the same settings as the root user, unless they explicitly override the settings by running the
  * <a>ModifyIdFormat</a> command. Resources created with longer IDs are visible to all IAM users, regardless of these
  * settings and provided that they have permission to use the relevant <code>Describe</code> command for the resource
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatRequest &request)
 {
@@ -3307,6 +3187,11 @@ DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIdentityIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the ID format settings for resources for the specified IAM user, IAM role, or root user. For example, you can
  * view the resource types that are enabled for longer IDs. This request only returns information about resource types
  * whose ID formats can be modified; it does not return information about other resource types. For more information, see
@@ -3328,12 +3213,6 @@ DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatReq
  * </p
  *
  * These settings apply to the principal specified in the request. They do not apply to the principal that makes the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityIdFormatResponse * Ec2Client::describeIdentityIdFormat(const DescribeIdentityIdFormatRequest &request)
 {
@@ -3341,13 +3220,12 @@ DescribeIdentityIdFormatResponse * Ec2Client::describeIdentityIdFormat(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified AMI. You can specify only one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const DescribeImageAttributeRequest &request)
 {
@@ -3355,6 +3233,11 @@ DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const Describ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the images (AMIs, AKIs, and ARIs) available to you. Images available to you include public
  * images, private images that you own, and private images owned by other AWS accounts but for which you have explicit
  * launch
@@ -3362,12 +3245,6 @@ DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const Describ
  * permissions> <note>
  *
  * Deregistered images are included in the returned results for an unspecified interval after
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImagesResponse * Ec2Client::describeImages(const DescribeImagesRequest &request)
 {
@@ -3375,13 +3252,12 @@ DescribeImagesResponse * Ec2Client::describeImages(const DescribeImagesRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeImportImageTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Displays details about an import virtual machine or import snapshot tasks that are already
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImportImageTasksResponse * Ec2Client::describeImportImageTasks(const DescribeImportImageTasksRequest &request)
 {
@@ -3389,13 +3265,12 @@ DescribeImportImageTasksResponse * Ec2Client::describeImportImageTasks(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeImportSnapshotTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your import snapshot
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImportSnapshotTasksResponse * Ec2Client::describeImportSnapshotTasks(const DescribeImportSnapshotTasksRequest &request)
 {
@@ -3403,17 +3278,16 @@ DescribeImportSnapshotTasksResponse * Ec2Client::describeImportSnapshotTasks(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInstanceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified instance. You can specify only one attribute at a time. Valid
  * attribute values are: <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> | <code>userData</code> |
  * <code>disableApiTermination</code> | <code>instanceInitiatedShutdownBehavior</code> | <code>rootDeviceName</code> |
  * <code>blockDeviceMapping</code> | <code>productCodes</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
  * <code>ebsOptimized</code> | <code>sriovNetSupport</code>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const DescribeInstanceAttributeRequest &request)
 {
@@ -3421,6 +3295,11 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInstanceCreditSpecificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the credit option for CPU usage of one or more of your T2 instances. The credit options are
  * <code>standard</code> and
  *
@@ -3445,12 +3324,6 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html">T2
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCreditSpecifications(const DescribeInstanceCreditSpecificationsRequest &request)
 {
@@ -3458,6 +3331,11 @@ DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCredit
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInstanceStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the status of one or more instances. By default, only running instances are described, unless you specifically
  * indicate to return the status of all
  *
@@ -3486,12 +3364,6 @@ DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCredit
  * <b>Instance state</b> - You can manage your instances from the moment you launch them through their termination. For
  * more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance
  * Lifecycle</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const DescribeInstanceStatusRequest &request)
 {
@@ -3499,6 +3371,11 @@ DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const Describ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your
  *
  * instances>
@@ -3516,12 +3393,6 @@ DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const Describ
  * If you describe instances in the rare case where an Availability Zone is experiencing a service disruption and you
  * specify instance IDs that are in the affected zone, or do not specify any instance IDs at all, the call fails. If you
  * describe instances and specify only instance IDs that are in an unaffected zone, the call works
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstancesRequest &request)
 {
@@ -3529,13 +3400,12 @@ DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstances
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInternetGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your Internet
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const DescribeInternetGatewaysRequest &request)
 {
@@ -3543,6 +3413,11 @@ DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeKeyPairsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your key
  *
  * pairs>
@@ -3550,12 +3425,6 @@ DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const Des
  * For more information about key pairs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsRequest &request)
 {
@@ -3563,14 +3432,13 @@ DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeLaunchTemplateVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more versions of a specified launch template. You can describe all versions, individual versions, or a
  * range of
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLaunchTemplateVersionsResponse * Ec2Client::describeLaunchTemplateVersions(const DescribeLaunchTemplateVersionsRequest &request)
 {
@@ -3578,13 +3446,12 @@ DescribeLaunchTemplateVersionsResponse * Ec2Client::describeLaunchTemplateVersio
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeLaunchTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more launch
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLaunchTemplatesResponse * Ec2Client::describeLaunchTemplates(const DescribeLaunchTemplatesRequest &request)
 {
@@ -3592,14 +3459,13 @@ DescribeLaunchTemplatesResponse * Ec2Client::describeLaunchTemplates(const Descr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeMovingAddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your Elastic IP addresses that are being moved to the EC2-VPC platform, or that are being restored to the
  * EC2-Classic platform. This request does not return information about any other Elastic IP addresses in your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const DescribeMovingAddressesRequest &request)
 {
@@ -3607,13 +3473,12 @@ DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const Descr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNatGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the your NAT
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGatewaysRequest &request)
 {
@@ -3621,6 +3486,11 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkAclsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your network
  *
  * ACLs>
@@ -3628,12 +3498,6 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
  * For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetworkAclsRequest &request)
 {
@@ -3641,13 +3505,12 @@ DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetwo
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkInterfaceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a network interface attribute. You can specify only one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNetworkInterfaceAttributeResponse * Ec2Client::describeNetworkInterfaceAttribute(const DescribeNetworkInterfaceAttributeRequest &request)
 {
@@ -3655,13 +3518,12 @@ DescribeNetworkInterfaceAttributeResponse * Ec2Client::describeNetworkInterfaceA
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkInterfacePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the permissions for your network interfaces.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNetworkInterfacePermissionsResponse * Ec2Client::describeNetworkInterfacePermissions(const DescribeNetworkInterfacePermissionsRequest &request)
 {
@@ -3669,13 +3531,12 @@ DescribeNetworkInterfacePermissionsResponse * Ec2Client::describeNetworkInterfac
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkInterfacesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNetworkInterfacesResponse * Ec2Client::describeNetworkInterfaces(const DescribeNetworkInterfacesRequest &request)
 {
@@ -3683,15 +3544,14 @@ DescribeNetworkInterfacesResponse * Ec2Client::describeNetworkInterfaces(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribePlacementGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your placement groups. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const DescribePlacementGroupsRequest &request)
 {
@@ -3699,15 +3559,14 @@ DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const Descr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribePrefixListsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes available AWS services in a prefix list format, which includes the prefix list name and prefix list ID of the
  * service and the IP address range for the service. A prefix list ID is required for creating an outbound security group
  * rule that allows traffic from a VPC to access an AWS service through a gateway VPC
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefixListsRequest &request)
 {
@@ -3715,6 +3574,11 @@ DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefi
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribePrincipalIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the ID format settings for the root user and all IAM roles and IAM users that have explicitly specified a
  * longer ID (17-character ID) preference.
  *
@@ -3735,12 +3599,6 @@ DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefi
  * <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> |
  * <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> |
  * <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const DescribePrincipalIdFormatRequest &request)
 {
@@ -3748,18 +3606,17 @@ DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeRegionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more regions that are currently available to
  *
  * you>
  *
  * For a list of the regions supported by Amazon EC2, see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region">Regions and
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsRequest &request)
 {
@@ -3767,6 +3624,11 @@ DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeReservedInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the Reserved Instances that you
  *
  * purchased>
@@ -3774,12 +3636,6 @@ DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsReques
  * For more information about Reserved Instances, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts-on-demand-reserved-instances.html">Reserved
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const DescribeReservedInstancesRequest &request)
 {
@@ -3787,6 +3643,11 @@ DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeReservedInstancesListingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your account's Reserved Instance listings in the Reserved Instance
  *
  * Marketplace>
@@ -3811,12 +3672,6 @@ DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const D
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
  * Instance Marketplace</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstancesListings(const DescribeReservedInstancesListingsRequest &request)
 {
@@ -3824,6 +3679,11 @@ DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstances
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeReservedInstancesModificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the modifications made to your Reserved Instances. If no parameter is specified, information about all your
  * Reserved Instances modification requests is returned. If a modification ID is specified, only information about the
  * specific modification is
@@ -3832,12 +3692,6 @@ DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstances
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying
  * Reserved Instances</a> in the Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInstancesModifications(const DescribeReservedInstancesModificationsRequest &request)
 {
@@ -3845,6 +3699,11 @@ DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInst
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeReservedInstancesOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes Reserved Instance offerings that are available for purchase. With Reserved Instances, you purchase the right
  * to launch instances for a period of time. During that time period, you do not receive insufficient capacity errors, and
  * you pay a lower usage rate than the rate charged for On-Demand instances for the actual time
@@ -3858,12 +3717,6 @@ DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInst
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
  * Instance Marketplace</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstancesOfferings(const DescribeReservedInstancesOfferingsRequest &request)
 {
@@ -3871,6 +3724,11 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeRouteTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your route
  *
  * tables>
@@ -3883,12 +3741,6 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
  * For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRouteTablesRequest &request)
 {
@@ -3896,6 +3748,11 @@ DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRoute
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeScheduledInstanceAvailabilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Finds available schedules that meet the specified
  *
  * criteria>
@@ -3908,12 +3765,6 @@ DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRoute
  *
  * After you find a schedule that meets your needs, call <a>PurchaseScheduledInstances</a> to purchase Scheduled Instances
  * with that
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScheduledInstanceAvailabilityResponse * Ec2Client::describeScheduledInstanceAvailability(const DescribeScheduledInstanceAvailabilityRequest &request)
 {
@@ -3921,13 +3772,12 @@ DescribeScheduledInstanceAvailabilityResponse * Ec2Client::describeScheduledInst
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeScheduledInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your Scheduled
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScheduledInstancesResponse * Ec2Client::describeScheduledInstances(const DescribeScheduledInstancesRequest &request)
 {
@@ -3935,14 +3785,13 @@ DescribeScheduledInstancesResponse * Ec2Client::describeScheduledInstances(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSecurityGroupReferencesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [EC2-VPC only] Describes the VPCs on the other side of a VPC peering connection that are referencing the security groups
  * you've specified in this
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupReferences(const DescribeSecurityGroupReferencesRequest &request)
 {
@@ -3950,6 +3799,11 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSecurityGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your security
  *
  * groups>
@@ -3959,12 +3813,6 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
  * Security Groups</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> and <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your VPC</a> in
  * the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const DescribeSecurityGroupsRequest &request)
 {
@@ -3972,6 +3820,11 @@ DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const Describ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSnapshotAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified snapshot. You can specify only one attribute at a
  *
  * time>
@@ -3979,12 +3832,6 @@ DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const Describ
  * For more information about EBS snapshots, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS Snapshots</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const DescribeSnapshotAttributeRequest &request)
 {
@@ -3992,6 +3839,11 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSnapshotsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the EBS snapshots available to you. Available snapshots include public snapshots available for
  * any AWS account to launch, private snapshots that you own, and private snapshots owned by another AWS account but for
  * which you've been given explicit create volume
@@ -4048,12 +3900,6 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
  * For more information about EBS snapshots, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS Snapshots</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
@@ -4061,15 +3907,14 @@ DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshots
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotDatafeedSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the data feed for Spot Instances. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscription(const DescribeSpotDatafeedSubscriptionRequest &request)
 {
@@ -4077,13 +3922,12 @@ DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotFleetInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the running instances for the specified Spot
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const DescribeSpotFleetInstancesRequest &request)
 {
@@ -4091,18 +3935,17 @@ DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotFleetRequestHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the events for the specified Spot Fleet request during the specified
  *
  * time>
  *
  * Spot Fleet events are delayed by up to 30 seconds before they can be described. This ensures that you can query by the
  * last evaluated time and not miss a recorded
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHistory(const DescribeSpotFleetRequestHistoryRequest &request)
 {
@@ -4110,17 +3953,16 @@ DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHis
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotFleetRequestsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your Spot Fleet
  *
  * requests>
  *
  * Spot Fleet requests are deleted 48 hours after they are canceled and their instances are
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const DescribeSpotFleetRequestsRequest &request)
 {
@@ -4128,6 +3970,11 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotInstanceRequestsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the Spot Instance requests that belong to your account. Spot Instances are instances that Amazon EC2 launches
  * when the Spot price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
@@ -4143,12 +3990,6 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
  * <code>spot</code>>
  *
  * Spot Instance requests are deleted 4 hours after they are canceled and their instances are
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(const DescribeSpotInstanceRequestsRequest &request)
 {
@@ -4156,6 +3997,11 @@ DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSpotPriceHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the Spot price history. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html">Spot Instance Pricing
  * History</a> in the <i>Amazon Elastic Compute Cloud User
@@ -4165,12 +4011,6 @@ DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(c
  * When you specify a start and end time, this operation returns the prices of the instance types within the time range
  * that you specified and the time when the price changed. The price is valid within the time period that you specified;
  * the response merely indicates the last time that the price
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const DescribeSpotPriceHistoryRequest &request)
 {
@@ -4178,15 +4018,14 @@ DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const Des
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeStaleSecurityGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [EC2-VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when
  * they reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC peering
  * connection has been
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(const DescribeStaleSecurityGroupsRequest &request)
 {
@@ -4194,6 +4033,11 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSubnetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your
  *
  * subnets>
@@ -4201,12 +4045,6 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
  * For more information about subnets, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsRequest &request)
 {
@@ -4214,6 +4052,11 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of the tags for your EC2
  *
  * resources>
@@ -4221,12 +4064,6 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &request)
 {
@@ -4234,6 +4071,11 @@ DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVolumeAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified volume. You can specify only one attribute at a
  *
  * time>
@@ -4241,12 +4083,6 @@ DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &reques
  * For more information about EBS volumes, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS Volumes</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const DescribeVolumeAttributeRequest &request)
 {
@@ -4254,6 +4090,11 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVolumeStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes
  * to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an
  * issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system
@@ -4291,12 +4132,6 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
  *
  * Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does
  * not indicate volumes in the <code>error</code> state (for example, when a volume is incapable of accepting
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVolumeStatusRequest &request)
 {
@@ -4304,6 +4139,11 @@ DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVol
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVolumesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified EBS
  *
  * volumes>
@@ -4318,12 +4158,6 @@ DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVol
  * For more information about EBS volumes, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html">Amazon EBS Volumes</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesRequest &request)
 {
@@ -4331,6 +4165,11 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVolumesModificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Reports the current modification status of EBS
  *
  * volumes>
@@ -4348,12 +4187,6 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
  * User Guide</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods">Monitoring Volume
  * Modifications"</a>.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(const DescribeVolumesModificationsRequest &request)
 {
@@ -4361,13 +4194,12 @@ DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified attribute of the specified VPC. You can specify only one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpcAttributeRequest &request)
 {
@@ -4375,13 +4207,12 @@ DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpc
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcClassicLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the ClassicLink status of one or more
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const DescribeVpcClassicLinkRequest &request)
 {
@@ -4389,18 +4220,17 @@ DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const Describ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcClassicLinkDnsSupportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the ClassicLink DNS support status of one or more VPCs. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
  * the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic
  * instance. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcClassicLinkDnsSupportResponse * Ec2Client::describeVpcClassicLinkDnsSupport(const DescribeVpcClassicLinkDnsSupportRequest &request)
 {
@@ -4408,13 +4238,12 @@ DescribeVpcClassicLinkDnsSupportResponse * Ec2Client::describeVpcClassicLinkDnsS
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointConnectionNotificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the connection notifications for VPC endpoints and VPC endpoint
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointConnectionNotificationsResponse * Ec2Client::describeVpcEndpointConnectionNotifications(const DescribeVpcEndpointConnectionNotificationsRequest &request)
 {
@@ -4422,13 +4251,12 @@ DescribeVpcEndpointConnectionNotificationsResponse * Ec2Client::describeVpcEndpo
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the VPC endpoint connections to your VPC endpoint services, including any endpoints that are pending your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointConnectionsResponse * Ec2Client::describeVpcEndpointConnections(const DescribeVpcEndpointConnectionsRequest &request)
 {
@@ -4436,13 +4264,12 @@ DescribeVpcEndpointConnectionsResponse * Ec2Client::describeVpcEndpointConnectio
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointServiceConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the VPC endpoint service configurations in your account (your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointServiceConfigurationsResponse * Ec2Client::describeVpcEndpointServiceConfigurations(const DescribeVpcEndpointServiceConfigurationsRequest &request)
 {
@@ -4450,13 +4277,12 @@ DescribeVpcEndpointServiceConfigurationsResponse * Ec2Client::describeVpcEndpoin
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointServicePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the principals (service consumers) that are permitted to discover your VPC endpoint
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointServicePermissionsResponse * Ec2Client::describeVpcEndpointServicePermissions(const DescribeVpcEndpointServicePermissionsRequest &request)
 {
@@ -4464,13 +4290,12 @@ DescribeVpcEndpointServicePermissionsResponse * Ec2Client::describeVpcEndpointSe
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointServicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes available services to which you can create a VPC
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointServicesResponse * Ec2Client::describeVpcEndpointServices(const DescribeVpcEndpointServicesRequest &request)
 {
@@ -4478,13 +4303,12 @@ DescribeVpcEndpointServicesResponse * Ec2Client::describeVpcEndpointServices(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your VPC
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcEndpointsResponse * Ec2Client::describeVpcEndpoints(const DescribeVpcEndpointsRequest &request)
 {
@@ -4492,13 +4316,12 @@ DescribeVpcEndpointsResponse * Ec2Client::describeVpcEndpoints(const DescribeVpc
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcPeeringConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your VPC peering
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcPeeringConnectionsResponse * Ec2Client::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
@@ -4506,13 +4329,12 @@ DescribeVpcPeeringConnectionsResponse * Ec2Client::describeVpcPeeringConnections
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpcsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &request)
 {
@@ -4520,6 +4342,11 @@ DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpnConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your VPN
  *
  * connections>
@@ -4527,12 +4354,6 @@ DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &reques
  * For more information about VPN connections, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const DescribeVpnConnectionsRequest &request)
 {
@@ -4540,6 +4361,11 @@ DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const Describ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeVpnGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your virtual private
  *
  * gateways>
@@ -4547,12 +4373,6 @@ DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const Describ
  * For more information about virtual private gateways, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGatewaysRequest &request)
 {
@@ -4560,14 +4380,13 @@ DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGa
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DetachClassicLinkVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unlinks (detaches) a linked EC2-Classic instance from a VPC. After the instance has been unlinked, the VPC security
  * groups are no longer associated with it. An instance is automatically unlinked from a VPC when it's
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClassicLinkVpcRequest &request)
 {
@@ -4575,14 +4394,13 @@ DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClass
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DetachInternetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches an Internet gateway from a VPC, disabling connectivity between the Internet and the VPC. The VPC must not
  * contain any running instances with Elastic IP addresses or public IPv4
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInternetGatewayRequest &request)
 {
@@ -4590,13 +4408,12 @@ DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInt
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DetachNetworkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches a network interface from an
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachNetworkInterfaceRequest &request)
 {
@@ -4604,6 +4421,11 @@ DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachN
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DetachVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating
  * system before detaching the volume. Failure to do so can result in the volume becoming stuck in the <code>busy</code>
  * state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force
@@ -4620,12 +4442,6 @@ DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachN
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detaching an Amazon EBS Volume</a>
  * in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &request)
 {
@@ -4633,6 +4449,11 @@ DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DetachVpnGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches a virtual private gateway from a VPC. You do this if you're planning to turn off the VPC and not use it
  * anymore. You can confirm a virtual private gateway has been completely detached from a VPC by describing the virtual
  * private gateway (any attachments to the virtual private gateway are also
@@ -4641,12 +4462,6 @@ DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &reques
  *
  * You must wait for the attachment's state to switch to <code>detached</code> before you can delete the VPC or attach a
  * different VPC to the virtual private
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayRequest &request)
 {
@@ -4654,13 +4469,12 @@ DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableVgwRoutePropagationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables a virtual private gateway (VGW) from propagating routes to a specified route table of a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const DisableVgwRoutePropagationRequest &request)
 {
@@ -4668,13 +4482,12 @@ DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableVpcClassicLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables ClassicLink for a VPC. You cannot disable ClassicLink for a VPC that has EC2-Classic instances linked to
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVpcClassicLinkRequest &request)
 {
@@ -4682,16 +4495,15 @@ DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVp
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableVpcClassicLinkDnsSupportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed
  * between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information about
  * ClassicLink, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
  * the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSupport(const DisableVpcClassicLinkDnsSupportRequest &request)
 {
@@ -4699,6 +4511,11 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateAddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates an Elastic IP address from the instance or network interface it's associated
  *
  * with>
@@ -4710,12 +4527,6 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
  * Guide</i>>
  *
  * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateAddressRequest &request)
 {
@@ -4723,17 +4534,16 @@ DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateA
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateIamInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates an IAM instance profile from a running or stopped
  *
  * instance>
  *
  * Use <a>DescribeIamInstanceProfileAssociations</a> to get the association
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfile(const DisassociateIamInstanceProfileRequest &request)
 {
@@ -4741,6 +4551,11 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a subnet from a route
  *
  * table>
@@ -4749,12 +4564,6 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
  * the VPC's main route table. For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const DisassociateRouteTableRequest &request)
 {
@@ -4762,14 +4571,13 @@ DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const Disasso
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateSubnetCidrBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a CIDR block from a subnet. Currently, you can disassociate an IPv6 CIDR block only. You must detach or
  * delete all gateways and resources that are associated with the CIDR block before you can disassociate it.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(const DisassociateSubnetCidrBlockRequest &request)
 {
@@ -4777,6 +4585,11 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateVpcCidrBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a CIDR block from a VPC. To disassociate the CIDR block, you must specify its association ID. You can get
  * the association ID by using <a>DescribeVpcs</a>. You must detach or delete all gateways and resources that are
  * associated with the CIDR block before you can disassociate it.
@@ -4784,12 +4597,6 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
  * </p
  *
  * You cannot disassociate the CIDR block with which you originally created the VPC (the primary CIDR
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const DisassociateVpcCidrBlockRequest &request)
 {
@@ -4797,13 +4604,12 @@ DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const Dis
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableVgwRoutePropagationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables a virtual private gateway (VGW) to propagate routes to the specified route table of a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableVgwRoutePropagationResponse * Ec2Client::enableVgwRoutePropagation(const EnableVgwRoutePropagationRequest &request)
 {
@@ -4811,13 +4617,12 @@ EnableVgwRoutePropagationResponse * Ec2Client::enableVgwRoutePropagation(const E
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableVolumeIOResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables I/O operations for a volume that had I/O operations disabled because the data on the volume was potentially
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &request)
 {
@@ -4825,18 +4630,17 @@ EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableVpcClassicLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables a VPC for ClassicLink. You can then link EC2-Classic instances to your ClassicLink-enabled VPC to allow
  * communication over private IP addresses. You cannot enable your VPC for ClassicLink if any of your VPC's route tables
  * have existing routes for address ranges within the <code>10.0.0.0/8</code> IP address range, excluding local routes for
  * VPCs in the <code>10.0.0.0/16</code> and <code>10.1.0.0/16</code> IP address ranges. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcClassicLinkRequest &request)
 {
@@ -4844,18 +4648,17 @@ EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcCl
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableVpcClassicLinkDnsSupportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
  * the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic
  * instance. For more information about ClassicLink, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSupport(const EnableVpcClassicLinkDnsSupportRequest &request)
 {
@@ -4863,6 +4666,11 @@ EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSuppo
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetConsoleOutputResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the console output for the specified
  *
  * instance>
@@ -4885,12 +4693,6 @@ EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSuppo
  * it>
  *
  * For Windows instances, the instance console output includes output from the EC2Config
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputRequest &request)
 {
@@ -4898,17 +4700,16 @@ GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetConsoleScreenshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve a JPG-format screenshot of a running instance to help with
  *
  * troubleshooting>
  *
  * The returned content is
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConsoleScreenshotResponse * Ec2Client::getConsoleScreenshot(const GetConsoleScreenshotRequest &request)
 {
@@ -4916,18 +4717,17 @@ GetConsoleScreenshotResponse * Ec2Client::getConsoleScreenshot(const GetConsoleS
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetHostReservationPurchasePreviewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Preview a reservation purchase with configurations that match those of your Dedicated Host. You must have active
  * Dedicated Hosts in your account before you purchase a
  *
  * reservation>
  *
  * This is a preview of the <a>PurchaseHostReservation</a> action and does not result in the offering being
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchasePreview(const GetHostReservationPurchasePreviewRequest &request)
 {
@@ -4935,13 +4735,12 @@ GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchas
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetLaunchTemplateDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the configuration data of the specified instance. You can use this data to create a launch
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunchTemplateDataRequest &request)
 {
@@ -4949,6 +4748,11 @@ GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunch
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetPasswordDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the encrypted administrator password for a running Windows
  *
  * instance>
@@ -4974,12 +4778,6 @@ GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunch
  * When you launch an instance, password generation and encryption may take a few minutes. If you try to retrieve the
  * password before it's available, the output returns an empty string. We recommend that you wait up to 15 minutes after
  * launching an instance before trying to retrieve the generated
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPasswordDataResponse * Ec2Client::getPasswordData(const GetPasswordDataRequest &request)
 {
@@ -4987,15 +4785,14 @@ GetPasswordDataResponse * Ec2Client::getPasswordData(const GetPasswordDataReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetReservedInstancesExchangeQuoteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a quote and exchange information for exchanging one or more specified Convertible Reserved Instances for a new
  * Convertible Reserved Instance. If the exchange cannot be performed, the reason is returned in the response. Use
  * <a>AcceptReservedInstancesExchangeQuote</a> to perform the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExchangeQuote(const GetReservedInstancesExchangeQuoteRequest &request)
 {
@@ -5003,15 +4800,14 @@ GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExcha
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Import single or multi-volume disk images or EBS snapshots into an Amazon Machine Image (AMI). For more information, see
  * <a href="http://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html">Importing a VM as an Image
  * Using VM Import/Export</a> in the <i>VM Import/Export User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
 {
@@ -5019,6 +4815,11 @@ ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an import instance task using metadata from the specified disk image. <code>ImportInstance</code> only supports
  * single-volume VMs. To import multi-volume VMs, use <a>ImportImage</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ec2-cli-vmimport-export.html">Importing a Virtual
@@ -5028,12 +4829,6 @@ ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
  *
  * For information about the import manifest referenced by this API action, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/manifest.html">VM Import
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &request)
 {
@@ -5041,6 +4836,11 @@ ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportKeyPairResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Imports the public key from an RSA key pair that you created with a third-party tool. Compare this with
  * <a>CreateKeyPair</a>, in which AWS creates the key pair and gives the keys to you (AWS keeps a copy of the public key).
  * With ImportKeyPair, you create the key pair and give AWS just the public key. The private key is never transferred
@@ -5051,12 +4851,6 @@ ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &
  * For more information about key pairs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a> in the <i>Amazon Elastic
  * Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &request)
 {
@@ -5064,13 +4858,12 @@ ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Imports a disk into an EBS
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &request)
 {
@@ -5078,6 +4871,11 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an import volume task using metadata from the specified disk image.For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/importing-your-volumes-into-amazon-ebs.html">Importing
  * Disks to Amazon
@@ -5086,12 +4884,6 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
  *
  * For information about the import manifest referenced by this API action, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/manifest.html">VM Import
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &request)
 {
@@ -5099,13 +4891,12 @@ ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyFpgaImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified attribute of the specified Amazon FPGA Image
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const ModifyFpgaImageAttributeRequest &request)
 {
@@ -5113,17 +4904,16 @@ ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const Mod
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyHostsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, AWS will place instances that you
  * launch with a tenancy of <code>host</code>, but without targeting a specific host ID, onto any available Dedicated Host
  * in your account which has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID if you
  * want the instance to launch onto a specific host. If no host ID is provided, the instance will be launched onto a
  * suitable host which has auto-placement
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
 {
@@ -5131,6 +4921,11 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the ID format for the specified resource on a per-region basis. You can specify that resources should receive
  * longer IDs (17-character IDs) when they are
  *
@@ -5159,12 +4954,6 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
  *
  * Resources created with longer IDs are visible to all IAM roles and users, regardless of these settings and provided that
  * they have permission to use the relevant <code>Describe</code> command for the resource
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &request)
 {
@@ -5172,6 +4961,11 @@ ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIdentityIdFormatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the ID format of a resource for a specified IAM user, IAM role, or the root user for an account; or all IAM
  * users, IAM roles, and the root user for an account. You can specify that resources should receive longer IDs
  * (17-character IDs) when they are created.
@@ -5203,12 +4997,6 @@ ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &
  *
  * Resources created with longer IDs are visible to all IAM roles and users, regardless of these settings and provided that
  * they have permission to use the relevant <code>Describe</code> command for the resource
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyIdentityIdFormatRequest &request)
 {
@@ -5216,6 +5004,11 @@ ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyI
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified attribute of the specified AMI. You can specify only one attribute at a time. You can use the
  * <code>Attribute</code> parameter to specify the attribute or one of the following parameters: <code>Description</code>,
  * <code>LaunchPermission</code>, or
@@ -5228,12 +5021,6 @@ ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyI
  *
  * To enable the SriovNetSupport enhanced networking attribute of an image, enable SriovNetSupport on an instance and
  * create an AMI from the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImageAttributeRequest &request)
 {
@@ -5241,6 +5028,11 @@ ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImage
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstanceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified attribute of the specified instance. You can specify only one attribute at a
  *
  * time>
@@ -5248,12 +5040,6 @@ ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImage
  * To modify some attributes, the instance must be stopped. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html">Modifying
  * Attributes of a Stopped Instance</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const ModifyInstanceAttributeRequest &request)
 {
@@ -5261,6 +5047,11 @@ ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const Modif
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstanceCreditSpecificationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the credit option for CPU usage on a running or stopped T2 instance. The credit options are
  * <code>standard</code> and
  *
@@ -5268,12 +5059,6 @@ ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const Modif
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html">T2
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpecification(const ModifyInstanceCreditSpecificationRequest &request)
 {
@@ -5281,6 +5066,11 @@ ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpeci
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstancePlacementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the placement attributes for a specified instance. You can do the
  *
  * following> <ul> <li>
@@ -5313,12 +5103,6 @@ ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpeci
  * request>
  *
  * To modify the host ID, tenancy, or placement group for an instance, the instance must be in the <code>stopped</code>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const ModifyInstancePlacementRequest &request)
 {
@@ -5326,14 +5110,13 @@ ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const Modif
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyLaunchTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies a launch template. You can specify which version of the launch template to set as the default version. When
  * launching an instance, the default version applies when a launch template version is not
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunchTemplateRequest &request)
 {
@@ -5341,13 +5124,12 @@ ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunc
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyNetworkInterfaceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified network interface attribute. You can specify only one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttribute(const ModifyNetworkInterfaceAttributeRequest &request)
 {
@@ -5355,6 +5137,11 @@ ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttri
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyReservedInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the Availability Zone, instance count, instance type, or network platform (EC2-Classic or EC2-VPC) of your
  * Reserved Instances. The Reserved Instances to be modified must be identical, except for Availability Zone, network
  * platform, and instance
@@ -5363,12 +5150,6 @@ ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttri
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying
  * Reserved Instances</a> in the Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const ModifyReservedInstancesRequest &request)
 {
@@ -5376,6 +5157,11 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifySnapshotAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a
  * snapshot's list of create volume permissions, but you cannot do both in a single API call. If you need to both add and
  * remove account IDs for a snapshot, you must use multiple API
@@ -5390,12 +5176,6 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
  * For more information on modifying snapshot permissions, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing Snapshots</a>
  * in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const ModifySnapshotAttributeRequest &request)
 {
@@ -5403,6 +5183,11 @@ ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const Modif
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifySpotFleetRequestResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified Spot Fleet
  *
  * request>
@@ -5428,12 +5213,6 @@ ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const Modif
  * manually>
  *
  * If you are finished with your Spot Fleet for now, but will use it again later, you can set the target capacity to
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifySpotFleetRequestRequest &request)
 {
@@ -5441,13 +5220,12 @@ ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifyS
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifySubnetAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies a subnet attribute. You can only modify one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySubnetAttributeRequest &request)
 {
@@ -5455,6 +5233,11 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If
  * your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without
  * stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux,
@@ -5494,12 +5277,6 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
  *
  * If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before
  * applying further modifications to the affected EBS
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &request)
 {
@@ -5507,6 +5284,11 @@ ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVolumeAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies a volume
  *
  * attribute>
@@ -5519,12 +5301,6 @@ ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &reques
  *
  * You can change the default behavior to resume I/O operations. We recommend that you change this only for boot volumes or
  * for volumes that are stateless or
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVolumeAttributeResponse * Ec2Client::modifyVolumeAttribute(const ModifyVolumeAttributeRequest &request)
 {
@@ -5532,13 +5308,12 @@ ModifyVolumeAttributeResponse * Ec2Client::modifyVolumeAttribute(const ModifyVol
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified attribute of the specified
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttributeRequest &request)
 {
@@ -5546,16 +5321,15 @@ ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttrib
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint
  * (interface or gateway). For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html">VPC Endpoints</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpointRequest &request)
 {
@@ -5563,14 +5337,13 @@ ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpoint
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcEndpointConnectionNotificationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies a connection notification for VPC endpoint or VPC endpoint service. You can change the SNS topic for the
  * notification, or the events for which to be notified.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointConnectionNotification(const ModifyVpcEndpointConnectionNotificationRequest &request)
 {
@@ -5578,15 +5351,14 @@ ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointCo
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcEndpointServiceConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers for your
  * service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an
  * interface VPC
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServiceConfiguration(const ModifyVpcEndpointServiceConfigurationRequest &request)
 {
@@ -5594,15 +5366,14 @@ ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServ
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcEndpointServicePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the permissions for your <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html">VPC endpoint service</a>. You can add
  * or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts) to connect to your endpoint
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServicePermissions(const ModifyVpcEndpointServicePermissionsRequest &request)
 {
@@ -5610,6 +5381,11 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcPeeringConnectionOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the VPC peering connection options on one side of a VPC peering connection. You can do the
  *
  * following> <ul> <li>
@@ -5633,12 +5409,6 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
  * connection options, depending on whether their VPC was the requester or accepter for the VPC peering connection. If the
  * peered VPCs are in the same account, you can modify the requester and accepter options in the same request. To confirm
  * which VPC is the accepter and requester for a VPC peering connection, use the <a>DescribeVpcPeeringConnections</a>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectionOptions(const ModifyVpcPeeringConnectionOptionsRequest &request)
 {
@@ -5646,6 +5416,11 @@ ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectio
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcTenancyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the instance tenancy attribute of the specified VPC. You can change the instance tenancy attribute of a VPC to
  * <code>default</code> only. You cannot change the instance tenancy attribute to
  *
@@ -5660,12 +5435,6 @@ ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectio
  * For more information about Dedicated Instances, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html">Dedicated Instances</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyRequest &request)
 {
@@ -5673,6 +5442,11 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * MonitorInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring Your Instances and
  * Volumes</a> in the <i>Amazon Elastic Compute Cloud User
@@ -5680,12 +5454,6 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
  * Guide</i>>
  *
  * To disable detailed monitoring, see
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesRequest &request)
 {
@@ -5693,17 +5461,16 @@ MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * MoveAddressToVpcResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Moves an Elastic IP address from the EC2-Classic platform to the EC2-VPC platform. The Elastic IP address must be
  * allocated to your account for more than 24 hours, and it must not be associated with an instance. After the Elastic IP
  * address is moved, it is no longer available for use in the EC2-Classic platform, unless you move it back using the
  * <a>RestoreAddressToClassic</a> request. You cannot move an Elastic IP address that was originally allocated for use in
  * the EC2-VPC platform to the EC2-Classic platform.
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcRequest &request)
 {
@@ -5711,15 +5478,14 @@ MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * PurchaseHostReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Purchase a reservation with configurations that match those of your Dedicated Host. You must have active Dedicated Hosts
  * in your account before you purchase a reservation. This action results in the specified reservation being purchased and
  * charged to your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const PurchaseHostReservationRequest &request)
 {
@@ -5727,6 +5493,11 @@ PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const Purch
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * PurchaseReservedInstancesOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Purchases a Reserved Instance for use with your account. With Reserved Instances, you pay a lower hourly rate compared
  * to On-Demand instance
  *
@@ -5741,12 +5512,6 @@ PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const Purch
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts-on-demand-reserved-instances.html">Reserved
  * Instances</a> and <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
  * Marketplace</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstancesOffering(const PurchaseReservedInstancesOfferingRequest &request)
 {
@@ -5754,6 +5519,11 @@ PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstances
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * PurchaseScheduledInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Purchases one or more Scheduled Instances with the specified
  *
  * schedule>
@@ -5766,12 +5536,6 @@ PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstances
  * period>
  *
  * After you purchase a Scheduled Instance, you can't cancel, modify, or resell your
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const PurchaseScheduledInstancesRequest &request)
 {
@@ -5779,6 +5543,11 @@ PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RebootInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests a reboot of one or more instances. This operation is asynchronous; it only queues a request to reboot the
  * specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated
  * instances are
@@ -5792,12 +5561,6 @@ PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const
  * For more information about troubleshooting, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Getting Console Output and Rebooting
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesRequest &request)
 {
@@ -5805,6 +5568,11 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RegisterImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers an AMI. When you're creating an AMI, this is the final step you must complete before you can launch an
  * instance from the AMI. For more information about creating AMIs, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami.html">Creating Your Own AMIs</a> in the
@@ -5837,12 +5605,6 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  *
  * If needed, you can deregister an AMI at any time. Any modifications you make to an AMI backed by an instance store
  * volume invalidates its registration. If you make changes to an image, deregister the previous image and register the new
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &request)
 {
@@ -5850,13 +5612,12 @@ RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RejectVpcEndpointConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Rejects one or more VPC endpoint connection requests to your VPC endpoint
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectVpcEndpointConnectionsResponse * Ec2Client::rejectVpcEndpointConnections(const RejectVpcEndpointConnectionsRequest &request)
 {
@@ -5864,15 +5625,14 @@ RejectVpcEndpointConnectionsResponse * Ec2Client::rejectVpcEndpointConnections(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RejectVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Rejects a VPC peering connection request. The VPC peering connection must be in the <code>pending-acceptance</code>
  * state. Use the <a>DescribeVpcPeeringConnections</a> request to view your outstanding VPC peering connection requests. To
  * delete an active VPC peering connection, or to delete a VPC peering connection request that you initiated, use
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const RejectVpcPeeringConnectionRequest &request)
 {
@@ -5880,6 +5640,11 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReleaseAddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Releases the specified Elastic IP
  *
  * address>
@@ -5902,12 +5667,6 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
  *
  * [EC2-VPC] After you release an Elastic IP address for use in a VPC, you might be able to recover it. For more
  * information, see
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &request)
 {
@@ -5915,6 +5674,11 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReleaseHostsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * When you no longer want to use an On-Demand Dedicated Host it can be released. On-Demand billing is stopped and the host
  * goes into <code>released</code> state. The host ID of Dedicated Hosts that have been released can no longer be specified
  * in another request, e.g., ModifyHosts. You must stop or terminate all instances on a host before it can be
@@ -5927,12 +5691,6 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
  * again>
  *
  * Released hosts will still appear in a <a>DescribeHosts</a>
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &request)
 {
@@ -5940,18 +5698,17 @@ ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceIamInstanceProfileAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Replaces an IAM instance profile for the specified running instance. You can use this action to change the IAM instance
  * profile that's associated with an instance without having to disassociate the existing IAM instance profile
  *
  * first>
  *
  * Use <a>DescribeIamInstanceProfileAssociations</a> to get the association
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProfileAssociation(const ReplaceIamInstanceProfileAssociationRequest &request)
 {
@@ -5959,6 +5716,11 @@ ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProf
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceNetworkAclAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes which network ACL a subnet is associated with. By default when you create a subnet, it's automatically
  * associated with the default network ACL. For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
@@ -5967,12 +5729,6 @@ ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProf
  * Guide</i>>
  *
  * This is an idempotent
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(const ReplaceNetworkAclAssociationRequest &request)
 {
@@ -5980,15 +5736,14 @@ ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceNetworkAclEntryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Replaces an entry (rule) in a network ACL. For more information about network ACLs, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const ReplaceNetworkAclEntryRequest &request)
 {
@@ -5996,6 +5751,11 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Replaces an existing route within a route table in a VPC. You must provide only one of the following: Internet gateway
  * or virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, or egress-only
  * Internet
@@ -6005,12 +5765,6 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
  * For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
  * Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &request)
 {
@@ -6018,6 +5772,11 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceRouteTableAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the route table associated with a given subnet in a VPC. After the operation completes, the subnet uses the
  * routes in the new route table it's associated with. For more information about route tables, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
@@ -6027,12 +5786,6 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
  *
  * You can also use ReplaceRouteTableAssociation to change which table is the main route table in the VPC. You just specify
  * the main route table's association ID and the route table to be the new main route
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(const ReplaceRouteTableAssociationRequest &request)
 {
@@ -6040,6 +5793,11 @@ ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(c
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReportInstanceStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Submits feedback about the status of an instance. The instance must be in the <code>running</code> state. If your
  * experience with the instance differs from the instance status returned by <a>DescribeInstanceStatus</a>, use
  * <a>ReportInstanceStatus</a> to report your experience with the instance. Amazon EC2 collects this information to improve
@@ -6048,12 +5806,6 @@ ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(c
  * checks>
  *
  * Use of this action does not change the value returned by
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInstanceStatusRequest &request)
 {
@@ -6061,6 +5813,11 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RequestSpotFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a Spot Fleet
  *
  * request>
@@ -6088,12 +5845,6 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html">Spot
  * Fleet Requests</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetRequest &request)
 {
@@ -6101,16 +5852,15 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RequestSpotInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a Spot Instance request. Spot Instances are instances that Amazon EC2 launches when the maximum price that you
  * specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
  * Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpotInstancesRequest &request)
 {
@@ -6118,14 +5868,13 @@ RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpot
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ResetFpgaImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets the specified attribute of the specified Amazon FPGA Image (AFI) to its default value. You can only reset the
  * load permission
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const ResetFpgaImageAttributeRequest &request)
 {
@@ -6133,17 +5882,16 @@ ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const Reset
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ResetImageAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets an attribute of an AMI to its default
  *
  * value> <note>
  *
  * The productCodes attribute can't be
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAttributeRequest &request)
 {
@@ -6151,6 +5899,11 @@ ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAtt
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ResetInstanceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets an attribute of an instance to its default value. To reset the <code>kernel</code> or <code>ramdisk</code>, the
  * instance must be in a stopped state. To reset the <code>sourceDestCheck</code>, the instance can be either running or
  *
@@ -6160,12 +5913,6 @@ ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAtt
  * <code>true</code>, which means checking is enabled. This value must be <code>false</code> for a NAT instance to perform
  * NAT. For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT
  * Instances</a> in the <i>Amazon Virtual Private Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetInstanceAttributeResponse * Ec2Client::resetInstanceAttribute(const ResetInstanceAttributeRequest &request)
 {
@@ -6173,13 +5920,12 @@ ResetInstanceAttributeResponse * Ec2Client::resetInstanceAttribute(const ResetIn
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ResetNetworkInterfaceAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets a network interface attribute. You can specify only one attribute at a
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribute(const ResetNetworkInterfaceAttributeRequest &request)
 {
@@ -6187,6 +5933,11 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ResetSnapshotAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets permission settings for the specified
  *
  * snapshot>
@@ -6194,12 +5945,6 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
  * For more information on modifying snapshot permissions, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing Snapshots</a>
  * in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSnapshotAttributeRequest &request)
 {
@@ -6207,15 +5952,14 @@ ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSn
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RestoreAddressToClassicResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Restores an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform. You
  * cannot move an Elastic IP address that was originally allocated for use in EC2-VPC. The Elastic IP address must not be
  * associated with an instance or network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const RestoreAddressToClassicRequest &request)
 {
@@ -6223,6 +5967,11 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RevokeSecurityGroupEgressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [EC2-VPC only] Removes one or more egress rules from a security group for EC2-VPC. This action doesn't apply to security
  * groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the
  * existing rule's values
@@ -6237,12 +5986,6 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
  * rule>
  *
  * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const RevokeSecurityGroupEgressRequest &request)
 {
@@ -6250,6 +5993,11 @@ RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const R
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RevokeSecurityGroupIngressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more ingress rules from a security group. To remove a rule, the values that you specify (for example,
  * ports) must match the existing rule's values
  *
@@ -6267,12 +6015,6 @@ RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const R
  * rule>
  *
  * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const RevokeSecurityGroupIngressRequest &request)
 {
@@ -6280,6 +6022,11 @@ RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RunInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Launches the specified number of instances using an AMI for which you have permissions.
  *
  * </p
@@ -6353,12 +6100,6 @@ RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const
  * Instance Immediately Terminates</a>, and <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html">Troubleshooting
  * Connecting to Your Instance</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &request)
 {
@@ -6366,6 +6107,11 @@ RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &reques
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RunScheduledInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Launches the specified Scheduled
  *
  * Instances>
@@ -6379,12 +6125,6 @@ RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &reques
  * you can launch it again after a few minutes. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-scheduled-instances.html">Scheduled Instances</a> in the
  * <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunScheduledInstancesRequest &request)
 {
@@ -6392,6 +6132,11 @@ RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunSchedu
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * StartInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts an Amazon EBS-backed instance that you've previously
  *
  * stopped>
@@ -6418,12 +6163,6 @@ RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunSchedu
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &request)
 {
@@ -6431,6 +6170,11 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * StopInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops an Amazon EBS-backed
  *
  * instance>
@@ -6467,12 +6211,6 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
  * information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshooting Stopping
  * Your Instance</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &request)
 {
@@ -6480,6 +6218,11 @@ StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &req
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * TerminateInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Shuts down one or more instances. This operation is idempotent; if you terminate an instance more than once, each call
  * succeeds.
  *
@@ -6512,12 +6255,6 @@ StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &req
  * For more information about troubleshooting, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html">Troubleshooting
  * Terminating Your Instance</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstancesRequest &request)
 {
@@ -6525,13 +6262,12 @@ TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstan
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * UnassignIpv6AddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unassigns one or more IPv6 addresses from a network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignIpv6AddressesRequest &request)
 {
@@ -6539,13 +6275,12 @@ UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignI
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * UnassignPrivateIpAddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unassigns one or more secondary private IP addresses from a network
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const UnassignPrivateIpAddressesRequest &request)
 {
@@ -6553,15 +6288,14 @@ UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * UnmonitorInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables detailed monitoring for a running instance. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring Your Instances and
  * Volumes</a> in the <i>Amazon Elastic Compute Cloud User
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstancesRequest &request)
 {
@@ -6569,6 +6303,11 @@ UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstan
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * UpdateSecurityGroupRuleDescriptionsEgressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * [EC2-VPC only] Updates the description of an egress (outbound) security group rule. You can replace an existing
  * description, or add a description to a rule that did not have one
  *
@@ -6576,12 +6315,6 @@ UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstan
  *
  * You specify the description as part of the IP permissions structure. You can remove a description for a security group
  * rule by omitting the description parameter in the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsEgress(const UpdateSecurityGroupRuleDescriptionsEgressRequest &request)
 {
@@ -6589,6 +6322,11 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
 }
 
 /*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * UpdateSecurityGroupRuleDescriptionsIngressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the description of an ingress (inbound) security group rule. You can replace an existing description, or add a
  * description to a rule that did not have one
  *
@@ -6596,12 +6334,6 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
  *
  * You specify the description as part of the IP permissions structure. You can remove a description for a security group
  * rule by omitting the description parameter in the
- *
- * @param  request Request to send to Amazon Elastic Compute Cloud.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsIngress(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request)
 {
@@ -6609,19 +6341,16 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGr
 }
 
 /*!
- * @internal
+ * \class QtAws::EC2::Ec2ClientPrivate
+ * \brief The Ec2ClientPrivate class provides private implementation for Ec2Client.
+ * \internal
  *
- * @class  Ec2ClientPrivate
- *
- * @brief  Private implementation for Ec2Client.
+ * \ingroup aws-clients
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Ec2ClientPrivate object.
- *
- * @param  q  Pointer to this object's public Ec2Client instance.
+ * Constructs a Ec2ClientPrivate object with public implementation \a q.
  */
 Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

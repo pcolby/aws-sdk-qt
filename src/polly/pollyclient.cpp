@@ -48,10 +48,10 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::PollyClient
- *
  * \brief The PollyClient class provides access to the Amazon Polly service.
  *
- * \ingroup Polly
+ * \ingroup aws-clients
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -116,6 +116,11 @@ PollyClient::PollyClient(
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * DeleteLexiconResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available
  * for speech synthesis, nor is it possible to retrieve it using either the <code>GetLexicon</code> or
  * <code>ListLexicon</code>
@@ -123,12 +128,6 @@ PollyClient::PollyClient(
  * APIs>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &request)
 {
@@ -136,6 +135,11 @@ DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &r
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * DescribeVoicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified
  * language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.
  *
@@ -158,12 +162,6 @@ DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &r
  * </p
  *
  * This operation requires permissions to perform the <code>polly:DescribeVoices</code>
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest &request)
 {
@@ -171,14 +169,13 @@ DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * GetLexiconResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 {
@@ -186,14 +183,13 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * ListLexiconsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &request)
 {
@@ -201,6 +197,11 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * PutLexiconResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stores a pronunciation lexicon in an AWS Region. If a lexicon with the same name already exists in the region, it is
  * overwritten by the new lexicon. Lexicon operations have eventual consistency, therefore, it might take some time before
  * the lexicon is available to the SynthesizeSpeech
@@ -208,12 +209,6 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
  * operation>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 {
@@ -221,16 +216,15 @@ PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 }
 
 /*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * SynthesizeSpeechResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some
  * alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices)
  * unless phoneme mapping is used. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html">How it
- *
- * @param  request Request to send to Amazon Polly.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechRequest &request)
 {
@@ -238,19 +232,16 @@ SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechR
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::PollyClientPrivate
+ * \brief The PollyClientPrivate class provides private implementation for PollyClient.
+ * \internal
  *
- * @class  PollyClientPrivate
- *
- * @brief  Private implementation for PollyClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollyClientPrivate object.
- *
- * @param  q  Pointer to this object's public PollyClient instance.
+ * Constructs a PollyClientPrivate object with public implementation \a q.
  */
 PollyClientPrivate::PollyClientPrivate(PollyClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

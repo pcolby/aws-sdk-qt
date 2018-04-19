@@ -70,10 +70,10 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::MediaLiveClient
- *
  * \brief The MediaLiveClient class provides access to the AWS Elemental MediaLive service.
  *
- * \ingroup MediaLive
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaLive
  *
  */
 
@@ -131,12 +131,11 @@ MediaLiveClient::MediaLiveClient(
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelRequest &request)
 {
@@ -144,12 +143,11 @@ CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelReques
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateInputResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &request)
 {
@@ -157,12 +155,11 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateInputSecurityGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(const CreateInputSecurityGroupRequest &request)
 {
@@ -170,12 +167,11 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelRequest &request)
 {
@@ -183,12 +179,11 @@ DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelReques
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteInputResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &request)
 {
@@ -196,12 +191,11 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteInputSecurityGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request)
 {
@@ -209,12 +203,11 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannelRequest &request)
 {
@@ -222,12 +215,11 @@ DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannel
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeInputResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputRequest &request)
 {
@@ -235,12 +227,11 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeInputSecurityGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request)
 {
@@ -248,12 +239,11 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListChannelsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &request)
 {
@@ -261,12 +251,11 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListInputSecurityGroupsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const ListInputSecurityGroupsRequest &request)
 {
@@ -274,12 +263,11 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListInputsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
 {
@@ -287,12 +275,11 @@ ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &reques
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * StartChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &request)
 {
@@ -300,12 +287,11 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * StopChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &request)
 {
@@ -313,12 +299,11 @@ StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &req
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelRequest &request)
 {
@@ -326,12 +311,11 @@ UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelReques
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateInputResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &request)
 {
@@ -339,12 +323,11 @@ UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &req
 }
 
 /*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateInputSecurityGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaLive.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request)
 {
@@ -352,19 +335,16 @@ UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(con
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::MediaLiveClientPrivate
+ * \brief The MediaLiveClientPrivate class provides private implementation for MediaLiveClient.
+ * \internal
  *
- * @class  MediaLiveClientPrivate
- *
- * @brief  Private implementation for MediaLiveClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaLiveClientPrivate object.
- *
- * @param  q  Pointer to this object's public MediaLiveClient instance.
+ * Constructs a MediaLiveClientPrivate object with public implementation \a q.
  */
 MediaLiveClientPrivate::MediaLiveClientPrivate(MediaLiveClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

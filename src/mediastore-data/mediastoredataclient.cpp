@@ -46,10 +46,10 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::MediaStoreDataClient
- *
  * \brief The MediaStoreDataClient class provides access to the AWS Elemental MediaStore Data Plane service.
  *
- * \ingroup MediaStoreData
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -109,13 +109,12 @@ MediaStoreDataClient::MediaStoreDataClient(
 }
 
 /*!
+ * Sends \a request to the MediaStoreDataClient service, and returns a pointer to an
+ * DeleteObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an object at the specified
- *
- * @param  request Request to send to AWS Elemental MediaStore Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequest &request)
 {
@@ -123,13 +122,12 @@ DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequ
 }
 
 /*!
+ * Sends \a request to the MediaStoreDataClient service, and returns a pointer to an
+ * DescribeObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the headers for an object at the specified
- *
- * @param  request Request to send to AWS Elemental MediaStore Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObjectRequest &request)
 {
@@ -137,13 +135,12 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
 }
 
 /*!
+ * Sends \a request to the MediaStoreDataClient service, and returns a pointer to an
+ * GetObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Downloads the object at the specified
- *
- * @param  request Request to send to AWS Elemental MediaStore Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &request)
 {
@@ -151,13 +148,12 @@ GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &requ
 }
 
 /*!
+ * Sends \a request to the MediaStoreDataClient service, and returns a pointer to an
+ * ListItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides a list of metadata entries about folders and objects in the specified
- *
- * @param  request Request to send to AWS Elemental MediaStore Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &request)
 {
@@ -165,13 +161,12 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
 }
 
 /*!
+ * Sends \a request to the MediaStoreDataClient service, and returns a pointer to an
+ * PutObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads an object to the specified path. Object sizes are limited to 10
- *
- * @param  request Request to send to AWS Elemental MediaStore Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
 {
@@ -179,19 +174,16 @@ PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &requ
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::MediaStoreDataClientPrivate
+ * \brief The MediaStoreDataClientPrivate class provides private implementation for MediaStoreDataClient.
+ * \internal
  *
- * @class  MediaStoreDataClientPrivate
- *
- * @brief  Private implementation for MediaStoreDataClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaStoreDataClientPrivate object.
- *
- * @param  q  Pointer to this object's public MediaStoreDataClient instance.
+ * Constructs a MediaStoreDataClientPrivate object with public implementation \a q.
  */
 MediaStoreDataClientPrivate::MediaStoreDataClientPrivate(MediaStoreDataClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

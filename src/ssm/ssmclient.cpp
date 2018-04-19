@@ -230,10 +230,10 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SsmClient
- *
  * \brief The SsmClient class provides access to the Amazon Simple Systems Manager (SSM) ( SSM) service.
  *
- * \ingroup SSM
+ * \ingroup aws-clients
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -315,6 +315,11 @@ SsmClient::SsmClient(
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * AddTagsToResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,
  * managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize
  * your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
@@ -337,12 +342,6 @@ SsmClient::SsmClient(
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a> in the
  * <i>Amazon EC2 User
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -350,14 +349,13 @@ AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResource
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CancelCommandResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attempts to cancel the command specified by the Command ID. There is no guarantee that the command will be terminated
  * and the underlying process
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &request)
 {
@@ -365,17 +363,16 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateActivationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers your on-premises server or virtual machine with Amazon EC2 so that you can manage these resources using Run
  * Command. An on-premises server or virtual machine that has been registered with EC2 is called a managed instance. For
  * more information about activations, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting Up
  * Systems Manager in Hybrid
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateActivationResponse * SsmClient::createActivation(const CreateActivationRequest &request)
 {
@@ -383,6 +380,11 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates the specified Systems Manager document with the specified instances or
  *
  * targets>
@@ -394,12 +396,6 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
  *
  * If you associate a document with an instance that already has an associated document, the system throws the
  * AssociationAlreadyExists
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociationRequest &request)
 {
@@ -407,6 +403,11 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateAssociationBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates the specified Systems Manager document with the specified instances or
  *
  * targets>
@@ -418,12 +419,6 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
  *
  * If you associate a document with an instance that already has an associated document, the system throws the
  * AssociationAlreadyExists
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateAssociationBatchRequest &request)
 {
@@ -431,17 +426,16 @@ CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateA
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a Systems Manager
  *
  * document>
  *
  * After you create a document, you can use CreateAssociation to associate it with one or more running
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &request)
 {
@@ -449,13 +443,12 @@ CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const CreateMaintenanceWindowRequest &request)
 {
@@ -463,18 +456,17 @@ CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const Creat
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreatePatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a patch
  *
  * baseline> <note>
  *
  * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
  * see <a
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBaselineRequest &request)
 {
@@ -482,6 +474,11 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateResourceDataSyncResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a resource data sync configuration to a single bucket in Amazon S3. This is an asynchronous operation that
  * returns immediately. After a successful initial sync is completed, the system continuously syncs data to the Amazon S3
  * bucket. To check the status of the sync, use the
@@ -493,12 +490,6 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  * policy. To view an example of a restrictive Amazon S3 bucket policy for Resource Data Sync, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync">Configuring
  * Resource Data Sync for
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateResourceDataSyncRequest &request)
 {
@@ -506,15 +497,14 @@ CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateR
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteActivationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an activation. You are not required to delete an activation. If you delete an activation, you can no longer use
  * it to register additional managed instances. Deleting an activation does not de-register managed instances. You must
  * manually de-register managed
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationRequest &request)
 {
@@ -522,6 +512,11 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the specified Systems Manager document from the specified
  *
  * instance>
@@ -529,12 +524,6 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
  * When you disassociate a document from an instance, it does not change the configuration of the instance. To change the
  * configuration state of an instance after you disassociate a document, you must create a new document with the desired
  * configuration and associate it with the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociationRequest &request)
 {
@@ -542,18 +531,17 @@ DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociation
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the Systems Manager document and all instance associations to the
  *
  * document>
  *
  * Before you delete the document, we recommend that you use <a>DeleteAssociation</a> to disassociate all instances that
  * are associated with the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &request)
 {
@@ -561,13 +549,12 @@ DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const DeleteMaintenanceWindowRequest &request)
 {
@@ -575,13 +562,12 @@ DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const Delet
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteParameterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete a parameter from the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterRequest &request)
 {
@@ -589,13 +575,12 @@ DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterReques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete a list of parameters. This API is used to delete parameters by using the Amazon EC2
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersRequest &request)
 {
@@ -603,13 +588,12 @@ DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeletePatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBaselineRequest &request)
 {
@@ -617,15 +601,14 @@ DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBa
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteResourceDataSyncResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a Resource Data Sync configuration. After the configuration is deleted, changes to inventory data on managed
  * instances are no longer synced with the target Amazon S3 bucket. Deleting a sync configuration does not delete data in
  * the target Amazon S3
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteResourceDataSyncRequest &request)
 {
@@ -633,14 +616,13 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeregisterManagedInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any
  * time. If you don't plan to use Run Command on the server, we suggest uninstalling the SSM Agent
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const DeregisterManagedInstanceRequest &request)
 {
@@ -648,13 +630,12 @@ DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const D
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeregisterPatchBaselineForPatchGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a patch group from a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselineForPatchGroup(const DeregisterPatchBaselineForPatchGroupRequest &request)
 {
@@ -662,13 +643,12 @@ DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselin
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeregisterTargetFromMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a target from a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromMaintenanceWindow(const DeregisterTargetFromMaintenanceWindowRequest &request)
 {
@@ -676,13 +656,12 @@ DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromM
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeregisterTaskFromMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a task from a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaintenanceWindow(const DeregisterTaskFromMaintenanceWindowRequest &request)
 {
@@ -690,14 +669,13 @@ DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaint
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeActivationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Details about the activation, including: the date and time the activation was created, the expiration date, the IAM role
  * assigned to the instances in the activation, and the number of instances activated by this
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActivationsRequest &request)
 {
@@ -705,16 +683,15 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the association for the specified target or instance. If you created the association by using the
  * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you created the
  * association by specifying an instance ID and a Systems Manager document, then you retrieve the association by specifying
  * the document name and the instance ID.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssociationRequest &request)
 {
@@ -722,13 +699,12 @@ DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssoc
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAutomationExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides details about all active and terminated Automation
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(const DescribeAutomationExecutionsRequest &request)
 {
@@ -736,13 +712,12 @@ DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(c
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAutomationStepExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Information about all active and terminated step executions in an Automation
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExecutions(const DescribeAutomationStepExecutionsRequest &request)
 {
@@ -750,13 +725,12 @@ DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExec
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAvailablePatchesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all patches that could possibly be included in a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const DescribeAvailablePatchesRequest &request)
 {
@@ -764,13 +738,12 @@ DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const Des
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified Systems Manager
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentRequest &request)
 {
@@ -778,14 +751,13 @@ DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeDocumentPermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the permissions for a Systems Manager document. If you created the document, you are the owner. If a document
  * is shared, it can either be shared privately (by specifying a user's AWS account ID) or publicly (<i>All</i>).
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const DescribeDocumentPermissionRequest &request)
 {
@@ -793,13 +765,12 @@ DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeEffectiveInstanceAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * All associations for the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInstanceAssociations(const DescribeEffectiveInstanceAssociationsRequest &request)
 {
@@ -807,14 +778,13 @@ DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInst
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeEffectivePatchesForPatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Note that
  * this API applies only to Windows patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectivePatchesForPatchBaseline(const DescribeEffectivePatchesForPatchBaselineRequest &request)
 {
@@ -822,13 +792,12 @@ DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectiveP
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInstanceAssociationsStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The status of the associations for the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociationsStatus(const DescribeInstanceAssociationsStatusRequest &request)
 {
@@ -836,16 +805,15 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInstanceInformationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your instances. You can use this to get information about instances like the operating system
  * platform, the SSM Agent version (Linux), status etc. If you specify one or more instance IDs, it returns information for
  * those instances. If you do not specify instance IDs, it returns information for all your instances. If you specify an
  * instance ID that is not valid or an instance that you do not own, you receive an error.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(const DescribeInstanceInformationRequest &request)
 {
@@ -853,13 +821,12 @@ DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(con
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInstancePatchStatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the high-level patch state of one or more
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(const DescribeInstancePatchStatesRequest &request)
 {
@@ -867,13 +834,12 @@ DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(con
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInstancePatchStatesForPatchGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the high-level patch state for the instances in the specified patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePatchStatesForPatchGroup(const DescribeInstancePatchStatesForPatchGroupRequest &request)
 {
@@ -881,14 +847,13 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInstancePatchesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about the patches on the specified instance and their state relative to the patch baseline being
  * used for the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const DescribeInstancePatchesRequest &request)
 {
@@ -896,13 +861,12 @@ DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const Descr
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowExecutionTaskInvocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the individual task executions (one per target) for a particular task executed as part of a Maintenance Window
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeMaintenanceWindowExecutionTaskInvocations(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &request)
 {
@@ -910,13 +874,12 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeM
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowExecutionTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * For a given Maintenance Window execution, lists the tasks that were
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenanceWindowExecutionTasks(const DescribeMaintenanceWindowExecutionTasksRequest &request)
 {
@@ -924,14 +887,13 @@ DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenance
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the executions of a Maintenance Window. This includes information about when the Maintenance Window was scheduled
  * to be active, and information about tasks registered and run with the Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWindowExecutions(const DescribeMaintenanceWindowExecutionsRequest &request)
 {
@@ -939,13 +901,12 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the targets registered with the Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowTargets(const DescribeMaintenanceWindowTargetsRequest &request)
 {
@@ -953,13 +914,12 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tasks in a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTasks(const DescribeMaintenanceWindowTasksRequest &request)
 {
@@ -967,13 +927,12 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the Maintenance Windows in an AWS
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
@@ -981,6 +940,11 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get information about a
  *
  * parameter>
@@ -990,12 +954,6 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
  * of <code>MaxResults</code>. If the service reaches an internal limit while processing the results, it stops the
  * operation and returns the matching values up to that point and a <code>NextToken</code>. You can specify the
  * <code>NextToken</code> in a subsequent call to get the next set of
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParametersResponse * SsmClient::describeParameters(const DescribeParametersRequest &request)
 {
@@ -1003,13 +961,12 @@ DescribeParametersResponse * SsmClient::describeParameters(const DescribeParamet
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribePatchBaselinesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the patch baselines in your AWS
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const DescribePatchBaselinesRequest &request)
 {
@@ -1017,13 +974,12 @@ DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const Describ
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribePatchGroupStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns high-level aggregated patch compliance state for a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const DescribePatchGroupStateRequest &request)
 {
@@ -1031,13 +987,12 @@ DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const Descr
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribePatchGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all patch groups that have been registered with patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatchGroupsRequest &request)
 {
@@ -1045,13 +1000,12 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetAutomationExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get detailed information about a particular Automation
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAutomationExecutionRequest &request)
 {
@@ -1059,13 +1013,12 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetCommandInvocationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns detailed information about command execution for an invocation or plugin.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandInvocationRequest &request)
 {
@@ -1073,14 +1026,13 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetDefaultPatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
  * example, you can create a default patch baseline for each operating
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDefaultPatchBaselineRequest &request)
 {
@@ -1088,14 +1040,13 @@ GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDe
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetDeployablePatchSnapshotForInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current snapshot for the patch baseline the instance uses. This API is primarily used by the
  * AWS-RunPatchBaseline Systems Manager document.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSnapshotForInstance(const GetDeployablePatchSnapshotForInstanceRequest &request)
 {
@@ -1103,13 +1054,12 @@ GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSna
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the contents of the specified Systems Manager
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 {
@@ -1117,13 +1067,12 @@ GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetInventoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Query inventory
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &request)
 {
@@ -1131,14 +1080,13 @@ GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &reques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetInventorySchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item
  * type.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySchemaRequest &request)
 {
@@ -1146,13 +1094,12 @@ GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySch
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintenanceWindowRequest &request)
 {
@@ -1160,13 +1107,12 @@ GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintena
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetMaintenanceWindowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves details about a specific task executed as part of a Maintenance Window
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution(const GetMaintenanceWindowExecutionRequest &request)
 {
@@ -1174,13 +1120,12 @@ GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetMaintenanceWindowExecutionTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the details about a specific task executed as part of a Maintenance Window
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecutionTask(const GetMaintenanceWindowExecutionTaskRequest &request)
 {
@@ -1188,14 +1133,13 @@ GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecu
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetMaintenanceWindowExecutionTaskInvocationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a task invocation. A task invocation is a specific task executing on a specific target. Maintenance Windows
  * report status for all invocations.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceWindowExecutionTaskInvocation(const GetMaintenanceWindowExecutionTaskInvocationRequest &request)
 {
@@ -1203,13 +1147,12 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetMaintenanceWindowTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tasks in a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const GetMaintenanceWindowTaskRequest &request)
 {
@@ -1217,13 +1160,12 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetParameterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get information about a parameter by using the parameter name.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &request)
 {
@@ -1231,13 +1173,12 @@ GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &reques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetParameterHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Query a list of all parameters used by the AWS
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterHistoryRequest &request)
 {
@@ -1245,13 +1186,12 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get details of a
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &request)
 {
@@ -1259,6 +1199,11 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetParametersByPathResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve parameters in a specific hierarchy. For more information, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-working.html">Working with Systems
  * Manager Parameters</a>.
@@ -1274,12 +1219,6 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
  * results> <note>
  *
  * This API action doesn't support filtering by tags.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParametersByPathRequest &request)
 {
@@ -1287,13 +1226,12 @@ GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParameters
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetPatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineRequest &request)
 {
@@ -1301,13 +1239,12 @@ GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetPatchBaselineForPatchGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the patch baseline that should be used for the specified patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup(const GetPatchBaselineForPatchGroupRequest &request)
 {
@@ -1315,13 +1252,12 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListAssociationVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves all versions of an association for a specific association
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListAssociationVersionsRequest &request)
 {
@@ -1329,13 +1265,12 @@ ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListA
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the associations for the specified Systems Manager document or
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsRequest &request)
 {
@@ -1343,15 +1278,14 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListCommandInvocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command
  * invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command
  * invocation is created for each requested instance ID. ListCommandInvocations provide status about command
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCommandInvocationsRequest &request)
 {
@@ -1359,13 +1293,12 @@ ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCom
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListCommandsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the commands requested by users of the AWS
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &request)
 {
@@ -1373,14 +1306,13 @@ ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &reques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListComplianceItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * For a specified resource ID, this API action returns a list of compliance statuses for different resource types.
  * Currently, you can only specify one resource ID per call. List results depend on the criteria specified in the filter.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianceItemsRequest &request)
 {
@@ -1388,15 +1320,14 @@ ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianc
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListComplianceSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a summary count of compliant and non-compliant resources for a compliance type. For example, this call can
  * return State Manager associations, patches, or custom compliance types according to the filter criteria that you
  * specify.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListComplianceSummariesRequest &request)
 {
@@ -1404,13 +1335,12 @@ ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListC
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListDocumentVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all versions for a
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumentVersionsRequest &request)
 {
@@ -1418,13 +1348,12 @@ ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumen
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListDocumentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your Systems Manager
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &request)
 {
@@ -1432,13 +1361,12 @@ ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &req
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListInventoryEntriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * A list of inventory items returned by the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInventoryEntriesRequest &request)
 {
@@ -1446,14 +1374,13 @@ ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInvento
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListResourceComplianceSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a resource-level summary count. The summary includes information about compliant and non-compliant statuses and
  * detailed compliance-item severity counts, according to the filter criteria you
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSummaries(const ListResourceComplianceSummariesRequest &request)
 {
@@ -1461,6 +1388,11 @@ ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSumma
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListResourceDataSyncResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your resource data sync configurations. Includes information about the last time a sync attempted to start, the
  * last sync status, and the last time a sync successfully
  *
@@ -1471,12 +1403,6 @@ ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSumma
  * whether there are more sync configurations to list, check the value of <code>NextToken</code> in the output. If there
  * are more sync configurations to list, you can request them by specifying the <code>NextToken</code> returned in the call
  * to the parameter of a subsequent call.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourceDataSyncRequest &request)
 {
@@ -1484,13 +1410,12 @@ ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourc
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of the tags assigned to the specified
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1498,15 +1423,14 @@ ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForRe
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ModifyDocumentPermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Shares a Systems Manager document publicly or privately. If you share a document privately, you must specify the AWS
  * user account IDs for those people who can use the document. If you share a document publicly, you must specify
  * <i>All</i> as the account
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const ModifyDocumentPermissionRequest &request)
 {
@@ -1514,6 +1438,11 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * PutComplianceItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a compliance type and other compliance details on a designated resource. This action lets you register custom
  * compliance details with a resource. This call overwrites existing compliance information on the resource, so you must
  * provide a full list of compliance items each time that you send the
@@ -1582,12 +1511,6 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  *
  * InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify the time
  * by using the following format:
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceItemsRequest &request)
 {
@@ -1595,14 +1518,13 @@ PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceIt
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * PutInventoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Bulk update custom inventory items on one more instance. The request adds an inventory item, if it doesn't already
  * exist, or updates an inventory item, if it does
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &request)
 {
@@ -1610,13 +1532,12 @@ PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &reques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * PutParameterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Add one or more parameters to the
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &request)
 {
@@ -1624,13 +1545,12 @@ PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &reques
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * RegisterDefaultPatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Defines the default patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(const RegisterDefaultPatchBaselineRequest &request)
 {
@@ -1638,13 +1558,12 @@ RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(c
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * RegisterPatchBaselineForPatchGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a patch baseline for a patch
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineForPatchGroup(const RegisterPatchBaselineForPatchGroupRequest &request)
 {
@@ -1652,13 +1571,12 @@ RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineFor
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * RegisterTargetWithMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a target with a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaintenanceWindow(const RegisterTargetWithMaintenanceWindowRequest &request)
 {
@@ -1666,13 +1584,12 @@ RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaint
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * RegisterTaskWithMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a new task to a Maintenance
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenanceWindow(const RegisterTaskWithMaintenanceWindowRequest &request)
 {
@@ -1680,13 +1597,12 @@ RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenan
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * RemoveTagsFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes all tags from the specified
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -1694,13 +1610,12 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * SendAutomationSignalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends a signal to an Automation execution to change the current behavior or status of the execution.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomationSignalRequest &request)
 {
@@ -1708,13 +1623,12 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * SendCommandResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Executes commands on one or more managed
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 {
@@ -1722,13 +1636,12 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * StartAutomationExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates execution of an Automation
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const StartAutomationExecutionRequest &request)
 {
@@ -1736,13 +1649,12 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * StopAutomationExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stop an Automation that is currently
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopAutomationExecutionRequest &request)
 {
@@ -1750,14 +1662,13 @@ StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopA
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an association. You can update the association name and version, the document version, schedule, parameters, and
  * Amazon S3
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociationRequest &request)
 {
@@ -1765,13 +1676,12 @@ UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociation
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateAssociationStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the status of the Systems Manager document associated with the specified
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const UpdateAssociationStatusRequest &request)
 {
@@ -1779,13 +1689,12 @@ UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const Updat
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The document you want to
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &request)
 {
@@ -1793,13 +1702,12 @@ UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateDocumentDefaultVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Set the default version of a document.
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(const UpdateDocumentDefaultVersionRequest &request)
 {
@@ -1807,13 +1715,12 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing Maintenance Window. Only specified parameters are
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const UpdateMaintenanceWindowRequest &request)
 {
@@ -1821,6 +1728,11 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateMaintenanceWindowTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the target of an existing Maintenance Window. You can't change the target type, but you can change the
  *
  * following>
@@ -1844,12 +1756,6 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
  * Description>
  *
  * If a parameter is null, then the corresponding field is not
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget(const UpdateMaintenanceWindowTargetRequest &request)
 {
@@ -1857,6 +1763,11 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateMaintenanceWindowTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following
  *
  * values>
@@ -1888,12 +1799,6 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  * If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields
  * required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't
  * specified are set to
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(const UpdateMaintenanceWindowTaskRequest &request)
 {
@@ -1901,13 +1806,12 @@ UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(con
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateManagedInstanceRoleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Assigns or changes an Amazon Identity and Access Management (IAM) role to the managed
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const UpdateManagedInstanceRoleRequest &request)
 {
@@ -1915,18 +1819,17 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
 }
 
 /*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdatePatchBaselineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies an existing patch baseline. Fields not specified in the request are left
  *
  * unchanged> <note>
  *
  * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
  * see <a
- *
- * @param  request Request to send to Amazon Simple Systems Manager (SSM).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBaselineRequest &request)
 {
@@ -1934,19 +1837,16 @@ UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBa
 }
 
 /*!
- * @internal
+ * \class QtAws::SSM::SsmClientPrivate
+ * \brief The SsmClientPrivate class provides private implementation for SsmClient.
+ * \internal
  *
- * @class  SsmClientPrivate
- *
- * @brief  Private implementation for SsmClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SsmClientPrivate object.
- *
- * @param  q  Pointer to this object's public SsmClient instance.
+ * Constructs a SsmClientPrivate object with public implementation \a q.
  */
 SsmClientPrivate::SsmClientPrivate(SsmClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -40,10 +40,10 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsClient
- *
  * \brief The MarketplaceCommerceAnalyticsClient class provides access to the AWS Marketplace Commerce Analytics service.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  *
  */
 
@@ -101,18 +101,17 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
 }
 
 /*!
+ * Sends \a request to the MarketplaceCommerceAnalyticsClient service, and returns a pointer to an
+ * GenerateDataSetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Given a data set type and data set publication date, asynchronously publishes the requested data set to the specified S3
  * bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be
  * used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values
  * (CSV) format with the file name {data_set_type}_YYYY-MM-DD.csv. If a file with the same name already exists (e.g. if the
  * same data set is requested twice), the original file will be overwritten by the new file. Requires a Role with an
  * attached permissions policy providing Allow permissions for the following actions: s3:PutObject, s3:GetBucketLocation,
- *
- * @param  request Request to send to AWS Marketplace Commerce Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(const GenerateDataSetRequest &request)
 {
@@ -120,18 +119,17 @@ GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(co
 }
 
 /*!
+ * Sends \a request to the MarketplaceCommerceAnalyticsClient service, and returns a pointer to an
+ * StartSupportDataExportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Given a data set type and a from date, asynchronously publishes the requested customer support data to the specified S3
  * bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be
  * used to correlate requests with notifications from the SNS topic. Data sets will be published in comma-separated values
  * (CSV) format with the file name {data_set_type}_YYYY-MM-DD'T'HH-mm-ss'Z'.csv. If a file with the same name already
  * exists (e.g. if the same data set is requested twice), the original file will be overwritten by the new file. Requires a
  * Role with an attached permissions policy providing Allow permissions for the following actions: s3:PutObject,
- *
- * @param  request Request to send to AWS Marketplace Commerce Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSupportDataExport(const StartSupportDataExportRequest &request)
 {
@@ -139,19 +137,16 @@ StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSuppor
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsClientPrivate
+ * \brief The MarketplaceCommerceAnalyticsClientPrivate class provides private implementation for MarketplaceCommerceAnalyticsClient.
+ * \internal
  *
- * @class  MarketplaceCommerceAnalyticsClientPrivate
- *
- * @brief  Private implementation for MarketplaceCommerceAnalyticsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceCommerceAnalyticsClientPrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceCommerceAnalyticsClient instance.
+ * Constructs a MarketplaceCommerceAnalyticsClientPrivate object with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsClientPrivate::MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

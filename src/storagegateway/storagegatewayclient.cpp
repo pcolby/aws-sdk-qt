@@ -162,10 +162,10 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::StorageGatewayClient
- *
  * \brief The StorageGatewayClient class provides access to the AWS Storage Gateway service.
  *
- * \ingroup StorageGateway
+ * \ingroup aws-clients
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -292,6 +292,11 @@ StorageGatewayClient::StorageGatewayClient(
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ActivateGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Activates the gateway you previously deployed on your host. In the activation process, you specify information such as
  * the region you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the gateway snapshot
  * schedule window, an activation key, and a name for your gateway. The activation process also associates your gateway
@@ -300,12 +305,6 @@ StorageGatewayClient::StorageGatewayClient(
  * <a>UpdateGatewayInformation</a>> <note>
  *
  * You must turn on the gateway VM before you can activate your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGatewayRequest &request)
 {
@@ -313,6 +312,11 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AddCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Configures one or more gateway local disks as cache for a gateway. This operation is only supported in the cached
  * volume, tape and file gateway type (see <a
  * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">Storage Gateway
@@ -321,12 +325,6 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add cache, and one or more disk
  * IDs that you want to configure as
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request)
 {
@@ -334,6 +332,11 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AddTagsToResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more tags to the specified resource. You use tags to add metadata to resources, which you can use to
  * categorize these resources. For example, you can categorize resources by purpose, owner, environment, or team. Each tag
  * consists of a key and a value, which you define. You can add tags to the following AWS Storage Gateway
@@ -354,12 +357,6 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
  *
  * You can create a maximum of 10 tags for each resource. Virtual tapes and storage volumes that are recovered to a new
  * gateway maintain their
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -367,6 +364,11 @@ AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTag
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AddUploadBufferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Configures one or more gateway local disks as upload buffer for a specified gateway. This operation is supported for the
  * stored volume, cached volume and tape gateway
  *
@@ -374,12 +376,6 @@ AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTag
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add upload buffer, and one or
  * more disk IDs that you want to configure as upload
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadBufferRequest &request)
 {
@@ -387,6 +383,11 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AddWorkingStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Configures one or more gateway local disks as working storage for a gateway. This operation is only supported in the
  * stored volume gateway type. This operation is deprecated in cached volume API version 20120630. Use
  * <a>AddUploadBuffer</a>
@@ -400,12 +401,6 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add working storage, and one or
  * more disk IDs that you want to configure as working
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWorkingStorageRequest &request)
 {
@@ -413,14 +408,13 @@ AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWor
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CancelArchivalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated. This
  * operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchivalRequest &request)
 {
@@ -428,14 +422,13 @@ CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchiv
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CancelRetrievalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is
  * initiated. The virtual tape is returned to the VTS. This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetrievalRequest &request)
 {
@@ -443,6 +436,11 @@ CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetr
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateCachediSCSIVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a cached volume on a specified cached volume gateway. This operation is only supported in the cached volume
  * gateway
  *
@@ -463,12 +461,6 @@ CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetr
  * Optionally, you can provide the ARN for an existing volume as the <code>SourceVolumeARN</code> for this cached volume,
  * which creates an exact copy of the existing volume’s latest recovery point. The <code>VolumeSizeInBytes</code> value
  * must be equal to or larger than the size of the copied volume, in
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(const CreateCachediSCSIVolumeRequest &request)
 {
@@ -476,6 +468,11 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateNFSFileShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a file share on an existing file gateway. In Storage Gateway, a file share is a file system mount point backed
  * by Amazon S3 cloud storage. Storage Gateway exposes file shares using a Network File System (NFS) interface. This
  * operation is only supported in the file gateway
@@ -490,12 +487,6 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  * </p
  *
  * File gateway does not support creating hard or symbolic links on a file
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const CreateNFSFileShareRequest &request)
 {
@@ -503,6 +494,11 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates a snapshot of a
  *
  * volume>
@@ -531,12 +527,6 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  *
  * Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the
  * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a>
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapshotRequest &request)
 {
@@ -544,6 +534,11 @@ CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapsh
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateSnapshotFromVolumeRecoveryPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates a snapshot of a gateway from a volume recovery point. This operation is only supported in the cached volume
  * gateway
  *
@@ -564,12 +559,6 @@ CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapsh
  *
  * To list or delete a snapshot, you must use the Amazon EC2 API. For more information, in <i>Amazon Elastic Compute Cloud
  * API
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnapshotFromVolumeRecoveryPoint(const CreateSnapshotFromVolumeRecoveryPointRequest &request)
 {
@@ -577,6 +566,11 @@ CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnap
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateStorediSCSIVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a volume on a specified gateway. This operation is only supported in the stored volume gateway
  *
  * type>
@@ -590,12 +584,6 @@ CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnap
  * In the request you must specify the gateway and the disk information on which you are creating the volume. In response,
  * the gateway creates the volume and returns volume information such as the volume Amazon Resource Name (ARN), its size,
  * and the iSCSI target ARN that initiators can use to connect to the volume
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(const CreateStorediSCSIVolumeRequest &request)
 {
@@ -603,6 +591,11 @@ CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateTapeWithBarcodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a virtual tape by using your own barcode. You write data to the virtual tape and then archive the tape. A
  * barcode is unique and can not be reused if it has already been used on a tape . This applies to barcodes used on deleted
  * tapes. This operation is only supported in the tape gateway
@@ -611,12 +604,6 @@ CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(
  *
  * Cache storage must be allocated to the gateway before you can create a virtual tape. Use the <a>AddCache</a> operation
  * to add cache storage to a
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(const CreateTapeWithBarcodeRequest &request)
 {
@@ -624,6 +611,11 @@ CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(cons
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateTapesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes. This operation is
  * only supported in the tape gateway
  *
@@ -631,12 +623,6 @@ CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(cons
  *
  * Cache storage must be allocated to the gateway before you can create virtual tapes. Use the <a>AddCache</a> operation to
  * add cache storage to a gateway.
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest &request)
 {
@@ -644,15 +630,14 @@ CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteBandwidthRateLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the bandwidth rate limits of a gateway. You can delete either the upload and download bandwidth rate limit, or
  * you can delete both. If you delete only one of the limits, the other limit remains unchanged. To specify which gateway
  * to work with, use the Amazon Resource Name (ARN) of the gateway in your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimit(const DeleteBandwidthRateLimitRequest &request)
 {
@@ -660,13 +645,12 @@ DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimi
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteChapCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(const DeleteChapCredentialsRequest &request)
 {
@@ -674,13 +658,12 @@ DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(cons
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteFileShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a file share from a file gateway. This operation is only supported in the file gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFileShareRequest &request)
 {
@@ -688,6 +671,11 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a gateway. To specify which gateway to delete, use the Amazon Resource Name (ARN) of the gateway in your
  * request. The operation deletes the gateway; however, it does not delete the gateway virtual machine (VM) from your host
  *
@@ -704,12 +692,6 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
  * canceling your Amazon EC2 subscription.  If you prefer not to cancel your Amazon EC2 subscription, you can delete your
  * snapshots using the Amazon EC2 console. For more information, see the <a href="http://aws.amazon.com/storagegateway">
  * AWS Storage Gateway Detail Page</a>.
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayRequest &request)
 {
@@ -717,6 +699,11 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteSnapshotScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a snapshot of a
  *
  * volume>
@@ -730,12 +717,6 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
  * types> <note>
  *
  * To list or delete a snapshot, you must use the Amazon EC2 API. in <i>Amazon Elastic Compute Cloud API
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(const DeleteSnapshotScheduleRequest &request)
 {
@@ -743,13 +724,12 @@ DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(co
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteTapeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified virtual tape. This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &request)
 {
@@ -757,14 +737,13 @@ DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &r
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteTapeArchiveResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified virtual tape from the virtual tape shelf (VTS). This operation is only supported in the tape
  * gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const DeleteTapeArchiveRequest &request)
 {
@@ -772,6 +751,11 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DeleteVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified storage volume that you previously created using the <a>CreateCachediSCSIVolume</a> or
  * <a>CreateStorediSCSIVolume</a> API. This operation is only supported in the cached volume and stored volume types. For
  * stored volume gateways, the local disk that was configured as the storage volume is not deleted. You can reuse the local
@@ -788,12 +772,6 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
  * Reference</i>>
  *
  * In the request, you must provide the Amazon Resource Name (ARN) of the storage volume you want to
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequest &request)
 {
@@ -801,6 +779,11 @@ DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequ
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeBandwidthRateLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the bandwidth rate limits of a gateway. By default, these limits are not set, which means no bandwidth rate
  * limiting is in
  *
@@ -809,12 +792,6 @@ DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequ
  * This operation only returns a value for a bandwidth rate limit only if the limit is set. If no limits are set for the
  * gateway, then this operation returns only the gateway ARN in the response body. To specify which gateway to describe,
  * use the Amazon Resource Name (ARN) of the gateway in your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRateLimit(const DescribeBandwidthRateLimitRequest &request)
 {
@@ -822,18 +799,17 @@ DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRate
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the cache of a gateway. This operation is only supported in the cached volume, tape and file
  * gateway
  *
  * types>
  *
  * The response includes disk IDs that are configured as cache, and it includes the amount of cache allocated and
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheRequest &request)
 {
@@ -841,6 +817,11 @@ DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheR
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeCachediSCSIVolumesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a description of the gateway volumes specified in the request. This operation is only supported in the cached
  * volume gateway
  *
@@ -848,12 +829,6 @@ DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheR
  *
  * The list of gateway volumes in the request must be from one gateway. In the response Amazon Storage Gateway returns
  * volume information sorted by volume Amazon Resource Name
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVolumes(const DescribeCachediSCSIVolumesRequest &request)
 {
@@ -861,14 +836,13 @@ DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVo
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeChapCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI
  * target, one for each target-initiator
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(const DescribeChapCredentialsRequest &request)
 {
@@ -876,15 +850,14 @@ DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeGatewayInformationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the
  * gateway is running or not). To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
  * your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInformation(const DescribeGatewayInformationRequest &request)
 {
@@ -892,14 +865,13 @@ DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInform
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeMaintenanceStartTimeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are in
  * terms of the gateway's time
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenanceStartTime(const DescribeMaintenanceStartTimeRequest &request)
 {
@@ -907,13 +879,12 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeNFSFileSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a description for one or more file shares from a file gateway. This operation is only supported in the file gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(const DescribeNFSFileSharesRequest &request)
 {
@@ -921,15 +892,14 @@ DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(cons
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeSnapshotScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the snapshot schedule for the specified gateway volume. The snapshot schedule information includes intervals
  * at which snapshots are automatically initiated on the volume. This operation is only supported in the cached volume and
  * stored volume
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedule(const DescribeSnapshotScheduleRequest &request)
 {
@@ -937,15 +907,14 @@ DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedul
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeStorediSCSIVolumesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the description of the gateway volumes specified in the request. The list of gateway volumes in the request must
  * be from one gateway. In the response Amazon Storage Gateway returns volume information sorted by volume ARNs. This
  * operation is only supported in stored volume gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVolumes(const DescribeStorediSCSIVolumesRequest &request)
 {
@@ -953,6 +922,11 @@ DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVo
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeTapeArchivesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a description of specified virtual tapes in the virtual tape shelf (VTS). This operation is only supported in
  * the tape gateway
  *
@@ -960,12 +934,6 @@ DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVo
  *
  * If a specific <code>TapeARN</code> is not specified, AWS Storage Gateway returns a description of all virtual tapes
  * found in the VTS associated with your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const DescribeTapeArchivesRequest &request)
 {
@@ -973,6 +941,11 @@ DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const 
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeTapeRecoveryPointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of virtual tape recovery points that are available for the specified tape
  *
  * gateway>
@@ -980,12 +953,6 @@ DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const 
  * A recovery point is a point-in-time view of a virtual tape at which all the data on the virtual tape is consistent. If
  * your gateway crashes, virtual tapes that have recovery points can be recovered to a new gateway. This operation is only
  * supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryPoints(const DescribeTapeRecoveryPointsRequest &request)
 {
@@ -993,15 +960,14 @@ DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryP
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeTapesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a <code>TapeARN</code> is not
  * specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only
  * supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesRequest &request)
 {
@@ -1009,6 +975,11 @@ DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesR
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeUploadBufferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the upload buffer of a gateway. This operation is supported for the stored volume, cached
  * volume and tape gateway
  *
@@ -1016,12 +987,6 @@ DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesR
  *
  * The response includes disk IDs that are configured as upload buffer space, and it includes the amount of upload buffer
  * space allocated and
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const DescribeUploadBufferRequest &request)
 {
@@ -1029,18 +994,17 @@ DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const 
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeVTLDevicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a description of virtual tape library (VTL) devices for the specified tape gateway. In the response, AWS Storage
  * Gateway returns VTL device
  *
  * information>
  *
  * This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const DescribeVTLDevicesRequest &request)
 {
@@ -1048,6 +1012,11 @@ DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const Desc
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeWorkingStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the working storage of a gateway. This operation is only supported in the stored volumes
  * gateway type. This operation is deprecated in cached volumes API version (20120630). Use DescribeUploadBuffer
  *
@@ -1060,12 +1029,6 @@ DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const Desc
  *
  * The response includes disk IDs that are configured as working storage, and it includes the amount of working storage
  * allocated and
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(const DescribeWorkingStorageRequest &request)
 {
@@ -1073,6 +1036,11 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DisableGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables a tape gateway when the gateway is no longer functioning. For example, if your gateway VM is damaged, you can
  * disable the gateway so you can recover virtual
  *
@@ -1084,12 +1052,6 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
  * type> <b>
  *
  * Once a gateway is disabled it cannot be
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatewayRequest &request)
 {
@@ -1097,14 +1059,13 @@ DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatew
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListFileSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user
  * account. This operation is only supported in the file gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileSharesRequest &request)
 {
@@ -1112,6 +1073,11 @@ ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileShar
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists gateways owned by an AWS account in a region specified in the request. The returned list is ordered by gateway
  * Amazon Resource Name
  *
@@ -1124,12 +1090,6 @@ ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileShar
  *
  * If you have more gateways than are returned in a response (that is, the response returns only a truncated list of your
  * gateways), the response contains a marker that you can specify in your next request to fetch the next page of
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequest &request)
 {
@@ -1137,6 +1097,11 @@ ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequ
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListLocalDisksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of the gateway's local disks. To specify which gateway to describe, you use the Amazon Resource Name
  * (ARN) of the gateway in the body of the
  *
@@ -1146,12 +1111,6 @@ ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequ
  * volume or not configured at all. The response includes a <code>DiskStatus</code> field. This field can have a value of
  * present (the disk is available to use), missing (the disk is no longer connected to the gateway), or mismatch (the disk
  * node is occupied by a disk that has incorrect metadata or the disk content is
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDisksRequest &request)
 {
@@ -1159,14 +1118,13 @@ ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDis
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tags that have been added to the specified resource. This operation is only supported in the cached volume,
  * stored volume and tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1174,6 +1132,11 @@ ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const Li
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListTapesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS). You specify the tapes to list
  * by specifying one or more tape Amazon Resource Names (ARNs). If you don't specify a tape ARN, the operation lists all
  * virtual tapes in both your VTL and
@@ -1184,12 +1147,6 @@ ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const Li
  * specify the <code>Limit</code> parameter in the body to limit the number of tapes in the response. If the number of
  * tapes returned in the response is truncated, the response includes a <code>Marker</code> element that you can use in
  * your subsequent request to retrieve the next set of tapes. This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &request)
 {
@@ -1197,14 +1154,13 @@ ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &requ
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListVolumeInitiatorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists iSCSI initiators that are connected to a volume. You can use this operation to determine whether a volume is being
  * used or not. This operation is only supported in the cached volume and stored volume gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const ListVolumeInitiatorsRequest &request)
 {
@@ -1212,6 +1168,11 @@ ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const 
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListVolumeRecoveryPointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the recovery points for a specified gateway. This operation is only supported in the cached volume gateway
  *
  * type>
@@ -1219,12 +1180,6 @@ ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const 
  * Each cache volume has one recovery point. A volume recovery point is a point in time at which all data of the volume is
  * consistent and from which you can create a snapshot or clone a new cached volume from a source volume. To create a
  * snapshot from a volume recovery point use the <a>CreateSnapshotFromVolumeRecoveryPoint</a>
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoints(const ListVolumeRecoveryPointsRequest &request)
 {
@@ -1232,6 +1187,11 @@ ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoint
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ListVolumesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the iSCSI stored volumes of a gateway. Results are sorted by volume ARN. The response includes only the volume
  * ARNs. If you want additional volume information, use the <a>DescribeStorediSCSIVolumes</a> or the
  * <a>DescribeCachediSCSIVolumes</a>
@@ -1243,12 +1203,6 @@ ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoint
  * volumes returned in the response is truncated, the response includes a Marker field. You can use this Marker value in
  * your subsequent request to retrieve the next set of volumes. This operation is only supported in the cached volume and
  * stored volume gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest &request)
 {
@@ -1256,6 +1210,11 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * NotifyWhenUploadedResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends you notification through CloudWatch Events when all files written to your NFS file share have been uploaded to
  * Amazon
  *
@@ -1271,12 +1230,6 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
  *
  * For more information, see Getting File Upload Notification in the Storage Gateway User Guide
  * (https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification).
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const NotifyWhenUploadedRequest &request)
 {
@@ -1284,15 +1237,14 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * RefreshCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Refreshes the cache for the specified file share. This operation finds objects in the Amazon S3 bucket that were added,
  * removed or replaced since the gateway last listed the bucket's contents and cached the results. This operation is only
  * supported in the file gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequest &request)
 {
@@ -1300,14 +1252,13 @@ RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequ
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * RemoveTagsFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more tags from the specified resource. This operation is only supported in the cached volume, stored
  * volume and tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -1315,6 +1266,11 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ResetCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets all cache disks that have encountered a error and makes the disks available for reconfiguration as cache storage.
  * If your cache disk encounters a error, the gateway prevents read and write operations on virtual tapes in the gateway.
  * For example, an error can occur when a disk is corrupted or removed from the gateway. When a cache is reset, the gateway
@@ -1326,12 +1282,6 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
  * If the cache disk you are resetting contains data that has not been uploaded to Amazon S3 yet, that data can be lost.
  * After you reset cache disks, there will be no configured cache disks left in the gateway, so you must configure at least
  * one new cache disk for your gateway to function
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &request)
 {
@@ -1339,6 +1289,11 @@ ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &r
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * RetrieveTapeArchiveResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves an archived virtual tape from the virtual tape shelf (VTS) to a tape gateway. Virtual tapes archived in the
  * VTS are not associated with any gateway. However after a tape is retrieved, it is associated with a gateway, even though
  * it is also listed in the VTS, that is, archive. This operation is only supported in the tape gateway
@@ -1347,12 +1302,6 @@ ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &r
  *
  * Once a tape is successfully retrieved to a gateway, it cannot be retrieved again to another gateway. You must archive
  * the tape again before you can retrieve it to another gateway. This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const RetrieveTapeArchiveRequest &request)
 {
@@ -1360,6 +1309,11 @@ RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const Re
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * RetrieveTapeRecoveryPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the recovery point for the specified virtual tape. This operation is only supported in the tape gateway
  *
  * type>
@@ -1371,12 +1325,6 @@ RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const Re
  *
  * The virtual tape can be retrieved to only one gateway. The retrieved tape is read-only. The virtual tape can be
  * retrieved to only a tape gateway. There is no charge for retrieving recovery
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPoint(const RetrieveTapeRecoveryPointRequest &request)
 {
@@ -1384,15 +1332,14 @@ RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPo
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * SetLocalConsolePasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the password for your VM local console. When you log in to the local console for the first time, you log in to the
  * VM with the default credentials. We recommend that you set a new password. You don't need to know the default password
  * to set a new
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(const SetLocalConsolePasswordRequest &request)
 {
@@ -1400,6 +1347,11 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * ShutdownGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Shuts down a gateway. To specify which gateway to shut down, use the Amazon Resource Name (ARN) of the gateway in the
  * body of your
  *
@@ -1428,12 +1380,6 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
  *
  * If do not intend to use the gateway again, you must delete the gateway (using <a>DeleteGateway</a>) to no longer pay
  * software charges associated with the
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGatewayRequest &request)
 {
@@ -1441,6 +1387,11 @@ ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGa
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * StartGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts a gateway that you previously shut down (see <a>ShutdownGateway</a>). After the gateway starts, you can then make
  * other API calls, your applications can read from or write to the gateway's storage volumes and you will be able to take
  * snapshot
@@ -1454,12 +1405,6 @@ ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGa
  * <a>ActivateGateway</a>> </note>
  *
  * To specify which gateway to start, use the Amazon Resource Name (ARN) of the gateway in your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequest &request)
 {
@@ -1467,6 +1412,11 @@ StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequ
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateBandwidthRateLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the bandwidth rate limits of a gateway. You can update both the upload and download bandwidth rate limit or
  * specify only one of the two. If you don't set a bandwidth rate limit, the existing rate limit
  *
@@ -1478,12 +1428,6 @@ StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequ
  * bandwidth>
  *
  * To specify which gateway to update, use the Amazon Resource Name (ARN) of the gateway in your
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimit(const UpdateBandwidthRateLimitRequest &request)
 {
@@ -1491,6 +1435,11 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateChapCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target. By default, a
  * gateway does not have CHAP enabled; however, for added security, you might use
  *
@@ -1498,12 +1447,6 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
  *
  * When you update CHAP credentials, all existing connections on the target are closed and initiators must reconnect with
  * the new
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(const UpdateChapCredentialsRequest &request)
 {
@@ -1511,6 +1454,11 @@ UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(cons
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateGatewayInformationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a gateway's metadata, which includes the gateway's name and time zone. To specify which gateway to update, use
  * the Amazon Resource Name (ARN) of the gateway in your
  *
@@ -1518,12 +1466,6 @@ UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(cons
  *
  * For Gateways activated after September 2, 2015, the gateway's ARN contains the gateway ID rather than the gateway name.
  * However, changing the name of the gateway has no effect on the gateway's
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformation(const UpdateGatewayInformationRequest &request)
 {
@@ -1531,6 +1473,11 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateGatewaySoftwareNowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the gateway virtual machine (VM) software. The request immediately triggers the software
  *
  * update> <note>
@@ -1548,12 +1495,6 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
  * Your Windows iSCSI Settings</a> and <a
  * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorRedHatClient.html#CustomizeLinuxiSCSISettings">Customizing
  * Your Linux iSCSI Settings</a>,
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request)
 {
@@ -1561,14 +1502,13 @@ UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNo
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateMaintenanceStartTimeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a gateway's weekly maintenance start time information, including day and time of the week. The maintenance time
  * is the time in your gateway's time
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStartTime(const UpdateMaintenanceStartTimeRequest &request)
 {
@@ -1576,6 +1516,11 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateNFSFileShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a file share. This operation is only supported in the file gateway
  *
  * type> <note>
@@ -1610,12 +1555,6 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
  *
  * To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported in
  * file
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const UpdateNFSFileShareRequest &request)
 {
@@ -1623,6 +1562,11 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateSnapshotScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a snapshot schedule configured for a gateway volume. This operation is only supported in the cached volume and
  * stored volume gateway
  *
@@ -1635,12 +1579,6 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
  *
  * In the request you must identify the gateway volume whose snapshot schedule you want to update, and the schedule
  * information, including when you want the snapshot to begin on a day and the frequency (in hours) of
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request)
 {
@@ -1648,15 +1586,14 @@ UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(co
 }
 
 /*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateVTLDeviceTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the type of medium changer in a tape gateway. When you activate a tape gateway, you select a medium changer type
  * for the tape gateway. This operation enables you to select a different type of medium changer after a tape gateway is
  * activated. This operation is only supported in the tape gateway
- *
- * @param  request Request to send to AWS Storage Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request)
 {
@@ -1664,19 +1601,16 @@ UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const Up
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::StorageGatewayClientPrivate
+ * \brief The StorageGatewayClientPrivate class provides private implementation for StorageGatewayClient.
+ * \internal
  *
- * @class  StorageGatewayClientPrivate
- *
- * @brief  Private implementation for StorageGatewayClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StorageGatewayClientPrivate object.
- *
- * @param  q  Pointer to this object's public StorageGatewayClient instance.
+ * Constructs a StorageGatewayClientPrivate object with public implementation \a q.
  */
 StorageGatewayClientPrivate::StorageGatewayClientPrivate(StorageGatewayClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -50,10 +50,10 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::StsClient
- *
  * \brief The StsClient class provides access to the AWS Security Token Service ( STS) service.
  *
- * \ingroup STS
+ * \ingroup aws-clients
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -169,6 +169,11 @@ StsClient::StsClient(
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * AssumeRoleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security
  * token) that you can use to access AWS resources that you might not normally have access to. Typically, you use
  * <code>AssumeRole</code> for cross-account access or federation. For a comparison of <code>AssumeRole</code> with the
@@ -277,12 +282,6 @@ StsClient::StsClient(
  * To use MFA with <code>AssumeRole</code>, you pass values for the <code>SerialNumber</code> and <code>TokenCode</code>
  * parameters. The <code>SerialNumber</code> value identifies the user's hardware or virtual MFA device. The
  * <code>TokenCode</code> is the time-based one-time password (TOTP) that the MFA devices produces.
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
 {
@@ -290,6 +289,11 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * AssumeRoleWithSAMLResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a set of temporary security credentials for users who have been authenticated via a SAML authentication
  * response. This operation provides a mechanism for tying an enterprise identity store or directory to role-based AWS
  * access without user-specific credentials or configuration. For a comparison of <code>AssumeRoleWithSAML</code> with the
@@ -379,12 +383,6 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
  *
  * <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html">Creating a Role for SAML 2.0
  * Federation</a> in the <i>IAM User Guide</i>.
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithSAMLRequest &request)
 {
@@ -392,6 +390,11 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * AssumeRoleWithWebIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application
  * with a web identity provider, such as Amazon Cognito, Login with Amazon, Facebook, Google, or any OpenID
  * Connect-compatible identity
@@ -503,12 +506,6 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
  * <a href="http://aws.amazon.com/articles/web-identity-federation-with-mobile-applications">Web Identity Federation with
  * Mobile Applications</a>. This article discusses web identity federation and shows an example of how to use web identity
  * federation to get access to content in Amazon S3.
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const AssumeRoleWithWebIdentityRequest &request)
 {
@@ -516,6 +513,11 @@ AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const A
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * DecodeAuthorizationMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Decodes additional information about the authorization status of a request from an encoded message returned in response
  * to an AWS
  *
@@ -563,12 +565,6 @@ AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const A
  * resource> </li> <li>
  *
  * The values of condition keys in the context of the user's
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const DecodeAuthorizationMessageRequest &request)
 {
@@ -576,13 +572,12 @@ DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * GetCallerIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns details about the IAM identity whose credentials are used to call the
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentityRequest &request)
 {
@@ -590,6 +585,11 @@ GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentity
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * GetFederationTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security
  * token) for a federated user. A typical use is in a proxy application that gets temporary security credentials on behalf
  * of distributed applications inside a corporate network. Because you must call the <code>GetFederationToken</code> action
@@ -687,12 +687,6 @@ GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentity
  * credentials, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken">GetFederationToken—Federation
  * Through a Custom Identity Broker</a>.
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTokenRequest &request)
 {
@@ -700,6 +694,11 @@ GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTo
 }
 
 /*!
+ * Sends \a request to the StsClient service, and returns a pointer to an
+ * GetSessionTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a set of temporary credentials for an AWS account or IAM user. The credentials consist of an access key ID, a
  * secret access key, and a security token. Typically, you use <code>GetSessionToken</code> if you want to use MFA to
  * protect programmatic calls to specific AWS APIs like Amazon EC2 <code>StopInstances</code>. MFA-enabled IAM users would
@@ -753,12 +752,6 @@ GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTo
  * For more information about using <code>GetSessionToken</code> to create temporary credentials, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getsessiontoken">Temporary
  * Credentials for Users in Untrusted Environments</a> in the <i>IAM User Guide</i>.
- *
- * @param  request Request to send to AWS Security Token Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenRequest &request)
 {
@@ -766,19 +759,16 @@ GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenReques
 }
 
 /*!
- * @internal
+ * \class QtAws::STS::StsClientPrivate
+ * \brief The StsClientPrivate class provides private implementation for StsClient.
+ * \internal
  *
- * @class  StsClientPrivate
- *
- * @brief  Private implementation for StsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StsClientPrivate object.
- *
- * @param  q  Pointer to this object's public StsClient instance.
+ * Constructs a StsClientPrivate object with public implementation \a q.
  */
 StsClientPrivate::StsClientPrivate(StsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

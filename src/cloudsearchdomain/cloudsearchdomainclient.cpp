@@ -42,10 +42,10 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::CloudSearchDomainClient
- *
  * \brief The CloudSearchDomainClient class provides access to the Amazon CloudSearch Domain service.
  *
- * \ingroup CloudSearchDomain
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -116,6 +116,11 @@ CloudSearchDomainClient::CloudSearchDomainClient(
 }
 
 /*!
+ * Sends \a request to the CloudSearchDomainClient service, and returns a pointer to an
+ * SearchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on
  * which query parser you use. Amazon CloudSearch supports four query
  *
@@ -136,12 +141,6 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  * search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
- *
- * @param  request Request to send to Amazon CloudSearch Domain.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
 {
@@ -149,6 +148,11 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudSearchDomainClient service, and returns a pointer to an
+ * SuggestResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves autocomplete suggestions for a partial query string. You can use suggestions enable you to display likely
  * matches before users finish typing. In Amazon CloudSearch, suggestions are based on the contents of a particular text
  * field. When you request suggestions, Amazon CloudSearch finds all of the documents whose values in the suggester field
@@ -166,12 +170,6 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
  * search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
- *
- * @param  request Request to send to Amazon CloudSearch Domain.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request)
 {
@@ -179,6 +177,11 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
 }
 
 /*!
+ * Sends \a request to the CloudSearchDomainClient service, and returns a pointer to an
+ * UploadDocumentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Posts a batch of documents to a search domain for indexing. A document batch is a collection of add and delete
  * operations that represent the documents you want to add, update, or delete from your domain. Batches can be described in
  * either JSON or XML. Each item that you want Amazon CloudSearch to return as a search result (such as a product) is
@@ -200,12 +203,6 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
  * <i>Amazon CloudSearch Developer Guide</i>. For more information about uploading data for indexing, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading Data</a> in the
  * <i>Amazon CloudSearch Developer Guide</i>.
- *
- * @param  request Request to send to Amazon CloudSearch Domain.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadDocumentsRequest &request)
 {
@@ -213,19 +210,16 @@ UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadD
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearchDomain::CloudSearchDomainClientPrivate
+ * \brief The CloudSearchDomainClientPrivate class provides private implementation for CloudSearchDomainClient.
+ * \internal
  *
- * @class  CloudSearchDomainClientPrivate
- *
- * @brief  Private implementation for CloudSearchDomainClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudSearchDomainClientPrivate object.
- *
- * @param  q  Pointer to this object's public CloudSearchDomainClient instance.
+ * Constructs a CloudSearchDomainClientPrivate object with public implementation \a q.
  */
 CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

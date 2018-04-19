@@ -68,10 +68,10 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::CodeBuildClient
- *
  * \brief The CodeBuildClient class provides access to the AWS CodeBuild service.
  *
- * \ingroup CodeBuild
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -209,13 +209,12 @@ CodeBuildClient::CodeBuildClient(
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * BatchDeleteBuildsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDeleteBuildsRequest &request)
 {
@@ -223,13 +222,12 @@ BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDelete
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * BatchGetBuildsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsRequest &request)
 {
@@ -237,13 +235,12 @@ BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsReq
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * BatchGetProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about build
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProjectsRequest &request)
 {
@@ -251,13 +248,12 @@ BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProje
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * CreateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a build
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectRequest &request)
 {
@@ -265,6 +261,11 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * CreateWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS
  * CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the
  *
@@ -277,12 +278,6 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  * box. For more information, see step 9 in <a
  * href="http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console">Change a Build
  * Project's
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookRequest &request)
 {
@@ -290,13 +285,12 @@ CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookReques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * DeleteProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a build
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -304,14 +298,13 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * DeleteWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
  * from automatically rebuilding the source code every time a code change is pushed to the
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookRequest &request)
 {
@@ -319,13 +312,12 @@ DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookReques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * InvalidateProjectCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resets the cache for a
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const InvalidateProjectCacheRequest &request)
 {
@@ -333,13 +325,12 @@ InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const I
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ListBuildsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of build IDs, with each build ID representing a single
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &request)
 {
@@ -347,13 +338,12 @@ ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &reques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ListBuildsForProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of build IDs for the specified build project, with each build ID representing a single
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListBuildsForProjectRequest &request)
 {
@@ -361,13 +351,12 @@ ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListB
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ListCuratedEnvironmentImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about Docker images that are managed by AWS
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentImages(const ListCuratedEnvironmentImagesRequest &request)
 {
@@ -375,13 +364,12 @@ ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentIm
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ListProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of build project names, with each build project name representing a single build
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &request)
 {
@@ -389,13 +377,12 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * StartBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts running a
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &request)
 {
@@ -403,13 +390,12 @@ StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &reques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * StopBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attempts to stop running a
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 {
@@ -417,13 +403,12 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * UpdateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the settings of a build
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectRequest &request)
 {
@@ -431,13 +416,12 @@ UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectReques
 }
 
 /*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * UpdateWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the webhook associated with an AWS CodeBuild build project.
- *
- * @param  request Request to send to AWS CodeBuild.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookRequest &request)
 {
@@ -445,19 +429,16 @@ UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookReques
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::CodeBuildClientPrivate
+ * \brief The CodeBuildClientPrivate class provides private implementation for CodeBuildClient.
+ * \internal
  *
- * @class  CodeBuildClientPrivate
- *
- * @brief  Private implementation for CodeBuildClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeBuildClientPrivate object.
- *
- * @param  q  Pointer to this object's public CodeBuildClient instance.
+ * Constructs a CodeBuildClientPrivate object with public implementation \a q.
  */
 CodeBuildClientPrivate::CodeBuildClientPrivate(CodeBuildClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

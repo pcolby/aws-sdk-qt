@@ -48,10 +48,10 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::ImportExportClient
- *
  * \brief The ImportExportClient class provides access to the AWS Import/Export service.
  *
- * \ingroup ImportExport
+ * \ingroup aws-clients
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -112,13 +112,12 @@ ImportExportClient::ImportExportClient(
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * CancelJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already
- *
- * @param  request Request to send to AWS Import/Export.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &request)
 {
@@ -126,15 +125,14 @@ CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &reques
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * CreateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation initiates the process of scheduling an upload or download of your data. You include in the request a
  * manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in
  * other operations, a signature that you use to identify your storage device, and the address where you should ship your
- *
- * @param  request Request to send to AWS Import/Export.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &request)
 {
@@ -142,12 +140,11 @@ CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &reques
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * GetShippingLabelResponse object to track the result.
  *
- * @param  request Request to send to AWS Import/Export.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippingLabelRequest &request)
 {
@@ -155,13 +152,12 @@ GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippin
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * GetStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation returns information about a job, including where the job is in the processing pipeline, the status of the
- *
- * @param  request Request to send to AWS Import/Export.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &request)
 {
@@ -169,14 +165,13 @@ GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &reques
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological
  * order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the
- *
- * @param  request Request to send to AWS Import/Export.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
 {
@@ -184,14 +179,13 @@ ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
 }
 
 /*!
+ * Sends \a request to the ImportExportClient service, and returns a pointer to an
+ * UpdateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You use this operation to change the parameters specified in the original manifest file by supplying a new manifest
  * file. The manifest file attached to this request replaces the original manifest file. You can only use the operation
- *
- * @param  request Request to send to AWS Import/Export.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &request)
 {
@@ -199,19 +193,16 @@ UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &reques
 }
 
 /*!
- * @internal
+ * \class QtAws::ImportExport::ImportExportClientPrivate
+ * \brief The ImportExportClientPrivate class provides private implementation for ImportExportClient.
+ * \internal
  *
- * @class  ImportExportClientPrivate
- *
- * @brief  Private implementation for ImportExportClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportExportClientPrivate object.
- *
- * @param  q  Pointer to this object's public ImportExportClient instance.
+ * Constructs a ImportExportClientPrivate object with public implementation \a q.
  */
 ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

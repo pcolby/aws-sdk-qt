@@ -70,10 +70,10 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::MqClient
- *
  * \brief The MqClient class provides access to the AmazonMQ service.
  *
- * \ingroup MQ
+ * \ingroup aws-clients
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -133,12 +133,11 @@ MqClient::MqClient(
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * CreateBrokerResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request)
 {
@@ -146,13 +145,12 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * CreateConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
- *
- * @param  request Request to send to AmazonMQ.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigurationRequest &request)
 {
@@ -160,12 +158,11 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * CreateUserResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 {
@@ -173,12 +170,11 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DeleteBrokerResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
 {
@@ -186,12 +182,11 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DeleteUserResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -199,12 +194,11 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeBrokerResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
 {
@@ -212,12 +206,11 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeConfigurationResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeConfigurationRequest &request)
 {
@@ -225,12 +218,11 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeConfigurationRevisionResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request)
 {
@@ -238,12 +230,11 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeUserResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request)
 {
@@ -251,12 +242,11 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * ListBrokersResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 {
@@ -264,12 +254,11 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * ListConfigurationRevisionsResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const ListConfigurationRevisionsRequest &request)
 {
@@ -277,12 +266,11 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * ListConfigurationsResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -290,12 +278,11 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * ListUsersResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 {
@@ -303,12 +290,11 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * RebootBrokerResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request)
 {
@@ -316,12 +302,11 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * UpdateBrokerResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request)
 {
@@ -329,12 +314,11 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * UpdateConfigurationResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigurationRequest &request)
 {
@@ -342,12 +326,11 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
 }
 
 /*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * UpdateUserResponse object to track the result.
  *
- * @param  request Request to send to AmazonMQ.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 {
@@ -355,19 +338,16 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::MqClientPrivate
+ * \brief The MqClientPrivate class provides private implementation for MqClient.
+ * \internal
  *
- * @class  MqClientPrivate
- *
- * @brief  Private implementation for MqClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MqClientPrivate object.
- *
- * @param  q  Pointer to this object's public MqClient instance.
+ * Constructs a MqClientPrivate object with public implementation \a q.
  */
 MqClientPrivate::MqClientPrivate(MqClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -128,10 +128,10 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CloudFrontClient
- *
  * \brief The CloudFrontClient class provides access to the Amazon CloudFront service.
  *
- * \ingroup CloudFront
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -194,17 +194,16 @@ CloudFrontClient::CloudFrontClient(
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateCloudFrontOriginAccessIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity
  * to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about
  * how to use origin access identities, see <a
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
  * through CloudFront</a> in the <i>Amazon CloudFront Developer
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -212,14 +211,13 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new web distribution. Send a <code>POST</code> request to the <code>/<i>CloudFront API
  * version</i>/distribution</code>/<code>distribution ID</code>
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDistributionRequest &request)
 {
@@ -227,13 +225,12 @@ CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDi
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateDistributionWithTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new distribution with
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTags(const CreateDistributionWithTagsRequest &request)
 {
@@ -241,13 +238,12 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateFieldLevelEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new field-level encryption
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFieldLevelEncryptionConfigResponse * CloudFrontClient::createFieldLevelEncryptionConfig(const CreateFieldLevelEncryptionConfigRequest &request)
 {
@@ -255,13 +251,12 @@ CreateFieldLevelEncryptionConfigResponse * CloudFrontClient::createFieldLevelEnc
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateFieldLevelEncryptionProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a field-level encryption
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFieldLevelEncryptionProfileResponse * CloudFrontClient::createFieldLevelEncryptionProfile(const CreateFieldLevelEncryptionProfileRequest &request)
 {
@@ -269,13 +264,12 @@ CreateFieldLevelEncryptionProfileResponse * CloudFrontClient::createFieldLevelEn
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateInvalidationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new invalidation.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateInvalidationRequest &request)
 {
@@ -283,14 +277,13 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreatePublicKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public
  * keys with one AWS
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKeyRequest &request)
 {
@@ -298,6 +291,11 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateStreamingDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new RMTP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
  * media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.
  *
@@ -328,12 +326,6 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
  * changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a
  * mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of
  * values
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribution(const CreateStreamingDistributionRequest &request)
 {
@@ -341,13 +333,12 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateStreamingDistributionWithTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new streaming distribution with
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request)
 {
@@ -355,13 +346,12 @@ CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingD
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteCloudFrontOriginAccessIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete an origin access identity.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFrontOriginAccessIdentity(const DeleteCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -369,13 +359,12 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete a distribution.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDistributionRequest &request)
 {
@@ -383,13 +372,12 @@ DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDi
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteFieldLevelEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove a field-level encryption
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFieldLevelEncryptionConfigResponse * CloudFrontClient::deleteFieldLevelEncryptionConfig(const DeleteFieldLevelEncryptionConfigRequest &request)
 {
@@ -397,13 +385,12 @@ DeleteFieldLevelEncryptionConfigResponse * CloudFrontClient::deleteFieldLevelEnc
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteFieldLevelEncryptionProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove a field-level encryption
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEncryptionProfile(const DeleteFieldLevelEncryptionProfileRequest &request)
 {
@@ -411,13 +398,12 @@ DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEn
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeletePublicKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove a public key you previously added to
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKeyRequest &request)
 {
@@ -425,12 +411,11 @@ DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKe
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteServiceLinkedRoleResponse object to track the result.
  *
- * @param  request Request to send to Amazon CloudFront.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
 {
@@ -438,6 +423,11 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteStreamingDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following
  *
  * steps>
@@ -491,12 +481,6 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
  * For information about deleting a distribution using the CloudFront console, see <a
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
  * Distribution</a> in the <i>Amazon CloudFront Developer
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
 {
@@ -504,13 +488,12 @@ DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribut
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetCloudFrontOriginAccessIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the information about an origin access identity.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -518,13 +501,12 @@ GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOrigi
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetCloudFrontOriginAccessIdentityConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the configuration information about an origin access identity.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request)
 {
@@ -532,13 +514,12 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the information about a distribution.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributionRequest &request)
 {
@@ -546,13 +527,12 @@ GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributio
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetDistributionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the configuration information about a distribution.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const GetDistributionConfigRequest &request)
 {
@@ -560,13 +540,12 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetFieldLevelEncryptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the field-level encryption configuration
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFieldLevelEncryptionResponse * CloudFrontClient::getFieldLevelEncryption(const GetFieldLevelEncryptionRequest &request)
 {
@@ -574,13 +553,12 @@ GetFieldLevelEncryptionResponse * CloudFrontClient::getFieldLevelEncryption(cons
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetFieldLevelEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the field-level encryption configuration
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFieldLevelEncryptionConfigResponse * CloudFrontClient::getFieldLevelEncryptionConfig(const GetFieldLevelEncryptionConfigRequest &request)
 {
@@ -588,13 +566,12 @@ GetFieldLevelEncryptionConfigResponse * CloudFrontClient::getFieldLevelEncryptio
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetFieldLevelEncryptionProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the field-level encryption profile
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFieldLevelEncryptionProfileResponse * CloudFrontClient::getFieldLevelEncryptionProfile(const GetFieldLevelEncryptionProfileRequest &request)
 {
@@ -602,13 +579,12 @@ GetFieldLevelEncryptionProfileResponse * CloudFrontClient::getFieldLevelEncrypti
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetFieldLevelEncryptionProfileConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the field-level encryption profile configuration
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFieldLevelEncryptionProfileConfigResponse * CloudFrontClient::getFieldLevelEncryptionProfileConfig(const GetFieldLevelEncryptionProfileConfigRequest &request)
 {
@@ -616,13 +592,12 @@ GetFieldLevelEncryptionProfileConfigResponse * CloudFrontClient::getFieldLevelEn
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetInvalidationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the information about an invalidation.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidationRequest &request)
 {
@@ -630,13 +605,12 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetPublicKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the public key
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest &request)
 {
@@ -644,13 +618,12 @@ GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest 
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetPublicKeyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Return public key configuration
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPublicKeyConfigResponse * CloudFrontClient::getPublicKeyConfig(const GetPublicKeyConfigRequest &request)
 {
@@ -658,13 +631,12 @@ GetPublicKeyConfigResponse * CloudFrontClient::getPublicKeyConfig(const GetPubli
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetStreamingDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a specified RTMP distribution, including the distribution
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(const GetStreamingDistributionRequest &request)
 {
@@ -672,13 +644,12 @@ GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(co
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetStreamingDistributionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the configuration information about a streaming distribution.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistributionConfig(const GetStreamingDistributionConfigRequest &request)
 {
@@ -686,13 +657,12 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListCloudFrontOriginAccessIdentitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists origin access
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request)
 {
@@ -700,13 +670,12 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List distributions.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
 {
@@ -714,13 +683,12 @@ ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistri
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByWebACLIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List the distributions that are associated with a specified AWS WAF web ACL.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request)
 {
@@ -728,13 +696,12 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListFieldLevelEncryptionConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all field-level encryption configurations that have been created in CloudFront for this
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFieldLevelEncryptionConfigsResponse * CloudFrontClient::listFieldLevelEncryptionConfigs(const ListFieldLevelEncryptionConfigsRequest &request)
 {
@@ -742,13 +709,12 @@ ListFieldLevelEncryptionConfigsResponse * CloudFrontClient::listFieldLevelEncryp
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListFieldLevelEncryptionProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Request a list of field-level encryption profiles that have been created in CloudFront for this
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncryptionProfiles(const ListFieldLevelEncryptionProfilesRequest &request)
 {
@@ -756,13 +722,12 @@ ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncry
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListInvalidationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists invalidation batches.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvalidationsRequest &request)
 {
@@ -770,13 +735,12 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListPublicKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all public keys that have been added to CloudFront for this
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRequest &request)
 {
@@ -784,13 +748,12 @@ ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRe
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListStreamingDistributionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List streaming distributions.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistributions(const ListStreamingDistributionsRequest &request)
 {
@@ -798,13 +761,12 @@ ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistribution
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List tags for a CloudFront
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -812,13 +774,12 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Add tags to a CloudFront
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &request)
 {
@@ -826,13 +787,12 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove tags from a CloudFront
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceRequest &request)
 {
@@ -840,13 +800,12 @@ UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceReque
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateCloudFrontOriginAccessIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update an origin access identity.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFrontOriginAccessIdentity(const UpdateCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -854,6 +813,11 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the configuration for a web distribution. Perform the following
  *
  * steps>
@@ -919,12 +883,6 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these
  * accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in
  * the <code>Quantity</code> element and the number of values you're actually
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
 {
@@ -932,13 +890,12 @@ UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDi
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateFieldLevelEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update a field-level encryption configuration.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFieldLevelEncryptionConfigResponse * CloudFrontClient::updateFieldLevelEncryptionConfig(const UpdateFieldLevelEncryptionConfigRequest &request)
 {
@@ -946,13 +903,12 @@ UpdateFieldLevelEncryptionConfigResponse * CloudFrontClient::updateFieldLevelEnc
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateFieldLevelEncryptionProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update a field-level encryption profile.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEncryptionProfile(const UpdateFieldLevelEncryptionProfileRequest &request)
 {
@@ -960,13 +916,12 @@ UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEn
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdatePublicKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update public key information. Note that the only value you can change is the
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKeyRequest &request)
 {
@@ -974,13 +929,12 @@ UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKe
 }
 
 /*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateStreamingDistributionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update a streaming distribution.
- *
- * @param  request Request to send to Amazon CloudFront.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribution(const UpdateStreamingDistributionRequest &request)
 {
@@ -988,19 +942,16 @@ UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribut
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFront::CloudFrontClientPrivate
+ * \brief The CloudFrontClientPrivate class provides private implementation for CloudFrontClient.
+ * \internal
  *
- * @class  CloudFrontClientPrivate
- *
- * @brief  Private implementation for CloudFrontClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudFrontClientPrivate object.
- *
- * @param  q  Pointer to this object's public CloudFrontClient instance.
+ * Constructs a CloudFrontClientPrivate object with public implementation \a q.
  */
 CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

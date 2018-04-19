@@ -166,10 +166,10 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::PinpointClient
- *
  * \brief The PinpointClient class provides access to the Amazon Pinpoint service.
  *
- * \ingroup Pinpoint
+ * \ingroup aws-clients
+ * \inmodule QtAwsPinpoint
  *
  */
 
@@ -227,12 +227,11 @@ PinpointClient::PinpointClient(
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateAppResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 {
@@ -240,12 +239,11 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateCampaignResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequest &request)
 {
@@ -253,12 +251,11 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateExportJobResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
 {
@@ -266,12 +263,11 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateImportJobResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
@@ -279,12 +275,11 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateSegmentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
 {
@@ -292,12 +287,11 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteAdmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChannelRequest &request)
 {
@@ -305,12 +299,11 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteApnsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsChannelRequest &request)
 {
@@ -318,12 +311,11 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteApnsSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(const DeleteApnsSandboxChannelRequest &request)
 {
@@ -331,12 +323,11 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteApnsVoipChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const DeleteApnsVoipChannelRequest &request)
 {
@@ -344,12 +335,11 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteApnsVoipSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChannel(const DeleteApnsVoipSandboxChannelRequest &request)
 {
@@ -357,12 +347,11 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteAppResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -370,12 +359,11 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteBaiduChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaiduChannelRequest &request)
 {
@@ -383,12 +371,11 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteCampaignResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequest &request)
 {
@@ -396,12 +383,11 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteEmailChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmailChannelRequest &request)
 {
@@ -409,12 +395,11 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteEndpointResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -422,12 +407,11 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteEventStreamResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventStreamRequest &request)
 {
@@ -435,12 +419,11 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteGcmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
 {
@@ -448,12 +431,11 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteSegmentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest &request)
 {
@@ -461,12 +443,11 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteSmsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChannelRequest &request)
 {
@@ -474,12 +455,11 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetAdmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest &request)
 {
@@ -487,12 +467,11 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApnsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequest &request)
 {
@@ -500,12 +479,11 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApnsSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request)
 {
@@ -513,12 +491,11 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApnsVoipChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoipChannelRequest &request)
 {
@@ -526,12 +503,11 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApnsVoipSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(const GetApnsVoipSandboxChannelRequest &request)
 {
@@ -539,12 +515,11 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetAppResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 {
@@ -552,12 +527,11 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApplicationSettingsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const GetApplicationSettingsRequest &request)
 {
@@ -565,12 +539,11 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetAppsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 {
@@ -578,12 +551,11 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetBaiduChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
 {
@@ -591,12 +563,11 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &request)
 {
@@ -604,12 +575,11 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignActivitiesResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
 {
@@ -617,12 +587,11 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaignVersionRequest &request)
 {
@@ -630,12 +599,11 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignVersionsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
 {
@@ -643,12 +611,11 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &request)
 {
@@ -656,12 +623,11 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetEmailChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
 {
@@ -669,12 +635,11 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetEndpointResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &request)
 {
@@ -682,12 +647,11 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetEventStreamResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequest &request)
 {
@@ -695,12 +659,11 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetExportJobResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &request)
 {
@@ -708,12 +671,11 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetExportJobsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest &request)
 {
@@ -721,12 +683,11 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetGcmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest &request)
 {
@@ -734,12 +695,11 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetImportJobResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &request)
 {
@@ -747,12 +707,11 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetImportJobsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest &request)
 {
@@ -760,12 +719,11 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request)
 {
@@ -773,12 +731,11 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentExportJobsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSegmentExportJobsRequest &request)
 {
@@ -786,12 +743,11 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentImportJobsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSegmentImportJobsRequest &request)
 {
@@ -799,12 +755,11 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVersionRequest &request)
 {
@@ -812,12 +767,11 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentVersionsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
 {
@@ -825,12 +779,11 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSegmentsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &request)
 {
@@ -838,12 +791,11 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSmsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest &request)
 {
@@ -851,12 +803,11 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * PutEventStreamResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequest &request)
 {
@@ -864,12 +815,11 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * SendMessagesResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
 {
@@ -877,12 +827,11 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * SendUsersMessagesResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
 {
@@ -890,12 +839,11 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateAdmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
 {
@@ -903,12 +851,11 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateApnsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
 {
@@ -916,12 +863,11 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateApnsSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
 {
@@ -929,12 +875,11 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateApnsVoipChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
 {
@@ -942,12 +887,11 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateApnsVoipSandboxChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
 {
@@ -955,12 +899,11 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateApplicationSettingsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(const UpdateApplicationSettingsRequest &request)
 {
@@ -968,12 +911,11 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateBaiduChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
 {
@@ -981,12 +923,11 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateCampaignResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
 {
@@ -994,12 +935,11 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateEmailChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
 {
@@ -1007,12 +947,11 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateEndpointResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -1020,12 +959,11 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateEndpointsBatchResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
 {
@@ -1033,12 +971,11 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateGcmChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
 {
@@ -1046,12 +983,11 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateSegmentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest &request)
 {
@@ -1059,12 +995,11 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
 }
 
 /*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateSmsChannelResponse object to track the result.
  *
- * @param  request Request to send to Amazon Pinpoint.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {
@@ -1072,19 +1007,16 @@ UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChann
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::PinpointClientPrivate
+ * \brief The PinpointClientPrivate class provides private implementation for PinpointClient.
+ * \internal
  *
- * @class  PinpointClientPrivate
- *
- * @brief  Private implementation for PinpointClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PinpointClientPrivate object.
- *
- * @param  q  Pointer to this object's public PinpointClient instance.
+ * Constructs a PinpointClientPrivate object with public implementation \a q.
  */
 PinpointClientPrivate::PinpointClientPrivate(PinpointClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

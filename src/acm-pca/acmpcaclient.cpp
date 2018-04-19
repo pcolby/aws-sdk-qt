@@ -68,10 +68,10 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::AcmpcaClient
- *
  * \brief The AcmpcaClient class provides access to the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.
  *
- * \ingroup ACMPCA
+ * \ingroup aws-clients
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -159,6 +159,11 @@ AcmpcaClient::AcmpcaClient(
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * CreateCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a private subordinate certificate authority (CA). You must specify the CA configuration, the revocation
  * configuration, the CA type, and an optional idempotency token. The CA configuration specifies the name of the algorithm
  * and key size to be used to create the CA private key, the type of signing algorithm that the CA uses to sign, and X.500
@@ -166,12 +171,6 @@ AcmpcaClient::AcmpcaClient(
  * (the validity period of the CRL), the Amazon S3 bucket that will contain the CRL, and a CNAME alias for the S3 bucket
  * that is included in certificates issued by the CA. If successful, this function returns the Amazon Resource Name (ARN)
  * of the
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCertificateAuthorityResponse * AcmpcaClient::createCertificateAuthority(const CreateCertificateAuthorityRequest &request)
 {
@@ -179,15 +178,14 @@ CreateCertificateAuthorityResponse * AcmpcaClient::createCertificateAuthority(co
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * CreateCertificateAuthorityAuditReportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an audit report that lists every time that the your CA private key is used. The report is saved in the Amazon S3
  * bucket that you specify on input. The <a>IssueCertificate</a> and <a>RevokeCertificate</a> functions use the private
  * key. You can generate a new report every 30
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateAuthorityAuditReport(const CreateCertificateAuthorityAuditReportRequest &request)
 {
@@ -195,6 +193,11 @@ CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateA
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * DeleteCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the private certificate authority (CA) that you created or started to create by calling the
  * <a>CreateCertificateAuthority</a> function. This action requires that you enter an ARN (Amazon Resource Name) for the
  * private CA that you want to delete. You can find the ARN by calling the <a>ListCertificateAuthorities</a> function. You
@@ -204,12 +207,6 @@ CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateA
  * delete the CA unless it has been disabled for more than 30 days. To disable a CA, call the
  * <a>UpdateCertificateAuthority</a> function and set the <b>CertificateAuthorityStatus</b> argument to
  * <code>DISABLED</code>.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(const DeleteCertificateAuthorityRequest &request)
 {
@@ -217,6 +214,11 @@ DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(co
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * DescribeCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists information about your private certificate authority (CA). You specify the private CA on input by its ARN (Amazon
  * Resource Name). The output contains the status of your CA. This can be any of the following:
  *
@@ -245,12 +247,6 @@ DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(co
  *
  * <b>FAILED:</b> Your private CA has failed. Your CA can fail for problems such a network outage or backend AWS failure or
  * other errors. A failed CA can never return to the pending state. You must create a new CA.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthority(const DescribeCertificateAuthorityRequest &request)
 {
@@ -258,15 +254,14 @@ DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthorit
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * DescribeCertificateAuthorityAuditReportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists information about a specific audit report created by calling the <a>CreateCertificateAuthorityAuditReport</a>
  * function. Audit information is created every time the certificate authority (CA) private key is used. The private key is
  * used when you call the <a>IssueCertificate</a> function or the <a>RevokeCertificate</a> function.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificateAuthorityAuditReportResponse * AcmpcaClient::describeCertificateAuthorityAuditReport(const DescribeCertificateAuthorityAuditReportRequest &request)
 {
@@ -274,17 +269,16 @@ DescribeCertificateAuthorityAuditReportResponse * AcmpcaClient::describeCertific
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * GetCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a certificate from your private CA. The ARN of the certificate is returned when you call the
  * <a>IssueCertificate</a> function. You must specify both the ARN of your private CA and the ARN of the issued certificate
  * when calling the <b>GetCertificate</b> function. You can retrieve the certificate if it is in the <b>ISSUED</b> state.
  * You can call the <a>CreateCertificateAuthorityAuditReport</a> function to create a report that contains information
  * about all of the certificates issued and revoked by your private CA.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCertificateResponse * AcmpcaClient::getCertificate(const GetCertificateRequest &request)
 {
@@ -292,15 +286,14 @@ GetCertificateResponse * AcmpcaClient::getCertificate(const GetCertificateReques
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * GetCertificateAuthorityCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the certificate and certificate chain for your private certificate authority (CA). Both the certificate and
  * the chain are base64 PEM-encoded. The chain does not include the CA certificate. Each certificate in the chain signs the
  * one before it.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCertificateAuthorityCertificateResponse * AcmpcaClient::getCertificateAuthorityCertificate(const GetCertificateAuthorityCertificateRequest &request)
 {
@@ -308,16 +301,15 @@ GetCertificateAuthorityCertificateResponse * AcmpcaClient::getCertificateAuthori
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * GetCertificateAuthorityCsrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the certificate signing request (CSR) for your private certificate authority (CA). The CSR is created when you
  * call the <a>CreateCertificateAuthority</a> function. Take the CSR to your on-premises X.509 infrastructure and sign it
  * by using your root or a subordinate CA. Then import the signed certificate back into ACM PCA by calling the
  * <a>ImportCertificateAuthorityCertificate</a> function. The CSR is returned as a base64 PEM-encoded string.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(const GetCertificateAuthorityCsrRequest &request)
 {
@@ -325,6 +317,11 @@ GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(co
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * ImportCertificateAuthorityCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Imports your signed private CA certificate into ACM PCA. Before you can call this function, you must create the private
  * certificate authority by calling the <a>CreateCertificateAuthority</a> function. You must then generate a certificate
  * signing request (CSR) by calling the <a>GetCertificateAuthorityCsr</a> function. Take the CSR to your on-premises CA and
@@ -344,12 +341,6 @@ GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(co
  * </p </note> <note>
  *
  * The chain must be
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateAuthorityCertificate(const ImportCertificateAuthorityCertificateRequest &request)
 {
@@ -357,6 +348,11 @@ ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateA
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * IssueCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uses your private certificate authority (CA) to issue a client certificate. This function returns the Amazon Resource
  * Name (ARN) of the certificate. You can retrieve the certificate by calling the <a>GetCertificate</a> function and
  * specifying the ARN.
@@ -365,12 +361,6 @@ ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateA
  *
  * You cannot use the ACM <b>ListCertificateAuthorities</b> function to retrieve the ARNs of the certificates that you
  * issue by using ACM
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 IssueCertificateResponse * AcmpcaClient::issueCertificate(const IssueCertificateRequest &request)
 {
@@ -378,13 +368,12 @@ IssueCertificateResponse * AcmpcaClient::issueCertificate(const IssueCertificate
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * ListCertificateAuthoritiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the private certificate authorities that you created by using the <a>CreateCertificateAuthority</a>
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificateAuthoritiesResponse * AcmpcaClient::listCertificateAuthorities(const ListCertificateAuthoritiesRequest &request)
 {
@@ -392,15 +381,14 @@ ListCertificateAuthoritiesResponse * AcmpcaClient::listCertificateAuthorities(co
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tags, if any, that are associated with your private CA. Tags are labels that you can use to identify and
  * organize your CAs. Each tag consists of a key and an optional value. Call the <a>TagCertificateAuthority</a> function to
  * add one or more tags to your CA. Call the <a>UntagCertificateAuthority</a> function to remove tags.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
 {
@@ -408,17 +396,16 @@ ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * RevokeCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Revokes a certificate that you issued by calling the <a>IssueCertificate</a> function. If you enable a certificate
  * revocation list (CRL) when you create or update your private CA, information about the revoked certificates will be
  * included in the CRL. ACM PCA writes the CRL to an S3 bucket that you specify. For more information about revocation, see
  * the <a>CrlConfiguration</a> structure. ACM PCA also writes revocation information to the audit report. For more
  * information, see <a>CreateCertificateAuthorityAuditReport</a>.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RevokeCertificateResponse * AcmpcaClient::revokeCertificate(const RevokeCertificateRequest &request)
 {
@@ -426,18 +413,17 @@ RevokeCertificateResponse * AcmpcaClient::revokeCertificate(const RevokeCertific
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * TagCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more tags to your private CA. Tags are labels that you can use to identify and organize your AWS resources.
  * Each tag consists of a key and an optional value. You specify the private CA on input by its Amazon Resource Name (ARN).
  * You specify the tag by using a key-value pair. You can apply a tag to just one private CA if you want to identify a
  * specific characteristic of that CA, or you can apply the same tag to multiple private CAs if you want to filter for a
  * common relationship among those CAs. To remove one or more tags, use the <a>UntagCertificateAuthority</a> function. Call
  * the <a>ListTags</a> function to see what tags are associated with your CA.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagCertificateAuthorityResponse * AcmpcaClient::tagCertificateAuthority(const TagCertificateAuthorityRequest &request)
 {
@@ -445,16 +431,15 @@ TagCertificateAuthorityResponse * AcmpcaClient::tagCertificateAuthority(const Ta
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * UntagCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove one or more tags from your private CA. A tag consists of a key-value pair. If you do not specify the value
  * portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the
  * tag is removed only if it is associated with the specified value. To add tags to a private CA, use the
  * <a>TagCertificateAuthority</a>. Call the <a>ListTags</a> function to see what tags are associated with your CA.
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagCertificateAuthorityResponse * AcmpcaClient::untagCertificateAuthority(const UntagCertificateAuthorityRequest &request)
 {
@@ -462,16 +447,15 @@ UntagCertificateAuthorityResponse * AcmpcaClient::untagCertificateAuthority(cons
 }
 
 /*!
+ * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * UpdateCertificateAuthorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the status or configuration of a private certificate authority (CA). Your private CA must be in the <b>
  * <code>ACTIVE</code> </b> or <b> <code>DISABLED</code> </b> state before you can update it. You can disable a private CA
  * that is in the <b> <code>ACTIVE</code> </b> state or make a CA that is in the <b> <code>DISABLED</code> </b> state
  * active
- *
- * @param  request Request to send to AWS Certificate Manager Private Certificate Authority.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(const UpdateCertificateAuthorityRequest &request)
 {
@@ -479,19 +463,16 @@ UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(co
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::AcmpcaClientPrivate
+ * \brief The AcmpcaClientPrivate class provides private implementation for AcmpcaClient.
+ * \internal
  *
- * @class  AcmpcaClientPrivate
- *
- * @brief  Private implementation for AcmpcaClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcmpcaClientPrivate object.
- *
- * @param  q  Pointer to this object's public AcmpcaClient instance.
+ * Constructs a AcmpcaClientPrivate object with public implementation \a q.
  */
 AcmpcaClientPrivate::AcmpcaClientPrivate(AcmpcaClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

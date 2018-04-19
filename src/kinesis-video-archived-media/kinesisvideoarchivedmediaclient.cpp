@@ -40,10 +40,10 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClient
- *
  * \brief The KinesisVideoArchivedMediaClient class provides access to the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service.
  *
- * \ingroup KinesisVideoArchivedMedia
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  *
  */
 
@@ -101,6 +101,11 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
 }
 
 /*!
+ * Sends \a request to the KinesisVideoArchivedMediaClient service, and returns a pointer to an
+ * GetMediaForFragmentListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets media for a list of fragments (specified by fragment number) from the archived data in a Kinesis video
  *
  * stream> <note>
@@ -119,12 +124,6 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  *
  * Kinesis Video Streams sends media data at a rate of up to 25 megabytes per second (or 200 megabits per second) during a
  * <code>GetMediaForFragmentList</code> session.
- *
- * @param  request Request to send to Amazon Kinesis Video Streams Archived Media.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMediaForFragmentListResponse * KinesisVideoArchivedMediaClient::getMediaForFragmentList(const GetMediaForFragmentListRequest &request)
 {
@@ -132,13 +131,12 @@ GetMediaForFragmentListResponse * KinesisVideoArchivedMediaClient::getMediaForFr
 }
 
 /*!
+ * Sends \a request to the KinesisVideoArchivedMediaClient service, and returns a pointer to an
+ * ListFragmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of <a>Fragment</a> objects from the specified stream and start location within the archived
- *
- * @param  request Request to send to Amazon Kinesis Video Streams Archived Media.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFragmentsResponse * KinesisVideoArchivedMediaClient::listFragments(const ListFragmentsRequest &request)
 {
@@ -146,19 +144,16 @@ ListFragmentsResponse * KinesisVideoArchivedMediaClient::listFragments(const Lis
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClientPrivate
+ * \brief The KinesisVideoArchivedMediaClientPrivate class provides private implementation for KinesisVideoArchivedMediaClient.
+ * \internal
  *
- * @class  KinesisVideoArchivedMediaClientPrivate
- *
- * @brief  Private implementation for KinesisVideoArchivedMediaClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoArchivedMediaClientPrivate object.
- *
- * @param  q  Pointer to this object's public KinesisVideoArchivedMediaClient instance.
+ * Constructs a KinesisVideoArchivedMediaClientPrivate object with public implementation \a q.
  */
 KinesisVideoArchivedMediaClientPrivate::KinesisVideoArchivedMediaClientPrivate(KinesisVideoArchivedMediaClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

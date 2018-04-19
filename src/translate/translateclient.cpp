@@ -38,10 +38,10 @@ namespace Translate {
 
 /*!
  * \class QtAws::Translate::TranslateClient
- *
  * \brief The TranslateClient class provides access to the Amazon Translate service.
  *
- * \ingroup Translate
+ * \ingroup aws-clients
+ * \inmodule QtAwsTranslate
  *
  *  Provides translation between English and one of six languages, or between one of the six languages and
  */
@@ -100,6 +100,11 @@ TranslateClient::TranslateClient(
 }
 
 /*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * TranslateTextResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Translates input text from the source language to the target language. You can translate between English (en) and one of
  * the following languages, or between one of the following languages and
  *
@@ -132,12 +137,6 @@ TranslateClient::TranslateClient(
  * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
  * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call Amazon Comprehend to
  * determine the source
- *
- * @param  request Request to send to Amazon Translate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TranslateTextResponse * TranslateClient::translateText(const TranslateTextRequest &request)
 {
@@ -145,19 +144,16 @@ TranslateTextResponse * TranslateClient::translateText(const TranslateTextReques
 }
 
 /*!
- * @internal
+ * \class QtAws::Translate::TranslateClientPrivate
+ * \brief The TranslateClientPrivate class provides private implementation for TranslateClient.
+ * \internal
  *
- * @class  TranslateClientPrivate
- *
- * @brief  Private implementation for TranslateClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsTranslate
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranslateClientPrivate object.
- *
- * @param  q  Pointer to this object's public TranslateClient instance.
+ * Constructs a TranslateClientPrivate object with public implementation \a q.
  */
 TranslateClientPrivate::TranslateClientPrivate(TranslateClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -38,10 +38,10 @@ namespace MobileAnalytics {
 
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsClient
- *
  * \brief The MobileAnalyticsClient class provides access to the Amazon Mobile Analytics service.
  *
- * \ingroup MobileAnalytics
+ * \ingroup aws-clients
+ * \inmodule QtAwsMobileAnalytics
  *
  *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
  */
@@ -100,14 +100,13 @@ MobileAnalyticsClient::MobileAnalyticsClient(
 }
 
 /*!
+ * Sends \a request to the MobileAnalyticsClient service, and returns a pointer to an
+ * PutEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The PutEvents operation records one or more events. You can have up to 1,500 unique custom events per app, any
  * combination of up to 40 attributes and metrics per custom event, and any number of attribute or metric
- *
- * @param  request Request to send to Amazon Mobile Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &request)
 {
@@ -115,19 +114,16 @@ PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &req
 }
 
 /*!
- * @internal
+ * \class QtAws::MobileAnalytics::MobileAnalyticsClientPrivate
+ * \brief The MobileAnalyticsClientPrivate class provides private implementation for MobileAnalyticsClient.
+ * \internal
  *
- * @class  MobileAnalyticsClientPrivate
- *
- * @brief  Private implementation for MobileAnalyticsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileAnalyticsClientPrivate object.
- *
- * @param  q  Pointer to this object's public MobileAnalyticsClient instance.
+ * Constructs a MobileAnalyticsClientPrivate object with public implementation \a q.
  */
 MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

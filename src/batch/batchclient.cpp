@@ -68,10 +68,10 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::BatchClient
- *
  * \brief The BatchClient class provides access to the AWS Batch service.
  *
- * \ingroup Batch
+ * \ingroup aws-clients
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -143,16 +143,15 @@ BatchClient::BatchClient(
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * CancelJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
  * <code>RUNNABLE</code> state are cancelled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>
  * are not cancelled (but the API operation still succeeds, even if no job is cancelled); these jobs must be terminated
  * with the <a>TerminateJob</a>
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
 {
@@ -160,6 +159,11 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * CreateComputeEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS Batch compute environment. You can create <code>MANAGED</code> or <code>UNMANAGED</code> compute
  *
  * environments>
@@ -181,12 +185,6 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  * associated with it and then manually launch your container instances into that Amazon ECS cluster. For more information,
  * see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html">Launching an
  * Amazon ECS Container Instance</a> in the <i>Amazon Elastic Container Service Developer
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const CreateComputeEnvironmentRequest &request)
 {
@@ -194,6 +192,11 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * CreateJobQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS Batch job queue. When you create a job queue, you associate one or more compute environments to the queue
  * and assign an order of preference for the compute
  *
@@ -202,12 +205,6 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
  * You also set a priority to the job queue that determines the order in which the AWS Batch scheduler places jobs onto its
  * associated compute environments. For example, if a compute environment is associated with more than one job queue, the
  * job queue with a higher priority is given preference for scheduling jobs to that compute
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest &request)
 {
@@ -215,18 +212,17 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DeleteComputeEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS Batch compute
  *
  * environment>
  *
  * Before you can delete a compute environment, you must set its state to <code>DISABLED</code> with the
  * <a>UpdateComputeEnvironment</a> API operation and disassociate it from any job queues with the <a>UpdateJobQueue</a> API
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const DeleteComputeEnvironmentRequest &request)
 {
@@ -234,6 +230,11 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DeleteJobQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified job queue. You must first disable submissions for a queue with the <a>UpdateJobQueue</a>
  * operation. All jobs in the queue are terminated when you delete a job
  *
@@ -241,12 +242,6 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
  *
  * It is not necessary to disassociate compute environments from a queue before submitting a <code>DeleteJobQueue</code>
  * request.
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest &request)
 {
@@ -254,13 +249,12 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DeregisterJobDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deregisters an AWS Batch job
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const DeregisterJobDefinitionRequest &request)
 {
@@ -268,18 +262,17 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DescribeComputeEnvironmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your compute
  *
  * environments>
  *
  * If you are using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code> operation to
  * determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(const DescribeComputeEnvironmentsRequest &request)
 {
@@ -287,14 +280,13 @@ DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(c
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DescribeJobDefinitionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a list of job definitions. You can specify a <code>status</code> (such as <code>ACTIVE</code>) to only return
  * job definitions that match that
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const DescribeJobDefinitionsRequest &request)
 {
@@ -302,13 +294,12 @@ DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const Descr
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DescribeJobQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes one or more of your job
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueuesRequest &request)
 {
@@ -316,13 +307,12 @@ DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueu
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DescribeJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a list of AWS Batch
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &request)
 {
@@ -330,14 +320,13 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of task jobs for a specified job queue. You can filter the results by job status with the
  * <code>jobStatus</code> parameter. If you do not specify a status, only <code>RUNNING</code> jobs are
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 {
@@ -345,13 +334,12 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * RegisterJobDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers an AWS Batch job definition.
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const RegisterJobDefinitionRequest &request)
 {
@@ -359,14 +347,13 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * SubmitJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Submits an AWS Batch job from a job definition. Parameters specified during <a>SubmitJob</a> override parameters defined
  * in the job definition.
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
 {
@@ -374,15 +361,14 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * TerminateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Terminates a job in a job queue. Jobs that are in the <code>STARTING</code> or <code>RUNNING</code> state are
  * terminated, which causes them to transition to <code>FAILED</code>. Jobs that have not progressed to the
  * <code>STARTING</code> state are
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &request)
 {
@@ -390,13 +376,12 @@ TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &requ
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * UpdateComputeEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an AWS Batch compute
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const UpdateComputeEnvironmentRequest &request)
 {
@@ -404,13 +389,12 @@ UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const U
 }
 
 /*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * UpdateJobQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a job
- *
- * @param  request Request to send to AWS Batch.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest &request)
 {
@@ -418,19 +402,16 @@ UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::BatchClientPrivate
+ * \brief The BatchClientPrivate class provides private implementation for BatchClient.
+ * \internal
  *
- * @class  BatchClientPrivate
- *
- * @brief  Private implementation for BatchClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchClientPrivate object.
- *
- * @param  q  Pointer to this object's public BatchClient instance.
+ * Constructs a BatchClientPrivate object with public implementation \a q.
  */
 BatchClientPrivate::BatchClientPrivate(BatchClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

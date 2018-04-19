@@ -98,10 +98,10 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::SwfClient
- *
  * \brief The SwfClient class provides access to the Amazon Simple Workflow Service ( SWF) service.
  *
- * \ingroup SWF
+ * \ingroup aws-clients
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -175,6 +175,11 @@ SwfClient::SwfClient(
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * CountClosedWorkflowExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the number of closed workflow executions within the given domain that meet the specified filtering
  *
  * criteria> <note>
@@ -220,12 +225,6 @@ SwfClient::SwfClient(
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions(const CountClosedWorkflowExecutionsRequest &request)
 {
@@ -233,6 +232,11 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * CountOpenWorkflowExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the number of open workflow executions within the given domain that meet the specified filtering
  *
  * criteria> <note>
@@ -278,12 +282,6 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(const CountOpenWorkflowExecutionsRequest &request)
 {
@@ -291,6 +289,11 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * CountPendingActivityTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the estimated number of activity tasks in the specified task list. The count returned is an approximation and
  * isn't guaranteed to be exact. If you specify a task list that no activity task was ever scheduled in then <code>0</code>
  * is
@@ -323,12 +326,6 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const CountPendingActivityTasksRequest &request)
 {
@@ -336,6 +333,11 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * CountPendingDecisionTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the estimated number of decision tasks in the specified task list. The count returned is an approximation and
  * isn't guaranteed to be exact. If you specify a task list that no decision task was ever scheduled in then <code>0</code>
  * is
@@ -368,12 +370,6 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const CountPendingDecisionTasksRequest &request)
 {
@@ -381,6 +377,11 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DeprecateActivityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecates the specified <i>activity type</i>. After an activity type has been deprecated, you cannot create new tasks
  * of that activity type. Tasks of this type that were scheduled before the type was deprecated continue to
  *
@@ -423,12 +424,6 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const DeprecateActivityTypeRequest &request)
 {
@@ -436,6 +431,11 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DeprecateDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecates the specified domain. After a domain has been deprecated it cannot be used to create new workflow executions
  * or register new types. However, you can still use visibility actions on this domain. Deprecating a domain also
  * deprecates all activity and workflow types registered in the domain. Executions that were started before the domain was
@@ -472,12 +472,6 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainRequest &request)
 {
@@ -485,6 +479,11 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DeprecateWorkflowTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecates the specified <i>workflow type</i>. After a workflow type has been deprecated, you cannot create new
  * executions of that type. Executions that were started before the type was deprecated continues to run. A deprecated
  * workflow type may still be used when calling visibility
@@ -528,12 +527,6 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const DeprecateWorkflowTypeRequest &request)
 {
@@ -541,6 +534,11 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DescribeActivityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified activity type. This includes configuration settings provided when the type was
  * registered and other general information about the
  *
@@ -579,12 +577,6 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeActivityTypeRequest &request)
 {
@@ -592,6 +584,11 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DescribeDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified domain, including description and
  *
  * status>
@@ -621,12 +618,6 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &request)
 {
@@ -634,6 +625,11 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DescribeWorkflowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified workflow execution including its type and some
  *
  * statistics> <note>
@@ -667,12 +663,6 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const DescribeWorkflowExecutionRequest &request)
 {
@@ -680,6 +670,11 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * DescribeWorkflowTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified <i>workflow type</i>. This includes configuration settings specified when the
  * type was registered and other information such as creation date, current status,
  *
@@ -718,12 +713,6 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWorkflowTypeRequest &request)
 {
@@ -731,6 +720,11 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * GetWorkflowExecutionHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the history of the specified workflow execution. The results may be split into multiple pages. To retrieve
  * subsequent pages, make the call again using the <code>nextPageToken</code> returned by the initial
  *
@@ -765,12 +759,6 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(const GetWorkflowExecutionHistoryRequest &request)
 {
@@ -778,6 +766,11 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListActivityTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about all activities registered in the specified domain that match the specified name and
  * registration status. The result includes information like creation date, current status of the activity, etc. The
  * results may be split into multiple pages. To retrieve subsequent pages, make the call again using the
@@ -810,12 +803,6 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypesRequest &request)
 {
@@ -823,6 +810,11 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListClosedWorkflowExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of closed workflow executions in the specified domain that meet the filtering criteria. The results may
  * be split into multiple pages. To retrieve subsequent pages, make the call again using the nextPageToken returned by the
  * initial
@@ -870,12 +862,6 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request)
 {
@@ -883,6 +869,11 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListDomainsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the list of domains registered in the account. The results may be split into multiple pages. To retrieve
  * subsequent pages, make the call again using the nextPageToken returned by the initial
  *
@@ -918,12 +909,6 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
 {
@@ -931,6 +916,11 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListOpenWorkflowExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of open workflow executions in the specified domain that meet the filtering criteria. The results may be
  * split into multiple pages. To retrieve subsequent pages, make the call again using the nextPageToken returned by the
  * initial
@@ -978,12 +968,6 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request)
 {
@@ -991,6 +975,11 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListWorkflowTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about workflow types in the specified domain. The results may be split into multiple pages that can
  * be retrieved by making the call
  *
@@ -1021,12 +1010,6 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypesRequest &request)
 {
@@ -1034,6 +1017,11 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * PollForActivityTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by workers to get an <a>ActivityTask</a> from the specified activity <code>taskList</code>. This initiates a long
  * poll, where the service holds the HTTP connection open and responds as soon as a task becomes available. The maximum
  * time the service holds on to the request before responding is 60 seconds. If no task is available within 60 seconds, the
@@ -1073,12 +1061,6 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivityTaskRequest &request)
 {
@@ -1086,6 +1068,11 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * PollForDecisionTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by deciders to get a <a>DecisionTask</a> from the specified decision <code>taskList</code>. A decision task may be
  * returned for any open workflow execution that is using the specified task list. The task includes a paginated view of
  * the history of the workflow execution. The decider should use the workflow type and the history to determine how to
@@ -1138,12 +1125,6 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisionTaskRequest &request)
 {
@@ -1151,6 +1132,11 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RecordActivityTaskHeartbeatResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by activity workers to report to the service that the <a>ActivityTask</a> represented by the specified
  * <code>taskToken</code> is still making progress. The worker can also specify details of the progress, for example
  * percent complete, using the <code>details</code> parameter. This action can also be used by the worker as a mechanism to
@@ -1211,12 +1197,6 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(const RecordActivityTaskHeartbeatRequest &request)
 {
@@ -1224,6 +1204,11 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RegisterActivityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a new <i>activity type</i> along with its configuration settings in the specified
  *
  * domain> <b>
@@ -1270,12 +1255,6 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterActivityTypeRequest &request)
 {
@@ -1283,6 +1262,11 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RegisterDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a new
  *
  * domain>
@@ -1313,12 +1297,6 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &request)
 {
@@ -1326,6 +1304,11 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RegisterWorkflowTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a new <i>workflow type</i> and its configuration settings in the specified
  *
  * domain>
@@ -1376,12 +1359,6 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWorkflowTypeRequest &request)
 {
@@ -1389,6 +1366,11 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RequestCancelWorkflowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Records a <code>WorkflowExecutionCancelRequested</code> event in the currently running workflow execution identified by
  * the given domain, workflowId, and runId. This logically requests the cancellation of the workflow execution as a whole.
  * It is up to the decider to take appropriate actions when it receives an execution history with this
@@ -1430,12 +1412,6 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecution(const RequestCancelWorkflowExecutionRequest &request)
 {
@@ -1443,6 +1419,11 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RespondActivityTaskCanceledResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by workers to tell the service that the <a>ActivityTask</a> identified by the <code>taskToken</code> was
  * successfully canceled. Additional <code>details</code> can be provided using the <code>details</code>
  *
@@ -1489,12 +1470,6 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(const RespondActivityTaskCanceledRequest &request)
 {
@@ -1502,6 +1477,11 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RespondActivityTaskCompletedResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by workers to tell the service that the <a>ActivityTask</a> identified by the <code>taskToken</code> completed
  * successfully with a <code>result</code> (if provided). The <code>result</code> appears in the
  * <code>ActivityTaskCompleted</code> event in the workflow
@@ -1546,12 +1526,6 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(const RespondActivityTaskCompletedRequest &request)
 {
@@ -1559,6 +1533,11 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RespondActivityTaskFailedResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by workers to tell the service that the <a>ActivityTask</a> identified by the <code>taskToken</code> has failed
  * with <code>reason</code> (if specified). The <code>reason</code> and <code>details</code> appear in the
  * <code>ActivityTaskFailed</code> event added to the workflow
@@ -1597,12 +1576,6 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const RespondActivityTaskFailedRequest &request)
 {
@@ -1610,6 +1583,11 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * RespondDecisionTaskCompletedResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by deciders to tell the service that the <a>DecisionTask</a> identified by the <code>taskToken</code> has
  * successfully completed. The <code>decisions</code> argument specifies the list of decisions made while processing the
  *
@@ -1630,12 +1608,6 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
  * they were actual API calls, including applying conditions to some parameters. For more information, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request)
 {
@@ -1643,6 +1615,11 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * SignalWorkflowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Records a <code>WorkflowExecutionSignaled</code> event in the workflow execution history and creates a decision task for
  * the workflow execution identified by the given domain, workflowId and runId. The event is recorded with the specified
  * user defined signalName and input (if
@@ -1683,12 +1660,6 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const SignalWorkflowExecutionRequest &request)
 {
@@ -1696,6 +1667,11 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * StartWorkflowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts an execution of the workflow type in the specified domain using the provided <code>workflowId</code> and input
  *
  * data>
@@ -1761,12 +1737,6 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWorkflowExecutionRequest &request)
 {
@@ -1774,6 +1744,11 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
 }
 
 /*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * TerminateWorkflowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Records a <code>WorkflowExecutionTerminated</code> event and forces closure of the workflow execution identified by the
  * given domain, runId, and workflowId. The child policy, registered with the workflow type or specified when starting this
  * execution, is applied to any open child workflow executions of this workflow
@@ -1819,12 +1794,6 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
- *
- * @param  request Request to send to Amazon Simple Workflow Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request)
 {
@@ -1832,19 +1801,16 @@ TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const
 }
 
 /*!
- * @internal
+ * \class QtAws::SWF::SwfClientPrivate
+ * \brief The SwfClientPrivate class provides private implementation for SwfClient.
+ * \internal
  *
- * @class  SwfClientPrivate
- *
- * @brief  Private implementation for SwfClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SwfClientPrivate object.
- *
- * @param  q  Pointer to this object's public SwfClient instance.
+ * Constructs a SwfClientPrivate object with public implementation \a q.
  */
 SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

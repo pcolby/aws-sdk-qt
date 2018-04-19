@@ -76,10 +76,10 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::MediaConvertClient
- *
  * \brief The MediaConvertClient class provides access to the AWS Elemental MediaConvert service.
  *
- * \ingroup MediaConvert
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaConvert
  *
  */
 
@@ -137,13 +137,12 @@ MediaConvertClient::MediaConvertClient(
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * CancelJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &request)
 {
@@ -151,13 +150,12 @@ CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &reques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * CreateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new transcoding job. For information about jobs and job settings, see the User Guide at
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &request)
 {
@@ -165,13 +163,12 @@ CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &reques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * CreateJobTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new job template. For information about job templates see the User Guide at
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJobTemplateRequest &request)
 {
@@ -179,13 +176,12 @@ CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJo
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * CreatePresetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new preset. For information about job templates see the User Guide at
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetRequest &request)
 {
@@ -193,13 +189,12 @@ CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetReques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * CreateQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a new transcoding queue. For information about job templates see the User Guide at
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &request)
 {
@@ -207,12 +202,11 @@ CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DeleteJobTemplateResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJobTemplateRequest &request)
 {
@@ -220,12 +214,11 @@ DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJo
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DeletePresetResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetRequest &request)
 {
@@ -233,12 +226,11 @@ DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetReques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DeleteQueueResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &request)
 {
@@ -246,12 +238,11 @@ DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DescribeEndpointsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
@@ -259,12 +250,11 @@ DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const Describe
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * GetJobResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
 {
@@ -272,12 +262,11 @@ GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * GetJobTemplateResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplateRequest &request)
 {
@@ -285,12 +274,11 @@ GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplate
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * GetPresetResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &request)
 {
@@ -298,12 +286,11 @@ GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &reques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * GetQueueResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
 {
@@ -311,13 +298,12 @@ GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * ListJobTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve a JSON array of up to twenty of your job templates. This will return the templates themselves, not just a list
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTemplatesRequest &request)
 {
@@ -325,14 +311,13 @@ ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTem
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve a JSON array of up to twenty of your most recently created jobs. This array includes in-process, completed, and
  * errored jobs. This will return the jobs themselves, not just a list of the jobs. To retrieve the twenty next most recent
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
 {
@@ -340,13 +325,12 @@ ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * ListPresetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve a JSON array of up to twenty of your presets. This will return the presets themselves, not just a list of them.
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &request)
 {
@@ -354,13 +338,12 @@ ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * ListQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them.
- *
- * @param  request Request to send to AWS Elemental MediaConvert.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &request)
 {
@@ -368,12 +351,11 @@ ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &req
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * UpdateJobTemplateResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJobTemplateRequest &request)
 {
@@ -381,12 +363,11 @@ UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJo
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * UpdatePresetResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetRequest &request)
 {
@@ -394,12 +375,11 @@ UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetReques
 }
 
 /*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * UpdateQueueResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaConvert.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &request)
 {
@@ -407,19 +387,16 @@ UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::MediaConvertClientPrivate
+ * \brief The MediaConvertClientPrivate class provides private implementation for MediaConvertClient.
+ * \internal
  *
- * @class  MediaConvertClientPrivate
- *
- * @brief  Private implementation for MediaConvertClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaConvertClientPrivate object.
- *
- * @param  q  Pointer to this object's public MediaConvertClient instance.
+ * Constructs a MediaConvertClientPrivate object with public implementation \a q.
  */
 MediaConvertClientPrivate::MediaConvertClientPrivate(MediaConvertClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

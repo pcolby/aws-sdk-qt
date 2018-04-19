@@ -60,10 +60,10 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::FmsClient
- *
  * \brief The FmsClient class provides access to the Firewall Management Service (FMS) service.
  *
- * \ingroup FMS
+ * \ingroup aws-clients
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -127,6 +127,11 @@ FmsClient::FmsClient(
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * AssociateAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with a master account in
  * AWS Organizations or associated with a member account that has the appropriate permissions. If the account ID that you
  * submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
@@ -135,12 +140,6 @@ FmsClient::FmsClient(
  * account>
  *
  * The account that you associate with AWS Firewall Manager is called the AWS Firewall manager administrator account.
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const AssociateAdminAccountRequest &request)
 {
@@ -148,14 +147,13 @@ AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const Associate
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DeleteNotificationChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic
  * that is used to record AWS Firewall Manager SNS
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotificationChannelResponse * FmsClient::deleteNotificationChannel(const DeleteNotificationChannelRequest &request)
 {
@@ -163,13 +161,12 @@ DeleteNotificationChannelResponse * FmsClient::deleteNotificationChannel(const D
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DeletePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently deletes an AWS Firewall Manager policy.
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -177,14 +174,13 @@ DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &reques
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DisassociateAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the account that has been set as the AWS Firewall Manager administrator account. You will need to submit
  * an <code>AssociateAdminAccount</code> request to set a new account as the AWS Firewall
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const DisassociateAdminAccountRequest &request)
 {
@@ -192,13 +188,12 @@ DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const Dis
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the AWS Organizations master account that is associated with AWS Firewall Manager as the AWS Firewall Manager
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountRequest &request)
 {
@@ -206,15 +201,14 @@ GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountReques
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetComplianceDetailResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns detailed compliance information about the specified member account. Details include resources that are in and
  * out of compliance with the specified policy. Resources are considered non-compliant if the specified policy has not been
  * applied to
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetComplianceDetailRequest &request)
 {
@@ -222,14 +216,13 @@ GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetCompliance
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetNotificationChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the Amazon Simple Notification Service (SNS) topic that is used to record AWS Firewall Manager
  * SNS
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNotificationChannelRequest &request)
 {
@@ -237,13 +230,12 @@ GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNoti
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified AWS Firewall Manager
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -251,14 +243,13 @@ GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListComplianceStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an array of <code>PolicyComplianceStatus</code> objects in the response. Use <code>PolicyComplianceStatus</code>
  * to get a summary of which member accounts are protected by the specified policy.
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplianceStatusRequest &request)
 {
@@ -266,13 +257,12 @@ ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplia
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an array of <code>PolicySummary</code> objects in the
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * FmsClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -280,13 +270,12 @@ ListPoliciesResponse * FmsClient::listPolicies(const ListPoliciesRequest &reques
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * PutNotificationChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNotificationChannelRequest &request)
 {
@@ -294,13 +283,12 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
 }
 
 /*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * PutPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS Firewall Manager
- *
- * @param  request Request to send to Firewall Management Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
 {
@@ -308,19 +296,16 @@ PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::FMS::FmsClientPrivate
+ * \brief The FmsClientPrivate class provides private implementation for FmsClient.
+ * \internal
  *
- * @class  FmsClientPrivate
- *
- * @brief  Private implementation for FmsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FmsClientPrivate object.
- *
- * @param  q  Pointer to this object's public FmsClient instance.
+ * Constructs a FmsClientPrivate object with public implementation \a q.
  */
 FmsClientPrivate::FmsClientPrivate(FmsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

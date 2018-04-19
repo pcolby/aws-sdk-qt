@@ -116,10 +116,10 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::WorkDocsClient
- *
  * \brief The WorkDocsClient class provides access to the Amazon WorkDocs service.
  *
- * \ingroup WorkDocs
+ * \ingroup aws-clients
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -206,15 +206,14 @@ WorkDocsClient::WorkDocsClient(
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * AbortDocumentVersionUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Aborts the upload of the specified document version that was previously initiated by
  * <a>InitiateDocumentVersionUpload</a>. The client should make this call only when it no longer intends to upload the
  * document version, or fails to do
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortDocumentVersionUploadResponse * WorkDocsClient::abortDocumentVersionUpload(const AbortDocumentVersionUploadRequest &request)
 {
@@ -222,13 +221,12 @@ AbortDocumentVersionUploadResponse * WorkDocsClient::abortDocumentVersionUpload(
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * ActivateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Activates the specified user. Only active users can access Amazon
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ActivateUserResponse * WorkDocsClient::activateUser(const ActivateUserRequest &request)
 {
@@ -236,14 +234,13 @@ ActivateUserResponse * WorkDocsClient::activateUser(const ActivateUserRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * AddResourcePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a set of permissions for the specified folder or document. The resource permissions are overwritten if the
  * principals already have different
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddResourcePermissionsResponse * WorkDocsClient::addResourcePermissions(const AddResourcePermissionsRequest &request)
 {
@@ -251,13 +248,12 @@ AddResourcePermissionsResponse * WorkDocsClient::addResourcePermissions(const Ad
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateCommentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a new comment to the specified document
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCommentResponse * WorkDocsClient::createComment(const CreateCommentRequest &request)
 {
@@ -265,13 +261,12 @@ CreateCommentResponse * WorkDocsClient::createComment(const CreateCommentRequest
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateCustomMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more custom properties to the specified resource (a folder, document, or
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCustomMetadataResponse * WorkDocsClient::createCustomMetadata(const CreateCustomMetadataRequest &request)
 {
@@ -279,13 +274,12 @@ CreateCustomMetadataResponse * WorkDocsClient::createCustomMetadata(const Create
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a folder with the specified name and parent
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFolderResponse * WorkDocsClient::createFolder(const CreateFolderRequest &request)
 {
@@ -293,13 +287,12 @@ CreateFolderResponse * WorkDocsClient::createFolder(const CreateFolderRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds the specified list of labels to the given resource (a document or
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &request)
 {
@@ -307,6 +300,11 @@ CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateNotificationSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Configure WorkDocs to use Amazon SNS
  *
  * notifications>
@@ -314,12 +312,6 @@ CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &r
  * The endpoint receives a confirmation message, and must confirm the subscription. For more information, see <a
  * href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.confirm">Confirm the
  * Subscription</a> in the <i>Amazon Simple Notification Service Developer
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubscription(const CreateNotificationSubscriptionRequest &request)
 {
@@ -327,14 +319,13 @@ CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubsc
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * CreateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a user in a Simple AD or Microsoft AD directory. The status of a newly created user is "ACTIVE". New users can
  * access Amazon
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * WorkDocsClient::createUser(const CreateUserRequest &request)
 {
@@ -342,13 +333,12 @@ CreateUserResponse * WorkDocsClient::createUser(const CreateUserRequest &request
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeactivateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deactivates the specified user, which revokes the user's access to Amazon
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeactivateUserResponse * WorkDocsClient::deactivateUser(const DeactivateUserRequest &request)
 {
@@ -356,13 +346,12 @@ DeactivateUserResponse * WorkDocsClient::deactivateUser(const DeactivateUserRequ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteCommentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified comment from the document
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCommentResponse * WorkDocsClient::deleteComment(const DeleteCommentRequest &request)
 {
@@ -370,13 +359,12 @@ DeleteCommentResponse * WorkDocsClient::deleteComment(const DeleteCommentRequest
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteCustomMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes custom metadata from the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCustomMetadataResponse * WorkDocsClient::deleteCustomMetadata(const DeleteCustomMetadataRequest &request)
 {
@@ -384,13 +372,12 @@ DeleteCustomMetadataResponse * WorkDocsClient::deleteCustomMetadata(const Delete
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently deletes the specified document and its associated
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentResponse * WorkDocsClient::deleteDocument(const DeleteDocumentRequest &request)
 {
@@ -398,13 +385,12 @@ DeleteDocumentResponse * WorkDocsClient::deleteDocument(const DeleteDocumentRequ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently deletes the specified folder and its
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFolderResponse * WorkDocsClient::deleteFolder(const DeleteFolderRequest &request)
 {
@@ -412,13 +398,12 @@ DeleteFolderResponse * WorkDocsClient::deleteFolder(const DeleteFolderRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteFolderContentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the contents of the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFolderContentsResponse * WorkDocsClient::deleteFolderContents(const DeleteFolderContentsRequest &request)
 {
@@ -426,13 +411,12 @@ DeleteFolderContentsResponse * WorkDocsClient::deleteFolderContents(const Delete
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified list of labels from a
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLabelsResponse * WorkDocsClient::deleteLabels(const DeleteLabelsRequest &request)
 {
@@ -440,13 +424,12 @@ DeleteLabelsResponse * WorkDocsClient::deleteLabels(const DeleteLabelsRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteNotificationSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified subscription from the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotificationSubscriptionResponse * WorkDocsClient::deleteNotificationSubscription(const DeleteNotificationSubscriptionRequest &request)
 {
@@ -454,13 +437,12 @@ DeleteNotificationSubscriptionResponse * WorkDocsClient::deleteNotificationSubsc
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DeleteUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified user from a Simple AD or Microsoft AD
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * WorkDocsClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -468,13 +450,12 @@ DeleteUserResponse * WorkDocsClient::deleteUser(const DeleteUserRequest &request
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeActivitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the user activities in a specified time
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivitiesResponse * WorkDocsClient::describeActivities(const DescribeActivitiesRequest &request)
 {
@@ -482,13 +463,12 @@ DescribeActivitiesResponse * WorkDocsClient::describeActivities(const DescribeAc
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeCommentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all the comments for the specified document
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCommentsResponse * WorkDocsClient::describeComments(const DescribeCommentsRequest &request)
 {
@@ -496,17 +476,16 @@ DescribeCommentsResponse * WorkDocsClient::describeComments(const DescribeCommen
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeDocumentVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the document versions for the specified
  *
  * document>
  *
  * By default, only active versions are
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDocumentVersionsResponse * WorkDocsClient::describeDocumentVersions(const DescribeDocumentVersionsRequest &request)
 {
@@ -514,18 +493,17 @@ DescribeDocumentVersionsResponse * WorkDocsClient::describeDocumentVersions(cons
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeFolderContentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the contents of the specified folder, including its documents and
  *
  * subfolders>
  *
  * By default, Amazon WorkDocs returns the first 100 active document and folder metadata items. If there are more results,
  * the response includes a marker that you can use to request the next set of results. You can also request initialized
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const DescribeFolderContentsRequest &request)
 {
@@ -533,13 +511,12 @@ DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const De
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the groups specified by
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequest &request)
 {
@@ -547,13 +524,12 @@ DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeNotificationSubscriptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the specified notification
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNotificationSubscriptionsResponse * WorkDocsClient::describeNotificationSubscriptions(const DescribeNotificationSubscriptionsRequest &request)
 {
@@ -561,13 +537,12 @@ DescribeNotificationSubscriptionsResponse * WorkDocsClient::describeNotification
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeResourcePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the permissions of a specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermissions(const DescribeResourcePermissionsRequest &request)
 {
@@ -575,15 +550,14 @@ DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermission
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeRootFoldersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the current user's special folders; the <code>RootFolder</code> and the <code>RecycleBin</code>.
  * <code>RootFolder</code> is the root of user's files and folders and <code>RecycleBin</code> is the root of recycled
  * items. This is not a valid action for SigV4 (administrative API)
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const DescribeRootFoldersRequest &request)
 {
@@ -591,18 +565,17 @@ DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const Describe
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * DescribeUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified users. You can describe all users or filter the results (for example, by status or
  *
  * organization)>
  *
  * By default, Amazon WorkDocs returns the first 24 active or pending users. If there are more results, the response
  * includes a marker that you can use to request the next set of
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUsersResponse * WorkDocsClient::describeUsers(const DescribeUsersRequest &request)
 {
@@ -610,14 +583,13 @@ DescribeUsersResponse * WorkDocsClient::describeUsers(const DescribeUsersRequest
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetCurrentUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves details of the current user for whom the authentication token was generated. This is not a valid action for
  * SigV4 (administrative API)
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCurrentUserResponse * WorkDocsClient::getCurrentUser(const GetCurrentUserRequest &request)
 {
@@ -625,13 +597,12 @@ GetCurrentUserResponse * WorkDocsClient::getCurrentUser(const GetCurrentUserRequ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves details of a
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &request)
 {
@@ -639,6 +610,11 @@ GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetDocumentPathResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the path information (the hierarchy from the root folder) for the requested
  *
  * document>
@@ -646,12 +622,6 @@ GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &requ
  * By default, Amazon WorkDocs returns a maximum of 100 levels upwards from the requested document and only includes the
  * IDs of the parent folders in the path. You can limit the maximum number of levels. You can also request the names of the
  * parent
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentPathResponse * WorkDocsClient::getDocumentPath(const GetDocumentPathRequest &request)
 {
@@ -659,13 +629,12 @@ GetDocumentPathResponse * WorkDocsClient::getDocumentPath(const GetDocumentPathR
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetDocumentVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves version metadata for the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentVersionResponse * WorkDocsClient::getDocumentVersion(const GetDocumentVersionRequest &request)
 {
@@ -673,13 +642,12 @@ GetDocumentVersionResponse * WorkDocsClient::getDocumentVersion(const GetDocumen
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the metadata of the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
 {
@@ -687,18 +655,17 @@ GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetFolderPathResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the path information (the hierarchy from the root folder) for the specified
  *
  * folder>
  *
  * By default, Amazon WorkDocs returns a maximum of 100 levels upwards from the requested folder and only includes the IDs
  * of the parent folders in the path. You can limit the maximum number of levels. You can also request the parent folder
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest &request)
 {
@@ -706,6 +673,11 @@ GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * InitiateDocumentVersionUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new document object and version
  *
  * object>
@@ -717,12 +689,6 @@ GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest
  * <a>UpdateDocumentVersion</a>>
  *
  * To cancel the document upload, call
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateDocumentVersionUploadResponse * WorkDocsClient::initiateDocumentVersionUpload(const InitiateDocumentVersionUploadRequest &request)
 {
@@ -730,13 +696,12 @@ InitiateDocumentVersionUploadResponse * WorkDocsClient::initiateDocumentVersionU
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * RemoveAllResourcePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes all the permissions from the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveAllResourcePermissionsResponse * WorkDocsClient::removeAllResourcePermissions(const RemoveAllResourcePermissionsRequest &request)
 {
@@ -744,13 +709,12 @@ RemoveAllResourcePermissionsResponse * WorkDocsClient::removeAllResourcePermissi
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * RemoveResourcePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the permission for the specified principal from the specified
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveResourcePermissionResponse * WorkDocsClient::removeResourcePermission(const RemoveResourcePermissionRequest &request)
 {
@@ -758,13 +722,12 @@ RemoveResourcePermissionResponse * WorkDocsClient::removeResourcePermission(cons
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * UpdateDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified attributes of a document. The user must have access to both the document and its parent folder, if
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentResponse * WorkDocsClient::updateDocument(const UpdateDocumentRequest &request)
 {
@@ -772,18 +735,17 @@ UpdateDocumentResponse * WorkDocsClient::updateDocument(const UpdateDocumentRequ
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * UpdateDocumentVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the status of the document version to ACTIVE.
  *
  * </p
  *
  * Amazon WorkDocs also sets its document container to ACTIVE. This is the last step in a document upload, after the client
  * uploads the document to an S3-presigned URL returned by <a>InitiateDocumentVersionUpload</a>.
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentVersionResponse * WorkDocsClient::updateDocumentVersion(const UpdateDocumentVersionRequest &request)
 {
@@ -791,14 +753,13 @@ UpdateDocumentVersionResponse * WorkDocsClient::updateDocumentVersion(const Upda
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * UpdateFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified attributes of the specified folder. The user must have access to both the folder and its parent
  * folder, if
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFolderResponse * WorkDocsClient::updateFolder(const UpdateFolderRequest &request)
 {
@@ -806,14 +767,13 @@ UpdateFolderResponse * WorkDocsClient::updateFolder(const UpdateFolderRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * UpdateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon
  * WorkDocs
- *
- * @param  request Request to send to Amazon WorkDocs.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request)
 {
@@ -821,19 +781,16 @@ UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::WorkDocsClientPrivate
+ * \brief The WorkDocsClientPrivate class provides private implementation for WorkDocsClient.
+ * \internal
  *
- * @class  WorkDocsClientPrivate
- *
- * @brief  Private implementation for WorkDocsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkDocsClientPrivate object.
- *
- * @param  q  Pointer to this object's public WorkDocsClient instance.
+ * Constructs a WorkDocsClientPrivate object with public implementation \a q.
  */
 WorkDocsClientPrivate::WorkDocsClientPrivate(WorkDocsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

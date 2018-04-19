@@ -66,10 +66,10 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::OpsWorksCMClient
- *
  * \brief The OpsWorksCMClient class provides access to the AWS OpsWorks for Chef Automate (OpsWorksCM) service.
  *
- * \ingroup OpsWorksCM
+ * \ingroup aws-clients
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -187,6 +187,11 @@ OpsWorksCMClient::OpsWorksCMClient(
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * AssociateNodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a new node with the server. For more information about how to disassociate a node, see
  *
  * <a>DisassociateNode</a>>
@@ -216,12 +221,6 @@ OpsWorksCMClient::OpsWorksCMClient(
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid. The AssociateNode
  * API call can be integrated into Auto Scaling configurations, AWS Cloudformation templates, or the user data of a
  * server's instance.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeRequest &request)
 {
@@ -229,6 +228,11 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * CreateBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an application-level backup of a server. While the server is in the <code>BACKING_UP</code> state, the server
  * cannot be changed, and no additional backup can be created.
  *
@@ -247,12 +251,6 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  * <code>InvalidStateException</code> is thrown when the server is not in any of the following states: RUNNING, HEALTHY, or
  * UNHEALTHY. A <code>ResourceNotFoundException</code> is thrown when the server is not found. A
  * <code>ValidationException</code> is thrown when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest &request)
 {
@@ -260,6 +258,11 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * CreateServerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates and immedately starts a new server. The server is ready to use when it is in the <code>HEALTHY</code> state. By
  * default, you can create a maximum of 10 servers.
  *
@@ -294,12 +297,6 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  * By default, your server is accessible from any IP address. We recommend that you update your security group rules to
  * allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the
  * navigation pane of the EC2 management console.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
 {
@@ -307,6 +304,11 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DeleteBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a backup. You can delete both manual and automated backups. This operation is asynchronous.
  *
  * </p
@@ -314,12 +316,6 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  * An <code>InvalidStateException</code> is thrown when a backup deletion is already in progress. A
  * <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * thrown when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest &request)
 {
@@ -327,6 +323,11 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DeleteServerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the server and the underlying AWS CloudFormation stacks (including the server's EC2 instance). When you run this
  * command, the server state is updated to <code>DELETING</code>. After the server is deleted, it is no longer returned by
  * <code>DescribeServer</code> requests. If the AWS CloudFormation stack cannot be deleted, the server cannot be deleted.
@@ -342,12 +343,6 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  * raised when parameters of the request are not valid.
  *
  * </p
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest &request)
 {
@@ -355,17 +350,16 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DescribeAccountAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes your account attributes, and creates requests to increase limits before they are reached or exceeded.
  *
  * </p
  *
  * This operation is synchronous.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -373,6 +367,11 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DescribeBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes backups. The results are ordered by time, with newest backups first. If you do not specify a BackupId or
  * ServerName, the command returns all backups.
  *
@@ -384,12 +383,6 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  *
  * A <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackupsRequest &request)
 {
@@ -397,6 +390,11 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DescribeEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes events for a specified server. Results are ordered by time, with newest events first.
  *
  * </p
@@ -407,12 +405,6 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  *
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -420,6 +412,11 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DescribeNodeAssociationStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the current status of an existing association or disassociation request.
  *
  * </p
@@ -427,12 +424,6 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  * A <code>ResourceNotFoundException</code> is thrown when no recent association or disassociation request with the
  * specified token is found, or when the server does not exist. A <code>ValidationException</code> is raised when
  * parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
 {
@@ -440,6 +431,11 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DescribeServersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all configuration management servers that are identified with your account. Only the stored results from Amazon
  * DynamoDB are returned. AWS OpsWorks CM does not query other services.
  *
@@ -451,12 +447,6 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  *
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServersRequest &request)
 {
@@ -464,6 +454,11 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * DisassociateNodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a node from an AWS OpsWorks CM server, and removes the node from the server's managed nodes. After a node
  * is disassociated, the node key pair is no longer valid for accessing the configuration manager's API. For more
  * information about how to associate a node, see <a>AssociateNode</a>.
@@ -473,12 +468,6 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  * A node can can only be disassociated from a server that is in a <code>HEALTHY</code> state. Otherwise, an
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
 {
@@ -486,6 +475,11 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * RestoreServerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Restores a backup to a server that is in a <code>CONNECTION_LOST</code>, <code>HEALTHY</code>, <code>RUNNING</code>,
  * <code>UNHEALTHY</code>, or <code>TERMINATED</code> state. When you run RestoreServer, the server's EC2 instance is
  * deleted, and a new EC2 instance is configured. RestoreServer maintains the existing server endpoint, so configuration
@@ -500,12 +494,6 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  * An <code>InvalidStateException</code> is thrown when the server is not in a valid state. A
  * <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerRequest &request)
 {
@@ -513,6 +501,11 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * StartMaintenanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Manually starts server maintenance. This command can be useful if an earlier maintenance attempt failed, and the
  * underlying cause of maintenance failure has been resolved. The server is in an <code>UNDER_MAINTENANCE</code> state
  * while maintenance is in progress.
@@ -522,12 +515,6 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  * Maintenance can only be started on servers in <code>HEALTHY</code> and <code>UNHEALTHY</code> states. Otherwise, an
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
 {
@@ -535,17 +522,16 @@ StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMainten
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * UpdateServerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates settings for a server.
  *
  * </p
  *
  * This operation is synchronous.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest &request)
 {
@@ -553,6 +539,11 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
 }
 
 /*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * UpdateServerEngineAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates engine-specific attributes on a specified server. The server enters the <code>MODIFYING</code> state when this
  * operation is in progress. Only one update can occur at a time. You can use this command to reset a Chef server's private
  * key (<code>CHEF_PIVOTAL_KEY</code>), a Chef server's admin password (<code>CHEF_DELIVERY_ADMIN_PASSWORD</code>), or a
@@ -567,12 +558,6 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  * This operation can only be called for servers in <code>HEALTHY</code> or <code>UNHEALTHY</code> states. Otherwise, an
  * <code>InvalidStateException</code> is raised. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
- *
- * @param  request Request to send to AWS OpsWorks for Chef Automate.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
 {
@@ -580,19 +565,16 @@ UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttri
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::OpsWorksCMClientPrivate
+ * \brief The OpsWorksCMClientPrivate class provides private implementation for OpsWorksCMClient.
+ * \internal
  *
- * @class  OpsWorksCMClientPrivate
- *
- * @brief  Private implementation for OpsWorksCMClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OpsWorksCMClientPrivate object.
- *
- * @param  q  Pointer to this object's public OpsWorksCMClient instance.
+ * Constructs a OpsWorksCMClientPrivate object with public implementation \a q.
  */
 OpsWorksCMClientPrivate::OpsWorksCMClientPrivate(OpsWorksCMClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -184,10 +184,10 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GreengrassClient
- *
  * \brief The GreengrassClient class provides access to the AWS Greengrass service.
  *
- * \ingroup Greengrass
+ * \ingroup aws-clients
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -248,13 +248,12 @@ GreengrassClient::GreengrassClient(
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * AssociateRoleToGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a role with a group. Your AWS Greengrass core will use the role to access AWS cloud services. The role's
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const AssociateRoleToGroupRequest &request)
 {
@@ -262,14 +261,13 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * AssociateServiceRoleToAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a role with your account. AWS Greengrass will use the role to access your Lambda functions and AWS IoT
  * resources. This is necessary for deployments to succeed. The role must have at least minimum permissions in the policy
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request)
 {
@@ -277,14 +275,13 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateCoreDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a core definition. You may provide the initial version of the core definition now or use
  * ''CreateCoreDefinitionVersion'' at a later time. AWS Greengrass groups must each contain exactly one AWS Greengrass
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const CreateCoreDefinitionRequest &request)
 {
@@ -292,13 +289,12 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateCoreDefinitionVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a version of a core definition that has already been defined. AWS Greengrass groups must each contain exactly
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVersion(const CreateCoreDefinitionVersionRequest &request)
 {
@@ -306,12 +302,11 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateDeploymentResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -319,13 +314,12 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateDeviceDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a device definition. You may provide the initial version of the device definition now or use
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const CreateDeviceDefinitionRequest &request)
 {
@@ -333,12 +327,11 @@ CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateDeviceDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinitionVersion(const CreateDeviceDefinitionVersionRequest &request)
 {
@@ -346,14 +339,13 @@ CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinition
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateFunctionDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a
  * group. You can create an initial version of the definition by providing a list of Lambda functions and their
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(const CreateFunctionDefinitionRequest &request)
 {
@@ -361,12 +353,11 @@ CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateFunctionDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefinitionVersion(const CreateFunctionDefinitionVersionRequest &request)
 {
@@ -374,12 +365,11 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &request)
 {
@@ -387,12 +377,11 @@ CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &re
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateGroupCertificateAuthorityResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertificateAuthority(const CreateGroupCertificateAuthorityRequest &request)
 {
@@ -400,12 +389,11 @@ CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertifica
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateGroupVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGroupVersionRequest &request)
 {
@@ -413,13 +401,12 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateLoggerDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a logger definition. You may provide the initial version of the logger definition now or use
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const CreateLoggerDefinitionRequest &request)
 {
@@ -427,12 +414,11 @@ CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateLoggerDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinitionVersion(const CreateLoggerDefinitionVersionRequest &request)
 {
@@ -440,13 +426,12 @@ CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinition
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateResourceDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a resource definition which contains a list of resources to be used in a group. You can create an initial
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(const CreateResourceDefinitionRequest &request)
 {
@@ -454,12 +439,11 @@ CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateResourceDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefinitionVersion(const CreateResourceDefinitionVersionRequest &request)
 {
@@ -467,14 +451,13 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateSoftwareUpdateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a software update for a core or group of cores (specified as an IoT thing group.) Use this to update the OTA
  * Agent as well as the Greengrass core software. It makes use of the IoT Jobs feature which provides additional commands
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(const CreateSoftwareUpdateJobRequest &request)
 {
@@ -482,13 +465,12 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateSubscriptionDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a subscription definition. You may provide the initial version of the subscription definition now or use
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefinition(const CreateSubscriptionDefinitionRequest &request)
 {
@@ -496,12 +478,11 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateSubscriptionDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscriptionDefinitionVersion(const CreateSubscriptionDefinitionVersionRequest &request)
 {
@@ -509,12 +490,11 @@ CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscripti
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteCoreDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const DeleteCoreDefinitionRequest &request)
 {
@@ -522,12 +502,11 @@ DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const Dele
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteDeviceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const DeleteDeviceDefinitionRequest &request)
 {
@@ -535,12 +514,11 @@ DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteFunctionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(const DeleteFunctionDefinitionRequest &request)
 {
@@ -548,12 +526,11 @@ DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &request)
 {
@@ -561,12 +538,11 @@ DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &re
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteLoggerDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const DeleteLoggerDefinitionRequest &request)
 {
@@ -574,12 +550,11 @@ DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteResourceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(const DeleteResourceDefinitionRequest &request)
 {
@@ -587,12 +562,11 @@ DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteSubscriptionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefinition(const DeleteSubscriptionDefinitionRequest &request)
 {
@@ -600,12 +574,11 @@ DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefin
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DisassociateRoleFromGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(const DisassociateRoleFromGroupRequest &request)
 {
@@ -613,12 +586,11 @@ DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DisassociateServiceRoleFromAccountResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServiceRoleFromAccount(const DisassociateServiceRoleFromAccountRequest &request)
 {
@@ -626,12 +598,11 @@ DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServi
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetAssociatedRoleResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssociatedRoleRequest &request)
 {
@@ -639,12 +610,11 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetConnectivityInfoResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetConnectivityInfoRequest &request)
 {
@@ -652,12 +622,11 @@ GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetCon
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetCoreDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDefinitionRequest &request)
 {
@@ -665,12 +634,11 @@ GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDef
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetCoreDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(const GetCoreDefinitionVersionRequest &request)
 {
@@ -678,12 +646,11 @@ GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetDeploymentStatusResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDeploymentStatusRequest &request)
 {
@@ -691,12 +658,11 @@ GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDep
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetDeviceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDeviceDefinitionRequest &request)
 {
@@ -704,12 +670,11 @@ GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDev
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetDeviceDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersion(const GetDeviceDefinitionVersionRequest &request)
 {
@@ -717,12 +682,11 @@ GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersio
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetFunctionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const GetFunctionDefinitionRequest &request)
 {
@@ -730,13 +694,12 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetFunctionDefinitionVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about a Lambda function definition version, including which Lambda functions are included in the
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVersion(const GetFunctionDefinitionVersionRequest &request)
 {
@@ -744,12 +707,11 @@ GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVe
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 {
@@ -757,12 +719,11 @@ GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetGroupCertificateAuthorityResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuthority(const GetGroupCertificateAuthorityRequest &request)
 {
@@ -770,12 +731,11 @@ GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuth
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetGroupCertificateConfigurationResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificateConfiguration(const GetGroupCertificateConfigurationRequest &request)
 {
@@ -783,12 +743,11 @@ GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificate
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetGroupVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersionRequest &request)
 {
@@ -796,12 +755,11 @@ GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersio
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetLoggerDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLoggerDefinitionRequest &request)
 {
@@ -809,12 +767,11 @@ GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLog
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetLoggerDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersion(const GetLoggerDefinitionVersionRequest &request)
 {
@@ -822,12 +779,11 @@ GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersio
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetResourceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const GetResourceDefinitionRequest &request)
 {
@@ -835,12 +791,11 @@ GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const Ge
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetResourceDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVersion(const GetResourceDefinitionVersionRequest &request)
 {
@@ -848,12 +803,11 @@ GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVe
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetServiceRoleForAccountResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request)
 {
@@ -861,12 +815,11 @@ GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetSubscriptionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(const GetSubscriptionDefinitionRequest &request)
 {
@@ -874,12 +827,11 @@ GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetSubscriptionDefinitionVersionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefinitionVersion(const GetSubscriptionDefinitionVersionRequest &request)
 {
@@ -887,12 +839,11 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListCoreDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersions(const ListCoreDefinitionVersionsRequest &request)
 {
@@ -900,12 +851,11 @@ ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersion
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListCoreDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCoreDefinitionsRequest &request)
 {
@@ -913,12 +863,11 @@ ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCo
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListDeploymentsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeploymentsRequest &request)
 {
@@ -926,12 +875,11 @@ ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeployment
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListDeviceDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVersions(const ListDeviceDefinitionVersionsRequest &request)
 {
@@ -939,12 +887,11 @@ ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVer
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListDeviceDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const ListDeviceDefinitionsRequest &request)
 {
@@ -952,12 +899,11 @@ ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const Li
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListFunctionDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitionVersions(const ListFunctionDefinitionVersionsRequest &request)
 {
@@ -965,12 +911,11 @@ ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitio
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListFunctionDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(const ListFunctionDefinitionsRequest &request)
 {
@@ -978,12 +923,11 @@ ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(cons
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListGroupCertificateAuthoritiesResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificateAuthorities(const ListGroupCertificateAuthoritiesRequest &request)
 {
@@ -991,12 +935,11 @@ ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificate
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListGroupVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupVersionsRequest &request)
 {
@@ -1004,12 +947,11 @@ ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupV
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListGroupsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &request)
 {
@@ -1017,12 +959,11 @@ ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &reque
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListLoggerDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVersions(const ListLoggerDefinitionVersionsRequest &request)
 {
@@ -1030,12 +971,11 @@ ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVer
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListLoggerDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const ListLoggerDefinitionsRequest &request)
 {
@@ -1043,12 +983,11 @@ ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const Li
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListResourceDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitionVersions(const ListResourceDefinitionVersionsRequest &request)
 {
@@ -1056,12 +995,11 @@ ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitio
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListResourceDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(const ListResourceDefinitionsRequest &request)
 {
@@ -1069,12 +1007,11 @@ ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(cons
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListSubscriptionDefinitionVersionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionDefinitionVersions(const ListSubscriptionDefinitionVersionsRequest &request)
 {
@@ -1082,12 +1019,11 @@ ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionD
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListSubscriptionDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefinitions(const ListSubscriptionDefinitionsRequest &request)
 {
@@ -1095,12 +1031,11 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ResetDeploymentsResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploymentsRequest &request)
 {
@@ -1108,13 +1043,12 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateConnectivityInfoResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive
- *
- * @param  request Request to send to AWS Greengrass.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const UpdateConnectivityInfoRequest &request)
 {
@@ -1122,12 +1056,11 @@ UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateCoreDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const UpdateCoreDefinitionRequest &request)
 {
@@ -1135,12 +1068,11 @@ UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const Upda
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateDeviceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const UpdateDeviceDefinitionRequest &request)
 {
@@ -1148,12 +1080,11 @@ UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateFunctionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(const UpdateFunctionDefinitionRequest &request)
 {
@@ -1161,12 +1092,11 @@ UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateGroupResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &request)
 {
@@ -1174,12 +1104,11 @@ UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &re
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateGroupCertificateConfigurationResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCertificateConfiguration(const UpdateGroupCertificateConfigurationRequest &request)
 {
@@ -1187,12 +1116,11 @@ UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCerti
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateLoggerDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const UpdateLoggerDefinitionRequest &request)
 {
@@ -1200,12 +1128,11 @@ UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const 
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateResourceDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(const UpdateResourceDefinitionRequest &request)
 {
@@ -1213,12 +1140,11 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
 }
 
 /*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateSubscriptionDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Greengrass.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request)
 {
@@ -1226,19 +1152,16 @@ UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefin
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GreengrassClientPrivate
+ * \brief The GreengrassClientPrivate class provides private implementation for GreengrassClient.
+ * \internal
  *
- * @class  GreengrassClientPrivate
- *
- * @brief  Private implementation for GreengrassClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GreengrassClientPrivate object.
- *
- * @param  q  Pointer to this object's public GreengrassClient instance.
+ * Constructs a GreengrassClientPrivate object with public implementation \a q.
  */
 GreengrassClientPrivate::GreengrassClientPrivate(GreengrassClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

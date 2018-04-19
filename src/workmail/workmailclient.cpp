@@ -98,10 +98,10 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::WorkMailClient
- *
  * \brief The WorkMailClient class provides access to the Amazon WorkMail service.
  *
- * \ingroup WorkMail
+ * \ingroup aws-clients
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -192,13 +192,12 @@ WorkMailClient::WorkMailClient(
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * AssociateDelegateToResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a member to the resource's set of
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResource(const AssociateDelegateToResourceRequest &request)
 {
@@ -206,13 +205,12 @@ AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResourc
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * AssociateMemberToGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a member to the group's
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const AssociateMemberToGroupRequest &request)
 {
@@ -220,13 +218,12 @@ AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const As
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds an alias to the set of a given member of Amazon
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &request)
 {
@@ -234,13 +231,12 @@ CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a group that can be used in Amazon WorkMail by calling the RegisterToWorkMail
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &request)
 {
@@ -248,13 +244,12 @@ CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Amazon WorkMail resource. The available types are equipment and
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequest &request)
 {
@@ -262,13 +257,12 @@ CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a user who can be used in Amazon WorkMail by calling the RegisterToWorkMail
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request)
 {
@@ -276,13 +270,12 @@ CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove the alias from a set of aliases for a given
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -290,13 +283,12 @@ DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a group from Amazon
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &request)
 {
@@ -304,13 +296,12 @@ DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteMailboxPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes permissions granted to a user or
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(const DeleteMailboxPermissionsRequest &request)
 {
@@ -318,13 +309,12 @@ DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(cons
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified resource.
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequest &request)
 {
@@ -332,14 +322,13 @@ DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a user from Amazon WorkMail and all subsequent systems. The action can't be undone. The mailbox is kept as-is
  * for a minimum of 30 days, without any means to restore it.
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -347,15 +336,14 @@ DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeregisterFromWorkMailResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Mark a user, group, or resource as no longer used in Amazon WorkMail. This action disassociates the mailbox and
  * schedules it for clean-up. Amazon WorkMail keeps mailboxes for 30 days before they are permanently removed. The
  * functionality in the console is
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const DeregisterFromWorkMailRequest &request)
 {
@@ -363,13 +351,12 @@ DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const De
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the data available for the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest &request)
 {
@@ -377,13 +364,12 @@ DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides more information regarding a given organization based on its
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrganizationResponse * WorkMailClient::describeOrganization(const DescribeOrganizationRequest &request)
 {
@@ -391,13 +377,12 @@ DescribeOrganizationResponse * WorkMailClient::describeOrganization(const Descri
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the data available for the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeResourceResponse * WorkMailClient::describeResource(const DescribeResourceRequest &request)
 {
@@ -405,13 +390,12 @@ DescribeResourceResponse * WorkMailClient::describeResource(const DescribeResour
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides information regarding the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUserResponse * WorkMailClient::describeUser(const DescribeUserRequest &request)
 {
@@ -419,13 +403,12 @@ DescribeUserResponse * WorkMailClient::describeUser(const DescribeUserRequest &r
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DisassociateDelegateFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a member from the resource's set of
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateDelegateFromResourceResponse * WorkMailClient::disassociateDelegateFromResource(const DisassociateDelegateFromResourceRequest &request)
 {
@@ -433,13 +416,12 @@ DisassociateDelegateFromResourceResponse * WorkMailClient::disassociateDelegateF
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DisassociateMemberFromGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a member from a
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGroup(const DisassociateMemberFromGroupRequest &request)
 {
@@ -447,13 +429,12 @@ DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGrou
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a paginated call to list the aliases associated with a given
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &request)
 {
@@ -461,13 +442,12 @@ ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &requ
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListGroupMembersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an overview of the members of a
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupMembersResponse * WorkMailClient::listGroupMembers(const ListGroupMembersRequest &request)
 {
@@ -475,13 +455,12 @@ ListGroupMembersResponse * WorkMailClient::listGroupMembers(const ListGroupMembe
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns summaries of the organization's
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request)
 {
@@ -489,13 +468,12 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListMailboxPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the mailbox permissions associated with a
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const ListMailboxPermissionsRequest &request)
 {
@@ -503,13 +481,12 @@ ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const Li
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListOrganizationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns summaries of the customer's non-deleted
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOrganizationsResponse * WorkMailClient::listOrganizations(const ListOrganizationsRequest &request)
 {
@@ -517,14 +494,13 @@ ListOrganizationsResponse * WorkMailClient::listOrganizations(const ListOrganiza
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListResourceDelegatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the delegates associated with a resource. Users and groups can be resource delegates and answer requests on behalf
  * of the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDelegatesResponse * WorkMailClient::listResourceDelegates(const ListResourceDelegatesRequest &request)
 {
@@ -532,13 +508,12 @@ ListResourceDelegatesResponse * WorkMailClient::listResourceDelegates(const List
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns summaries of the organization's
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest &request)
 {
@@ -546,13 +521,12 @@ ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns summaries of the organization's
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
 {
@@ -560,13 +534,12 @@ ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutMailboxPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets permissions for a user or group. This replaces any pre-existing permissions set for the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutMailboxPermissionsRequest &request)
 {
@@ -574,18 +547,17 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * RegisterToWorkMailResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers an existing and disabled user, group, or resource/entity for Amazon WorkMail use by associating a mailbox and
  * calendaring capabilities. It performs no change if the entity is enabled and fails if the entity is deleted. This
  * operation results in the accumulation of costs. For more information, see <a
  * href="http://aws.amazon.com/workmail/pricing">Pricing</a>. The equivalent console functionality for this operation is
  * <i>Enable</i>. Users can either be created by calling the CreateUser API or they can be synchronized from your
  * directory. For more information, see
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterToWorkMailResponse * WorkMailClient::registerToWorkMail(const RegisterToWorkMailRequest &request)
 {
@@ -593,13 +565,12 @@ RegisterToWorkMailResponse * WorkMailClient::registerToWorkMail(const RegisterTo
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ResetPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Allows the administrator to reset the password for a
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest &request)
 {
@@ -607,14 +578,13 @@ ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdatePrimaryEmailAddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the primary email for an entity. The current email is moved into the list of aliases (or swapped between an
  * existing alias and the current primary email) and the email provided in the input is promoted as the
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(const UpdatePrimaryEmailAddressRequest &request)
 {
@@ -622,14 +592,13 @@ UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(co
 }
 
 /*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates data for the resource. It must be preceded by a describe call in order to have the latest information. The
  * dataset in the request should be the one expected when performing another describe
- *
- * @param  request Request to send to Amazon WorkMail.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequest &request)
 {
@@ -637,19 +606,16 @@ UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequ
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::WorkMailClientPrivate
+ * \brief The WorkMailClientPrivate class provides private implementation for WorkMailClient.
+ * \internal
  *
- * @class  WorkMailClientPrivate
- *
- * @brief  Private implementation for WorkMailClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkMailClientPrivate object.
- *
- * @param  q  Pointer to this object's public WorkMailClient instance.
+ * Constructs a WorkMailClientPrivate object with public implementation \a q.
  */
 WorkMailClientPrivate::WorkMailClientPrivate(WorkMailClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

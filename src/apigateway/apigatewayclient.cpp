@@ -276,10 +276,10 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::APIGatewayClient
- *
  * \brief The APIGatewayClient class provides access to the Amazon API Gateway service.
  *
- * \ingroup APIGateway
+ * \ingroup aws-clients
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -342,15 +342,14 @@ APIGatewayClient::APIGatewayClient(
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create an <a>ApiKey</a> resource.
  *
  * </p <div class="seeAlso"><a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -358,15 +357,14 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a>
  *
  * resource> <div class="seeAlso"><a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
@@ -374,13 +372,12 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateBasePathMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new <a>BasePathMapping</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const CreateBasePathMappingRequest &request)
 {
@@ -388,13 +385,12 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -402,12 +398,11 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateDocumentationPartResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(const CreateDocumentationPartRequest &request)
 {
@@ -415,12 +410,11 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateDocumentationVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersion(const CreateDocumentationVersionRequest &request)
 {
@@ -428,13 +422,12 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new domain
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomainNameRequest &request)
 {
@@ -442,13 +435,12 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a new <a>Model</a> resource to an existing <a>RestApi</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &request)
 {
@@ -456,13 +448,12 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateRequestValidatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <a>ReqeustValidator</a> of a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const CreateRequestValidatorRequest &request)
 {
@@ -470,13 +461,12 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a <a>Resource</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRequest &request)
 {
@@ -484,13 +474,12 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new <a>RestApi</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiRequest &request)
 {
@@ -498,13 +487,12 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &request)
 {
@@ -512,13 +500,12 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateUsagePlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePlanRequest &request)
 {
@@ -526,13 +513,12 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateUsagePlanKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a usage plan key for adding an existing API key to a usage
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUsagePlanKeyRequest &request)
 {
@@ -540,14 +526,13 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * CreateVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes
  * 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkRequest &request)
 {
@@ -555,13 +540,12 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the <a>ApiKey</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
@@ -569,15 +553,14 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
@@ -585,13 +568,12 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteBasePathMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the <a>BasePathMapping</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const DeleteBasePathMappingRequest &request)
 {
@@ -599,13 +581,12 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteClientCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the <a>ClientCertificate</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(const DeleteClientCertificateRequest &request)
 {
@@ -613,14 +594,13 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources
  * associated with
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploymentRequest &request)
 {
@@ -628,12 +608,11 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteDocumentationPartResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(const DeleteDocumentationPartRequest &request)
 {
@@ -641,12 +620,11 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteDocumentationVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersion(const DeleteDocumentationVersionRequest &request)
 {
@@ -654,13 +632,12 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the <a>DomainName</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomainNameRequest &request)
 {
@@ -668,14 +645,13 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteGatewayResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets
  * it with the default
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const DeleteGatewayResponseRequest &request)
 {
@@ -683,13 +659,12 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteIntegrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a delete
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteIntegrationRequest &request)
 {
@@ -697,13 +672,12 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteIntegrationResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a delete integration
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request)
 {
@@ -711,13 +685,12 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteMethodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing <a>Method</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest &request)
 {
@@ -725,13 +698,12 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteMethodResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing <a>MethodResponse</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const DeleteMethodResponseRequest &request)
 {
@@ -739,13 +711,12 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &request)
 {
@@ -753,13 +724,12 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteRequestValidatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <a>RequestValidator</a> of a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const DeleteRequestValidatorRequest &request)
 {
@@ -767,13 +737,12 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <a>Resource</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRequest &request)
 {
@@ -781,13 +750,12 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiRequest &request)
 {
@@ -795,13 +763,12 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a <a>Stage</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &request)
 {
@@ -809,13 +776,12 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteUsagePlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a usage plan of a given plan
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePlanRequest &request)
 {
@@ -823,13 +789,12 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteUsagePlanKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a usage plan key and remove the underlying API key from the associated usage
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUsagePlanKeyRequest &request)
 {
@@ -837,13 +802,12 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * DeleteVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing <a>VpcLink</a> of a specified
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkRequest &request)
 {
@@ -851,13 +815,12 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * FlushStageAuthorizersCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Flushes all authorizer cache entries on a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCache(const FlushStageAuthorizersCacheRequest &request)
 {
@@ -865,13 +828,12 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * FlushStageCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Flushes a stage's
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCacheRequest &request)
 {
@@ -879,13 +841,12 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GenerateClientCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates a <a>ClientCertificate</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(const GenerateClientCertificateRequest &request)
 {
@@ -893,13 +854,12 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the current <a>Account</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &request)
 {
@@ -907,13 +867,12 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the current <a>ApiKey</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 {
@@ -921,13 +880,12 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetApiKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the current <a>ApiKeys</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &request)
 {
@@ -935,15 +893,14 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerRequest &request)
 {
@@ -951,15 +908,14 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetAuthorizersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe an existing <a>Authorizers</a>
  *
  * resource> <div class="seeAlso"><a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRequest &request)
 {
@@ -967,13 +923,12 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetBasePathMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe a <a>BasePathMapping</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBasePathMappingRequest &request)
 {
@@ -981,13 +936,12 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetBasePathMappingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a collection of <a>BasePathMapping</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBasePathMappingsRequest &request)
 {
@@ -995,13 +949,12 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetClientCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the current <a>ClientCertificate</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetClientCertificateRequest &request)
 {
@@ -1009,13 +962,12 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetClientCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a collection of <a>ClientCertificate</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const GetClientCertificatesRequest &request)
 {
@@ -1023,13 +975,12 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a <a>Deployment</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentRequest &request)
 {
@@ -1037,13 +988,12 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDeploymentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a <a>Deployments</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRequest &request)
 {
@@ -1051,12 +1001,11 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDocumentationPartResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetDocumentationPartRequest &request)
 {
@@ -1064,12 +1013,11 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDocumentationPartsResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const GetDocumentationPartsRequest &request)
 {
@@ -1077,12 +1025,11 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDocumentationVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(const GetDocumentationVersionRequest &request)
 {
@@ -1090,12 +1037,11 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDocumentationVersionsResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(const GetDocumentationVersionsRequest &request)
 {
@@ -1103,13 +1049,12 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a domain name that is contained in a simpler, more intuitive URL that can be
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameRequest &request)
 {
@@ -1117,13 +1062,12 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetDomainNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a collection of <a>DomainName</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRequest &request)
 {
@@ -1131,13 +1075,12 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetExportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Exports a deployed version of a <a>RestApi</a> in a specified
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 {
@@ -1145,13 +1088,12 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetGatewayResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a <a>GatewayResponse</a> of a specified response type on the given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatewayResponseRequest &request)
 {
@@ -1159,15 +1101,14 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetGatewayResponsesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any
  * definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a>
  * collection for the supported response
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGatewayResponsesRequest &request)
 {
@@ -1175,13 +1116,12 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetIntegrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Get the integration
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRequest &request)
 {
@@ -1189,13 +1129,12 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetIntegrationResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a get integration
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const GetIntegrationResponseRequest &request)
 {
@@ -1203,13 +1142,12 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetMethodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe an existing <a>Method</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 {
@@ -1217,13 +1155,12 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetMethodResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a <a>MethodResponse</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodResponseRequest &request)
 {
@@ -1231,13 +1168,12 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes an existing model defined for a <a>RestApi</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 {
@@ -1245,13 +1181,12 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetModelTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates a sample mapping template that can be used to transform a payload into the structure of a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemplateRequest &request)
 {
@@ -1259,13 +1194,12 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetModelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes existing <a>Models</a> defined for a <a>RestApi</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 {
@@ -1273,13 +1207,12 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetRequestValidatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a <a>RequestValidator</a> of a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetRequestValidatorRequest &request)
 {
@@ -1287,13 +1220,12 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetRequestValidatorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the <a>RequestValidators</a> collection of a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetRequestValidatorsRequest &request)
 {
@@ -1301,13 +1233,12 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists information about a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &request)
 {
@@ -1315,13 +1246,12 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists information about a collection of <a>Resource</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest &request)
 {
@@ -1329,13 +1259,12 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the <a>RestApi</a> resource in the
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &request)
 {
@@ -1343,13 +1272,12 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetRestApisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the <a>RestApis</a> resources for your
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &request)
 {
@@ -1357,13 +1285,12 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetSdkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates a client SDK for a <a>RestApi</a> and
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 {
@@ -1371,12 +1298,11 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetSdkTypeResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &request)
 {
@@ -1384,12 +1310,11 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetSdkTypesResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &request)
 {
@@ -1397,13 +1322,12 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a <a>Stage</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 {
@@ -1411,13 +1335,12 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetStagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more <a>Stage</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 {
@@ -1425,13 +1348,12 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the <a>Tags</a> collection for a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 {
@@ -1439,13 +1361,12 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the usage data of a usage plan in a specified time
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 {
@@ -1453,13 +1374,12 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetUsagePlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a usage plan of a given plan
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest &request)
 {
@@ -1467,13 +1387,12 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetUsagePlanKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a usage plan key of a given key
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKeyRequest &request)
 {
@@ -1481,13 +1400,12 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetUsagePlanKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets all the usage plan keys representing the API keys added to a specified usage
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlanKeysRequest &request)
 {
@@ -1495,13 +1413,12 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetUsagePlansResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets all the usage plans of the caller's
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansRequest &request)
 {
@@ -1509,13 +1426,12 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a specified VPC link under the caller's account in a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &request)
 {
@@ -1523,13 +1439,12 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * GetVpcLinksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the <a>VpcLinks</a> collection under the caller's account in a selected
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &request)
 {
@@ -1537,13 +1452,12 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * ImportApiKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Import API keys from an external source, such as a CSV-formatted
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysRequest &request)
 {
@@ -1551,12 +1465,11 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * ImportDocumentationPartsResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(const ImportDocumentationPartsRequest &request)
 {
@@ -1564,13 +1477,12 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * ImportRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * A feature of the API Gateway control service for creating a new API from an external API definition
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiRequest &request)
 {
@@ -1578,13 +1490,12 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutGatewayResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatewayResponseRequest &request)
 {
@@ -1592,13 +1503,12 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutIntegrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets up a method's
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRequest &request)
 {
@@ -1606,13 +1516,12 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutIntegrationResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents a put
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const PutIntegrationResponseRequest &request)
 {
@@ -1620,13 +1529,12 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutMethodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Add a method to an existing <a>Resource</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 {
@@ -1634,13 +1542,12 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutMethodResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a <a>MethodResponse</a> to an existing <a>Method</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodResponseRequest &request)
 {
@@ -1648,14 +1555,13 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * PutRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The
  * update can take the form of merging the supplied definition into the existing API or overwriting the existing
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &request)
 {
@@ -1663,13 +1569,12 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or updates a tag on a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &request)
 {
@@ -1677,16 +1582,15 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * TestInvokeAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
  * body> <div class="seeAlso"> <a
  * href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
@@ -1694,13 +1598,12 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * TestInvokeMethodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMethodRequest &request)
 {
@@ -1708,13 +1611,12 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a tag from a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1722,13 +1624,12 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about the current <a>Account</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountRequest &request)
 {
@@ -1736,13 +1637,12 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateApiKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about an <a>ApiKey</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
@@ -1750,15 +1650,14 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
@@ -1766,13 +1665,12 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateBasePathMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about the <a>BasePathMapping</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const UpdateBasePathMappingRequest &request)
 {
@@ -1780,13 +1678,12 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateClientCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about an <a>ClientCertificate</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(const UpdateClientCertificateRequest &request)
 {
@@ -1794,13 +1691,12 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about a <a>Deployment</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploymentRequest &request)
 {
@@ -1808,12 +1704,11 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateDocumentationPartResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(const UpdateDocumentationPartRequest &request)
 {
@@ -1821,12 +1716,11 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateDocumentationVersionResponse object to track the result.
  *
- * @param  request Request to send to Amazon API Gateway.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersion(const UpdateDocumentationVersionRequest &request)
 {
@@ -1834,13 +1728,12 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about the <a>DomainName</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomainNameRequest &request)
 {
@@ -1848,13 +1741,12 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateGatewayResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <a>GatewayResponse</a> of a specified response type on the given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const UpdateGatewayResponseRequest &request)
 {
@@ -1862,13 +1754,12 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateIntegrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents an update
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateIntegrationRequest &request)
 {
@@ -1876,13 +1767,12 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateIntegrationResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents an update integration
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(const UpdateIntegrationResponseRequest &request)
 {
@@ -1890,13 +1780,12 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateMethodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing <a>Method</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest &request)
 {
@@ -1904,13 +1793,12 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateMethodResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing <a>MethodResponse</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const UpdateMethodResponseRequest &request)
 {
@@ -1918,13 +1806,12 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about a
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &request)
 {
@@ -1932,13 +1819,12 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateRequestValidatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a <a>RequestValidator</a> of a given
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const UpdateRequestValidatorRequest &request)
 {
@@ -1946,13 +1832,12 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about a <a>Resource</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRequest &request)
 {
@@ -1960,13 +1845,12 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateRestApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about the specified
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiRequest &request)
 {
@@ -1974,13 +1858,12 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about a <a>Stage</a>
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &request)
 {
@@ -1988,13 +1871,12 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Grants a temporary extension to the remaining quota of a usage plan associated with a specified API
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &request)
 {
@@ -2002,13 +1884,12 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateUsagePlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a usage plan of a given plan
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePlanRequest &request)
 {
@@ -2016,13 +1897,12 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
 }
 
 /*!
+ * Sends \a request to the APIGatewayClient service, and returns a pointer to an
+ * UpdateVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing <a>VpcLink</a> of a specified
- *
- * @param  request Request to send to Amazon API Gateway.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkRequest &request)
 {
@@ -2030,19 +1910,16 @@ UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkReque
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::APIGatewayClientPrivate
+ * \brief The APIGatewayClientPrivate class provides private implementation for APIGatewayClient.
+ * \internal
  *
- * @class  APIGatewayClientPrivate
- *
- * @brief  Private implementation for APIGatewayClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new APIGatewayClientPrivate object.
- *
- * @param  q  Pointer to this object's public APIGatewayClient instance.
+ * Constructs a APIGatewayClientPrivate object with public implementation \a q.
  */
 APIGatewayClientPrivate::APIGatewayClientPrivate(APIGatewayClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

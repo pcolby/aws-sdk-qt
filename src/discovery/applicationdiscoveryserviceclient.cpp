@@ -73,10 +73,10 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient
- *
  * \brief The ApplicationDiscoveryServiceClient class provides access to the AWS Application Discovery Service service.
  *
- * \ingroup ApplicationDiscoveryService
+ * \ingroup aws-clients
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -198,13 +198,12 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * AssociateConfigurationItemsToApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates one or more configuration items with an
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
@@ -212,13 +211,12 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * CreateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an application with the given name and
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -226,14 +224,13 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * CreateTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
  * a list of multiple configuration
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
 {
@@ -241,13 +238,12 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DeleteApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a list of applications and their associations with configuration
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
 {
@@ -255,14 +251,13 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
  * configuration
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -270,14 +265,13 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeAgentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
  * specify an
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
 {
@@ -285,6 +279,11 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type
  * (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the
  * output for a <i>server</i> configuration item includes a list of attributes about the server, such as host name,
@@ -295,12 +294,6 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  * For a complete list of outputs for each asset type, see <a
  * href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations">Using
  * the DescribeConfigurations
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
@@ -308,17 +301,16 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeExportConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated. Use <code>DescribeExportTasks</code>
  *
  * instead>
  *
  * Retrieves the status of a given export process. You can retrieve status from a maximum of 100
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
@@ -326,13 +318,12 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeExportTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
@@ -340,14 +331,13 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
  * a specific configuration
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -355,13 +345,12 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DisassociateConfigurationItemsFromApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates one or more configuration items from an
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
 {
@@ -369,6 +358,11 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * ExportConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated. Use <code>StartExportTask</code>
  *
  * instead>
@@ -377,12 +371,6 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  * the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API
  * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
  * two configuration exports in six
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
@@ -390,13 +378,12 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * GetDiscoverySummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a short summary of discovered
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
@@ -404,14 +391,13 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * ListConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
  * identifies the relationship
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -419,13 +405,12 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * ListServerNeighborsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of servers that are one network hop away from a specified
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
@@ -433,13 +418,12 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StartDataCollectionByAgentIdsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Instructs the specified agents or connectors to start collecting
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
 {
@@ -447,6 +431,11 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StartExportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Begins the export of discovered data to an S3
  *
  * bucket>
@@ -461,12 +450,6 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both AWS Agentless
  * Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports
  * per day.
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
@@ -474,13 +457,12 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StopDataCollectionByAgentIdsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Instructs the specified agents or connectors to stop collecting
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
 {
@@ -488,13 +470,12 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * UpdateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates metadata about an
- *
- * @param  request Request to send to AWS Application Discovery Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -502,19 +483,16 @@ UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClientPrivate
+ * \brief The ApplicationDiscoveryServiceClientPrivate class provides private implementation for ApplicationDiscoveryServiceClient.
+ * \internal
  *
- * @class  ApplicationDiscoveryServiceClientPrivate
- *
- * @brief  Private implementation for ApplicationDiscoveryServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationDiscoveryServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public ApplicationDiscoveryServiceClient instance.
+ * Constructs a ApplicationDiscoveryServiceClientPrivate object with public implementation \a q.
  */
 ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

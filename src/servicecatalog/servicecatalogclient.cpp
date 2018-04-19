@@ -156,10 +156,10 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogClient
- *
  * \brief The ServiceCatalogClient class provides access to the AWS Service Catalog service.
  *
- * \ingroup ServiceCatalog
+ * \ingroup aws-clients
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -223,13 +223,12 @@ ServiceCatalogClient::ServiceCatalogClient(
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AcceptPortfolioShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accepts an offer to share the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const AcceptPortfolioShareRequest &request)
 {
@@ -237,13 +236,12 @@ AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const 
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AssociatePrincipalWithPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates the specified principal ARN with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincipalWithPortfolio(const AssociatePrincipalWithPortfolioRequest &request)
 {
@@ -251,13 +249,12 @@ AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincip
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AssociateProductWithPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates the specified product with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWithPortfolio(const AssociateProductWithPortfolioRequest &request)
 {
@@ -265,13 +262,12 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AssociateTagOptionWithResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associate the specified TagOption with the specified portfolio or
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptionWithResource(const AssociateTagOptionWithResourceRequest &request)
 {
@@ -279,6 +275,11 @@ AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptio
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CopyProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Copies the specified source product to the specified target product or a new
  *
  * product>
@@ -288,12 +289,6 @@ AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptio
  * region>
  *
  * This operation is performed asynchronously. To track the progress of the operation, use
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest &request)
 {
@@ -301,13 +296,12 @@ CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateConstraintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateConstraintRequest &request)
 {
@@ -315,13 +309,12 @@ CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateCo
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreatePortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePortfolioRequest &request)
 {
@@ -329,13 +322,12 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreatePortfolioShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Shares the specified portfolio with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const CreatePortfolioShareRequest &request)
 {
@@ -343,13 +335,12 @@ CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const 
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductRequest &request)
 {
@@ -357,6 +348,11 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateProvisionedProductPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when
  * updating a provisioned product) when the plan is
  *
@@ -369,12 +365,6 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
  *
  * To view the resource changes in the change set, use <a>DescribeProvisionedProductPlan</a>. To create or modify the
  * provisioned product, use
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedProductPlan(const CreateProvisionedProductPlanRequest &request)
 {
@@ -382,17 +372,16 @@ CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedPr
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a provisioning artifact (also known as a version) for the specified
  *
  * product>
  *
  * You cannot create a provisioning artifact for a product that was shared with
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArtifact(const CreateProvisioningArtifactRequest &request)
 {
@@ -400,13 +389,12 @@ CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArt
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateTagOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagOptionRequest &request)
 {
@@ -414,13 +402,12 @@ CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagO
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteConstraintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteConstraintRequest &request)
 {
@@ -428,17 +415,16 @@ DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteCo
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeletePortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * portfolio>
  *
  * You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePortfolioRequest &request)
 {
@@ -446,13 +432,12 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeletePortfolioShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops sharing the specified portfolio with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const DeletePortfolioShareRequest &request)
 {
@@ -460,17 +445,16 @@ DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const 
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * product>
  *
  * You cannot delete a product if it was shared with you or is associated with a
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductRequest &request)
 {
@@ -478,13 +462,12 @@ DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductR
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteProvisionedProductPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedProductPlan(const DeleteProvisionedProductPlanRequest &request)
 {
@@ -492,18 +475,17 @@ DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedPr
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified provisioning artifact (also known as a version) for the specified
  *
  * product>
  *
  * You cannot delete a provisioning artifact associated with a product that was shared with you. You cannot delete the last
  * provisioning artifact for a product, because a product must have at least one provisioning
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArtifact(const DeleteProvisioningArtifactRequest &request)
 {
@@ -511,17 +493,16 @@ DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArt
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteTagOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * TagOption>
  *
  * You cannot delete a TagOption if it is associated with a product or
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagOptionRequest &request)
 {
@@ -529,13 +510,12 @@ DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagO
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeConstraintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const DescribeConstraintRequest &request)
 {
@@ -543,13 +523,12 @@ DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const Desc
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeCopyProductStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the status of the specified copy product
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductStatus(const DescribeCopyProductStatusRequest &request)
 {
@@ -557,13 +536,12 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribePortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const DescribePortfolioRequest &request)
 {
@@ -571,13 +549,12 @@ DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const Descri
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribeProductRequest &request)
 {
@@ -585,13 +562,12 @@ DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribePr
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProductAsAdminResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified product. This operation is run with administrator
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(const DescribeProductAsAdminRequest &request)
 {
@@ -599,13 +575,12 @@ DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(co
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProductViewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const DescribeProductViewRequest &request)
 {
@@ -613,13 +588,12 @@ DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const De
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProvisionedProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified provisioned
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedProduct(const DescribeProvisionedProductRequest &request)
 {
@@ -627,13 +601,12 @@ DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedPr
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProvisionedProductPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the resource changes for the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvisionedProductPlan(const DescribeProvisionedProductPlanRequest &request)
 {
@@ -641,13 +614,12 @@ DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvision
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified provisioning artifact (also known as a version) for the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisioningArtifact(const DescribeProvisioningArtifactRequest &request)
 {
@@ -655,6 +627,11 @@ DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisionin
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeProvisioningParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the configuration required to provision the specified product using the specified provisioning
  *
  * artifact>
@@ -663,12 +640,6 @@ DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisionin
  * user cannot take action to fix the conflict, and launch is not blocked. In subsequent calls to <a>ProvisionProduct</a>,
  * do not include conflicted TagOption keys as tags, or this causes the error "Parameter validation failed: Missing
  * required parameter in Tags[<i>N</i>]:<i>Value</i>". Tag the provisioned product with the value
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvisioningParameters(const DescribeProvisioningParametersRequest &request)
 {
@@ -676,18 +647,17 @@ DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvision
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeRecordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified request
  *
  * operation>
  *
  * Use this operation after calling a request operation (for example, <a>ProvisionProduct</a>,
  * <a>TerminateProvisionedProduct</a>, or <a>UpdateProvisionedProduct</a>).
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeRecordRequest &request)
 {
@@ -695,13 +665,12 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeTagOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const DescribeTagOptionRequest &request)
 {
@@ -709,13 +678,12 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisassociatePrincipalFromPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a previously associated principal ARN from a specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociatePrincipalFromPortfolio(const DisassociatePrincipalFromPortfolioRequest &request)
 {
@@ -723,13 +691,12 @@ DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociateP
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisassociateProductFromPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the specified product from the specified portfolio.
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociateProductFromPortfolio(const DisassociateProductFromPortfolioRequest &request)
 {
@@ -737,13 +704,12 @@ DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociatePro
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisassociateTagOptionFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the specified TagOption from the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTagOptionFromResource(const DisassociateTagOptionFromResourceRequest &request)
 {
@@ -751,13 +717,12 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ExecuteProvisionedProductPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provisions or modifies a product based on the resource changes for the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisionedProductPlan(const ExecuteProvisionedProductPlanRequest &request)
 {
@@ -765,13 +730,12 @@ ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisioned
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListAcceptedPortfolioSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all portfolios for which sharing was accepted by this
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request)
 {
@@ -779,13 +743,12 @@ ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfoli
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListConstraintsForPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the constraints for the specified portfolio and
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPortfolio(const ListConstraintsForPortfolioRequest &request)
 {
@@ -793,14 +756,13 @@ ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPo
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListLaunchPathsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary
  * when provisioning a product. A path also determines the constraints put on the
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunchPathsRequest &request)
 {
@@ -808,13 +770,12 @@ ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunch
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListPortfolioAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the account IDs that have access to the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const ListPortfolioAccessRequest &request)
 {
@@ -822,13 +783,12 @@ ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const Li
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListPortfoliosResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all portfolios in the
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoliosRequest &request)
 {
@@ -836,13 +796,12 @@ ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoli
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListPortfoliosForProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all portfolios that the specified product is associated
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduct(const ListPortfoliosForProductRequest &request)
 {
@@ -850,13 +809,12 @@ ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduc
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListPrincipalsForPortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all principal ARNs associated with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPortfolio(const ListPrincipalsForPortfolioRequest &request)
 {
@@ -864,13 +822,12 @@ ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPort
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListProvisionedProductPlansResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the plans for the specified provisioned product or all plans to which the user has
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProductPlans(const ListProvisionedProductPlansRequest &request)
 {
@@ -878,13 +835,12 @@ ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProdu
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListProvisioningArtifactsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all provisioning artifacts (also known as versions) for the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifacts(const ListProvisioningArtifactsRequest &request)
 {
@@ -892,13 +848,12 @@ ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifa
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListRecordHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the specified requests or all performed
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRecordHistoryRequest &request)
 {
@@ -906,13 +861,12 @@ ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRe
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListResourcesForTagOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the resources associated with the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOption(const ListResourcesForTagOptionRequest &request)
 {
@@ -920,13 +874,12 @@ ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOpt
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListTagOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the specified TagOptions or all
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptionsRequest &request)
 {
@@ -934,6 +887,11 @@ ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptio
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ProvisionProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provisions the specified
  *
  * product>
@@ -946,12 +904,6 @@ ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptio
  *
  * If the request contains a tag key with an empty list of values, there is a tag conflict for that key. Do not include
  * conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const ProvisionProductRequest &request)
 {
@@ -959,13 +911,12 @@ ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const Provisio
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * RejectPortfolioShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Rejects an offer to share the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const RejectPortfolioShareRequest &request)
 {
@@ -973,17 +924,16 @@ RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const 
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ScanProvisionedProductsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the provisioned products that are available (not
  *
  * terminated)>
  *
  * To use additional filtering, see
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(const ScanProvisionedProductsRequest &request)
 {
@@ -991,13 +941,12 @@ ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * SearchProductsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the products to which the caller has
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProductsRequest &request)
 {
@@ -1005,13 +954,12 @@ SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProduc
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * SearchProductsAsAdminResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the products for the specified portfolio or all
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(const SearchProductsAsAdminRequest &request)
 {
@@ -1019,13 +967,12 @@ SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(cons
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * SearchProvisionedProductsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the provisioned products that meet the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProducts(const SearchProvisionedProductsRequest &request)
 {
@@ -1033,6 +980,11 @@ SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProdu
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * TerminateProvisionedProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Terminates the specified provisioned
  *
  * product>
@@ -1042,12 +994,6 @@ SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProdu
  * product>
  *
  * You can check the status of this request using
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisionedProduct(const TerminateProvisionedProductRequest &request)
 {
@@ -1055,13 +1001,12 @@ TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisioned
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateConstraintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateConstraintRequest &request)
 {
@@ -1069,17 +1014,16 @@ UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateCo
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdatePortfolioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
  *
  * portfolio>
  *
  * You cannot update a product that was shared with
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePortfolioRequest &request)
 {
@@ -1087,13 +1031,12 @@ UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePort
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductRequest &request)
 {
@@ -1101,6 +1044,11 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateProvisionedProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests updates to the configuration of the specified provisioned
  *
  * product>
@@ -1111,12 +1059,6 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
  * entirely>
  *
  * You can check the status of this request using
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduct(const UpdateProvisionedProductRequest &request)
 {
@@ -1124,17 +1066,16 @@ UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduc
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified provisioning artifact (also known as a version) for the specified
  *
  * product>
  *
  * You cannot update a provisioning artifact for a product that was shared with
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArtifact(const UpdateProvisioningArtifactRequest &request)
 {
@@ -1142,13 +1083,12 @@ UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArt
 }
 
 /*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateTagOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
- *
- * @param  request Request to send to AWS Service Catalog.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagOptionRequest &request)
 {
@@ -1156,19 +1096,16 @@ UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagO
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ServiceCatalogClientPrivate
+ * \brief The ServiceCatalogClientPrivate class provides private implementation for ServiceCatalogClient.
+ * \internal
  *
- * @class  ServiceCatalogClientPrivate
- *
- * @brief  Private implementation for ServiceCatalogClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceCatalogClientPrivate object.
- *
- * @param  q  Pointer to this object's public ServiceCatalogClient instance.
+ * Constructs a ServiceCatalogClientPrivate object with public implementation \a q.
  */
 ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

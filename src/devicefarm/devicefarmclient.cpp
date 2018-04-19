@@ -150,10 +150,10 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmClient
- *
  * \brief The DeviceFarmClient class provides access to the AWS Device Farm service.
  *
- * \ingroup DeviceFarm
+ * \ingroup aws-clients
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -213,13 +213,12 @@ DeviceFarmClient::DeviceFarmClient(
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateDevicePoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevicePoolRequest &request)
 {
@@ -227,13 +226,12 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a profile that can be applied to one or more private fleet device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInstanceProfileResponse * DeviceFarmClient::createInstanceProfile(const CreateInstanceProfileRequest &request)
 {
@@ -241,13 +239,12 @@ CreateInstanceProfileResponse * DeviceFarmClient::createInstanceProfile(const Cr
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a network
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const CreateNetworkProfileRequest &request)
 {
@@ -255,13 +252,12 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectRequest &request)
 {
@@ -269,13 +265,12 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateRemoteAccessSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Specifies and starts a remote access
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request)
 {
@@ -283,13 +278,12 @@ CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads an app or test
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest &request)
 {
@@ -297,13 +291,12 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteDevicePoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevicePoolRequest &request)
 {
@@ -311,13 +304,12 @@ DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevice
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a profile that can be applied to one or more private device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInstanceProfileResponse * DeviceFarmClient::deleteInstanceProfile(const DeleteInstanceProfileRequest &request)
 {
@@ -325,13 +317,12 @@ DeleteInstanceProfileResponse * DeviceFarmClient::deleteInstanceProfile(const De
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a network
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const DeleteNetworkProfileRequest &request)
 {
@@ -339,17 +330,16 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS Device Farm project, given the project
  *
  * ARN>
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -357,13 +347,12 @@ DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteRemoteAccessSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a completed remote access session and its
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request)
 {
@@ -371,17 +360,16 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the run, given the run
  *
  * ARN>
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 {
@@ -389,13 +377,12 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an upload given the upload
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest &request)
 {
@@ -403,13 +390,12 @@ DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest 
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetAccountSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -417,13 +403,12 @@ GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccou
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a unique device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 {
@@ -431,13 +416,12 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetDeviceInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a device instance belonging to a private device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceInstanceResponse * DeviceFarmClient::getDeviceInstance(const GetDeviceInstanceRequest &request)
 {
@@ -445,13 +429,12 @@ GetDeviceInstanceResponse * DeviceFarmClient::getDeviceInstance(const GetDeviceI
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetDevicePoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolRequest &request)
 {
@@ -459,13 +442,12 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetDevicePoolCompatibilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about compatibility with a device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request)
 {
@@ -473,13 +455,12 @@ GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibilit
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified instance
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstanceProfileResponse * DeviceFarmClient::getInstanceProfile(const GetInstanceProfileRequest &request)
 {
@@ -487,13 +468,12 @@ GetInstanceProfileResponse * DeviceFarmClient::getInstanceProfile(const GetInsta
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 {
@@ -501,13 +481,12 @@ GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a network
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetworkProfileRequest &request)
 {
@@ -515,17 +494,16 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetOfferingStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many
  * offerings are currently available and the offerings that will be available in the next period. The API returns a
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferingStatusRequest &request)
 {
@@ -533,13 +511,12 @@ GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferin
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &request)
 {
@@ -547,13 +524,12 @@ GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &reque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetRemoteAccessSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a link to a currently running remote access
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const GetRemoteAccessSessionRequest &request)
 {
@@ -561,13 +537,12 @@ GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const 
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 {
@@ -575,13 +550,12 @@ GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetSuiteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 {
@@ -589,13 +563,12 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetTestResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 {
@@ -603,13 +576,12 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 {
@@ -617,14 +589,13 @@ GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * InstallToRemoteAccessSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Installs an application to the device in a remote access session. For Android applications, the file must be in .apk
  * format. For iOS applications, the file must be in .ipa
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSession(const InstallToRemoteAccessSessionRequest &request)
 {
@@ -632,13 +603,12 @@ InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSe
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListArtifactsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsRequest &request)
 {
@@ -646,13 +616,12 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListDeviceInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the private device instances associated with one or more AWS
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeviceInstancesResponse * DeviceFarmClient::listDeviceInstances(const ListDeviceInstancesRequest &request)
 {
@@ -660,13 +629,12 @@ ListDeviceInstancesResponse * DeviceFarmClient::listDeviceInstances(const ListDe
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListDevicePoolsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePoolsRequest &request)
 {
@@ -674,13 +642,12 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListDevicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about unique device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &request)
 {
@@ -688,13 +655,12 @@ ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &re
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListInstanceProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about all the instance profiles in an AWS
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInstanceProfilesResponse * DeviceFarmClient::listInstanceProfiles(const ListInstanceProfilesRequest &request)
 {
@@ -702,13 +668,12 @@ ListInstanceProfilesResponse * DeviceFarmClient::listInstanceProfiles(const List
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about jobs for a given test
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 {
@@ -716,13 +681,12 @@ ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListNetworkProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the list of available network
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNetworkProfilesRequest &request)
 {
@@ -730,16 +694,15 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListOfferingPromotionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion.
  * The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const ListOfferingPromotionsRequest &request)
 {
@@ -747,17 +710,16 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListOfferingTransactionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is
  * paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(const ListOfferingTransactionsRequest &request)
 {
@@ -765,17 +727,16 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the
  * recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the
  * user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsRequest &request)
 {
@@ -783,13 +744,12 @@ ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest &request)
 {
@@ -797,13 +757,12 @@ ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest 
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListRemoteAccessSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all currently running remote access
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(const ListRemoteAccessSessionsRequest &request)
 {
@@ -811,13 +770,12 @@ ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(co
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListRunsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about runs, given an AWS Device Farm project
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 {
@@ -825,13 +783,12 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListSamplesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about samples, given an AWS Device Farm project
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &request)
 {
@@ -839,13 +796,12 @@ ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &re
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListSuitesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about test suites for a given
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &request)
 {
@@ -853,13 +809,12 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTestsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about tests in a given test
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 {
@@ -867,13 +822,12 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListUniqueProblemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about unique
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniqueProblemsRequest &request)
 {
@@ -881,13 +835,12 @@ ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniq
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListUploadsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about uploads, given an AWS Device Farm project
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &request)
 {
@@ -895,17 +848,16 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * PurchaseOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an
  * offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not
  * permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOfferingRequest &request)
 {
@@ -913,16 +865,15 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * RenewOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the
  * next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation.
  * Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe
  * that you should be able to invoke this
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingRequest &request)
 {
@@ -930,13 +881,12 @@ RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingReque
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ScheduleRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Schedules a
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &request)
 {
@@ -944,13 +894,12 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * StopRemoteAccessSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Ends a specified remote access
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request)
 {
@@ -958,16 +907,15 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * StopRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests
  * have not started executing, and you will not be billed for these devices. On devices where tests have started executing,
  * Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be
  * billed for Setup, Teardown, and any tests that were in progress or already
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 {
@@ -975,13 +923,12 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateDeviceInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates information about an existing private device
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeviceInstanceResponse * DeviceFarmClient::updateDeviceInstance(const UpdateDeviceInstanceRequest &request)
 {
@@ -989,14 +936,13 @@ UpdateDeviceInstanceResponse * DeviceFarmClient::updateDeviceInstance(const Upda
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateDevicePoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are
  * all-or-nothing, meaning they can only be updated as a whole (or not at
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevicePoolRequest &request)
 {
@@ -1004,13 +950,12 @@ UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevice
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateInstanceProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates information about an existing private device instance
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateInstanceProfileResponse * DeviceFarmClient::updateInstanceProfile(const UpdateInstanceProfileRequest &request)
 {
@@ -1018,13 +963,12 @@ UpdateInstanceProfileResponse * DeviceFarmClient::updateInstanceProfile(const Up
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the network profile with specific
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const UpdateNetworkProfileRequest &request)
 {
@@ -1032,13 +976,12 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
 }
 
 /*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified project name, given the project ARN and a new
- *
- * @param  request Request to send to AWS Device Farm.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectRequest &request)
 {
@@ -1046,19 +989,16 @@ UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectReque
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeviceFarmClientPrivate
+ * \brief The DeviceFarmClientPrivate class provides private implementation for DeviceFarmClient.
+ * \internal
  *
- * @class  DeviceFarmClientPrivate
- *
- * @brief  Private implementation for DeviceFarmClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeviceFarmClientPrivate object.
- *
- * @param  q  Pointer to this object's public DeviceFarmClient instance.
+ * Constructs a DeviceFarmClientPrivate object with public implementation \a q.
  */
 DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

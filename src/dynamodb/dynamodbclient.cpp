@@ -98,10 +98,10 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DynamoDBClient
- *
  * \brief The DynamoDBClient class provides access to the Amazon DynamoDB service.
  *
- * \ingroup DynamoDB
+ * \ingroup aws-clients
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -178,6 +178,11 @@ DynamoDBClient::DynamoDBClient(
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * BatchGetItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>BatchGetItem</code> operation returns the attributes of one or more items from one or more tables. You
  * identify requested items by primary
  *
@@ -241,12 +246,6 @@ DynamoDBClient::DynamoDBClient(
  * read capacity units according to the type of read. For more information, see <a
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
  * Units Calculations</a> in the <i>Amazon DynamoDB Developer
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &request)
 {
@@ -254,6 +253,11 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * BatchWriteItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>BatchWriteItem</code> operation puts or deletes multiple items in one or more tables. A single call to
  * <code>BatchWriteItem</code> can write up to 16 MB of data, which can comprise as many as 25 put or delete requests.
  * Individual items to be written can be as large as 400
@@ -343,12 +347,6 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
  * KB> </li> <li>
  *
  * The total request size exceeds 16
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequest &request)
 {
@@ -356,6 +354,11 @@ BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * CreateBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a backup for an existing
  *
  * table>
@@ -400,12 +403,6 @@ BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequ
  * Stream> </li> <li>
  *
  * Provisioned read and write
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &request)
 {
@@ -413,6 +410,11 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * CreateGlobalTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a global table from an existing table. A global table creates a replication relationship between two or more
  * DynamoDB tables with the same table name in the provided regions.
  *
@@ -435,12 +437,6 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
  * </p </li> <li>
  *
  * The tables must have DynamoDB Streams enabled (NEW_AND_OLD_IMAGES).
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobalTableRequest &request)
 {
@@ -448,6 +444,11 @@ CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobal
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * CreateTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>CreateTable</code> operation adds a new table to your account. In an AWS account, table names must be unique
  * within each region. That is, you can have two tables with same name if you create the tables in different
  *
@@ -467,12 +468,6 @@ CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobal
  * time>
  *
  * You can use the <code>DescribeTable</code> action to check the table
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTableResponse * DynamoDBClient::createTable(const CreateTableRequest &request)
 {
@@ -480,17 +475,16 @@ CreateTableResponse * DynamoDBClient::createTable(const CreateTableRequest &requ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DeleteBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing backup of a
  *
  * table>
  *
  * You can call <code>DeleteBackup</code> at a maximum rate of 10 times per
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &request)
 {
@@ -498,6 +492,11 @@ DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &r
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DeleteItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a single item in a table by primary key. You can perform a conditional delete operation that deletes the item if
  * it exists, or if it has an expected attribute
  *
@@ -515,12 +514,6 @@ DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &r
  *
  * Conditional deletes are useful for deleting items only if specific conditions are met. If those conditions are met,
  * DynamoDB performs the delete. Otherwise, the item is not
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request)
 {
@@ -528,6 +521,11 @@ DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DeleteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>DeleteTable</code> operation deletes a table and all of its items. After a <code>DeleteTable</code> request,
  * the specified table is in the <code>DELETING</code> state until DynamoDB completes the deletion. If the table is in the
  * <code>ACTIVE</code> state, you can delete it. If a table is in <code>CREATING</code> or <code>UPDATING</code> states,
@@ -551,12 +549,6 @@ DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request
  * hours>
  *
  * Use the <code>DescribeTable</code> action to check the status of the table.
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTableResponse * DynamoDBClient::deleteTable(const DeleteTableRequest &request)
 {
@@ -564,17 +556,16 @@ DeleteTableResponse * DynamoDBClient::deleteTable(const DeleteTableRequest &requ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes an existing backup of a
  *
  * table>
  *
  * You can call <code>DescribeBackup</code> at a maximum rate of 10 times per
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequest &request)
 {
@@ -582,6 +573,11 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeContinuousBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Checks the status of continuous backups and point in time recovery on the specified table. Continuous backups are
  * <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
  * <code>PointInTimeRecoveryStatus</code> will be set to
@@ -599,12 +595,6 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
  * </p
  *
  * You can call <code>DescribeContinuousBackups</code> at a maximum rate of 10 times per
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(const DescribeContinuousBackupsRequest &request)
 {
@@ -612,13 +602,12 @@ DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(co
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeGlobalTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the specified global
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const DescribeGlobalTableRequest &request)
 {
@@ -626,6 +615,11 @@ DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const Describe
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the current provisioned-capacity limits for your AWS account in a region, both for the region as a whole and for
  * any one DynamoDB table that you create
  *
@@ -707,12 +701,6 @@ DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const Describe
  * minute> </note>
  *
  * The <code>DescribeLimits</code> Request element has no
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequest &request)
 {
@@ -720,6 +708,11 @@ DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the table, including the current status of the table, when it was created, the primary key
  * schema, and any indexes on the
  *
@@ -729,12 +722,6 @@ DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequ
  * return a <code>ResourceNotFoundException</code>. This is because <code>DescribeTable</code> uses an eventually
  * consistent query, and the metadata for your table might not be available at that moment. Wait for a few seconds, and
  * then try the <code>DescribeTable</code> request
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTableResponse * DynamoDBClient::describeTable(const DescribeTableRequest &request)
 {
@@ -742,13 +729,12 @@ DescribeTableResponse * DynamoDBClient::describeTable(const DescribeTableRequest
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeTimeToLiveResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gives a description of the Time to Live (TTL) status on the specified table.
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTimeToLiveRequest &request)
 {
@@ -756,6 +742,11 @@ DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTi
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * GetItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>GetItem</code> operation returns a set of attributes for the item with the given primary key. If there is no
  * matching item, <code>GetItem</code> does not return any data and there will be no <code>Item</code> element in the
  *
@@ -764,12 +755,6 @@ DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTi
  * <code>GetItem</code> provides an eventually consistent read by default. If your application requires a strongly
  * consistent read, set <code>ConsistentRead</code> to <code>true</code>. Although a strongly consistent read might take
  * more time than an eventually consistent read, it always returns the last updated
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
 {
@@ -777,6 +762,11 @@ GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * ListBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List backups associated with an AWS account. To list backups for a given table, specify <code>TableName</code>.
  * <code>ListBackups</code> returns a paginated list of results with at most 1MB worth of items in a page. You can also
  * specify a limit for the maximum number of entries to be returned in a page.
@@ -789,12 +779,6 @@ GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
  * requested>
  *
  * You can call <code>ListBackups</code> a maximum of 5 times per
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBackupsResponse * DynamoDBClient::listBackups(const ListBackupsRequest &request)
 {
@@ -802,13 +786,12 @@ ListBackupsResponse * DynamoDBClient::listBackups(const ListBackupsRequest &requ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * ListGlobalTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all global tables that have a replica in the specified
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGlobalTablesResponse * DynamoDBClient::listGlobalTables(const ListGlobalTablesRequest &request)
 {
@@ -816,14 +799,13 @@ ListGlobalTablesResponse * DynamoDBClient::listGlobalTables(const ListGlobalTabl
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * ListTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an array of table names associated with the current account and endpoint. The output from
  * <code>ListTables</code> is paginated, with each page returning a maximum of 100 table
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request)
 {
@@ -831,6 +813,11 @@ ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * ListTagsOfResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all tags on an Amazon DynamoDB resource. You can call ListTagsOfResource up to 10 times per second, per
  *
  * account>
@@ -838,12 +825,6 @@ ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request
  * For an overview on tagging DynamoDB resources, see <a
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging for DynamoDB</a> in the
  * <i>Amazon DynamoDB Developer
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOfResourceRequest &request)
 {
@@ -851,6 +832,11 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * PutItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new item, or replaces an old item with a new item. If an item that has the same primary key as the new item
  * already exists in the specified table, the new item completely replaces the existing item. You can perform a conditional
  * put operation (add a new item if one with the specified primary key doesn't exist), or replace an existing item if it
@@ -923,12 +909,6 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
  * For more information about <code>PutItem</code>, see <a
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working with Items</a> in
  * the <i>Amazon DynamoDB Developer
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
 {
@@ -936,6 +916,11 @@ PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * QueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>Query</code> operation finds items based on primary key values. You can query any table or secondary index
  * that has a composite primary key (a partition key and a sort key).
  *
@@ -993,12 +978,6 @@ PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
  * secondary index, you can set the <code>ConsistentRead</code> parameter to <code>true</code> and obtain a strongly
  * consistent result. Global secondary indexes support eventually consistent reads only, so do not specify
  * <code>ConsistentRead</code> when querying a global secondary
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 QueryResponse * DynamoDBClient::query(const QueryRequest &request)
 {
@@ -1006,6 +985,11 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * RestoreTableFromBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new table from an existing backup. Any number of users can execute up to 4 concurrent restores (any type of
  * restore) in a given account.
  *
@@ -1038,12 +1022,6 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
  * setting> </li> <li>
  *
  * Time to Live (TTL)
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const RestoreTableFromBackupRequest &request)
 {
@@ -1051,6 +1029,11 @@ RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const Re
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * RestoreTableToPointInTimeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Restores the specified table to the specified point in time within <code>EarliestRestorableDateTime</code> and
  * <code>LatestRestorableDateTime</code>. You can restore your table to any point in time during the last 35 days with a
  * 1-minute granularity. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given
@@ -1085,12 +1068,6 @@ RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const Re
  * setting> </li> <li>
  *
  * Point in time recovery
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreTableToPointInTimeResponse * DynamoDBClient::restoreTableToPointInTime(const RestoreTableToPointInTimeRequest &request)
 {
@@ -1098,6 +1075,11 @@ RestoreTableToPointInTimeResponse * DynamoDBClient::restoreTableToPointInTime(co
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * ScanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>Scan</code> operation returns one or more items and item attributes by accessing every item in a table or a
  * secondary index. To have DynamoDB return fewer items, you can provide a <code>FilterExpression</code>
  *
@@ -1130,12 +1112,6 @@ RestoreTableToPointInTimeResponse * DynamoDBClient::restoreTableToPointInTime(co
  * <code>Scan</code> uses eventually consistent reads when accessing the data in a table; therefore, the result set might
  * not include the changes to data in the table immediately before the operation began. If you need a consistent copy of
  * the data, as of the time that the <code>Scan</code> begins, you can set the <code>ConsistentRead</code> parameter to
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
 {
@@ -1143,6 +1119,11 @@ ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associate a set of tags with an Amazon DynamoDB resource. You can then activate these user-defined tags so that they
  * appear on the Billing and Cost Management console for cost allocation tracking. You can call TagResource up to 5 times
  * per second, per account.
@@ -1152,12 +1133,6 @@ ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
  * For an overview on tagging DynamoDB resources, see <a
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging for DynamoDB</a> in the
  * <i>Amazon DynamoDB Developer
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &request)
 {
@@ -1165,6 +1140,11 @@ TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &requ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the association of tags from an Amazon DynamoDB resource. You can call UntagResource up to 5 times per second,
  * per account.
  *
@@ -1173,12 +1153,6 @@ TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &requ
  * For an overview on tagging DynamoDB resources, see <a
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging for DynamoDB</a> in the
  * <i>Amazon DynamoDB Developer
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1186,6 +1160,11 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateContinuousBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * <code>UpdateContinuousBackups</code> enables or disables point in time recovery for the specified table. A successful
  * <code>UpdateContinuousBackups</code> call returns the current <code>ContinuousBackupsDescription</code>. Continuous
  * backups are <code>ENABLED</code> on all tables at table creation. If point in time recovery is enabled,
@@ -1200,12 +1179,6 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
  *
  * <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time. You can restore your table to any
  * point in time during the last 35 days with a 1-minute granularity.
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const UpdateContinuousBackupsRequest &request)
 {
@@ -1213,6 +1186,11 @@ UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const 
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateGlobalTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or removes replicas in the specified global table. The global table must already exist to be able to use this
  * operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key
  * schema, and must have DynamoDB Streams
@@ -1221,12 +1199,6 @@ UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const 
  *
  * Although you can use <code>UpdateGlobalTable</code> to add replicas and remove replicas in a single request, for
  * simplicity we recommend that you issue separate requests for adding or removing
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobalTableRequest &request)
 {
@@ -1234,6 +1206,11 @@ UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobal
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Edits an existing item's attributes, or adds a new item to the table if it does not already exist. You can put, delete,
  * or add attribute values. You can also perform a conditional update on an existing item (insert a new attribute
  * name-value pair if it doesn't exist, or replace an existing name-value pair if it has certain expected attribute
@@ -1242,12 +1219,6 @@ UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobal
  *
  * You can also return the item's attribute values in the same <code>UpdateItem</code> operation using the
  * <code>ReturnValues</code>
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request)
 {
@@ -1255,6 +1226,11 @@ UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given
  *
  * table>
@@ -1284,12 +1260,6 @@ UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request
  * <code>ACTIVE</code> to <code>UPDATING</code>. While it is <code>UPDATING</code>, you cannot issue another
  * <code>UpdateTable</code> request. When the table returns to the <code>ACTIVE</code> state, the <code>UpdateTable</code>
  * operation is
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &request)
 {
@@ -1297,6 +1267,11 @@ UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &requ
 }
 
 /*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateTimeToLiveResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The UpdateTimeToLive method will enable or disable TTL for the specified table. A successful
  * <code>UpdateTimeToLive</code> call returns the current <code>TimeToLiveSpecification</code>; it may take up to one hour
  * for the change to fully process. Any additional <code>UpdateTimeToLive</code> calls for the same table during this one
@@ -1330,12 +1305,6 @@ UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &requ
  *
  * For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time To
  * Live</a> in the Amazon DynamoDB Developer Guide.
- *
- * @param  request Request to send to Amazon DynamoDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLiveRequest &request)
 {
@@ -1343,19 +1312,16 @@ UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLi
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDB::DynamoDBClientPrivate
+ * \brief The DynamoDBClientPrivate class provides private implementation for DynamoDBClient.
+ * \internal
  *
- * @class  DynamoDBClientPrivate
- *
- * @brief  Private implementation for DynamoDBClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DynamoDBClientPrivate object.
- *
- * @param  q  Pointer to this object's public DynamoDBClient instance.
+ * Constructs a DynamoDBClientPrivate object with public implementation \a q.
  */
 DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

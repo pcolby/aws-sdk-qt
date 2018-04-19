@@ -44,10 +44,10 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneClient
- *
  * \brief The IoTJobsDataPlaneClient class provides access to the AWS IoT Jobs Data Plane service.
  *
- * \ingroup IoTJobsDataPlane
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -119,13 +119,12 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
 }
 
 /*!
+ * Sends \a request to the IoTJobsDataPlaneClient service, and returns a pointer to an
+ * DescribeJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets details of a job
- *
- * @param  request Request to send to AWS IoT Jobs Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
@@ -133,13 +132,12 @@ DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(cons
 }
 
 /*!
+ * Sends \a request to the IoTJobsDataPlaneClient service, and returns a pointer to an
+ * GetPendingJobExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the list of all jobs for a thing that are not in a terminal
- *
- * @param  request Request to send to AWS IoT Jobs Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecutions(const GetPendingJobExecutionsRequest &request)
 {
@@ -147,13 +145,12 @@ GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecution
 }
 
 /*!
+ * Sends \a request to the IoTJobsDataPlaneClient service, and returns a pointer to an
+ * StartNextPendingJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a
- *
- * @param  request Request to send to AWS IoT Jobs Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJobExecution(const StartNextPendingJobExecutionRequest &request)
 {
@@ -161,13 +158,12 @@ StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJ
 }
 
 /*!
+ * Sends \a request to the IoTJobsDataPlaneClient service, and returns a pointer to an
+ * UpdateJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the status of a job
- *
- * @param  request Request to send to AWS IoT Jobs Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const UpdateJobExecutionRequest &request)
 {
@@ -175,19 +171,16 @@ UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const Up
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneClientPrivate
+ * \brief The IoTJobsDataPlaneClientPrivate class provides private implementation for IoTJobsDataPlaneClient.
+ * \internal
  *
- * @class  IoTJobsDataPlaneClientPrivate
- *
- * @brief  Private implementation for IoTJobsDataPlaneClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTJobsDataPlaneClientPrivate object.
- *
- * @param  q  Pointer to this object's public IoTJobsDataPlaneClient instance.
+ * Constructs a IoTJobsDataPlaneClientPrivate object with public implementation \a q.
  */
 IoTJobsDataPlaneClientPrivate::IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

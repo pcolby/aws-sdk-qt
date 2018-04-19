@@ -56,10 +56,10 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::Cloud9Client
- *
  * \brief The Cloud9Client class provides access to the AWS Cloud9 service.
  *
- * \ingroup Cloud9
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -171,14 +171,13 @@ Cloud9Client::Cloud9Client(
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * CreateEnvironmentEC2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
  * connects from the instance to the
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEnvironmentEC2Request &request)
 {
@@ -186,13 +185,12 @@ CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEn
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * CreateEnvironmentMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds an environment member to an AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(const CreateEnvironmentMembershipRequest &request)
 {
@@ -200,14 +198,13 @@ CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * DeleteEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also
  * terminates the
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironmentRequest &request)
 {
@@ -215,13 +212,12 @@ DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironm
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * DeleteEnvironmentMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an environment member from an AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(const DeleteEnvironmentMembershipRequest &request)
 {
@@ -229,13 +225,12 @@ DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * DescribeEnvironmentMembershipsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about environment members for an AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMemberships(const DescribeEnvironmentMembershipsRequest &request)
 {
@@ -243,13 +238,12 @@ DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMember
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * DescribeEnvironmentStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets status information for an AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request)
 {
@@ -257,13 +251,12 @@ DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(cons
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * DescribeEnvironmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
@@ -271,13 +264,12 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * ListEnvironmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of AWS Cloud9 development environment
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
 {
@@ -285,13 +277,12 @@ ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironments
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * UpdateEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the settings of an existing AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
@@ -299,13 +290,12 @@ UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironm
 }
 
 /*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * UpdateEnvironmentMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the settings of an existing environment member for an AWS Cloud9 development
- *
- * @param  request Request to send to AWS Cloud9.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request)
 {
@@ -313,19 +303,16 @@ UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::Cloud9ClientPrivate
+ * \brief The Cloud9ClientPrivate class provides private implementation for Cloud9Client.
+ * \internal
  *
- * @class  Cloud9ClientPrivate
- *
- * @brief  Private implementation for Cloud9Client.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Cloud9ClientPrivate object.
- *
- * @param  q  Pointer to this object's public Cloud9Client instance.
+ * Constructs a Cloud9ClientPrivate object with public implementation \a q.
  */
 Cloud9ClientPrivate::Cloud9ClientPrivate(Cloud9Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

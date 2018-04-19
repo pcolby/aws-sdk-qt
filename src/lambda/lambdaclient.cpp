@@ -96,10 +96,10 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::LambdaClient
- *
  * \brief The LambdaClient class provides access to the AWS Lambda service.
  *
- * \ingroup Lambda
+ * \ingroup aws-clients
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -168,6 +168,11 @@ LambdaClient::LambdaClient(
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * AddPermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a permission to the resource policy associated with the specified AWS Lambda function. You use resource policies to
  * grant permissions to event sources that use <i>push</i> model. In a <i>push</i> model, event sources (such as Amazon S3
  * and custom applications) invoke your Lambda function. Each permission you add to the resource policy allows an event
@@ -188,12 +193,6 @@ LambdaClient::LambdaClient(
  * </p
  *
  * This operation requires permission for the <code>lambda:AddPermission</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &request)
 {
@@ -201,18 +200,17 @@ AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * CreateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an alias that points to the specified Lambda function version. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
  * Aliases</a>>
  *
  * Alias names are unique for a given function. This requires permission for the lambda:CreateAlias
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &request)
 {
@@ -220,6 +218,11 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * CreateEventSourceMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Identifies a stream as an event source for a Lambda function. It can be either an Amazon Kinesis stream or an Amazon
  * DynamoDB stream. AWS Lambda invokes the specified function when records are posted to the
  *
@@ -247,12 +250,6 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
  * </p
  *
  * This operation requires permission for the <code>lambda:CreateEventSourceMapping</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const CreateEventSourceMappingRequest &request)
 {
@@ -260,6 +257,11 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * CreateFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Lambda function. The function metadata is created from the request parameters, and the code for the
  * function is provided by a .zip file in the request body. If the function name already exists, the operation will fail.
  * Note that the function name is
@@ -274,12 +276,6 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  * </p
  *
  * This operation requires permission for the <code>lambda:CreateFunction</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionRequest &request)
 {
@@ -287,18 +283,17 @@ CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionReques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Lambda function alias. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
  * Aliases</a>>
  *
  * This requires permission for the lambda:DeleteAlias
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -306,17 +301,16 @@ DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteEventSourceMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes an event source mapping. This means AWS Lambda will no longer invoke the function for events in the associated
  *
  * source>
  *
  * This operation requires permission for the <code>lambda:DeleteEventSourceMapping</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request)
 {
@@ -324,6 +318,11 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Lambda function code and
  *
  * configuration>
@@ -343,12 +342,6 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
  * explicitly>
  *
  * This operation requires permission for the <code>lambda:DeleteFunction</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionRequest &request)
 {
@@ -356,13 +349,12 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteFunctionConcurrencyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes concurrent execution limits from this function. For more information, see
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request)
 {
@@ -370,6 +362,11 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetAccountSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a customer's account
  *
  * settings>
@@ -377,12 +374,6 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
  * You can use this operation to retrieve Lambda limits information, such as code size and concurrency limits. For more
  * information about limits, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html">AWS Lambda Limits</a>.
  * You can also retrieve resource usage statistics, such as code storage usage and function
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -390,6 +381,11 @@ GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSe
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the specified alias information such as the alias ARN, description, and function version it is pointing to. For
  * more information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS
  * Lambda
@@ -397,12 +393,6 @@ GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSe
  * Aliases</a>>
  *
  * This requires permission for the <code>lambda:GetAlias</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
 {
@@ -410,17 +400,16 @@ GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetEventSourceMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns configuration information for the specified event source mapping (see
  *
  * <a>CreateEventSourceMapping</a>)>
  *
  * This operation requires permission for the <code>lambda:GetEventSourceMapping</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEventSourceMappingRequest &request)
 {
@@ -428,6 +417,11 @@ GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEve
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the configuration information of the Lambda function and a presigned URL link to the .zip file you uploaded with
  * <a>CreateFunction</a> so you can download the .zip file. Note that the URL is valid for up to 10 minutes. The
  * configuration information is the same information you provided as parameters when uploading the
@@ -442,12 +436,6 @@ GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEve
  * Aliases</a>>
  *
  * This operation requires permission for the <code>lambda:GetFunction</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &request)
 {
@@ -455,6 +443,11 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the configuration information of the Lambda function. This the same information you provided as parameters when
  * uploading the function by using
  *
@@ -469,12 +462,6 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
  * Aliases</a>>
  *
  * This operation requires permission for the <code>lambda:GetFunctionConfiguration</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const GetFunctionConfigurationRequest &request)
 {
@@ -482,6 +469,11 @@ GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const 
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the resource policy associated with the specified Lambda
  *
  * function>
@@ -494,12 +486,6 @@ GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const 
  * </p
  *
  * You need permission for the <code>lambda:GetPolicy action.</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -507,6 +493,11 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * InvokeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Invokes a specific Lambda function. For an example, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/with-dynamodb-create-function.html#with-dbb-invoke-manually">Create
  * the Lambda Function and Test It Manually</a>.
@@ -531,12 +522,6 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  * have exceeded your account concurrent limit or if a function without reserved concurrency exceeds the account's
  * unreserved concurrency limit. <code>ReservedFunctionConcurrentInvocationLimitExceeded</code> will be returned when a
  * function with reserved concurrency exceeds its configured concurrency limit.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 {
@@ -544,6 +529,11 @@ InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * InvokeAsyncResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * <b>
  *
  * This API is deprecated. We recommend you use <code>Invoke</code> API (see
@@ -556,12 +546,6 @@ InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
  * console>
  *
  * This operation requires permission for the <code>lambda:InvokeFunction</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &request)
 {
@@ -569,6 +553,11 @@ InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns list of aliases created for a Lambda function. For each alias, the response includes information such as the
  * alias ARN, description, alias name, and the function version to which it points. For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
@@ -576,12 +565,6 @@ InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &reques
  * Aliases</a>>
  *
  * This requires permission for the lambda:ListAliases
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &request)
 {
@@ -589,6 +572,11 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListEventSourceMappingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of event source mappings you created using the <code>CreateEventSourceMapping</code> (see
  * <a>CreateEventSourceMapping</a>).
  *
@@ -607,12 +595,6 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
  * </p
  *
  * This operation requires permission for the <code>lambda:ListEventSourceMappings</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const ListEventSourceMappingsRequest &request)
 {
@@ -620,6 +602,11 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListFunctionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of your Lambda functions. For each function, the response includes the function configuration
  * information. You must use <a>GetFunction</a> to retrieve the code for your
  *
@@ -633,12 +620,6 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
  * information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &request)
 {
@@ -646,15 +627,14 @@ ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of tags assigned to a function when supplied the function ARN (Amazon Resource Name). For more
  * information on Tagging, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda
  * Functions</a> in the <b>AWS Lambda Developer
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
 {
@@ -662,15 +642,14 @@ ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListVersionsByFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all versions of a function. For information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const ListVersionsByFunctionRequest &request)
 {
@@ -678,17 +657,16 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * PublishVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Publishes a version of your function from the current snapshot of $LATEST. That is, AWS Lambda takes a snapshot of the
  * function code and configuration information from $LATEST and publishes a new version. The code and configuration cannot
  * be modified after publication. For information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionRequest &request)
 {
@@ -696,16 +674,15 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * PutFunctionConcurrencyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets a limit on the number of concurrent executions available to this function. It is a subset of your account's total
  * concurrent execution limit per region. Note that Lambda automatically reserves a buffer of 100 concurrent executions for
  * functions without any reserved concurrency limit. This means if your account limit is 1000, you have a total of 900
  * available to allocate to individual functions. For more information, see
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutFunctionConcurrencyRequest &request)
 {
@@ -713,6 +690,11 @@ PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutF
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * RemovePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can remove individual permissions from an resource policy associated with a Lambda function by providing a statement
  * ID that you provided when you added the
  *
@@ -730,12 +712,6 @@ PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutF
  * function>
  *
  * You need permission for the <code>lambda:RemovePermission</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemovePermissionResponse * LambdaClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -743,16 +719,15 @@ RemovePermissionResponse * LambdaClient::removePermission(const RemovePermission
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a list of tags (key-value pairs) on the Lambda function. Requires the Lambda function ARN (Amazon Resource
  * Name). If a key is specified without a value, Lambda creates a tag with the specified key and a value of null. For more
  * information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda Functions</a> in the
  * <b>AWS Lambda Developer Guide</b>.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &request)
 {
@@ -760,15 +735,14 @@ TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes tags from a Lambda function. Requires the function ARN (Amazon Resource Name). For more information, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/tagging.html">Tagging Lambda Functions</a> in the <b>AWS Lambda
  * Developer Guide</b>.
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &request)
 {
@@ -776,18 +750,17 @@ UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Using this API you can update the function version to which the alias points and the alias description. For more
  * information, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html">Introduction to AWS Lambda
  *
  * Aliases</a>>
  *
  * This requires permission for the lambda:UpdateAlias
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &request)
 {
@@ -795,6 +768,11 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateEventSourceMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * You can update an event source mapping. This is useful if you want to change the parameters of the existing mapping
  * without losing your position in the stream. You can change which function will receive the stream records, but to change
  * the stream itself, you must create a new
@@ -815,12 +793,6 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
  * reset>
  *
  * This operation requires permission for the <code>lambda:UpdateEventSourceMapping</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const UpdateEventSourceMappingRequest &request)
 {
@@ -828,6 +800,11 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateFunctionCodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the code for the specified Lambda function. This operation must only be used on an existing Lambda function and
  * cannot be used to update the function
  *
@@ -841,12 +818,6 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
  * </p
  *
  * This operation requires permission for the <code>lambda:UpdateFunctionCode</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFunctionCodeRequest &request)
 {
@@ -854,6 +825,11 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
 }
 
 /*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateFunctionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the configuration parameters for the specified Lambda function by using the values provided in the request. You
  * provide only the parameters you want to change. This operation must only be used on an existing Lambda function and
  * cannot be used to update the function's
@@ -868,12 +844,6 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
  * </p
  *
  * This operation requires permission for the <code>lambda:UpdateFunctionConfiguration</code>
- *
- * @param  request Request to send to AWS Lambda.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
 {
@@ -881,19 +851,16 @@ UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::LambdaClientPrivate
+ * \brief The LambdaClientPrivate class provides private implementation for LambdaClient.
+ * \internal
  *
- * @class  LambdaClientPrivate
- *
- * @brief  Private implementation for LambdaClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LambdaClientPrivate object.
- *
- * @param  q  Pointer to this object's public LambdaClient instance.
+ * Constructs a LambdaClientPrivate object with public implementation \a q.
  */
 LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

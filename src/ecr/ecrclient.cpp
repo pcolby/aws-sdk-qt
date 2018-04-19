@@ -80,10 +80,10 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::EcrClient
- *
  * \brief The EcrClient class provides access to the Amazon EC2 Container Registry ( ECR) service.
  *
- * \ingroup ECR
+ * \ingroup aws-clients
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -145,18 +145,17 @@ EcrClient::EcrClient(
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * BatchCheckLayerAvailabilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Check the availability of multiple image layers in a specified registry and
  *
  * repository> <note>
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
 {
@@ -164,6 +163,11 @@ BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(con
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * BatchDeleteImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a list of specified images within a specified repository. Images are specified with either <code>imageTag</code>
  * or
  *
@@ -175,12 +179,6 @@ BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(con
  * repository>
  *
  * You can completely delete an image (and all of its tags) by specifying the image's digest in your
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageRequest &request)
 {
@@ -188,14 +186,13 @@ BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageReq
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * BatchGetImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets detailed information for specified images within a specified repository. Images are specified with either
  * <code>imageTag</code> or
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &request)
 {
@@ -203,6 +200,11 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * CompleteLayerUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID.
  * You can optionally provide a <code>sha256</code> digest of the image layer for data validation
  *
@@ -210,12 +212,6 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
 {
@@ -223,13 +219,12 @@ CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayer
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * CreateRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an image
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryRequest &request)
 {
@@ -237,13 +232,12 @@ CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryReq
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DeleteLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified lifecycle
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
 {
@@ -251,14 +245,13 @@ DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLif
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DeleteRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an existing image repository. If a repository contains images, you must use the <code>force</code> option to
  * delete
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
@@ -266,13 +259,12 @@ DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryReq
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DeleteRepositoryPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the repository policy from a specified
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
 {
@@ -280,6 +272,11 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DescribeImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns metadata about the images in a repository, including image size, image tags, and creation
  *
  * date> <note>
@@ -287,12 +284,6 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
  * Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker
  * registry. The output of the <code>docker images</code> command shows the uncompressed image size, so it may return a
  * larger image size than the image sizes returned by
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -300,13 +291,12 @@ DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DescribeRepositoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes image repositories in a
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRepositoriesRequest &request)
 {
@@ -314,6 +304,11 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetAuthorizationTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a token that is valid for a specified registry for 12 hours. This command allows you to use the
  * <code>docker</code> CLI to push and pull images with Amazon ECR. If you do not specify a registry, the default registry
  * is
@@ -323,12 +318,6 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
  * The <code>authorizationToken</code> returned for each registry specified is a base64 encoded string that can be decoded
  * and used in a <code>docker login</code> command to authenticate to a registry. The AWS CLI offers an <code>aws ecr
  * get-login</code> command that simplifies the login
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
 {
@@ -336,6 +325,11 @@ GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthor
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetDownloadUrlForLayerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer. You can only get URLs for image layers
  * that are referenced in an
  *
@@ -343,12 +337,6 @@ GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthor
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request)
 {
@@ -356,13 +344,12 @@ GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDown
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the specified lifecycle
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
 {
@@ -370,13 +357,12 @@ GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePol
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetLifecyclePolicyPreviewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the results of the specified lifecycle policy preview
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request)
 {
@@ -384,13 +370,12 @@ GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const G
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetRepositoryPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the repository policy for a specified
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
 {
@@ -398,18 +383,17 @@ GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepository
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * InitiateLayerUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Notify Amazon ECR that you intend to upload an image
  *
  * layer> <note>
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
 {
@@ -417,6 +401,11 @@ InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayer
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * ListImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all the image IDs for a given
  *
  * repository>
@@ -425,12 +414,6 @@ InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayer
  * <code>TAGGED</code> or <code>UNTAGGED</code>. For example, you can filter your results to return only
  * <code>UNTAGGED</code> images and then pipe that result to a <a>BatchDeleteImage</a> operation to delete them. Or, you
  * can filter your results to return only <code>TAGGED</code> images to list all of the tags in your
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
 {
@@ -438,18 +421,17 @@ ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * PutImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates the image manifest and tags associated with an
  *
  * image> <note>
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
 {
@@ -457,14 +439,13 @@ PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * PutLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates a lifecycle policy. For information about lifecycle policy syntax, see <a
  * href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
 {
@@ -472,13 +453,12 @@ PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePol
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * SetRepositoryPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Applies a repository policy on a specified repository to control access
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
 {
@@ -486,13 +466,12 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * StartLifecyclePolicyPreviewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts a preview of the specified lifecycle policy. This allows you to see the results before creating the lifecycle
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request)
 {
@@ -500,18 +479,17 @@ StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(con
 }
 
 /*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * UploadLayerPartResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads an image layer part to Amazon
  *
  * ECR> <note>
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
- *
- * @param  request Request to send to Amazon EC2 Container Registry.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartRequest &request)
 {
@@ -519,19 +497,16 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
 }
 
 /*!
- * @internal
+ * \class QtAws::ECR::EcrClientPrivate
+ * \brief The EcrClientPrivate class provides private implementation for EcrClient.
+ * \internal
  *
- * @class  EcrClientPrivate
- *
- * @brief  Private implementation for EcrClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EcrClientPrivate object.
- *
- * @param  q  Pointer to this object's public EcrClient instance.
+ * Constructs a EcrClientPrivate object with public implementation \a q.
  */
 EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

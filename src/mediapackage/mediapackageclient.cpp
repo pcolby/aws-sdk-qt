@@ -58,10 +58,10 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::MediaPackageClient
- *
  * \brief The MediaPackageClient class provides access to the AWS Elemental MediaPackage service.
  *
- * \ingroup MediaPackage
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaPackage
  *
  */
 
@@ -119,12 +119,11 @@ MediaPackageClient::MediaPackageClient(
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * CreateChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelRequest &request)
 {
@@ -132,12 +131,11 @@ CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelReq
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * CreateOriginEndpointResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const CreateOriginEndpointRequest &request)
 {
@@ -145,12 +143,11 @@ CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const Cr
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * DeleteChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelRequest &request)
 {
@@ -158,12 +155,11 @@ DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelReq
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * DeleteOriginEndpointResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const DeleteOriginEndpointRequest &request)
 {
@@ -171,12 +167,11 @@ DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const De
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * DescribeChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChannelRequest &request)
 {
@@ -184,12 +179,11 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * DescribeOriginEndpointResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(const DescribeOriginEndpointRequest &request)
 {
@@ -197,12 +191,11 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * ListChannelsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsRequest &request)
 {
@@ -210,12 +203,11 @@ ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsReques
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * ListOriginEndpointsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const ListOriginEndpointsRequest &request)
 {
@@ -223,12 +215,11 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * RotateChannelCredentialsResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(const RotateChannelCredentialsRequest &request)
 {
@@ -236,12 +227,11 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * UpdateChannelResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelRequest &request)
 {
@@ -249,12 +239,11 @@ UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelReq
 }
 
 /*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * UpdateOriginEndpointResponse object to track the result.
  *
- * @param  request Request to send to AWS Elemental MediaPackage.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const UpdateOriginEndpointRequest &request)
 {
@@ -262,19 +251,16 @@ UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const Up
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::MediaPackageClientPrivate
+ * \brief The MediaPackageClientPrivate class provides private implementation for MediaPackageClient.
+ * \internal
  *
- * @class  MediaPackageClientPrivate
- *
- * @brief  Private implementation for MediaPackageClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaPackageClientPrivate object.
- *
- * @param  q  Pointer to this object's public MediaPackageClient instance.
+ * Constructs a MediaPackageClientPrivate object with public implementation \a q.
  */
 MediaPackageClientPrivate::MediaPackageClientPrivate(MediaPackageClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

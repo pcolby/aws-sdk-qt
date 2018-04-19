@@ -44,10 +44,10 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneClient
- *
  * \brief The IoTDataPlaneClient class provides access to the AWS IoT Data Plane service.
  *
- * \ingroup IoTDataPlane
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -111,6 +111,11 @@ IoTDataPlaneClient::IoTDataPlaneClient(
 }
 
 /*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * DeleteThingShadowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the thing shadow for the specified
  *
  * thing>
@@ -118,12 +123,6 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the
  * <i>AWS IoT Developer
- *
- * @param  request Request to send to AWS IoT Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteThingShadowRequest &request)
 {
@@ -131,6 +130,11 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
 }
 
 /*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * GetThingShadowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the thing shadow for the specified
  *
  * thing>
@@ -138,12 +142,6 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
  * For more information, see <a
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the <i>AWS IoT
  * Developer
- *
- * @param  request Request to send to AWS IoT Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadowRequest &request)
 {
@@ -151,18 +149,17 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
 }
 
 /*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * PublishResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Publishes state
  *
  * information>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
  * Protocol</a> in the <i>AWS IoT Developer
- *
- * @param  request Request to send to AWS IoT Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
 {
@@ -170,6 +167,11 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * UpdateThingShadowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the thing shadow for the specified
  *
  * thing>
@@ -177,12 +179,6 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
  * For more information, see <a
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the
  * <i>AWS IoT Developer
- *
- * @param  request Request to send to AWS IoT Data Plane.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateThingShadowRequest &request)
 {
@@ -190,19 +186,16 @@ UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateTh
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::IoTDataPlaneClientPrivate
+ * \brief The IoTDataPlaneClientPrivate class provides private implementation for IoTDataPlaneClient.
+ * \internal
  *
- * @class  IoTDataPlaneClientPrivate
- *
- * @brief  Private implementation for IoTDataPlaneClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTDataPlaneClientPrivate object.
- *
- * @param  q  Pointer to this object's public IoTDataPlaneClient instance.
+ * Constructs a IoTDataPlaneClientPrivate object with public implementation \a q.
  */
 IoTDataPlaneClientPrivate::IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

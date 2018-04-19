@@ -76,10 +76,10 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CloudHSMClient
- *
  * \brief The CloudHSMClient class provides access to the Amazon CloudHSM service.
  *
- * \ingroup CloudHSM
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -149,6 +149,11 @@ CloudHSMClient::CloudHSMClient(
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * AddTagsToResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -167,12 +172,6 @@ CloudHSMClient::CloudHSMClient(
  * resource>
  *
  * Each tag consists of a key and a value. Tag keys must be unique to each
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -180,6 +179,11 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * CreateHapgResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -195,12 +199,6 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
  *
  * Creates a high-availability partition group. A high-availability partition group is a group of partitions that spans
  * multiple physical
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request)
 {
@@ -208,6 +206,11 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * CreateHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -234,12 +237,6 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  *
  * It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the
  * <a>DescribeHsm</a> operation. The HSM is ready to be initialized when the status changes to
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
 {
@@ -247,6 +244,11 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * CreateLunaClientResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -261,12 +263,6 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
  * Reference</a>>
  *
  * Creates an HSM
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClientRequest &request)
 {
@@ -274,6 +270,11 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DeleteHapgResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -288,12 +289,6 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
  * Reference</a>>
  *
  * Deletes a high-availability partition
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request)
 {
@@ -301,6 +296,11 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DeleteHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -315,12 +315,6 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
  * Reference</a>>
  *
  * Deletes an HSM. After completion, this operation cannot be undone and your key material cannot be
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
 {
@@ -328,6 +322,11 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DeleteLunaClientResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -342,12 +341,6 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
  * Reference</a>>
  *
  * Deletes a
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClientRequest &request)
 {
@@ -355,6 +348,11 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DescribeHapgResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -369,12 +367,6 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
  * Reference</a>>
  *
  * Retrieves information about a high-availability partition
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &request)
 {
@@ -382,6 +374,11 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DescribeHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -396,12 +393,6 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
  * Reference</a>>
  *
  * Retrieves information about an HSM. You can identify the HSM by its ARN or its serial
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &request)
 {
@@ -409,6 +400,11 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * DescribeLunaClientResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -423,12 +419,6 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
  * Reference</a>>
  *
  * Retrieves information about an HSM
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLunaClientRequest &request)
 {
@@ -436,6 +426,11 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * GetConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -450,12 +445,6 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
  * Reference</a>>
  *
  * Gets the configuration files necessary to connect to all high availability partition groups the client is associated
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
 {
@@ -463,6 +452,11 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ListAvailableZonesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -477,12 +471,6 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
  * Reference</a>>
  *
  * Lists the Availability Zones that have available AWS CloudHSM
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvailableZonesRequest &request)
 {
@@ -490,6 +478,11 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ListHapgsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -510,12 +503,6 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHapgs</code>
  * to retrieve the next set of
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
 {
@@ -523,6 +510,11 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ListHsmsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -543,12 +535,6 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHsms</code>
  * to retrieve the next set of
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
 {
@@ -556,6 +542,11 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ListLunaClientsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -576,12 +567,6 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to
  * <code>ListLunaClients</code> to retrieve the next set of
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsRequest &request)
 {
@@ -589,6 +574,11 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -603,12 +593,6 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
  * Reference</a>>
  *
  * Returns a list of all tags for the specified AWS CloudHSM
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -616,6 +600,11 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ModifyHapgResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -630,12 +619,6 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
  * Reference</a>>
  *
  * Modifies an existing high-availability partition
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request)
 {
@@ -643,6 +626,11 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ModifyHsmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -663,12 +651,6 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  * This operation can result in the HSM being offline for up to 15 minutes while the AWS CloudHSM service is reconfigured.
  * If you are modifying a production HSM, you should ensure that your AWS CloudHSM service is configured for high
  * availability, and consider executing this operation during a maintenance
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
 {
@@ -676,6 +658,11 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * ModifyLunaClientResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -694,12 +681,6 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
  * client>
  *
  * This action can potentially start a workflow to install the new certificate on the client's
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClientRequest &request)
 {
@@ -707,6 +688,11 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
 }
 
 /*!
+ * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * RemoveTagsFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a
  * href="http://docs.aws.amazon.com/cloudhsm/classic/userguide/">AWS CloudHSM Classic User Guide</a>, and the <a
@@ -725,12 +711,6 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
  * resource>
  *
  * To remove a tag, specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use
- *
- * @param  request Request to send to Amazon CloudHSM.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -738,19 +718,16 @@ RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const Re
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::CloudHSMClientPrivate
+ * \brief The CloudHSMClientPrivate class provides private implementation for CloudHSMClient.
+ * \internal
  *
- * @class  CloudHSMClientPrivate
- *
- * @brief  Private implementation for CloudHSMClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMClientPrivate object.
- *
- * @param  q  Pointer to this object's public CloudHSMClient instance.
+ * Constructs a CloudHSMClientPrivate object with public implementation \a q.
  */
 CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

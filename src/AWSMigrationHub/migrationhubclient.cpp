@@ -68,10 +68,10 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::MigrationHubClient
- *
  * \brief The MigrationHubClient class provides access to the AWS Migration Hub service.
  *
- * \ingroup MigrationHub
+ * \ingroup aws-clients
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -131,6 +131,11 @@ MigrationHubClient::MigrationHubClient(
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * AssociateCreatedArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task
  * performed by a migration tool. This API has the following
  *
@@ -147,12 +152,6 @@ MigrationHubClient::MigrationHubClient(
  * <code>arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b</code>> </li> <li>
  *
  * Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or DMS endpoint,
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(const AssociateCreatedArtifactRequest &request)
 {
@@ -160,13 +159,12 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * AssociateDiscoveredResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a discovered resource ID from Application Discovery Service (ADS) with a migration
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredResource(const AssociateDiscoveredResourceRequest &request)
 {
@@ -174,16 +172,15 @@ AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredRes
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * CreateProgressUpdateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a progress update stream which is an AWS resource used for access control as well as a namespace for migration
  * task names that is implicitly linked to your AWS account. It must uniquely identify the migration tool as it is used for
  * all updates made by the tool; however, it does not need to be unique for each AWS account because it is scoped to the
  * AWS
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStream(const CreateProgressUpdateStreamRequest &request)
 {
@@ -191,6 +188,11 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * DeleteProgressUpdateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for
  * access control. This API has the following
  *
@@ -219,12 +221,6 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
  * Once the stream and all of its resources are deleted, <code>CreateProgressUpdateStream</code> for a stream of the same
  * name will succeed, and that stream will be an entirely new logical resource (without any resources associated with the
  * old
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStream(const DeleteProgressUpdateStreamRequest &request)
 {
@@ -232,13 +228,12 @@ DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStr
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * DescribeApplicationStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the migration status of an
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(const DescribeApplicationStateRequest &request)
 {
@@ -246,13 +241,12 @@ DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * DescribeMigrationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of all attributes associated with a specific migration
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const DescribeMigrationTaskRequest &request)
 {
@@ -260,6 +254,11 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * DisassociateCreatedArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was
  * previously associated. This API has the following
  *
@@ -276,12 +275,6 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
  * <code>arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b</code>> </li> <li>
  *
  * Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or RDS instance,
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArtifact(const DisassociateCreatedArtifactRequest &request)
 {
@@ -289,13 +282,12 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * DisassociateDiscoveredResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociate an Application Discovery Service (ADS) discovered resource from a migration
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request)
 {
@@ -303,18 +295,17 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ImportMigrationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration
  *
  * tool>
  *
  * This API is a prerequisite to calling the <code>NotifyMigrationTaskState</code> API as the migration tool must first
  * register the migration task with Migration
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const ImportMigrationTaskRequest &request)
 {
@@ -322,6 +313,11 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ListCreatedArtifactsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the created artifacts attached to a given migration task in an update stream. This API has the following
  *
  * traits> <ul> <li>
@@ -335,12 +331,6 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
  * </p </li> <li>
  *
  * Lists created artifacts in a paginated interface.
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const ListCreatedArtifactsRequest &request)
 {
@@ -348,13 +338,12 @@ ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const Li
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ListDiscoveredResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists discovered resources associated with the given
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
@@ -362,6 +351,11 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ListMigrationTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all, or filtered by resource name, migration tasks associated with the user account making this call. This API has
  * the following
  *
@@ -376,12 +370,6 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
  * resource> </li> <li>
  *
  * Lists migration tasks in a paginated
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMigrationTasksRequest &request)
 {
@@ -389,13 +377,12 @@ ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMi
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ListProgressUpdateStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists progress update streams associated with the user account making this
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStreams(const ListProgressUpdateStreamsRequest &request)
 {
@@ -403,15 +390,14 @@ ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStream
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * NotifyApplicationStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the migration state of an application. For a given application identified by the value passed to
  * <code>ApplicationId</code>, its status is set or updated by passing one of three values to <code>Status</code>:
  * <code>NOT_STARTED | IN_PROGRESS |
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(const NotifyApplicationStateRequest &request)
 {
@@ -419,6 +405,11 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * NotifyMigrationTaskStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Notifies Migration Hub of the current status, progress, or other detail regarding a migration task. This API has the
  * following
  *
@@ -433,12 +424,6 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
  * target> </li> <li>
  *
  * <code>ProgressUpdateStream</code> is used for access control and to provide a namespace for each migration
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(const NotifyMigrationTaskStateRequest &request)
 {
@@ -446,6 +431,11 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
 }
 
 /*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * PutResourceAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery
  * Service (ADS)'s repository. This association occurs asynchronously after <code>PutResourceAttributes</code>
  *
@@ -464,12 +454,6 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  *
  * Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an
  * association was found based on the provided details, call
- *
- * @param  request Request to send to AWS Migration Hub.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const PutResourceAttributesRequest &request)
 {
@@ -477,19 +461,16 @@ PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const 
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::MigrationHubClientPrivate
+ * \brief The MigrationHubClientPrivate class provides private implementation for MigrationHubClient.
+ * \internal
  *
- * @class  MigrationHubClientPrivate
- *
- * @brief  Private implementation for MigrationHubClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MigrationHubClientPrivate object.
- *
- * @param  q  Pointer to this object's public MigrationHubClient instance.
+ * Constructs a MigrationHubClientPrivate object with public implementation \a q.
  */
 MigrationHubClientPrivate::MigrationHubClientPrivate(MigrationHubClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

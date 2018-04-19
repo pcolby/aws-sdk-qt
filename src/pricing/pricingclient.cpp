@@ -42,10 +42,10 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::PricingClient
- *
  * \brief The PricingClient class provides access to the AWS Price List Service ( Pricing) service.
  *
- * \ingroup Pricing
+ * \ingroup aws-clients
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -129,17 +129,16 @@ PricingClient::PricingClient(
 }
 
 /*!
+ * Sends \a request to the PricingClient service, and returns a pointer to an
+ * DescribeServicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get
  * the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information
  * specific to that service, such as the attribute names available for that service. For example, some of the attribute
  * names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>,
  * <code>locationType</code>, and
- *
- * @param  request Request to send to AWS Price List Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServicesResponse * PricingClient::describeServices(const DescribeServicesRequest &request)
 {
@@ -147,17 +146,16 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
 }
 
 /*!
+ * Sends \a request to the PricingClient service, and returns a pointer to an
+ * GetAttributeValuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of attribute values. Attibutes are similar to the details in a Price List API offer file. For a list of
  * available attributes, see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File
  * Definitions</a> in the <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS
  * Billing and Cost Management User
- *
- * @param  request Request to send to AWS Price List Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttributeValuesRequest &request)
 {
@@ -165,13 +163,12 @@ GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttribut
 }
 
 /*!
+ * Sends \a request to the PricingClient service, and returns a pointer to an
+ * GetProductsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all products that match the filter
- *
- * @param  request Request to send to AWS Price List Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &request)
 {
@@ -179,19 +176,16 @@ GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &reque
 }
 
 /*!
- * @internal
+ * \class QtAws::Pricing::PricingClientPrivate
+ * \brief The PricingClientPrivate class provides private implementation for PricingClient.
+ * \internal
  *
- * @class  PricingClientPrivate
- *
- * @brief  Private implementation for PricingClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PricingClientPrivate object.
- *
- * @param  q  Pointer to this object's public PricingClient instance.
+ * Constructs a PricingClientPrivate object with public implementation \a q.
  */
 PricingClientPrivate::PricingClientPrivate(PricingClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

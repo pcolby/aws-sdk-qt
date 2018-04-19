@@ -78,10 +78,10 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DaxClient
- *
  * \brief The DaxClient class provides access to the Amazon DynamoDB Accelerator (DAX) ( DAX) service.
  *
- * \ingroup DAX
+ * \ingroup aws-clients
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -143,13 +143,12 @@ DaxClient::DaxClient(
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * CreateClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &request)
 {
@@ -157,14 +156,13 @@ CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &req
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * CreateParameterGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a
  * DAX
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParameterGroupRequest &request)
 {
@@ -172,13 +170,12 @@ CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParam
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * CreateSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new subnet
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroupRequest &request)
 {
@@ -186,18 +183,17 @@ CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroup
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DecreaseReplicationFactorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more nodes from a DAX
  *
  * cluster> <note>
  *
  * You cannot use <code>DecreaseReplicationFactor</code> to remove the last node in a DAX cluster. If you need to do this,
  * use <code>DeleteCluster</code>
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const DecreaseReplicationFactorRequest &request)
 {
@@ -205,15 +201,14 @@ DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const D
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DeleteClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a previously provisioned DAX cluster. <i>DeleteCluster</i> deletes all associated nodes, node endpoints and the
  * DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the
  * cluster; you cannot cancel or revert this
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -221,13 +216,12 @@ DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &req
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DeleteParameterGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParameterGroupRequest &request)
 {
@@ -235,17 +229,16 @@ DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParam
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DeleteSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a subnet
  *
  * group> <note>
  *
  * You cannot delete a subnet group if it is associated with any DAX
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroupRequest &request)
 {
@@ -253,6 +246,11 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeClustersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX
  * cluster if a cluster identifier is
  *
@@ -274,12 +272,6 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
  * use>
  *
  * If nodes are currently being removed from the DAX cluster, no endpoint information for the removed nodes is
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersRequest &request)
 {
@@ -287,13 +279,12 @@ DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersReq
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeDefaultParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the default system parameter information for the DAX caching
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const DescribeDefaultParametersRequest &request)
 {
@@ -301,6 +292,11 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns events related to DAX clusters and parameter groups. You can obtain events specific to a particular DAX cluster
  * or parameter group by providing the name as a
  *
@@ -308,12 +304,6 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
  *
  * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
  * of events if
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -321,14 +311,13 @@ DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeParameterGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the
  * descriptions for that
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const DescribeParameterGroupsRequest &request)
 {
@@ -336,13 +325,12 @@ DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const Descr
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the detailed parameter list for a particular parameter
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParametersResponse * DaxClient::describeParameters(const DescribeParametersRequest &request)
 {
@@ -350,14 +338,13 @@ DescribeParametersResponse * DaxClient::describeParameters(const DescribeParamet
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * DescribeSubnetGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the
  * description of that
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSubnetGroupsRequest &request)
 {
@@ -365,13 +352,12 @@ DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSub
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * IncreaseReplicationFactorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more nodes to a DAX
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const IncreaseReplicationFactorRequest &request)
 {
@@ -379,13 +365,12 @@ IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const I
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all of the tags for a DAX cluster. You can call <code>ListTags</code> up to 10 times per second, per
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
 {
@@ -393,14 +378,13 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * RebootNodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
  * status is set to
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 {
@@ -408,14 +392,13 @@ RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a set of tags with a DAX resource. You can call <code>TagResource</code> up to 5 times per second, per
  * account.
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
 {
@@ -423,14 +406,13 @@ TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the association of tags from a DAX resource. You can call <code>UntagResource</code> up to 5 times per second,
  * per account.
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &request)
 {
@@ -438,14 +420,13 @@ UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &req
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * UpdateClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters
  * by specifying the parameters and the new
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &request)
 {
@@ -453,14 +434,13 @@ UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &req
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * UpdateParameterGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a
  * list parameter name and value
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParameterGroupRequest &request)
 {
@@ -468,13 +448,12 @@ UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParam
 }
 
 /*!
+ * Sends \a request to the DaxClient service, and returns a pointer to an
+ * UpdateSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies an existing subnet
- *
- * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroupRequest &request)
 {
@@ -482,19 +461,16 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
 }
 
 /*!
- * @internal
+ * \class QtAws::DAX::DaxClientPrivate
+ * \brief The DaxClientPrivate class provides private implementation for DaxClient.
+ * \internal
  *
- * @class  DaxClientPrivate
- *
- * @brief  Private implementation for DaxClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DaxClientPrivate object.
- *
- * @param  q  Pointer to this object's public DaxClient instance.
+ * Constructs a DaxClientPrivate object with public implementation \a q.
  */
 DaxClientPrivate::DaxClientPrivate(DaxClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

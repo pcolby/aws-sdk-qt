@@ -72,10 +72,10 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::CognitoIdentityClient
- *
  * \brief The CognitoIdentityClient class provides access to the Amazon Cognito Identity service.
  *
- * \ingroup CognitoIdentity
+ * \ingroup aws-clients
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -171,6 +171,11 @@ CognitoIdentityClient::CognitoIdentityClient(
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * CreateIdentityPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS
  * account. The limit on identity pools is 60 per account. The keys for <code>SupportedLoginProviders</code> are as
  *
@@ -197,12 +202,6 @@ CognitoIdentityClient::CognitoIdentityClient(
  * </p </li> </ul>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const CreateIdentityPoolRequest &request)
 {
@@ -210,17 +209,16 @@ CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const Cre
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * DeleteIdentitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes identities from an identity pool. You can specify a list of 1-60 identities that you want to
  *
  * delete>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteIdentitiesRequest &request)
 {
@@ -228,17 +226,16 @@ DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteI
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * DeleteIdentityPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a user pool. Once a pool is deleted, users will not be able to authenticate with the
  *
  * pool>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const DeleteIdentityPoolRequest &request)
 {
@@ -246,17 +243,16 @@ DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const Del
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * DescribeIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns metadata related to the given identity, including when the identity was created and any associated linked
  *
  * logins>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const DescribeIdentityRequest &request)
 {
@@ -264,18 +260,17 @@ DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const Describ
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * DescribeIdentityPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets details about a particular identity pool, including the pool name, ID description, creation date, and current
  * number of
  *
  * users>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const DescribeIdentityPoolRequest &request)
 {
@@ -283,6 +278,11 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetCredentialsForIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns credentials for the provided identity ID. Any provided logins will be validated against supported login
  * providers. If the token is for cognito-identity.amazonaws.com, it will be passed through to AWS Security Token Service
  * with the appropriate role for the
@@ -290,12 +290,6 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
  * token>
  *
  * This is a public API. You do not need any credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIdentity(const GetCredentialsForIdentityRequest &request)
 {
@@ -303,17 +297,16 @@ GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIden
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates (or retrieves) a Cognito ID. Supplying multiple logins will create an implicit linked
  *
  * account>
  *
  * This is a public API. You do not need any credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
 {
@@ -321,17 +314,16 @@ GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetIdentityPoolRolesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the roles for an identity
  *
  * pool>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const GetIdentityPoolRolesRequest &request)
 {
@@ -339,6 +331,11 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetOpenIdTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets an OpenID token, using a known Cognito ID. This known Cognito ID is returned by <a>GetId</a>. You can optionally
  * add additional logins for the identity. Supplying multiple logins creates an implicit
  *
@@ -349,12 +346,6 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
  * minutes>
  *
  * This is a public API. You do not need any credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTokenRequest &request)
 {
@@ -362,6 +353,11 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetOpenIdTokenForDeveloperIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers (or retrieves) a Cognito <code>IdentityId</code> and an OpenID Connect token for a user authenticated by your
  * backend authentication process. Supplying multiple logins will create an implicit linked account. You can only specify
  * one developer provider as part of the <code>Logins</code> map, which is linked to the identity pool. The developer
@@ -378,12 +374,6 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
  * <code>IdentityPoolId</code>>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTokenForDeveloperIdentity(const GetOpenIdTokenForDeveloperIdentityRequest &request)
 {
@@ -391,17 +381,16 @@ GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTok
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * ListIdentitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the identities in a
  *
  * pool>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentitiesRequest &request)
 {
@@ -409,17 +398,16 @@ ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentit
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * ListIdentityPoolsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the Cognito identity pools registered for your
  *
  * account>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListIdentityPoolsRequest &request)
 {
@@ -427,6 +415,11 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * LookupDeveloperIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the <code>IdentityID</code> associated with a <code>DeveloperUserIdentifier</code> or the list of
  * <code>DeveloperUserIdentifier</code>s associated with an <code>IdentityId</code> for an existing identity. Either
  * <code>IdentityID</code> or <code>DeveloperUserIdentifier</code> must not be null. If you supply only one of these
@@ -438,12 +431,6 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
  * thrown>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity(const LookupDeveloperIdentityRequest &request)
 {
@@ -451,6 +438,11 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * MergeDeveloperIdentitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Merges two users having different <code>IdentityId</code>s, existing in the same identity pool, and identified by the
  * same developer provider. You can use this action to request that discrete users be merged and identified as a single
  * user in the Cognito environment. Cognito associates the given source user (<code>SourceUserIdentifier</code>) with the
@@ -460,12 +452,6 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
  * thrown>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentities(const MergeDeveloperIdentitiesRequest &request)
 {
@@ -473,17 +459,16 @@ MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentiti
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * SetIdentityPoolRolesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the roles for an identity pool. These roles are used when making calls to <a>GetCredentialsForIdentity</a>
  *
  * action>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const SetIdentityPoolRolesRequest &request)
 {
@@ -491,6 +476,11 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * UnlinkDeveloperIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unlinks a <code>DeveloperUserIdentifier</code> from an existing identity. Unlinked developer users will be considered
  * new identities next time they are seen. If, for a given Cognito identity, you remove all federated identities as well as
  * the developer user identifier, the Cognito identity becomes
@@ -498,12 +488,6 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
  * inaccessible>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity(const UnlinkDeveloperIdentityRequest &request)
 {
@@ -511,18 +495,17 @@ UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * UnlinkIdentityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Unlinks a federated identity from an existing account. Unlinked logins will be considered new identities next time they
  * are seen. Removing the last linked login will make this identity
  *
  * inaccessible>
  *
  * This is a public API. You do not need any credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdentityRequest &request)
 {
@@ -530,17 +513,16 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
 }
 
 /*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * UpdateIdentityPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a user
  *
  * pool>
  *
  * You must use AWS Developer credentials to call this
- *
- * @param  request Request to send to Amazon Cognito Identity.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const UpdateIdentityPoolRequest &request)
 {
@@ -548,19 +530,16 @@ UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const Upd
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::CognitoIdentityClientPrivate
+ * \brief The CognitoIdentityClientPrivate class provides private implementation for CognitoIdentityClient.
+ * \internal
  *
- * @class  CognitoIdentityClientPrivate
- *
- * @brief  Private implementation for CognitoIdentityClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoIdentityClientPrivate object.
- *
- * @param  q  Pointer to this object's public CognitoIdentityClient instance.
+ * Constructs a CognitoIdentityClientPrivate object with public implementation \a q.
  */
 CognitoIdentityClientPrivate::CognitoIdentityClientPrivate(CognitoIdentityClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

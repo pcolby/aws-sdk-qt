@@ -124,10 +124,10 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClient
- *
  * \brief The DatabaseMigrationServiceClient class provides access to the AWS Database Migration Service service.
  *
- * \ingroup DatabaseMigrationService
+ * \ingroup aws-clients
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -196,15 +196,14 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * AddTagsToResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task.
  * These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a
  * Condition statement in an IAM policy for
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -212,13 +211,12 @@ AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(co
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an endpoint using the provided
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const CreateEndpointRequest &request)
 {
@@ -226,6 +224,11 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS DMS event notification subscription.
  *
  * </p
@@ -245,12 +248,6 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  * For more information about AWS DMS events, see <a
  * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working with Events and Notifications </a> in
  * the AWS Database MIgration Service User
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -258,13 +255,12 @@ CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSub
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateReplicationInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates the replication instance using the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
 {
@@ -272,13 +268,12 @@ CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplic
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateReplicationSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a replication subnet group given a list of the subnet IDs in a
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
 {
@@ -286,13 +281,12 @@ CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createRep
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a replication task using the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicationTask(const CreateReplicationTaskRequest &request)
 {
@@ -300,13 +294,12 @@ CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicatio
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified certificate.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -314,17 +307,16 @@ DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(co
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * endpoint> <note>
  *
  * All tasks associated with the endpoint must be deleted before you can delete the
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -332,13 +324,12 @@ DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const De
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an AWS DMS event subscription.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
@@ -346,17 +337,16 @@ DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSub
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteReplicationInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified replication
  *
  * instance> <note>
  *
  * You must delete any migration tasks that are associated with the replication instance before you can delete
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
 {
@@ -364,13 +354,12 @@ DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplic
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteReplicationSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a subnet
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request)
 {
@@ -378,13 +367,12 @@ DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteRep
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified replication
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicationTask(const DeleteReplicationTaskRequest &request)
 {
@@ -392,6 +380,11 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeAccountAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the AWS DMS attributes for a customer account. The attributes include AWS DMS quotas for the account, such
  * as the number of replication instances allowed. The description for a quota includes the quota name, current usage
  * toward that quota, and the quota's maximum
@@ -399,12 +392,6 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
  * value>
  *
  * This command does not take any
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -412,13 +399,12 @@ DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAcco
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides a description of the
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
@@ -426,14 +412,13 @@ DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertifica
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the status of the connections that have been made between the replication instance and an endpoint.
  * Connections are created when you test an
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnections(const DescribeConnectionsRequest &request)
 {
@@ -441,13 +426,12 @@ DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnection
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEndpointTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the type of endpoints
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpointTypes(const DescribeEndpointTypesRequest &request)
 {
@@ -455,13 +439,12 @@ DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpoint
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the endpoints for your account in the current
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
@@ -469,15 +452,14 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEventCategoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
  * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
  * with Events and Notifications </a> in the AWS Database Migration Service User Guide.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -485,6 +467,11 @@ DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventC
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEventSubscriptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all the event subscriptions for a customer account. The description of a subscription includes
  * <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>,
  * <code>SourceID</code>, <code>CreationTime</code>, and <code>Status</code>.
@@ -492,12 +479,6 @@ DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventC
  * </p
  *
  * If you specify <code>SubscriptionName</code>, this action lists the description for that
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
@@ -505,15 +486,14 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
  * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
  * with Events and Notifications </a>.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -521,13 +501,12 @@ DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const De
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeOrderableReplicationInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the replication instance types that can be created in the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
 {
@@ -535,13 +514,12 @@ DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeRefreshSchemasStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the status of the RefreshSchemas
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request)
 {
@@ -549,13 +527,12 @@ DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeR
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationInstanceTaskLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the task logs for the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request)
 {
@@ -563,13 +540,12 @@ DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::de
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about replication instances for your account in the current
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeReplicationInstances(const DescribeReplicationInstancesRequest &request)
 {
@@ -577,13 +553,12 @@ DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeR
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationSubnetGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the replication subnet
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request)
 {
@@ -591,13 +566,12 @@ DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::descri
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationTaskAssessmentResultsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the task assessment results from Amazon S3. This action always returns the latest
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
 {
@@ -605,13 +579,12 @@ DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClien
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about replication tasks for your account in the current
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeReplicationTasks(const DescribeReplicationTasksRequest &request)
 {
@@ -619,13 +592,12 @@ DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeRepli
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeSchemasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the schema for the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const DescribeSchemasRequest &request)
 {
@@ -633,18 +605,17 @@ DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const 
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeTableStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns table statistics on the database migration task, including table name, rows inserted, rows updated, and rows
  *
  * deleted>
  *
  * Note that the "last updated" column the DMS console only indicates the time that AWS DMS last updated the table
  * statistics record for a table. It does not indicate the time of the last update to the
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
 {
@@ -652,13 +623,12 @@ DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableS
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ImportCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(const ImportCertificateRequest &request)
 {
@@ -666,13 +636,12 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all tags for an AWS DMS
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -680,13 +649,12 @@ ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResourc
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ModifyEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const ModifyEndpointRequest &request)
 {
@@ -694,13 +662,12 @@ ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const Mo
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ModifyEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies an existing AWS DMS event notification subscription.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
@@ -708,18 +675,17 @@ ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSub
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ModifyReplicationInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the replication instance to apply new settings. You can change one or more parameters by specifying these
  * parameters and the new values in the
  *
  * request>
  *
  * Some settings are applied during the maintenance
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
 {
@@ -727,13 +693,12 @@ ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplic
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ModifyReplicationSubnetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the settings for the specified replication subnet
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request)
 {
@@ -741,6 +706,11 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ModifyReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the specified replication
  *
  * task>
@@ -751,12 +721,6 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  *
  * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
  * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
 {
@@ -764,14 +728,13 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * RebootReplicationInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes
  * available
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplicationInstance(const RebootReplicationInstanceRequest &request)
 {
@@ -779,14 +742,13 @@ RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplic
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * RefreshSchemasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Populates the schema for the specified endpoint. This is an asynchronous operation and can take several minutes. You can
  * check the status of this operation by calling the DescribeRefreshSchemasStatus
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const RefreshSchemasRequest &request)
 {
@@ -794,13 +756,12 @@ RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const Re
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ReloadTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Reloads the target database table with the source data.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const ReloadTablesRequest &request)
 {
@@ -808,13 +769,12 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * RemoveTagsFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes metadata tags from a DMS
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -822,18 +782,17 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * StartReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the replication
  *
  * task>
  *
  * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
  * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
 {
@@ -841,13 +800,12 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * StartReplicationTaskAssessmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the replication task assessment for unsupported data types in the source database.
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
 {
@@ -855,13 +813,12 @@ StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startRe
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * StopReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops the replication
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTask(const StopReplicationTaskRequest &request)
 {
@@ -869,13 +826,12 @@ StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTas
 }
 
 /*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * TestConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Tests the connection between the replication instance and the
- *
- * @param  request Request to send to AWS Database Migration Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const TestConnectionRequest &request)
 {
@@ -883,19 +839,16 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClientPrivate
+ * \brief The DatabaseMigrationServiceClientPrivate class provides private implementation for DatabaseMigrationServiceClient.
+ * \internal
  *
- * @class  DatabaseMigrationServiceClientPrivate
- *
- * @brief  Private implementation for DatabaseMigrationServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DatabaseMigrationServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public DatabaseMigrationServiceClient instance.
+ * Constructs a DatabaseMigrationServiceClientPrivate object with public implementation \a q.
  */
 DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

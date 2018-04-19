@@ -38,10 +38,10 @@ namespace MarketplaceEntitlementService {
 
 /*!
  * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClient
- *
  * \brief The MarketplaceEntitlementServiceClient class provides access to the AWS Marketplace Entitlement Service service.
  *
- * \ingroup MarketplaceEntitlementService
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceEntitlementService
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -116,14 +116,13 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 }
 
 /*!
+ * Sends \a request to the MarketplaceEntitlementServiceClient service, and returns a pointer to an
+ * GetEntitlementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product
- *
- * @param  request Request to send to AWS Marketplace Entitlement Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(const GetEntitlementsRequest &request)
 {
@@ -131,19 +130,16 @@ GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(c
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClientPrivate
+ * \brief The MarketplaceEntitlementServiceClientPrivate class provides private implementation for MarketplaceEntitlementServiceClient.
+ * \internal
  *
- * @class  MarketplaceEntitlementServiceClientPrivate
- *
- * @brief  Private implementation for MarketplaceEntitlementServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceEntitlementService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceEntitlementServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceEntitlementServiceClient instance.
+ * Constructs a MarketplaceEntitlementServiceClientPrivate object with public implementation \a q.
  */
 MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

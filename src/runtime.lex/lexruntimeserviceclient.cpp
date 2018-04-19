@@ -40,10 +40,10 @@ namespace LexRuntimeService {
 
 /*!
  * \class QtAws::LexRuntimeService::LexRuntimeServiceClient
- *
  * \brief The LexRuntimeServiceClient class provides access to the Amazon Lex Runtime Service service.
  *
- * \ingroup LexRuntimeService
+ * \ingroup aws-clients
+ * \inmodule QtAwsLexRuntimeService
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -108,6 +108,11 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 }
 
 /*!
+ * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * PostContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends user input (text or speech) to Amazon Lex. Clients use this API to send text and audio requests to Amazon Lex at
  * runtime. Amazon Lex interprets the user input using the machine learning model that it built for the bot.
  *
@@ -178,12 +183,6 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  *
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
- *
- * @param  request Request to send to Amazon Lex Runtime Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequest &request)
 {
@@ -191,6 +190,11 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
 }
 
 /*!
+ * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * PostTextResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sends user input (text-only) to Amazon Lex. Client applications can use this API to send requests to Amazon Lex at
  * runtime. Amazon Lex then interprets the user input using the machine learning model it built for the bot.
  *
@@ -256,12 +260,6 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  *
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
- *
- * @param  request Request to send to Amazon Lex Runtime Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &request)
 {
@@ -269,19 +267,16 @@ PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &requ
 }
 
 /*!
- * @internal
+ * \class QtAws::LexRuntimeService::LexRuntimeServiceClientPrivate
+ * \brief The LexRuntimeServiceClientPrivate class provides private implementation for LexRuntimeServiceClient.
+ * \internal
  *
- * @class  LexRuntimeServiceClientPrivate
- *
- * @brief  Private implementation for LexRuntimeServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexRuntimeServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public LexRuntimeServiceClient instance.
+ * Constructs a LexRuntimeServiceClientPrivate object with public implementation \a q.
  */
 LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

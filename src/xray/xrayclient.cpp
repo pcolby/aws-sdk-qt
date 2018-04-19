@@ -40,6 +40,9 @@
 /*!
  * \namespace QtAws::XRay
  * \brief The QtAws::XRay contains stuff...
+ *
+ * \inmodule QtAwsXRay
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -48,10 +51,10 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::XRayClient
- *
  * \brief The XRayClient class provides access to the AWS X-Ray service.
  *
- * \ingroup XRay
+ * \ingroup aws-clients
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  */
@@ -90,7 +93,7 @@ XRayClient::XRayClient(
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 XRayClient::XRayClient(
     const QUrl &endpoint,
@@ -110,14 +113,13 @@ XRayClient::XRayClient(
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * BatchGetTracesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a
  * single request. Use <code>GetTraceSummaries</code> to get a list of trace
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest &request)
 {
@@ -125,15 +127,14 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetServiceGraphResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a document that describes services that process incoming requests, and downstream services that they call as a
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
  * that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphRequest &request)
 {
@@ -141,13 +142,12 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetTraceGraphResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a service graph for one or more specific trace
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &request)
 {
@@ -155,6 +155,11 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetTraceSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves IDs and metadata for traces available for a specified time frame using an optional filter. To get the full
  * traces, pass the trace IDs to
  *
@@ -180,12 +185,6 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  * For a full list of indexed fields and keywords that you can use in filter expressions, see <a
  * href="http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
  * <i>AWS X-Ray Developer
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)
 {
@@ -193,13 +192,12 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * PutTelemetryRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Used by the AWS X-Ray daemon to upload
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetryRecordsRequest &request)
 {
@@ -207,6 +205,11 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
 }
 
 /*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * PutTraceSegmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon,
  * which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of
  *
@@ -266,12 +269,6 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  * hexadecimal> </li> <li>
  *
  * A 96-bit identifier for the trace, globally unique, in 24 hexadecimal
- *
- * @param  request Request to send to AWS X-Ray.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRequest &request)
 {
@@ -279,19 +276,16 @@ PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRe
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::XRayClientPrivate
+ * \brief The XRayClientPrivate class provides private implementation for XRayClient.
+ * \internal
  *
- * @class  XRayClientPrivate
- *
- * @brief  Private implementation for XRayClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new XRayClientPrivate object.
- *
- * @param  q  Pointer to this object's public XRayClient instance.
+ * Constructs a XRayClientPrivate object with public implementation \a q.
  */
 XRayClientPrivate::XRayClientPrivate(XRayClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

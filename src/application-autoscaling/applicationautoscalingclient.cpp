@@ -56,10 +56,10 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingClient
- *
  * \brief The ApplicationAutoScalingClient class provides access to the Application Auto Scaling service.
  *
- * \ingroup ApplicationAutoScaling
+ * \ingroup aws-clients
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -190,6 +190,11 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DeleteScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Application Auto Scaling scaling
  *
  * policy>
@@ -200,12 +205,6 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  * action>
  *
  * To create a scaling policy or update an existing one, see
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
@@ -213,13 +212,12 @@ DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DeleteScheduledActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified Application Auto Scaling scheduled
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
 {
@@ -227,6 +225,11 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DeregisterScalableTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deregisters a scalable
  *
  * target>
@@ -236,12 +239,6 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
  * it>
  *
  * To create a scalable target or update an existing one, see
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScalableTarget(const DeregisterScalableTargetRequest &request)
 {
@@ -249,6 +246,11 @@ DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScala
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DescribeScalableTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the scalable targets in the specified
  *
  * namespace>
@@ -259,12 +261,6 @@ DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScala
  *
  * To create a scalable target or update an existing one, see <a>RegisterScalableTarget</a>. If you are no longer using a
  * scalable target, you can deregister it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalableTargets(const DescribeScalableTargetsRequest &request)
 {
@@ -272,6 +268,11 @@ DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalable
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DescribeScalingActivitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides descriptive information about the scaling activities in the specified namespace from the previous six
  *
  * weeks>
@@ -283,12 +284,6 @@ DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalable
  * Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling
  * policies for a service namespace, see <a>DescribeScalingPolicies</a>. To create a scaling policy or update an existing
  * one, see
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
@@ -296,6 +291,11 @@ DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalin
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DescribeScalingPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the scaling policies for the specified service
  *
  * namespace>
@@ -307,12 +307,6 @@ DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalin
  *
  * To create a scaling policy or update an existing one, see <a>PutScalingPolicy</a>. If you are no longer using a scaling
  * policy, you can delete it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
@@ -320,6 +314,11 @@ DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingP
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * DescribeScheduledActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the scheduled actions for the specified service
  *
  * namespace>
@@ -331,12 +330,6 @@ DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingP
  *
  * To create a scheduled action or update an existing one, see <a>PutScheduledAction</a>. If you are no longer using a
  * scheduled action, you can delete it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
@@ -344,6 +337,11 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * PutScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates a policy for an Application Auto Scaling scalable
  *
  * target>
@@ -361,12 +359,6 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  *
  * You can view the scaling policies for a service namespace using <a>DescribeScalingPolicies</a>. If you are no longer
  * using a scaling policy, you can delete it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -374,6 +366,11 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * PutScheduledActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates a scheduled action for an Application Auto Scaling scalable
  *
  * target>
@@ -391,12 +388,6 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  *
  * You can view the scheduled actions using <a>DescribeScheduledActions</a>. If you are no longer using a scheduled action,
  * you can delete it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(const PutScheduledActionRequest &request)
 {
@@ -404,6 +395,11 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
 }
 
 /*!
+ * Sends \a request to the ApplicationAutoScalingClient service, and returns a pointer to an
+ * RegisterScalableTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or
  * scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum
  * values for its scalable
@@ -413,12 +409,6 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
  * After you register a scalable target, you can create and apply scaling policies using <a>PutScalingPolicy</a>. You can
  * view the scaling policies for a service namespace using <a>DescribeScalableTargets</a>. If you no longer need a scalable
  * target, you can deregister it using
- *
- * @param  request Request to send to Application Auto Scaling.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableTarget(const RegisterScalableTargetRequest &request)
 {
@@ -426,19 +416,16 @@ RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableT
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingClientPrivate
+ * \brief The ApplicationAutoScalingClientPrivate class provides private implementation for ApplicationAutoScalingClient.
+ * \internal
  *
- * @class  ApplicationAutoScalingClientPrivate
- *
- * @brief  Private implementation for ApplicationAutoScalingClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationAutoScalingClientPrivate object.
- *
- * @param  q  Pointer to this object's public ApplicationAutoScalingClient instance.
+ * Constructs a ApplicationAutoScalingClientPrivate object with public implementation \a q.
  */
 ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

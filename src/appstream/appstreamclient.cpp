@@ -102,10 +102,10 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::AppStreamClient
- *
  * \brief The AppStreamClient class provides access to the Amazon AppStream service.
  *
- * \ingroup AppStream
+ * \ingroup aws-clients
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -166,13 +166,12 @@ AppStreamClient::AppStreamClient(
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * AssociateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates the specified fleet with the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetRequest &request)
 {
@@ -180,14 +179,13 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CopyImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Copies the image within the same region or to a new region within the same AWS account. Note that any tags you added to
  * the image will not be
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 {
@@ -195,13 +193,12 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateDirectoryConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a directory
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const CreateDirectoryConfigRequest &request)
 {
@@ -209,13 +206,12 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &request)
 {
@@ -223,17 +219,16 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateImageBuilderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an image
  *
  * builder>
  *
  * The initial state of the builder is <code>PENDING</code>. When it is ready, the state is
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateImageBuilderRequest &request)
 {
@@ -241,13 +236,12 @@ CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateIma
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateImageBuilderStreamingURLResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a URL to start an image builder streaming
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStreamingURL(const CreateImageBuilderStreamingURLRequest &request)
 {
@@ -255,13 +249,12 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &request)
 {
@@ -269,13 +262,12 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateStreamingURLResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a URL to start a streaming session for the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
@@ -283,13 +275,12 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteDirectoryConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified directory
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request)
 {
@@ -297,13 +288,12 @@ DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const Del
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -311,14 +301,13 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot
  * provision new capacity using the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &request)
 {
@@ -326,13 +315,12 @@ DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteImageBuilderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified image builder and releases the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteImageBuilderRequest &request)
 {
@@ -340,14 +328,13 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified stack. After this operation completes, the environment can no longer be activated and any
  * reservations made for the stack are
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &request)
 {
@@ -355,14 +342,13 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeDirectoryConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified directory configurations. Note that although the response syntax in this topic includes the
  * account password, this password is not returned in the actual response.
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request)
 {
@@ -370,13 +356,12 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified fleets or all fleets in the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsRequest &request)
 {
@@ -384,13 +369,12 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeImageBuildersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified image builders or all image builders in the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const DescribeImageBuildersRequest &request)
 {
@@ -398,13 +382,12 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified images or all images in the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -412,15 +395,14 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the streaming sessions for the specified stack and fleet. If a user ID is provided, only the streaming
  * sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate
  * users using a streaming
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessionsRequest &request)
 {
@@ -428,13 +410,12 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeStacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified stacks or all stacks in the
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksRequest &request)
 {
@@ -442,13 +423,12 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DisassociateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the specified fleet from the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateFleetResponse * AppStreamClient::disassociateFleet(const DisassociateFleetRequest &request)
 {
@@ -456,13 +436,12 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * ExpireSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops the specified streaming
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionRequest &request)
 {
@@ -470,13 +449,12 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * ListAssociatedFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the fleets associated with the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListAssociatedFleetsRequest &request)
 {
@@ -484,13 +462,12 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * ListAssociatedStacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the stacks associated with the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListAssociatedStacksRequest &request)
 {
@@ -498,6 +475,11 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders, images, fleets, and
  *
  * stacks>
@@ -505,12 +487,6 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -518,13 +494,12 @@ ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTag
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * StartFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &request)
 {
@@ -532,13 +507,12 @@ StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &reques
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * StartImageBuilderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the specified image
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageBuilderRequest &request)
 {
@@ -546,13 +520,12 @@ StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageB
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * StopFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 {
@@ -560,13 +533,12 @@ StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * StopImageBuilderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops the specified image
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuilderRequest &request)
 {
@@ -574,6 +546,11 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or overwrites one or more tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders,
  * images, fleets, and
  *
@@ -592,12 +569,6 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &request)
 {
@@ -605,6 +576,11 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates the specified tags from the specified AppStream 2.0
  *
  * resource>
@@ -616,12 +592,6 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceRequest &request)
 {
@@ -629,13 +599,12 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateDirectoryConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified directory
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const UpdateDirectoryConfigRequest &request)
 {
@@ -643,6 +612,11 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
  *
  * fleet>
@@ -650,12 +624,6 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet name. If the fleet is
  * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code> and <code>ComputeCapacity</code>
  * attributes. If the fleet is in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {
@@ -663,13 +631,12 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
 }
 
 /*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified
- *
- * @param  request Request to send to Amazon AppStream.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &request)
 {
@@ -677,19 +644,16 @@ UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &req
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::AppStreamClientPrivate
+ * \brief The AppStreamClientPrivate class provides private implementation for AppStreamClient.
+ * \internal
  *
- * @class  AppStreamClientPrivate
- *
- * @brief  Private implementation for AppStreamClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AppStreamClientPrivate object.
- *
- * @param  q  Pointer to this object's public AppStreamClient instance.
+ * Constructs a AppStreamClientPrivate object with public implementation \a q.
  */
 AppStreamClientPrivate::AppStreamClientPrivate(AppStreamClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -66,10 +66,10 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::SecretsManagerClient
- *
  * \brief The SecretsManagerClient class provides access to the AWS Secrets Manager service.
  *
- * \ingroup SecretsManager
+ * \ingroup aws-clients
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -227,6 +227,11 @@ SecretsManagerClient::SecretsManagerClient(
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * CancelRotateSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables automatic scheduled rotation and cancels the rotation of a secret if one is currently in
  *
  * progress>
@@ -288,12 +293,6 @@ SecretsManagerClient::SecretsManagerClient(
  * <a>ListSecrets</a>> </li> <li>
  *
  * To list all of the versions currently associated with a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const CancelRotateSecretRequest &request)
 {
@@ -301,6 +300,11 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * CreateSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new secret. A secret in AWS Secrets Manager consists of both the protected secret data and the important
  * information needed to manage the
  *
@@ -387,12 +391,6 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * To retrieve the list of secret versions associated with the current secret, use <a>DescribeSecret</a> and examine the
  * <code>SecretVersionsToStages</code> response
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequest &request)
 {
@@ -400,6 +398,11 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * DeleteSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an entire secret and all of its versions. You can optionally include a recovery window during which you can
  * restore the secret. If you don't provide a recovery window value, the operation defaults to 30 days. Secrets Manager
  * attaches a <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of
@@ -448,12 +451,6 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  * <a>CreateSecret</a>> </li> <li>
  *
  * To cancel deletion of a version of a secret before the recovery period has expired, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequest &request)
 {
@@ -461,6 +458,11 @@ DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequ
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * DescribeSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the details of a secret. It does not include the encrypted fields. Only those fields that are populated with a
  * value are returned in the response.
  *
@@ -493,12 +495,6 @@ DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequ
  * <a>GetSecretValue</a>> </li> <li>
  *
  * To list all of the secrets in the AWS account, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecretRequest &request)
 {
@@ -506,6 +502,11 @@ DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecr
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * GetRandomPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Generates a random password of the specified complexity. This operation is intended for use in the Lambda rotation
  * function. Per best practice, we recommend that you specify the maximum length and include every character type that the
  * system you are generating a password for can
@@ -519,12 +520,6 @@ DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecr
  * To run this command, you must have the following
  *
  * permissions> <ul> <li>
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRandomPasswordRequest &request)
 {
@@ -532,6 +527,11 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * GetSecretValueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the contents of the encrypted fields <code>SecretString</code> and <code>SecretBinary</code> from the
  * specified version of a
  *
@@ -561,12 +561,6 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
  * <a>PutSecretValue</a>> </li> <li>
  *
  * To retrieve the non-encrypted details for the secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretValueRequest &request)
 {
@@ -574,6 +568,11 @@ GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretVal
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * ListSecretVersionIdsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the versions attached to the specified secret. The output does not include the <code>SecretString</code> or
  * <code>SecretBinary</code> fields. By default, the list includes only versions that have at least one staging label in
  * <code>VersionStage</code>
@@ -602,12 +601,6 @@ GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretVal
  * </p <ul> <li>
  *
  * To list the secrets in an account, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const ListSecretVersionIdsRequest &request)
 {
@@ -615,6 +608,11 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * ListSecretsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the secrets that are stored by AWS Secrets Manager in the AWS account. To list the versions currently
  * stored for a specific secret, use <a>ListSecretVersionIds</a>. The encrypted fields <code>SecretString</code> and
  * <code>SecretBinary</code> are not included in the output. To get that information, call the <a>GetSecretValue</a>
@@ -643,12 +641,6 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
  * </p <ul> <li>
  *
  * To list the versions attached to a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest &request)
 {
@@ -656,6 +648,11 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * PutSecretValueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stores a new encrypted secret value in the specified secret. To do this, the operation creates a new version and
  * attaches it to the secret. The version can contain a new <code>SecretString</code> value or a new
  * <code>SecretBinary</code>
@@ -746,12 +743,6 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  * <a>DescribeSecret</a>> </li> <li>
  *
  * To list the versions attached to a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretValueRequest &request)
 {
@@ -759,6 +750,11 @@ PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretVal
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * RestoreSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels the scheduled deletion of a secret by removing the <code>DeletedDate</code> time stamp. This makes the secret
  * accessible to query once
  *
@@ -779,12 +775,6 @@ PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretVal
  * </p <ul> <li>
  *
  * To delete a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretRequest &request)
 {
@@ -792,6 +782,11 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * RotateSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Configures and starts the asynchronous process of rotating this secret. If you include the configuration parameters, the
  * operation sets those values for the secret and then immediately starts a rotation. If you do not include the
  * configuration parameters, the operation starts a rotation with the values already stored in the secret. After the
@@ -858,12 +853,6 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  * <a>CreateSecret</a>> </li> <li>
  *
  * To attach staging labels to or remove staging labels from a version of a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequest &request)
 {
@@ -871,6 +860,11 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches one or more tags, each consisting of a key name and a value, to the specified secret. Tags are part of the
  * secret's overall metadata, and are not associated with any specific version of the secret. This operation only appends
  * tags to the existing list of tags. To remove tags, you must use
@@ -933,12 +927,6 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
  * <a>UntagResource</a>> </li> <li>
  *
  * To view the list of tags attached to a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest &request)
 {
@@ -946,6 +934,11 @@ TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more tags from the specified
  *
  * secret>
@@ -980,12 +973,6 @@ TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest
  * <a>TagResource</a>> </li> <li>
  *
  * To view the list of tags attached to a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceRequest &request)
 {
@@ -993,6 +980,11 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * UpdateSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies many of the details of a secret. If you include a <code>ClientRequestToken</code> and either
  * <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached to the
  *
@@ -1075,12 +1067,6 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  * <a>DescribeSecret</a>> </li> <li>
  *
  * To list the versions contained in a secret, use
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequest &request)
 {
@@ -1088,6 +1074,11 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
 }
 
 /*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * UpdateSecretVersionStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the staging labels attached to a version of a secret. Staging labels are used to track a version as it
  * progresses through the secret rotation process. You can attach a staging label to only one version of a secret at a
  * time. If a staging label to be added is already attached to another version, then it is moved--removed from the other
@@ -1132,12 +1123,6 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
  *
  * To get the list of staging labels that are currently associated with a version of a secret, use <code>
  * <a>DescribeSecret</a> </code> and examine the <code>SecretVersionsToStages</code> response
- *
- * @param  request Request to send to AWS Secrets Manager.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStage(const UpdateSecretVersionStageRequest &request)
 {
@@ -1145,19 +1130,16 @@ UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStag
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::SecretsManagerClientPrivate
+ * \brief The SecretsManagerClientPrivate class provides private implementation for SecretsManagerClient.
+ * \internal
  *
- * @class  SecretsManagerClientPrivate
- *
- * @brief  Private implementation for SecretsManagerClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SecretsManagerClientPrivate object.
- *
- * @param  q  Pointer to this object's public SecretsManagerClient instance.
+ * Constructs a SecretsManagerClientPrivate object with public implementation \a q.
  */
 SecretsManagerClientPrivate::SecretsManagerClientPrivate(SecretsManagerClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

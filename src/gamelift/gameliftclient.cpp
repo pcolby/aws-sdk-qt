@@ -166,10 +166,10 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GameLiftClient
- *
  * \brief The GameLiftClient class provides access to the Amazon GameLift service.
  *
- * \ingroup GameLift
+ * \ingroup aws-clients
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -663,6 +663,11 @@ GameLiftClient::GameLiftClient(
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * AcceptMatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a player's acceptance or rejection of a proposed FlexMatch match. A matchmaking configuration may require
  * player acceptance; if so, then matches built with that configuration cannot be completed unless all players accept the
  * proposed match within a specified time limit.
@@ -710,12 +715,6 @@ GameLiftClient::GameLiftClient(
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &request)
 {
@@ -723,6 +722,11 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an alias for a fleet. In most situations, you can use an alias ID in place of a fleet ID. By using a fleet alias
  * instead of a specific fleet ID, you can switch gameplay and players to a new fleet without changing your game client or
  * other game components. For example, for games in production, using an alias allows you to seamlessly redirect your
@@ -768,12 +772,6 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &request)
 {
@@ -781,6 +779,11 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Amazon GameLift build record for your game server binary files and points to the location of your game
  * server build files in an Amazon Simple Storage Service (Amazon S3) location.
  *
@@ -849,12 +852,6 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &request)
 {
@@ -862,6 +859,11 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new fleet to run your game servers. A fleet is a set of Amazon Elastic Compute Cloud (Amazon EC2) instances,
  * each of which can run multiple server processes to host game sessions. You set up a fleet to use instances with certain
  * hardware specifications (see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for more
@@ -1022,12 +1024,6 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &request)
 {
@@ -1035,6 +1031,11 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateGameSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a multiplayer game session for players. This action creates a game session record and assigns an available
  * server process in the specified fleet to host the game session. A fleet must have an <code>ACTIVE</code> status before a
  * game session can be created in
@@ -1115,12 +1116,6 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSessionRequest &request)
 {
@@ -1128,6 +1123,11 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateGameSessionQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Establishes a new queue for processing requests to place new game sessions. A queue identifies where new game sessions
  * can be hosted -- by specifying a list of destinations (fleets or aliases) -- and how long requests can wait in the queue
  * before timing out. You can set up a queue to try to place game sessions on fleets in multiple regions. To add placement
@@ -1175,12 +1175,6 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const CreateGameSessionQueueRequest &request)
 {
@@ -1188,6 +1182,11 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateMatchmakingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Defines a new matchmaking configuration for use with FlexMatch. A matchmaking configuration sets out guidelines for
  * matching players and getting the matches into games. You can set up multiple matchmaking configurations to handle the
  * scenarios needed for your game. Each matchmaking ticket (<a>StartMatchmaking</a> or <a>StartMatchBackfill</a>) specifies
@@ -1247,12 +1246,6 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfiguration(const CreateMatchmakingConfigurationRequest &request)
 {
@@ -1260,6 +1253,11 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateMatchmakingRuleSetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new rule set for FlexMatch matchmaking. A rule set describes the type of match to create, such as the number
  * and size of teams, and sets the parameters for acceptable player matches, such as minimum skill level or character type.
  * Rule sets are used in matchmaking configurations, which define how matchmaking requests are handled. Each
@@ -1312,12 +1310,6 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(const CreateMatchmakingRuleSetRequest &request)
 {
@@ -1325,6 +1317,11 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreatePlayerSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a player to a game session and creates a player session record. Before a player can be added, a game session must
  * have an <code>ACTIVE</code> status, have a creation policy of <code>ALLOW_ALL</code>, and have an open player slot. To
  * add a group of players to a game session, use
@@ -1370,12 +1367,6 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePlayerSessionRequest &request)
 {
@@ -1383,6 +1374,11 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreatePlayerSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a group of players to a game session. This action is useful with a team matching feature. Before players can be
  * added, a game session must have an <code>ACTIVE</code> status, have a creation policy of <code>ALLOW_ALL</code>, and
  * have an open player slot. To add a single player to a game session, use
@@ -1428,12 +1424,6 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const CreatePlayerSessionsRequest &request)
 {
@@ -1441,6 +1431,11 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateVpcPeeringAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests authorization to create or delete a peer connection between the VPC for your Amazon GameLift fleet and a
  * virtual private cloud (VPC) in your AWS account. VPC peering enables the game servers on your fleet to communicate
  * directly with other AWS resources. Once you've received authorization, call <a>CreateVpcPeeringConnection</a> to
@@ -1498,12 +1493,6 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthorization(const CreateVpcPeeringAuthorizationRequest &request)
 {
@@ -1511,6 +1500,11 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * CreateVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Establishes a VPC peering connection between a virtual private cloud (VPC) in an AWS account with the VPC for your
  * Amazon GameLift fleet. VPC peering enables the game servers on your fleet to communicate directly with other AWS
  * resources. You can peer with VPCs in any AWS account that you have access to, including the account that you use to
@@ -1560,12 +1554,6 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
@@ -1573,6 +1561,11 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an alias. This action removes all record of the alias. Game clients attempting to access a server process using
  * the deleted alias receive an error. To delete an alias, specify the alias ID to be
  *
@@ -1603,12 +1596,6 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -1616,6 +1603,11 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a build. This action permanently deletes the build record and any uploaded build
  *
  * files>
@@ -1646,12 +1638,6 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &request)
 {
@@ -1659,6 +1645,11 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes everything related to a fleet. Before deleting a fleet, you must set the fleet's desired capacity to zero. See
  *
  * <a>UpdateFleetCapacity</a>>
@@ -1752,12 +1743,6 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -1765,6 +1750,11 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteGameSessionQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a game session queue. This action means that any <a>StartGameSessionPlacement</a> requests that reference this
  * queue will fail. To delete a queue, specify the queue
  *
@@ -1787,12 +1777,6 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const DeleteGameSessionQueueRequest &request)
 {
@@ -1800,6 +1784,11 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteMatchmakingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently removes a FlexMatch matchmaking configuration. To delete, specify the configuration name. A matchmaking
  * configuration cannot be deleted if it is being used in any active matchmaking
  *
@@ -1834,12 +1823,6 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfiguration(const DeleteMatchmakingConfigurationRequest &request)
 {
@@ -1847,6 +1830,11 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a fleet scaling policy. This action means that the policy is no longer in force and removes all record of it. To
  * delete a scaling policy, specify both the scaling policy name and the fleet ID it is associated
  *
@@ -1937,12 +1925,6 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
@@ -1950,6 +1932,11 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteVpcPeeringAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a pending VPC peering authorization for the specified VPC. If the authorization has already been used to create
  * a peering connection, call <a>DeleteVpcPeeringConnection</a> to remove the connection.
  *
@@ -1980,12 +1967,6 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthorization(const DeleteVpcPeeringAuthorizationRequest &request)
 {
@@ -1993,6 +1974,11 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DeleteVpcPeeringConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes a VPC peering connection. To delete the connection, you must have a valid authorization for the VPC peering
  * connection that you want to delete. You can check for an authorization by calling
  * <a>DescribeVpcPeeringAuthorizations</a> or request a new one using <a>CreateVpcPeeringAuthorization</a>.
@@ -2029,12 +2015,6 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
@@ -2042,6 +2022,11 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves properties for an alias. This operation returns all alias metadata and settings. To get an alias's target
  * fleet ID only, use <code>ResolveAlias</code>.
  *
@@ -2076,12 +2061,6 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest &request)
 {
@@ -2089,6 +2068,11 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves properties for a build. To request a build record, specify a build ID. If successful, an object containing the
  * build properties is
  *
@@ -2115,12 +2099,6 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest &request)
 {
@@ -2128,6 +2106,11 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeEC2InstanceLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the following information for the specified EC2 instance
  *
  * type> <ul> <li>
@@ -2230,12 +2213,6 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request)
 {
@@ -2243,6 +2220,11 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeFleetAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves fleet properties, including metadata, status, and configuration, for one or more fleets. You can request
  * attributes for all fleets, or specify a list of one or more fleet IDs. When requesting multiple fleets, use the
  * pagination parameters to retrieve results as a set of sequential pages. If successful, a <a>FleetAttributes</a> object
@@ -2341,12 +2323,6 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const DescribeFleetAttributesRequest &request)
 {
@@ -2354,6 +2330,11 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeFleetCapacityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current status of fleet capacity for one or more fleets. This information includes the number of instances
  * that have been requested for the fleet and the number currently active. You can request capacity for all fleets, or
  * specify a list of one or more fleet IDs. When requesting multiple fleets, use the pagination parameters to retrieve
@@ -2452,12 +2433,6 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const DescribeFleetCapacityRequest &request)
 {
@@ -2465,6 +2440,11 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeFleetEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves entries from the specified fleet's event log. You can specify a time range to limit the result set. Use the
  * pagination parameters to retrieve results as a set of sequential pages. If successful, a collection of event log entries
  * matching the request are
@@ -2556,12 +2536,6 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const DescribeFleetEventsRequest &request)
 {
@@ -2569,6 +2543,11 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeFleetPortSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the inbound connection permissions for a fleet. Connection permissions include a range of IP addresses and
  * port settings that incoming traffic can use to access server processes in the fleet. To get a fleet's inbound connection
  * permissions, specify a fleet ID. If successful, a collection of <a>IpPermission</a> objects is returned for the
@@ -2661,12 +2640,6 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request)
 {
@@ -2674,6 +2647,11 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeFleetUtilizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves utilization statistics for one or more fleets. You can request utilization data for all fleets, or specify a
  * list of one or more fleet IDs. When requesting multiple fleets, use the pagination parameters to retrieve results as a
  * set of sequential pages. If successful, a <a>FleetUtilization</a> object is returned for each requested fleet ID. When
@@ -2771,12 +2749,6 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(const DescribeFleetUtilizationRequest &request)
 {
@@ -2784,6 +2756,11 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeGameSessionDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves properties, including the protection policy in force, for one or more game sessions. This action can be used
  * in several ways: (1) provide a <code>GameSessionId</code> or <code>GameSessionArn</code> to request details for a
  * specific game session; (2) provide either a <code>FleetId</code> or an <code>AliasId</code> to request properties for
@@ -2838,12 +2815,6 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request)
 {
@@ -2851,6 +2822,11 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeGameSessionPlacementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves properties and current status of a game session placement request. To get game session placement details,
  * specify the placement ID. If successful, a <a>GameSessionPlacement</a> object is
  *
@@ -2897,12 +2873,6 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacement(const DescribeGameSessionPlacementRequest &request)
 {
@@ -2910,6 +2880,11 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeGameSessionQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the properties for one or more game session queues. When requesting multiple queues, use the pagination
  * parameters to retrieve results as a set of sequential pages. If successful, a <a>GameSessionQueue</a> object is returned
  * for each requested queue. When specifying a list of queues, objects are returned only for queues that currently exist in
@@ -2934,12 +2909,6 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(const DescribeGameSessionQueuesRequest &request)
 {
@@ -2947,6 +2916,11 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeGameSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a set of one or more game sessions. Request a specific game session or request all game sessions on a fleet.
  * Alternatively, use <a>SearchGameSessions</a> to request a set of active game sessions that are filtered by certain
  * criteria. To retrieve protection policy settings for game sessions, use
@@ -3004,12 +2978,6 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const DescribeGameSessionsRequest &request)
 {
@@ -3017,6 +2985,11 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information about a fleet's instances, including instance IDs. Use this action to get details on all instances
  * in the fleet or get details on one specific
  *
@@ -3025,12 +2998,6 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
  * To get a specific instance, specify fleet ID and instance ID. To get all instances in a fleet, specify a fleet ID only.
  * Use the pagination parameters to retrieve results as a set of sequential pages. If successful, an <a>Instance</a> object
  * is returned for each
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInstancesRequest &request)
 {
@@ -3038,6 +3005,11 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeMatchmakingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves one or more matchmaking tickets. Use this operation to retrieve ticket information, including status and--once
  * a successful match is made--acquire connection information for the resulting new game session.
  *
@@ -3075,12 +3047,6 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const DescribeMatchmakingRequest &request)
 {
@@ -3088,6 +3054,11 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeMatchmakingConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the details of FlexMatch matchmaking configurations. with this operation, you have the following options: (1)
  * retrieve all existing configurations, (2) provide the names of one or more configurations to retrieve, or (3) retrieve
  * all configurations that use a specified rule set name. When requesting multiple items, use the pagination parameters to
@@ -3125,12 +3096,6 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingConfigurations(const DescribeMatchmakingConfigurationsRequest &request)
 {
@@ -3138,6 +3103,11 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeMatchmakingRuleSetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the details for FlexMatch matchmaking rule sets. You can request all existing rule sets for the region, or
  * provide a list of one or more rule set names. When requesting multiple items, use the pagination parameters to retrieve
  * results as a set of sequential pages. If successful, a rule set is returned for each requested name.
@@ -3173,12 +3143,6 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSets(const DescribeMatchmakingRuleSetsRequest &request)
 {
@@ -3186,6 +3150,11 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribePlayerSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves properties for one or more player sessions. This action can be used in several ways: (1) provide a
  * <code>PlayerSessionId</code> to request properties for a specific player session; (2) provide a
  * <code>GameSessionId</code> to request properties for all player sessions in the specified game session; (3) provide a
@@ -3232,12 +3201,6 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const DescribePlayerSessionsRequest &request)
 {
@@ -3245,6 +3208,11 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeRuntimeConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the current run-time configuration for the specified fleet. The run-time configuration tells Amazon GameLift
  * how to launch server processes on instances in the
  *
@@ -3335,12 +3303,6 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request)
 {
@@ -3348,6 +3310,11 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeScalingPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves all scaling policies applied to a
  *
  * fleet>
@@ -3443,12 +3410,6 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
@@ -3456,6 +3417,11 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeVpcPeeringAuthorizationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves valid VPC peering authorizations that are pending for the AWS account. This operation returns all VPC peering
  * authorizations and requests for peering. This includes those initiated and received by this account.
  *
@@ -3486,12 +3452,6 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAuthorizations(const DescribeVpcPeeringAuthorizationsRequest &request)
 {
@@ -3499,6 +3459,11 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * DescribeVpcPeeringConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves information on VPC peering connections. Use this operation to get peering information for all fleets or for
  * one specific fleet ID.
  *
@@ -3536,12 +3501,6 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
@@ -3549,6 +3508,11 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * GetGameSessionLogUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the location of stored game session logs for a specified game session. When a game session is terminated,
  * Amazon GameLift automatically stores the logs in Amazon S3 and retains them for 14 days. Use this URL to download the
  *
@@ -3600,12 +3564,6 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request)
 {
@@ -3613,6 +3571,11 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * GetInstanceAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests remote access to a fleet instance. Remote access is useful for debugging, gathering benchmarking data, or
  * watching activity in real time.
  *
@@ -3630,12 +3593,6 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
  *
  * To request access to a specific instance, specify the IDs of the instance and the fleet it belongs to. If successful, an
  * <a>InstanceAccess</a> object is returned containing the instance's IP address and a set of
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceAccessRequest &request)
 {
@@ -3643,6 +3600,11 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * ListAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves all aliases for this AWS account. You can filter the result set by alias name and/or routing strategy type.
  * Use the pagination parameters to retrieve results in sequential
  *
@@ -3677,12 +3639,6 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &request)
 {
@@ -3690,6 +3646,11 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * ListBuildsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves build records for all builds associated with the AWS account in use. You can limit results to builds that are
  * in a specific status by using the <code>Status</code> parameter. Use the pagination parameters to retrieve results in a
  * set of sequential pages.
@@ -3721,12 +3682,6 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request)
 {
@@ -3734,6 +3689,11 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * ListFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a collection of fleet records for this AWS account. You can filter the result set by build ID. Use the
  * pagination parameters to retrieve results in sequential
  *
@@ -3828,12 +3788,6 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request)
 {
@@ -3841,6 +3795,11 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * PutScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or updates a scaling policy for a fleet. An active scaling policy prompts Amazon GameLift to track a certain
  * metric for a fleet and automatically change the fleet's capacity in specific circumstances. Each scaling policy contains
  * one rule statement. Fleets can have multiple scaling policies in force
@@ -3956,12 +3915,6 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -3969,6 +3922,11 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * RequestUploadCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves a fresh set of credentials for use when uploading a new set of game build files to Amazon GameLift's Amazon
  * S3. This is done as part of the build creation process; see
  *
@@ -3976,12 +3934,6 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
  *
  * To request new credentials, specify the build ID as returned with an initial <code>CreateBuild</code> request. If
  * successful, a new set of credentials are returned, along with the S3 storage location associated with the build
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(const RequestUploadCredentialsRequest &request)
 {
@@ -3989,6 +3941,11 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * ResolveAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves the fleet ID that a specified alias is currently pointing
  *
  * to>
@@ -4018,12 +3975,6 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &request)
 {
@@ -4031,6 +3982,11 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * SearchGameSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves all active game sessions that match a set of search criteria and sorts them in a specified order. You can
  * search or sort by the following game session
  *
@@ -4134,12 +4090,6 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGameSessionsRequest &request)
 {
@@ -4147,6 +4097,11 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StartGameSessionPlacementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Places a request for a new game session in a queue (see <a>CreateGameSessionQueue</a>). When processing a placement
  * request, Amazon GameLift searches for available resources on the queue's destinations, scanning each until it finds
  * resources or the placement request times
@@ -4242,12 +4197,6 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(const StartGameSessionPlacementRequest &request)
 {
@@ -4255,6 +4204,11 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StartMatchBackfillResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Finds new players to fill open slots in an existing game session. This operation can be used to add players to matched
  * games that start with fewer than the maximum number of players or to replace players when they drop out. By backfilling
  * with the same matchmaker used to create the original match, you ensure that new players meet the match criteria and
@@ -4303,12 +4257,6 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatchBackfillRequest &request)
 {
@@ -4316,6 +4264,11 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StartMatchmakingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uses FlexMatch to create a game match for a group of players based on custom matchmaking rules, and starts a new game
  * for the matched players. Each matchmaking request specifies the type of match to build (team configuration, rules for an
  * acceptable match, etc.). The request also specifies the players to find a match for and where to host the new game
@@ -4404,12 +4357,6 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmakingRequest &request)
 {
@@ -4417,6 +4364,11 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StopGameSessionPlacementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a game session placement that is in <code>PENDING</code> status. To stop a placement, provide the placement ID
  * values. If successful, the placement is moved to <code>CANCELLED</code>
  *
@@ -4463,12 +4415,6 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(const StopGameSessionPlacementRequest &request)
 {
@@ -4476,6 +4422,11 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StopMatchmakingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a matchmaking ticket that is currently being processed. To stop the matchmaking operation, specify the ticket
  * ID. If successful, work on the ticket is stopped, and the ticket status is changed to
  *
@@ -4502,12 +4453,6 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingRequest &request)
 {
@@ -4515,6 +4460,11 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates properties for an alias. To update properties, specify the alias ID to be updated and provide the information to
  * be changed. To reassign an alias to another fleet, provide an updated routing strategy. If successful, the updated alias
  * record is
@@ -4546,12 +4496,6 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &request)
 {
@@ -4559,6 +4503,11 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateBuildResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates metadata in a build record, including the build name and version. To update the metadata, specify the build ID
  * to update and provide the new values. If successful, a build object containing the updated metadata is
  *
@@ -4585,12 +4534,6 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &request)
 {
@@ -4598,6 +4541,11 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateFleetAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates fleet properties, including name and description, for a fleet. To update metadata, specify the fleet ID and the
  * property values that you want to change. If successful, the fleet ID for the updated fleet is
  *
@@ -4688,12 +4636,6 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const UpdateFleetAttributesRequest &request)
 {
@@ -4701,6 +4643,11 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateFleetCapacityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates capacity settings for a fleet. Use this action to specify the number of EC2 instances (hosts) that you want this
  * fleet to contain. Before calling this action, you may want to call <a>DescribeEC2InstanceLimits</a> to get the maximum
  * capacity based on the fleet's EC2 instance
@@ -4805,12 +4752,6 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFleetCapacityRequest &request)
 {
@@ -4818,6 +4759,11 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateFleetPortSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates port settings for a fleet. To update settings, specify the fleet ID to be updated and list the permissions you
  * want to update. List the permissions you want to add in <code>InboundPermissionAuthorizations</code>, and permissions
  * you want to remove in <code>InboundPermissionRevocations</code>. Permissions to be removed must match existing fleet
@@ -4910,12 +4856,6 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request)
 {
@@ -4923,6 +4863,11 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateGameSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates game session properties. This includes the session name, maximum player count, protection policy, which controls
  * whether or not an active game session can be terminated during a scale-down event, and the player session creation
  * policy, which controls whether or not new players can join the session. To update a game session, specify the game
@@ -4971,12 +4916,6 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSessionRequest &request)
 {
@@ -4984,6 +4923,11 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateGameSessionQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates settings for a game session queue, which determines how new game session requests in the queue are processed. To
  * update settings, specify the queue name to be updated and provide the new settings. When updating destinations, provide
  * a complete list of destinations.
@@ -5007,12 +4951,6 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const UpdateGameSessionQueueRequest &request)
 {
@@ -5020,6 +4958,11 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateMatchmakingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates settings for a FlexMatch matchmaking configuration. To update settings, specify the configuration name to be
  * updated and provide the new settings.
  *
@@ -5054,12 +4997,6 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfiguration(const UpdateMatchmakingConfigurationRequest &request)
 {
@@ -5067,6 +5004,11 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * UpdateRuntimeConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the current run-time configuration for the specified fleet, which tells Amazon GameLift how to launch server
  * processes on instances in the fleet. You can update a fleet's run-time configuration at any time after the fleet is
  * created; it does not need to be in an <code>ACTIVE</code>
@@ -5171,12 +5113,6 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request)
 {
@@ -5184,6 +5120,11 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
 }
 
 /*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * ValidateMatchmakingRuleSetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Validates the syntax of a matchmaking rule or rule set. This operation checks that the rule set uses syntactically
  * correct JSON and that it conforms to allowed property expressions. To validate syntax, provide a rule set
  *
@@ -5218,12 +5159,6 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
- *
- * @param  request Request to send to Amazon GameLift.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request)
 {
@@ -5231,19 +5166,16 @@ ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::GameLiftClientPrivate
+ * \brief The GameLiftClientPrivate class provides private implementation for GameLiftClient.
+ * \internal
  *
- * @class  GameLiftClientPrivate
- *
- * @brief  Private implementation for GameLiftClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GameLiftClientPrivate object.
- *
- * @param  q  Pointer to this object's public GameLiftClient instance.
+ * Constructs a GameLiftClientPrivate object with public implementation \a q.
  */
 GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

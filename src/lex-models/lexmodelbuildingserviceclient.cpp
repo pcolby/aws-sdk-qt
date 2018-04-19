@@ -108,10 +108,10 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClient
- *
  * \brief The LexModelBuildingServiceClient class provides access to the Amazon Lex Model Building Service service.
  *
- * \ingroup LexModelBuildingService
+ * \ingroup aws-clients
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -173,6 +173,11 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * CreateBotVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this
  * resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last
  * created
@@ -190,12 +195,6 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  * </p
  *
  * This operation requires permission for the <code>lex:CreateBotVersion</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const CreateBotVersionRequest &request)
 {
@@ -203,6 +202,11 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * CreateIntentVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new version of an intent based on the <code>$LATEST</code> version of the intent. If the <code>$LATEST</code>
  * version of this intent hasn't changed since you last updated it, Amazon Lex doesn't create a new version. It returns the
  * last version you
@@ -220,12 +224,6 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
  * </p
  *
  * This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion(const CreateIntentVersionRequest &request)
 {
@@ -233,6 +231,11 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * CreateSlotTypeVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new version of a slot type based on the <code>$LATEST</code> version of the specified slot type. If the
  * <code>$LATEST</code> version of this resource has not changed since the last version that you created, Amazon Lex
  * doesn't create a new version. It returns the last version that you created.
@@ -250,12 +253,6 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
  * </p
  *
  * This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVersion(const CreateSlotTypeVersionRequest &request)
 {
@@ -263,6 +260,11 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteBotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes all versions of the bot, including the <code>$LATEST</code> version. To delete a specific version of the bot,
  * use the <a>DeleteBotVersion</a>
  *
@@ -276,12 +278,6 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  * successful>
  *
  * This operation requires permissions for the <code>lex:DeleteBot</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequest &request)
 {
@@ -289,6 +285,11 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteBotAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an alias for the specified bot.
  *
  * </p
@@ -298,12 +299,6 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
  * includes a reference to the channel association that refers to the bot. You can remove the reference to the alias by
  * deleting the channel association. If you get the same exception again, delete the referring association until the
  * <code>DeleteBotAlias</code> operation is
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const DeleteBotAliasRequest &request)
 {
@@ -311,17 +306,16 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteBotChannelAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the association between an Amazon Lex bot and a messaging
  *
  * platform>
  *
  * This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotChannelAssociation(const DeleteBotChannelAssociationRequest &request)
 {
@@ -329,17 +323,16 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteBotVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a specific version of a bot. To delete all versions of a bot, use the <a>DeleteBot</a> operation.
  *
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteBotVersion</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const DeleteBotVersionRequest &request)
 {
@@ -347,6 +340,11 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteIntentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes all versions of the intent, including the <code>$LATEST</code> version. To delete a specific version of the
  * intent, use the <a>DeleteIntentVersion</a>
  *
@@ -365,12 +363,6 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
  * </p </note>
  *
  * This operation requires permission for the <code>lex:DeleteIntent</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteIntentRequest &request)
 {
@@ -378,17 +370,16 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteIntentVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a specific version of an intent. To delete all versions of a intent, use the <a>DeleteIntent</a> operation.
  *
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteIntentVersion</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion(const DeleteIntentVersionRequest &request)
 {
@@ -396,6 +387,11 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteSlotTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes all versions of the slot type, including the <code>$LATEST</code> version. To delete a specific version of the
  * slot type, use the <a>DeleteSlotTypeVersion</a>
  *
@@ -414,12 +410,6 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
  * </p </note>
  *
  * This operation requires permission for the <code>lex:DeleteSlotType</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const DeleteSlotTypeRequest &request)
 {
@@ -427,18 +417,17 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteSlotTypeVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a specific version of a slot type. To delete all versions of a slot type, use the <a>DeleteSlotType</a>
  * operation.
  *
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVersion(const DeleteSlotTypeVersionRequest &request)
 {
@@ -446,6 +435,11 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * DeleteUtterancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes stored
  *
  * utterances>
@@ -461,12 +455,6 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  * user>
  *
  * This operation requires permissions for the <code>lex:DeleteUtterances</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const DeleteUtterancesRequest &request)
 {
@@ -474,17 +462,16 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias.
  *
  * </p
  *
  * This operation requires permissions for the <code>lex:GetBot</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &request)
 {
@@ -492,17 +479,16 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about an Amazon Lex bot alias. For more information about aliases, see
  *
  * <a>versioning-aliases</a>>
  *
  * This operation requires permissions for the <code>lex:GetBotAlias</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAliasRequest &request)
 {
@@ -510,17 +496,16 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of aliases for a specified Amazon Lex
  *
  * bot>
  *
  * This operation requires permissions for the <code>lex:GetBotAliases</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBotAliasesRequest &request)
 {
@@ -528,17 +513,16 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotChannelAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the association between an Amazon Lex bot and a messaging
  *
  * platform>
  *
  * This operation requires permissions for the <code>lex:GetBotChannelAssociation</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelAssociation(const GetBotChannelAssociationRequest &request)
 {
@@ -546,18 +530,17 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotChannelAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all of the channels associated with the specified bot.
  *
  * </p
  *
  * The <code>GetBotChannelAssociations</code> operation requires permissions for the
  * <code>lex:GetBotChannelAssociations</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannelAssociations(const GetBotChannelAssociationsRequest &request)
 {
@@ -565,6 +548,11 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about all of the versions of a
  *
  * bot>
@@ -581,12 +569,6 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
  * version>
  *
  * This operation requires permissions for the <code>lex:GetBotVersions</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const GetBotVersionsRequest &request)
 {
@@ -594,6 +576,11 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBotsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns bot information as follows:
  *
  * </p <ul> <li>
@@ -609,12 +596,6 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
  * bots> </li> </ul>
  *
  * This operation requires permission for the <code>lex:GetBots</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &request)
 {
@@ -622,17 +603,16 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBuiltinIntentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a built-in
  *
  * intent>
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntent</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const GetBuiltinIntentRequest &request)
 {
@@ -640,17 +620,16 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBuiltinIntentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of built-in intents that meet the specified
  *
  * criteria>
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntents</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(const GetBuiltinIntentsRequest &request)
 {
@@ -658,6 +637,11 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetBuiltinSlotTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of built-in slot types that meet the specified
  *
  * criteria>
@@ -669,12 +653,6 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
  * Kit</i>>
  *
  * This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes(const GetBuiltinSlotTypesRequest &request)
 {
@@ -682,13 +660,12 @@ GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetExportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Exports the contents of a Amazon Lex resource in a specified format.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequest &request)
 {
@@ -696,13 +673,12 @@ GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetImportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an import job started with the <code>StartImport</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequest &request)
 {
@@ -710,17 +686,16 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetIntentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about an intent. In addition to the intent name, you must specify the intent version.
  *
  * </p
  *
  * This operation requires permissions to perform the <code>lex:GetIntent</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequest &request)
 {
@@ -728,6 +703,11 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetIntentVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about all of the versions of an
  *
  * intent>
@@ -744,12 +724,6 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
  * version>
  *
  * This operation requires permissions for the <code>lex:GetIntentVersions</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(const GetIntentVersionsRequest &request)
 {
@@ -757,6 +731,11 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetIntentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns intent information as follows:
  *
  * </p <ul> <li>
@@ -772,12 +751,6 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
  * </p </li> </ul>
  *
  * The operation requires permission for the <code>lex:GetIntents</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsRequest &request)
 {
@@ -785,18 +758,17 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetSlotTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must
  * specify the slot type
  *
  * version>
  *
  * This operation requires permissions for the <code>lex:GetSlotType</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTypeRequest &request)
 {
@@ -804,6 +776,11 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetSlotTypeVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about all versions of a slot
  *
  * type>
@@ -820,12 +797,6 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
  * version>
  *
  * This operation requires permissions for the <code>lex:GetSlotTypeVersions</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions(const GetSlotTypeVersionsRequest &request)
 {
@@ -833,6 +804,11 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetSlotTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns slot type information as follows:
  *
  * </p <ul> <li>
@@ -848,12 +824,6 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
  * </p </li> </ul>
  *
  * The operation requires permission for the <code>lex:GetSlotTypes</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlotTypesRequest &request)
 {
@@ -861,6 +831,11 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetUtterancesViewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Use the <code>GetUtterancesView</code> operation to get information about the utterances that your users have made to
  * your bot. You can use this list to tune the utterances that your bot responds
  *
@@ -884,12 +859,6 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  * version> </note>
  *
  * This operation requires permissions for the <code>lex:GetUtterancesView</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(const GetUtterancesViewRequest &request)
 {
@@ -897,6 +866,11 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * PutBotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only
  * required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to
  * add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the
@@ -913,12 +887,6 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
  * exception>
  *
  * This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &request)
 {
@@ -926,18 +894,17 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * PutBotAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an alias for the specified version of the bot or replaces an alias for the specified bot. To change the version
  * of the bot that the alias points to, replace the alias. For more information about aliases, see
  *
  * <a>versioning-aliases</a>>
  *
  * This operation requires permissions for the <code>lex:PutBotAlias</code> action.
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAliasRequest &request)
 {
@@ -945,6 +912,11 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * PutIntentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an intent or replaces an existing
  *
  * intent>
@@ -1008,12 +980,6 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
  * <a>how-it-works</a>>
  *
  * This operation requires permissions for the <code>lex:PutIntent</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequest &request)
 {
@@ -1021,6 +987,11 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * PutSlotTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a custom slot type or replaces an existing custom slot
  *
  * type>
@@ -1039,12 +1010,6 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
  * <code>NOT_BUILT</code>>
  *
  * This operation requires permissions for the <code>lex:PutSlotType</code>
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTypeRequest &request)
 {
@@ -1052,13 +1017,12 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
 }
 
 /*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * StartImportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts a job to import a resource to Amazon
- *
- * @param  request Request to send to Amazon Lex Model Building Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
 {
@@ -1066,19 +1030,16 @@ StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImpo
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClientPrivate
+ * \brief The LexModelBuildingServiceClientPrivate class provides private implementation for LexModelBuildingServiceClient.
+ * \internal
  *
- * @class  LexModelBuildingServiceClientPrivate
- *
- * @brief  Private implementation for LexModelBuildingServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexModelBuildingServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public LexModelBuildingServiceClient instance.
+ * Constructs a LexModelBuildingServiceClientPrivate object with public implementation \a q.
  */
 LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

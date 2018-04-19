@@ -16,6 +16,9 @@
 /*!
  * \namespace QtAws::{{NameSpaceName}}
  * \brief The QtAws::{{NameSpaceName}} contains stuff...
+ *
+ * \inmodule QtAws{{NameSpaceName}}
+ *
  * @todo Move this to a separate template file.
  */
 
@@ -24,10 +27,10 @@ namespace {{NameSpaceName}} {
 
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
- *
  * \brief The {{ClassName}} class provides access to the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
  *
- * \ingroup {{NameSpaceName}}
+ * \ingroup aws-clients
+ * \inmodule QtAws{{NameSpaceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -70,7 +73,7 @@ namespace {{NameSpaceName}} {
  * client will determine the correct endpoint for the given region
  * automatically (via AwsEndpoint::getEndpoint).
  *
- * \a  AwsEndpoint::getEndpoint()
+ * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
 {{ClassName}}::{{ClassName}}(
     const QUrl &endpoint,
@@ -93,15 +96,14 @@ namespace {{NameSpaceName}} {
 
 {% for name,op in operations.items %}
 /*!
+ * Sends \a request to the {{ClassName}} service, and returns a pointer to an
+ * {{name}}Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
 {% for line in op.documentationFormatted %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
- *
- * @param  request Request to send to {{metadata.serviceFullName}}.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 {{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %})
 {
@@ -110,19 +112,16 @@ namespace {{NameSpaceName}} {
 
 {% endfor %}
 /*!
- * @internal
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
+ * \internal
  *
- * @class  {{ClassName}}Private
- *
- * @brief  Private implementation for {{ClassName}}.
+ * \ingroup aws-clients
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}}Private object.
- *
- * @param  q  Pointer to this object's public {{ClassName}} instance.
+ * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

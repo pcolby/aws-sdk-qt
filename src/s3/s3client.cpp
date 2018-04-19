@@ -191,10 +191,10 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::S3Client
- *
  * \brief The S3Client class provides access to the Amazon Simple Storage Service ( S3) service.
  *
- * \ingroup S3
+ * \ingroup aws-clients
+ * \inmodule QtAwsS3
  *
  */
 
@@ -252,14 +252,13 @@ S3Client::S3Client(
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * AbortMultipartUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
  * storage, you should call the List Parts operation and ensure the parts list is
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
@@ -267,12 +266,11 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * CompleteMultipartUploadResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
@@ -280,12 +278,11 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * CopyObjectResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 {
@@ -293,12 +290,11 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * CreateBucketResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request)
 {
@@ -306,16 +302,15 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * CreateMultipartUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Initiates a multipart upload and returns an upload ID.</p><p><b>Note:</b> After you initiate multipart upload and upload
  * one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of
  * the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and
  * stops charging you for the parts
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMultipartUploadRequest &request)
 {
@@ -323,13 +318,12 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request)
 {
@@ -337,12 +331,11 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketAnalyticsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request)
 {
@@ -350,12 +343,11 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketCorsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequest &request)
 {
@@ -363,12 +355,11 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketEncryptionResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBucketEncryptionRequest &request)
 {
@@ -376,12 +367,11 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketInventoryConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConfiguration(const DeleteBucketInventoryConfigurationRequest &request)
 {
@@ -389,12 +379,11 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketLifecycleResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBucketLifecycleRequest &request)
 {
@@ -402,12 +391,11 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketMetricsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfiguration(const DeleteBucketMetricsConfigurationRequest &request)
 {
@@ -415,12 +403,11 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketPolicyResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPolicyRequest &request)
 {
@@ -428,12 +415,11 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketReplicationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
 {
@@ -441,12 +427,11 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTaggingRequest &request)
 {
@@ -454,12 +439,11 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteBucketWebsiteResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWebsiteRequest &request)
 {
@@ -467,13 +451,12 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request)
 {
@@ -481,12 +464,11 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteObjectTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTaggingRequest &request)
 {
@@ -494,13 +476,12 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeleteObjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &request)
 {
@@ -508,12 +489,11 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketAccelerateConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfiguration(const GetBucketAccelerateConfigurationRequest &request)
 {
@@ -521,12 +501,11 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketAclResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request)
 {
@@ -534,12 +513,11 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketAnalyticsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfiguration(const GetBucketAnalyticsConfigurationRequest &request)
 {
@@ -547,12 +525,11 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketCorsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &request)
 {
@@ -560,12 +537,11 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketEncryptionResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncryptionRequest &request)
 {
@@ -573,12 +549,11 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketInventoryConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfiguration(const GetBucketInventoryConfigurationRequest &request)
 {
@@ -586,12 +561,11 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketLifecycleResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecycleRequest &request)
 {
@@ -599,12 +573,11 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketLifecycleConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfiguration(const GetBucketLifecycleConfigurationRequest &request)
 {
@@ -612,12 +585,11 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketLocationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationRequest &request)
 {
@@ -625,13 +597,12 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketLoggingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequest &request)
 {
@@ -639,12 +610,11 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketMetricsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(const GetBucketMetricsConfigurationRequest &request)
 {
@@ -652,12 +622,11 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketNotificationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketNotificationRequest &request)
 {
@@ -665,12 +634,11 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketNotificationConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConfiguration(const GetBucketNotificationConfigurationRequest &request)
 {
@@ -678,12 +646,11 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketPolicyResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest &request)
 {
@@ -691,12 +658,11 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketReplicationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketReplicationRequest &request)
 {
@@ -704,12 +670,11 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketRequestPaymentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBucketRequestPaymentRequest &request)
 {
@@ -717,12 +682,11 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequest &request)
 {
@@ -730,12 +694,11 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketVersioningResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersioningRequest &request)
 {
@@ -743,12 +706,11 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketWebsiteResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequest &request)
 {
@@ -756,12 +718,11 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 {
@@ -769,12 +730,11 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectAclResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request)
 {
@@ -782,12 +742,11 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequest &request)
 {
@@ -795,12 +754,11 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectTorrentResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequest &request)
 {
@@ -808,12 +766,11 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * HeadBucketResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 {
@@ -821,13 +778,12 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * HeadObjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 {
@@ -835,12 +791,11 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListBucketAnalyticsConfigurationsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request)
 {
@@ -848,12 +803,11 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListBucketInventoryConfigurationsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request)
 {
@@ -861,12 +815,11 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListBucketMetricsConfigurationsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request)
 {
@@ -874,12 +827,11 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListBucketsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
@@ -887,12 +839,11 @@ ListBucketsResponse * S3Client::listBuckets()
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListMultipartUploadsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
@@ -900,12 +851,11 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListObjectVersionsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersionsRequest &request)
 {
@@ -913,13 +863,12 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListObjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 {
@@ -927,14 +876,13 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListObjectsV2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  * return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &request)
 {
@@ -942,12 +890,11 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListPartsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 {
@@ -955,12 +902,11 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketAccelerateConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfiguration(const PutBucketAccelerateConfigurationRequest &request)
 {
@@ -968,12 +914,11 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketAclResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request)
 {
@@ -981,12 +926,11 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketAnalyticsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfiguration(const PutBucketAnalyticsConfigurationRequest &request)
 {
@@ -994,12 +938,11 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketCorsResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &request)
 {
@@ -1007,12 +950,11 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketEncryptionResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncryptionRequest &request)
 {
@@ -1020,12 +962,11 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketInventoryConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfiguration(const PutBucketInventoryConfigurationRequest &request)
 {
@@ -1033,12 +974,11 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketLifecycleResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecycleRequest &request)
 {
@@ -1046,12 +986,11 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketLifecycleConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfiguration(const PutBucketLifecycleConfigurationRequest &request)
 {
@@ -1059,13 +998,12 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketLoggingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequest &request)
 {
@@ -1073,12 +1011,11 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketMetricsConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(const PutBucketMetricsConfigurationRequest &request)
 {
@@ -1086,12 +1023,11 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketNotificationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketNotificationRequest &request)
 {
@@ -1099,12 +1035,11 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketNotificationConfigurationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConfiguration(const PutBucketNotificationConfigurationRequest &request)
 {
@@ -1112,12 +1047,11 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketPolicyResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest &request)
 {
@@ -1125,12 +1059,11 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketReplicationResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
 {
@@ -1138,15 +1071,14 @@ PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketRep
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketRequestPaymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the request payment configuration for a bucket. By default, the bucket owner pays for downloads from the bucket.
  * This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be
  * charged for the download. Documentation on requester pays buckets can be found at
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBucketRequestPaymentRequest &request)
 {
@@ -1154,12 +1086,11 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequest &request)
 {
@@ -1167,12 +1098,11 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketVersioningResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersioningRequest &request)
 {
@@ -1180,12 +1110,11 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutBucketWebsiteResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequest &request)
 {
@@ -1193,12 +1122,11 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 {
@@ -1206,12 +1134,11 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectAclResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request)
 {
@@ -1219,12 +1146,11 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectTaggingResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequest &request)
 {
@@ -1232,12 +1158,11 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * RestoreObjectResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &request)
 {
@@ -1245,15 +1170,14 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * SelectObjectContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * This operation filters the contents of an Amazon S3 object based on a simple Structured Query Language (SQL) statement.
  * In the request, along with the SQL expression, you must also specify a data serialization format (JSON or CSV) of the
  * object. Amazon S3 uses this to parse object data into records, and returns only records that match the specified SQL
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectContentRequest &request)
 {
@@ -1261,16 +1185,15 @@ SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectCo
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * UploadPartResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Uploads a part in a multipart upload.</p><p><b>Note:</b> After you initiate multipart upload and upload one or more
  * parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded
  * parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging
  * you for the parts
- *
- * @param  request Request to send to Amazon Simple Storage Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 {
@@ -1278,12 +1201,11 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * UploadPartCopyResponse object to track the result.
  *
- * @param  request Request to send to Amazon Simple Storage Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &request)
 {
@@ -1291,19 +1213,16 @@ UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &r
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::S3ClientPrivate
+ * \brief The S3ClientPrivate class provides private implementation for S3Client.
+ * \internal
  *
- * @class  S3ClientPrivate
- *
- * @brief  Private implementation for S3Client.
+ * \ingroup aws-clients
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new S3ClientPrivate object.
- *
- * @param  q  Pointer to this object's public S3Client instance.
+ * Constructs a S3ClientPrivate object with public implementation \a q.
  */
 S3ClientPrivate::S3ClientPrivate(S3Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

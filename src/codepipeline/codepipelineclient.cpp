@@ -90,10 +90,10 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CodePipelineClient
- *
  * \brief The CodePipelineClient class provides access to the AWS CodePipeline service.
  *
- * \ingroup CodePipeline
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -314,13 +314,12 @@ CodePipelineClient::CodePipelineClient(
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * AcknowledgeJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJobRequest &request)
 {
@@ -328,13 +327,12 @@ AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJob
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * AcknowledgeThirdPartyJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Confirms a job worker has received the specified job. Only used for partner
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request)
 {
@@ -342,13 +340,12 @@ AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * CreateCustomActionTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new custom action that can be used in all pipelines associated with the AWS account. Only used for custom
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(const CreateCustomActionTypeRequest &request)
 {
@@ -356,13 +353,12 @@ CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(cons
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * CreatePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipelineRequest &request)
 {
@@ -370,18 +366,17 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * DeleteCustomActionTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Marks a custom action as deleted. PollForJobs for the custom action will fail after the action is marked for deletion.
  * Only used for custom
  *
  * actions> <b>
  *
  * You cannot recreate a custom action after it has been deleted unless you increase the version number of the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(const DeleteCustomActionTypeRequest &request)
 {
@@ -389,13 +384,12 @@ DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(cons
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * DeletePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipelineRequest &request)
 {
@@ -403,13 +397,12 @@ DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipeline
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * DisableStageTransitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Prevents artifacts in a pipeline from transitioning to the next stage in the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(const DisableStageTransitionRequest &request)
 {
@@ -417,13 +410,12 @@ DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(cons
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * EnableStageTransitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables artifacts in a pipeline to transition to a stage in a
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const EnableStageTransitionRequest &request)
 {
@@ -431,6 +423,11 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetJobDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a job. Only used for custom
  *
  * actions> <b>
@@ -438,12 +435,6 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsRequest &request)
 {
@@ -451,14 +442,13 @@ GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsReq
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetPipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the metadata, structure, stages, and actions of a pipeline. Can be used to return the entire structure of a
  * pipeline in JSON format, which can then be modified and used to update the pipeline structure with
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &request)
 {
@@ -466,14 +456,13 @@ GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetPipelineExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and
  * the name, version, and status of the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const GetPipelineExecutionRequest &request)
 {
@@ -481,13 +470,12 @@ GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const Ge
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetPipelineStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the state of a pipeline, including the stages and
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelineStateRequest &request)
 {
@@ -495,6 +483,11 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetThirdPartyJobDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Requests the details of a job for a third party action. Only used for partner
  *
  * actions> <b>
@@ -502,12 +495,6 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
 {
@@ -515,13 +502,12 @@ GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(co
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListActionTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a summary of all AWS CodePipeline action types associated with your
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTypesRequest &request)
 {
@@ -529,13 +515,12 @@ ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTy
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListPipelineExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a summary of the most recent executions for a
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(const ListPipelineExecutionsRequest &request)
 {
@@ -543,13 +528,12 @@ ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(cons
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListPipelinesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a summary of all of the pipelines associated with your
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesRequest &request)
 {
@@ -557,6 +541,11 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PollForJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about any jobs for AWS CodePipeline to act
  *
  * upon> <b>
@@ -564,12 +553,6 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &request)
 {
@@ -577,18 +560,17 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PollForThirdPartyJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Determines whether there are any third party jobs for a job worker to act on. Only used for partner
  *
  * actions> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request)
 {
@@ -596,13 +578,12 @@ PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const 
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutActionRevisionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides information to AWS CodePipeline about new revisions to a
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActionRevisionRequest &request)
 {
@@ -610,13 +591,12 @@ PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActio
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutApprovalResultResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides the response to a manual approval request to AWS CodePipeline. Valid responses include Approved and
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutApprovalResultRequest &request)
 {
@@ -624,13 +604,12 @@ PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutAppro
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutJobFailureResultResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents the failure of a job as returned to the pipeline by a job worker. Only used for custom
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJobFailureResultRequest &request)
 {
@@ -638,13 +617,12 @@ PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJ
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutJobSuccessResultResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents the success of a job as returned to the pipeline by a job worker. Only used for custom
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJobSuccessResultRequest &request)
 {
@@ -652,13 +630,12 @@ PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJ
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutThirdPartyJobFailureResultResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents the failure of a third party job as returned to the pipeline by a job worker. Only used for partner
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request)
 {
@@ -666,13 +643,12 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutThirdPartyJobSuccessResultResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Represents the success of a third party job as returned to the pipeline by a job worker. Only used for partner
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
 {
@@ -680,13 +656,12 @@ PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSucc
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * RetryStageExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Resumes the pipeline execution by retrying the last failed actions in a
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const RetryStageExecutionRequest &request)
 {
@@ -694,14 +669,13 @@ RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const Retr
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * StartPipelineExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location specified as
  * part of the
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(const StartPipelineExecutionRequest &request)
 {
@@ -709,15 +683,14 @@ StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(cons
 }
 
 /*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * UpdatePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
  * conjunction with UpdatePipeline to provide the full structure of the pipeline. Updating the pipeline increases the
  * version number of the pipeline by
- *
- * @param  request Request to send to AWS CodePipeline.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
 {
@@ -725,19 +698,16 @@ UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipeline
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::CodePipelineClientPrivate
+ * \brief The CodePipelineClientPrivate class provides private implementation for CodePipelineClient.
+ * \internal
  *
- * @class  CodePipelineClientPrivate
- *
- * @brief  Private implementation for CodePipelineClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodePipelineClientPrivate object.
- *
- * @param  q  Pointer to this object's public CodePipelineClient instance.
+ * Constructs a CodePipelineClientPrivate object with public implementation \a q.
  */
 CodePipelineClientPrivate::CodePipelineClientPrivate(CodePipelineClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

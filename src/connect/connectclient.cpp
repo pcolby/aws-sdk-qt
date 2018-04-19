@@ -40,10 +40,10 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::ConnectClient
- *
  * \brief The ConnectClient class provides access to the Amazon Connect Service service.
  *
- * \ingroup Connect
+ * \ingroup aws-clients
+ * \inmodule QtAwsConnect
  *
  *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
  *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
@@ -104,6 +104,11 @@ ConnectClient::ConnectClient(
 }
 
 /*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * StartOutboundVoiceContactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>StartOutboundVoiceContact</code> operation initiates a contact flow to place an outbound call to a
  *
  * customer>
@@ -114,12 +119,6 @@ ConnectClient::ConnectClient(
  * second>
  *
  * If you are using an IAM account, it must have permissions to the <code>connect:StartOutboundVoiceContact</code>
- *
- * @param  request Request to send to Amazon Connect Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartOutboundVoiceContactResponse * ConnectClient::startOutboundVoiceContact(const StartOutboundVoiceContactRequest &request)
 {
@@ -127,17 +126,16 @@ StartOutboundVoiceContactResponse * ConnectClient::startOutboundVoiceContact(con
 }
 
 /*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * StopContactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Ends the contact initiated by the <code>StartOutboundVoiceContact</code>
  *
  * operation>
  *
  * If you are using an IAM account, it must have permissions to the <code>connect:StopContact</code>
- *
- * @param  request Request to send to Amazon Connect Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopContactResponse * ConnectClient::stopContact(const StopContactRequest &request)
 {
@@ -145,19 +143,16 @@ StopContactResponse * ConnectClient::stopContact(const StopContactRequest &reque
 }
 
 /*!
- * @internal
+ * \class QtAws::Connect::ConnectClientPrivate
+ * \brief The ConnectClientPrivate class provides private implementation for ConnectClient.
+ * \internal
  *
- * @class  ConnectClientPrivate
- *
- * @brief  Private implementation for ConnectClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectClientPrivate object.
- *
- * @param  q  Pointer to this object's public ConnectClient instance.
+ * Constructs a ConnectClientPrivate object with public implementation \a q.
  */
 ConnectClientPrivate::ConnectClientPrivate(ConnectClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

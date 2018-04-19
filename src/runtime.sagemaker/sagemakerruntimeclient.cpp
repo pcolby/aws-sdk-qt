@@ -38,10 +38,10 @@ namespace SageMakerRuntime {
 
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeClient
- *
  * \brief The SageMakerRuntimeClient class provides access to the Amazon SageMaker Runtime service.
  *
- * \ingroup SageMakerRuntime
+ * \ingroup aws-clients
+ * \inmodule QtAwsSageMakerRuntime
  *
  *  Amazon SageMaker runtime API.
  */
@@ -100,6 +100,11 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
 }
 
 /*!
+ * Sends \a request to the SageMakerRuntimeClient service, and returns a pointer to an
+ * InvokeEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API
  * to get inferences from the model hosted at the specified endpoint.
  *
@@ -112,12 +117,6 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  *
  * Amazon SageMaker strips all POST headers except those supported by the API. Amazon SageMaker might add additional
  * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
- *
- * @param  request Request to send to Amazon SageMaker Runtime.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndpointRequest &request)
 {
@@ -125,19 +124,16 @@ InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndp
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMakerRuntime::SageMakerRuntimeClientPrivate
+ * \brief The SageMakerRuntimeClientPrivate class provides private implementation for SageMakerRuntimeClient.
+ * \internal
  *
- * @class  SageMakerRuntimeClientPrivate
- *
- * @brief  Private implementation for SageMakerRuntimeClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerRuntimeClientPrivate object.
- *
- * @param  q  Pointer to this object's public SageMakerRuntimeClient instance.
+ * Constructs a SageMakerRuntimeClientPrivate object with public implementation \a q.
  */
 SageMakerRuntimeClientPrivate::SageMakerRuntimeClientPrivate(SageMakerRuntimeClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -70,10 +70,10 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsClient
- *
  * \brief The KinesisAnalyticsClient class provides access to the Amazon Kinesis Analytics service.
  *
- * \ingroup KinesisAnalytics
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisAnalytics
  *
  */
 
@@ -131,15 +131,14 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * AddApplicationCloudWatchLoggingOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a CloudWatch log stream to monitor application configuration errors. For more information about using CloudWatch
  * log streams with Amazon Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption(const AddApplicationCloudWatchLoggingOptionRequest &request)
 {
@@ -147,6 +146,11 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addAppli
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * AddApplicationInputResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a streaming source to your Amazon Kinesis application. For conceptual information, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html">Configuring Application Input</a>.
  *
@@ -163,12 +167,6 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addAppli
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationInput</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const AddApplicationInputRequest &request)
 {
@@ -176,15 +174,14 @@ AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const 
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * AddApplicationInputProcessingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds an <a>InputProcessingConfiguration</a> to an application. An input processor preprocesses records on the input
  * stream before the application's SQL code executes. Currently, the only input processor available is <a
  * href="https://aws.amazon.com/documentation/lambda/">AWS
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request)
 {
@@ -192,6 +189,11 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::add
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * AddApplicationOutputResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds an external destination to your Amazon Kinesis Analytics
  *
  * application>
@@ -220,12 +222,6 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::add
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html">Limits</a>>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationOutput</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(const AddApplicationOutputRequest &request)
 {
@@ -233,6 +229,11 @@ AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(cons
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * AddApplicationReferenceDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a reference data source to an existing
  *
  * application>
@@ -252,12 +253,6 @@ AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(cons
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationOutput</code> action.
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request)
 {
@@ -265,6 +260,11 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicati
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * CreateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an Amazon Kinesis Analytics application. You can configure each application with one streaming source as input,
  * application code to process the input, and up to three destinations where you want Amazon Kinesis Analytics to write the
  * output data from your application. For an overview, see <a
@@ -296,12 +296,6 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicati
  *
  * For introductory exercises to create an Amazon Kinesis Analytics application, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/getting-started.html">Getting Started</a>.
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -309,18 +303,17 @@ CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const Crea
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DeleteApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified application. Amazon Kinesis Analytics halts application execution and deletes the application,
  * including any application artifacts (such as in-application streams, reference table, and application
  *
  * code)>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DeleteApplication</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -328,15 +321,14 @@ DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const Dele
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DeleteApplicationCloudWatchLoggingOptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a CloudWatch log stream from an application. For more information about using CloudWatch log streams with Amazon
  * Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request)
 {
@@ -344,13 +336,12 @@ DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::delet
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DeleteApplicationInputProcessingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an <a>InputProcessingConfiguration</a> from an
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration(const DeleteApplicationInputProcessingConfigurationRequest &request)
 {
@@ -358,18 +349,17 @@ DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DeleteApplicationOutputResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes output destination configuration from your application configuration. Amazon Kinesis Analytics will no longer
  * write data from the corresponding in-application stream to the external output
  *
  * destination>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DeleteApplicationOutput</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutput(const DeleteApplicationOutputRequest &request)
 {
@@ -377,6 +367,11 @@ DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutpu
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DeleteApplicationReferenceDataSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a reference data source configuration from the specified application
  *
  * configuration>
@@ -387,12 +382,6 @@ DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutpu
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics.DeleteApplicationReferenceDataSource</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request)
 {
@@ -400,6 +389,11 @@ DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApp
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DescribeApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about a specific Amazon Kinesis Analytics
  *
  * application>
@@ -411,12 +405,6 @@ DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApp
  * This operation requires permissions to perform the <code>kinesisanalytics:DescribeApplication</code> action. You can use
  * <code>DescribeApplication</code> to get the current application versionId, which you need to call other operations such
  * as <code>Update</code>.
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const DescribeApplicationRequest &request)
 {
@@ -424,6 +412,11 @@ DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const 
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * DiscoverInputSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Infers a schema by evaluating sample records on the specified streaming source (Amazon Kinesis stream or Amazon Kinesis
  * Firehose delivery stream) or S3 object. In the response, the operation returns the inferred schema and also the sample
  * records that the operation used to infer the
@@ -438,12 +431,6 @@ DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const 
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DiscoverInputSchema</code> action.
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const DiscoverInputSchemaRequest &request)
 {
@@ -451,6 +438,11 @@ DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const 
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * ListApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of Amazon Kinesis Analytics applications in your account. For each application, the response includes the
  * application name, Amazon Resource Name (ARN), and status. If the response returns the <code>HasMoreApplications</code>
  * value as true, you can send another request by adding the <code>ExclusiveStartApplicationName</code> in the request
@@ -463,12 +455,6 @@ DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const 
  * <a>DescribeApplication</a>>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:ListApplications</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -476,6 +462,11 @@ ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListAp
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * StartApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Starts the specified Amazon Kinesis Analytics application. After creating an application, you must exclusively call this
  * operation to start your
  *
@@ -496,12 +487,6 @@ ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListAp
  * operation>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:StartApplication</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartApplicationRequest &request)
 {
@@ -509,6 +494,11 @@ StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartA
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * StopApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Stops the application from processing input data. You can stop an application only if it is in the running state. You
  * can use the <a>DescribeApplication</a> operation to find the application state. After the application is stopped, Amazon
  * Kinesis Analytics stops reading data from the input, the application stops processing data, and there is no output
@@ -517,12 +507,6 @@ StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartA
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:StopApplication</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopApplicationRequest &request)
 {
@@ -530,6 +514,11 @@ StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopAppl
 }
 
 /*!
+ * Sends \a request to the KinesisAnalyticsClient service, and returns a pointer to an
+ * UpdateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing Amazon Kinesis Analytics application. Using this API, you can update application code, input
  * configuration, and output configuration.
  *
@@ -541,12 +530,6 @@ StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopAppl
  * </p
  *
  * This operation requires permission for the <code>kinesisanalytics:UpdateApplication</code>
- *
- * @param  request Request to send to Amazon Kinesis Analytics.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -554,19 +537,16 @@ UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const Upda
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::KinesisAnalyticsClientPrivate
+ * \brief The KinesisAnalyticsClientPrivate class provides private implementation for KinesisAnalyticsClient.
+ * \internal
  *
- * @class  KinesisAnalyticsClientPrivate
- *
- * @brief  Private implementation for KinesisAnalyticsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisAnalyticsClientPrivate object.
- *
- * @param  q  Pointer to this object's public KinesisAnalyticsClient instance.
+ * Constructs a KinesisAnalyticsClientPrivate object with public implementation \a q.
  */
 KinesisAnalyticsClientPrivate::KinesisAnalyticsClientPrivate(KinesisAnalyticsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

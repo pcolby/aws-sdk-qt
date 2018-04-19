@@ -122,10 +122,10 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DirectConnectClient
- *
  * \brief The DirectConnectClient class provides access to the AWS Direct Connect service.
  *
- * \ingroup DirectConnect
+ * \ingroup aws-clients
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -191,6 +191,11 @@ DirectConnectClient::DirectConnectClient(
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AllocateConnectionOnInterconnectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated in favor of
  *
  * <a>AllocateHostedConnection</a>>
@@ -204,12 +209,6 @@ DirectConnectClient::DirectConnectClient(
  * interconnect> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnectionOnInterconnect(const AllocateConnectionOnInterconnectRequest &request)
 {
@@ -217,6 +216,11 @@ AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnecti
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AllocateHostedConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a hosted connection on an interconnect or a link aggregation group
  *
  * (LAG)>
@@ -226,12 +230,6 @@ AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnecti
  * LAG> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection(const AllocateHostedConnectionRequest &request)
 {
@@ -239,6 +237,11 @@ AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AllocatePrivateVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provisions a private virtual interface to be owned by another AWS
  *
  * customer>
@@ -246,12 +249,6 @@ AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection
  * Virtual interfaces created using this action must be confirmed by the virtual interface owner by using the
  * <a>ConfirmPrivateVirtualInterface</a> action. Until then, the virtual interface will be in 'Confirming' state, and will
  * not be available for handling
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVirtualInterface(const AllocatePrivateVirtualInterfaceRequest &request)
 {
@@ -259,6 +256,11 @@ AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVi
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AllocatePublicVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provisions a public virtual interface to be owned by a different
  *
  * customer>
@@ -275,12 +277,6 @@ AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVi
  *
  * When creating an IPv6 public virtual interface (addressFamily is 'ipv6'), the customer and amazon address fields should
  * be left blank to use auto-assigned IPv6 space. Custom IPv6 Addresses are currently not
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirtualInterface(const AllocatePublicVirtualInterfaceRequest &request)
 {
@@ -288,6 +284,11 @@ AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirt
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AssociateConnectionWithLagResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates an existing connection with a link aggregation group (LAG). The connection is interrupted and re-established
  * as a member of the LAG (connectivity to AWS will be interrupted). The connection must be hosted on the same AWS Direct
  * Connect endpoint as the LAG, and its bandwidth must match the bandwidth for the LAG. You can reassociate a connection
@@ -304,12 +305,6 @@ AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirt
  *
  * For interconnects, any hosted connections are automatically re-associated with the LAG. If the interconnect was
  * originally associated with a different LAG, the hosted connections remain associated with the original
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWithLag(const AssociateConnectionWithLagRequest &request)
 {
@@ -317,6 +312,11 @@ AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWit
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AssociateHostedConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect. If the
  * target interconnect or LAG has an existing hosted connection with a conflicting VLAN number or IP address, the operation
  * fails. This action temporarily interrupts the hosted connection's connectivity to AWS as it is being
@@ -324,12 +324,6 @@ AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWit
  * migrated> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnection(const AssociateHostedConnectionRequest &request)
 {
@@ -337,6 +331,11 @@ AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnecti
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AssociateVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a virtual interface with a specified link aggregation group (LAG) or connection. Connectivity to AWS is
  * temporarily interrupted as the virtual interface is being migrated. If the target connection or LAG has an associated
  * virtual interface with a conflicting VLAN number or a conflicting IP address, the operation fails.
@@ -351,12 +350,6 @@ AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnecti
  * In order to reassociate a virtual interface to a new connection or LAG, the requester must own either the virtual
  * interface itself or the connection to which the virtual interface is currently associated. Additionally, the requester
  * must own the connection or LAG to which the virtual interface will be newly
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateVirtualInterfaceResponse * DirectConnectClient::associateVirtualInterface(const AssociateVirtualInterfaceRequest &request)
 {
@@ -364,18 +357,17 @@ AssociateVirtualInterfaceResponse * DirectConnectClient::associateVirtualInterfa
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * ConfirmConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Confirm the creation of a hosted connection on an
  *
  * interconnect>
  *
  * Upon creation, the hosted connection is initially in the 'Ordering' state, and will remain in this state until the owner
  * calls ConfirmConnection to confirm creation of the hosted
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConfirmConnectionResponse * DirectConnectClient::confirmConnection(const ConfirmConnectionRequest &request)
 {
@@ -383,18 +375,17 @@ ConfirmConnectionResponse * DirectConnectClient::confirmConnection(const Confirm
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * ConfirmPrivateVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accept ownership of a private virtual interface created by another
  *
  * customer>
  *
  * After the virtual interface owner calls this function, the virtual interface will be created and attached to the given
  * virtual private gateway or direct connect gateway, and will be available for handling
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirtualInterface(const ConfirmPrivateVirtualInterfaceRequest &request)
 {
@@ -402,18 +393,17 @@ ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirt
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * ConfirmPublicVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accept ownership of a public virtual interface created by another
  *
  * customer>
  *
  * After the virtual interface owner calls this function, the specified virtual interface will be created and made
  * available for handling
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtualInterface(const ConfirmPublicVirtualInterfaceRequest &request)
 {
@@ -421,6 +411,11 @@ ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtua
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateBGPPeerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new BGP peer on a specified virtual interface. The BGP peer cannot be in the same address family (IPv4/IPv6)
  * of an existing BGP peer on the virtual
  *
@@ -438,12 +433,6 @@ ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtua
  *
  * For a public virtual interface, the Autonomous System Number (ASN) must be private or already whitelisted for the
  * virtual
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRequest &request)
 {
@@ -451,6 +440,11 @@ CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRe
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new connection between the customer network and a specific AWS Direct Connect
  *
  * location>
@@ -470,12 +464,6 @@ CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRe
  * You can automatically add the new connection to a link aggregation group (LAG) by specifying a LAG ID in the request.
  * This ensures that the new connection is allocated on the same AWS Direct Connect endpoint that hosts the specified LAG.
  * If there are no available ports on the endpoint, the request fails and no connection will be
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConnectionResponse * DirectConnectClient::createConnection(const CreateConnectionRequest &request)
 {
@@ -483,17 +471,16 @@ CreateConnectionResponse * DirectConnectClient::createConnection(const CreateCon
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateDirectConnectGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new direct connect gateway. A direct connect gateway is an intermediate object that enables you to connect a
  * set of virtual interfaces and virtual private gateways. direct connect gateways are global and visible in any AWS region
  * after they are created. The virtual interfaces and virtual private gateways that are connected through a direct connect
  * gateway can be in different regions. This enables you to connect to a VPC in any region, regardless of the region in
  * which the virtual interfaces are located, and pass traffic between
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectConnectGatewayResponse * DirectConnectClient::createDirectConnectGateway(const CreateDirectConnectGatewayRequest &request)
 {
@@ -501,14 +488,13 @@ CreateDirectConnectGatewayResponse * DirectConnectClient::createDirectConnectGat
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateDirectConnectGatewayAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an association between a direct connect gateway and a virtual private gateway (VGW). The VGW must be attached to
  * a VPC and must not be associated with another direct connect
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirectConnectGatewayAssociation(const CreateDirectConnectGatewayAssociationRequest &request)
 {
@@ -516,6 +502,11 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateInterconnectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new interconnect between a AWS Direct Connect partner's network and a specific AWS Direct Connect
  *
  * location>
@@ -541,12 +532,6 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
  * partner> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInterconnectResponse * DirectConnectClient::createInterconnect(const CreateInterconnectRequest &request)
 {
@@ -554,6 +539,11 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateLagResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new link aggregation group (LAG) with the specified number of bundled physical connections between the
  * customer network and a specific AWS Direct Connect location. A LAG is a logical interface that uses the Link Aggregation
  * Control Protocol (LACP) to aggregate multiple 1 gigabit or 10 gigabit interfaces, allowing you to treat them as a single
@@ -580,12 +570,6 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
  *
  * If the AWS account used to create a LAG is a registered AWS Direct Connect partner, the LAG is automatically enabled to
  * host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &request)
 {
@@ -593,14 +577,13 @@ CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &reque
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreatePrivateVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new private virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A
  * private virtual interface supports sending traffic to a single virtual private cloud
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtualInterface(const CreatePrivateVirtualInterfaceRequest &request)
 {
@@ -608,6 +591,11 @@ CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtua
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreatePublicVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new public virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A
  * public virtual interface supports sending traffic to public services of AWS such as Amazon Simple Storage Service
  * (Amazon
@@ -616,12 +604,6 @@ CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtua
  *
  * When creating an IPv6 public virtual interface (addressFamily is 'ipv6'), the customer and amazon address fields should
  * be left blank to use auto-assigned IPv6 space. Custom IPv6 Addresses are currently not
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualInterface(const CreatePublicVirtualInterfaceRequest &request)
 {
@@ -629,14 +611,13 @@ CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualI
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteBGPPeerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a BGP peer on the specified virtual interface that matches the specified customer address and ASN. You cannot
  * delete the last BGP peer from a virtual
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRequest &request)
 {
@@ -644,6 +625,11 @@ DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRe
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the
  *
  * connection>
@@ -651,12 +637,6 @@ DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRe
  * Deleting a connection only stops the AWS Direct Connect port hour and data transfer charges. You need to cancel
  * separately with the providers any services or charges for cross-connects or network circuits that connect you to the AWS
  * Direct Connect
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteConnectionRequest &request)
 {
@@ -664,14 +644,13 @@ DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteCon
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteDirectConnectGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a direct connect gateway. You must first delete all virtual interfaces that are attached to the direct connect
  * gateway and disassociate all virtual private gateways that are associated with the direct connect
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGateway(const DeleteDirectConnectGatewayRequest &request)
 {
@@ -679,13 +658,12 @@ DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGat
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteDirectConnectGatewayAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the association between a direct connect gateway and a virtual private
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirectConnectGatewayAssociation(const DeleteDirectConnectGatewayAssociationRequest &request)
 {
@@ -693,17 +671,16 @@ DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirec
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteInterconnectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * interconnect> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const DeleteInterconnectRequest &request)
 {
@@ -711,13 +688,12 @@ DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const Delet
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteLagResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a link aggregation group (LAG). You cannot delete a LAG if it has active virtual interfaces or hosted
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLagResponse * DirectConnectClient::deleteLag(const DeleteLagRequest &request)
 {
@@ -725,13 +701,12 @@ DeleteLagResponse * DirectConnectClient::deleteLag(const DeleteLagRequest &reque
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a virtual
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(const DeleteVirtualInterfaceRequest &request)
 {
@@ -739,6 +714,11 @@ DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(con
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeConnectionLoaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated in favor of
  *
  * <a>DescribeLoa</a>>
@@ -751,12 +731,6 @@ DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(con
  * provider uses when establishing your cross connect to AWS at the colocation facility. For more information, see <a
  * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
  * Connect Locations</a> in the AWS Direct Connect user
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const DescribeConnectionLoaRequest &request)
 {
@@ -764,17 +738,16 @@ DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Displays all connections in this
  *
  * region>
  *
  * If a connection ID is provided, the call returns only that particular
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConnectionsResponse * DirectConnectClient::describeConnections(const DescribeConnectionsRequest &request)
 {
@@ -782,6 +755,11 @@ DescribeConnectionsResponse * DirectConnectClient::describeConnections(const Des
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeConnectionsOnInterconnectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated in favor of
  *
  * <a>DescribeHostedConnections</a>>
@@ -791,12 +769,6 @@ DescribeConnectionsResponse * DirectConnectClient::describeConnections(const Des
  * interconnect> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnectionsOnInterconnect(const DescribeConnectionsOnInterconnectRequest &request)
 {
@@ -804,17 +776,16 @@ DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnect
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeDirectConnectGatewayAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all direct connect gateway and virtual private gateway (VGW) associations. Either a direct connect
  * gateway ID or a VGW ID must be provided in the request. If a direct connect gateway ID is provided, the response returns
  * all VGWs associated with the direct connect gateway. If a VGW ID is provided, the response returns all direct connect
  * gateways associated with the VGW. If both are provided, the response only returns the association that matches both the
  * direct connect gateway and the
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describeDirectConnectGatewayAssociations(const DescribeDirectConnectGatewayAssociationsRequest &request)
 {
@@ -822,17 +793,16 @@ DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describe
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeDirectConnectGatewayAttachmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of all direct connect gateway and virtual interface (VIF) attachments. Either a direct connect gateway ID
  * or a VIF ID must be provided in the request. If a direct connect gateway ID is provided, the response returns all VIFs
  * attached to the direct connect gateway. If a VIF ID is provided, the response returns all direct connect gateways
  * attached to the VIF. If both are provided, the response only returns the attachment that matches both the direct connect
  * gateway and the
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectConnectGatewayAttachmentsResponse * DirectConnectClient::describeDirectConnectGatewayAttachments(const DescribeDirectConnectGatewayAttachmentsRequest &request)
 {
@@ -840,16 +810,15 @@ DescribeDirectConnectGatewayAttachmentsResponse * DirectConnectClient::describeD
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeDirectConnectGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of direct connect gateways in your account. Deleted direct connect gateways are not returned. You can
  * provide a direct connect gateway ID in the request to return information about the specific direct connect gateway only.
  * Otherwise, if a direct connect gateway ID is not provided, information about all of your direct connect gateways is
  * returned.
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConnectGateways(const DescribeDirectConnectGatewaysRequest &request)
 {
@@ -857,17 +826,16 @@ DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConne
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeHostedConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of hosted connections that have been provisioned on the given interconnect or link aggregation group
  *
  * (LAG)> <note>
  *
  * This is intended for use by AWS Direct Connect partners
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnections(const DescribeHostedConnectionsRequest &request)
 {
@@ -875,6 +843,11 @@ DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnectio
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeInterconnectLoaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecated in favor of
  *
  * <a>DescribeLoa</a>>
@@ -887,12 +860,6 @@ DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnectio
  * cross connect to AWS at the colocation facility. For more information, see <a
  * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
  * Connect Locations</a> in the AWS Direct Connect user
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(const DescribeInterconnectLoaRequest &request)
 {
@@ -900,17 +867,16 @@ DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(c
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeInterconnectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of interconnects owned by the AWS
  *
  * account>
  *
  * If an interconnect ID is provided, it will only return this particular
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInterconnectsResponse * DirectConnectClient::describeInterconnects(const DescribeInterconnectsRequest &request)
 {
@@ -918,17 +884,16 @@ DescribeInterconnectsResponse * DirectConnectClient::describeInterconnects(const
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeLagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the link aggregation groups (LAGs) in your account.
  *
  * </p
  *
  * If a LAG ID is provided, only information about the specified LAG is
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsRequest &request)
 {
@@ -936,6 +901,11 @@ DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsReque
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeLoaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the LOA-CFA for a connection, interconnect, or link aggregation group
  *
  * (LAG)>
@@ -944,12 +914,6 @@ DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsReque
  * cross connect to AWS at the colocation facility. For more information, see <a
  * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
  * Connect Locations</a> in the AWS Direct Connect user
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest &request)
 {
@@ -957,14 +921,13 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeLocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the list of AWS Direct Connect locations in the current AWS region. These are the locations that may be selected
  * when calling <a>CreateConnection</a> or
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLocationsResponse * DirectConnectClient::describeLocations()
 {
@@ -972,13 +935,12 @@ DescribeLocationsResponse * DirectConnectClient::describeLocations()
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the tags associated with the specified Direct Connect
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -986,6 +948,11 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeVirtualGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of virtual private gateways owned by the AWS
  *
  * account>
@@ -994,12 +961,6 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
  * private gateway can be managed via Amazon Virtual Private Cloud (VPC) console or the <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html">EC2
  * CreateVpnGateway</a>
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
 {
@@ -1007,6 +968,11 @@ DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeVirtualInterfacesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Displays all virtual interfaces for an AWS account. Virtual interfaces deleted fewer than 15 minutes before you make the
  * request are also returned. If you specify a connection ID, only the virtual interfaces associated with the connection
  * are returned. If you specify a virtual interface ID, then only a single virtual interface is
@@ -1014,12 +980,6 @@ DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
  * returned>
  *
  * A virtual interface (VLAN) transmits the traffic between the AWS Direct Connect location and the
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfaces(const DescribeVirtualInterfacesRequest &request)
 {
@@ -1027,6 +987,11 @@ DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfac
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DisassociateConnectionFromLagResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disassociates a connection from a link aggregation group (LAG). The connection is interrupted and re-established as a
  * standalone connection (the connection is not deleted; to delete the connection, use the <a>DeleteConnection</a>
  * request). If the LAG has associated virtual interfaces or hosted connections, they remain associated with the LAG. A
@@ -1037,12 +1002,6 @@ DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfac
  * If disassociating the connection will cause the LAG to fall below its setting for minimum number of operational
  * connections, the request fails, except when it's the last member of the LAG. If all connections are disassociated, the
  * LAG continues to exist as an empty LAG with no physical connections.
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnectionFromLag(const DisassociateConnectionFromLagRequest &request)
 {
@@ -1050,18 +1009,17 @@ DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnect
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds the specified tags to the specified Direct Connect resource. Each Direct Connect resource can have a maximum of 50
  *
  * tags>
  *
  * Each tag consists of a key and an optional value. If a tag with the same key is already associated with the Direct
  * Connect resource, this action updates its
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest &request)
 {
@@ -1069,13 +1027,12 @@ TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest 
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more tags from the specified Direct Connect
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1083,6 +1040,11 @@ UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRe
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * UpdateLagResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the attributes of a link aggregation group (LAG).
  *
  * </p
@@ -1103,12 +1065,6 @@ UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRe
  * this value, and the number of operational connections falls below the specified value, the LAG will automatically go
  * down to avoid overutilization of the remaining connections. Adjusting this value should be done with care as it could
  * force the LAG down if the value is set higher than the current number of operational
- *
- * @param  request Request to send to AWS Direct Connect.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &request)
 {
@@ -1116,19 +1072,16 @@ UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &reque
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DirectConnectClientPrivate
+ * \brief The DirectConnectClientPrivate class provides private implementation for DirectConnectClient.
+ * \internal
  *
- * @class  DirectConnectClientPrivate
- *
- * @brief  Private implementation for DirectConnectClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectConnectClientPrivate object.
- *
- * @param  q  Pointer to this object's public DirectConnectClient instance.
+ * Constructs a DirectConnectClientPrivate object with public implementation \a q.
  */
 DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

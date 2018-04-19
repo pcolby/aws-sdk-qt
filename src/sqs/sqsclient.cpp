@@ -76,10 +76,10 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SqsClient
- *
  * \brief The SqsClient class provides access to the Amazon Simple Queue Service ( SQS) service.
  *
- * \ingroup SQS
+ * \ingroup aws-clients
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -203,6 +203,11 @@ SqsClient::SqsClient(
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * AddPermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a permission to a queue for a specific <a
  * href="http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principal</a>. This allows sharing access to the
  *
@@ -232,12 +237,6 @@ SqsClient::SqsClient(
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &request)
 {
@@ -245,6 +244,11 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ChangeMessageVisibilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the visibility timeout of a specified message in a queue to a new value. The maximum allowed timeout value is 12
  * hours. Thus, you can't extend the timeout of a message in an existing queue to more than a total visibility timeout of
  * 12 hours. For more information, see <a
@@ -286,12 +290,6 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * immediately but isn't saved in memory for that message. If you don't delete a message after it is received, the
  * visibility timeout for the message reverts to the original timeout value (not to the value you set using the
  * <code>ChangeMessageVisibility</code> action) the next time the message is
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const ChangeMessageVisibilityRequest &request)
 {
@@ -299,6 +297,11 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ChangeMessageVisibilityBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the visibility timeout of multiple messages. This is a batch version of <code>
  * <a>ChangeMessageVisibility</a>.</code> The result of the action on each message is reported individually in the
  * response. You can send up to 10 <code> <a>ChangeMessageVisibility</a> </code> requests with each
@@ -321,12 +324,6 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(const ChangeMessageVisibilityBatchRequest &request)
 {
@@ -334,6 +331,11 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * CreateQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new standard or FIFO queue. You can pass one or more attributes in the request. Keep the following caveats in
  *
  * mind> <ul> <li>
@@ -389,12 +391,6 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
 {
@@ -402,6 +398,11 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * DeleteMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified message from the specified queue. You specify the message by using the message's <i>receipt
  * handle</i> and not the <i>MessageId</i> you receive when you send the message. Even if the message is locked by another
  * reader due to the visibility timeout setting, it is still deleted from the queue. If you leave a message in the queue
@@ -420,12 +421,6 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
  * if one of the servers storing a copy of the message is unavailable when you send the request to delete the message. The
  * copy remains on the server and might be returned to you on a subsequent receive request. You should ensure that your
  * application is idempotent, so that receiving a message more than once does not cause
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &request)
 {
@@ -433,6 +428,11 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * DeleteMessageBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes up to ten messages from the specified queue. This is a batch version of <code> <a>DeleteMessage</a>.</code> The
  * result of the action on each message is reported individually in the
  *
@@ -453,12 +453,6 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBatchRequest &request)
 {
@@ -466,6 +460,11 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * DeleteQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the queue specified by the <code>QueueUrl</code>, regardless of the queue's contents. If the specified queue
  * doesn't exist, Amazon SQS returns a successful
  *
@@ -483,12 +482,6 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  * exist>
  *
  * When you delete a queue, you must wait at least 60 seconds before creating a queue with the same name.
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
 {
@@ -496,6 +489,11 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * GetQueueAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets attributes for the specified
  *
  * queue> <note>
@@ -516,12 +514,6 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttributesRequest &request)
 {
@@ -529,6 +521,11 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * GetQueueUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the URL of an existing queue. This action provides a simple way to retrieve the URL of an Amazon SQS
  *
  * queue>
@@ -538,12 +535,6 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
  * information about shared queue access, see <code> <a>AddPermission</a> </code> or see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/acp-overview.html">Shared Queues</a> in
  * the <i>Amazon Simple Queue Service Developer Guide</i>.
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
 {
@@ -551,6 +542,11 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ListDeadLetterSourceQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of your queues that have the <code>RedrivePolicy</code> queue attribute configured with a dead-letter
  *
  * queue>
@@ -558,12 +554,6 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
  * For more information about using dead-letter queues, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
  * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon Simple Queue Service Developer
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request)
 {
@@ -571,6 +561,11 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ListQueueTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all cost allocation tags added to the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -605,12 +600,6 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &request)
 {
@@ -618,14 +607,13 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ListQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of your queues. The maximum number of queues that can be returned is 1,000. If you specify a value for
  * the optional <code>QueueNamePrefix</code> parameter, only queues with a name that begins with the specified value are
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 {
@@ -633,6 +621,11 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * PurgeQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the messages in a queue specified by the <code>QueueURL</code>
  *
  * parameter> <b>
@@ -645,12 +638,6 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
  * calling the <code>PurgeQueue</code> action are deleted. Messages sent to the queue while it is being purged might be
  * deleted. While the queue is being purged, messages sent to the queue before <code>PurgeQueue</code> is called might be
  * received, but are deleted within the next
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
 {
@@ -658,6 +645,11 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * ReceiveMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Retrieves one or more messages (up to 10), from the specified queue. Using the <code>WaitTimeSeconds</code> parameter
  * enables long-poll support. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html">Amazon SQS Long
@@ -722,12 +714,6 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  *
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &request)
 {
@@ -735,14 +721,13 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * RemovePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Revokes any permissions in the queue policy that matches the specified <code>Label</code> parameter. Only the owner of
  * the queue can remove
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -750,6 +735,11 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * SendMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delivers a message to the specified
  *
  * queue> <b>
@@ -765,12 +755,6 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
  *
  * Any characters not included in this list will be rejected. For more information, see the <a
  * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
 {
@@ -778,6 +762,11 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * SendMessageBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delivers up to ten messages to the specified queue. This is a batch version of <code> <a>SendMessage</a>.</code> For a
  * FIFO queue, multiple messages within a single batch are enqueued in the order they are
  *
@@ -822,12 +811,6 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchRequest &request)
 {
@@ -835,6 +818,11 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * SetQueueAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the value of one or more queue attributes. When you change a queue's attributes, the change can take up to 60
  * seconds for most of the attributes to propagate throughout the Amazon SQS system. Changes made to the
  * <code>MessageRetentionPeriod</code> attribute can take up to 15
@@ -843,12 +831,6 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
  *
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttributesRequest &request)
 {
@@ -856,6 +838,11 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * TagQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Add cost allocation tags to the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -890,12 +877,6 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
 {
@@ -903,6 +884,11 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
 }
 
 /*!
+ * Sends \a request to the SqsClient service, and returns a pointer to an
+ * UntagQueueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove cost allocation tags from the specified Amazon SQS queue. For an overview, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-tagging-queues.html">Tagging Amazon
  * SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
@@ -937,12 +923,6 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
- *
- * @param  request Request to send to Amazon Simple Queue Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 {
@@ -950,19 +930,16 @@ UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::SQS::SqsClientPrivate
+ * \brief The SqsClientPrivate class provides private implementation for SqsClient.
+ * \internal
  *
- * @class  SqsClientPrivate
- *
- * @brief  Private implementation for SqsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SqsClientPrivate object.
- *
- * @param  q  Pointer to this object's public SqsClient instance.
+ * Constructs a SqsClientPrivate object with public implementation \a q.
  */
 SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

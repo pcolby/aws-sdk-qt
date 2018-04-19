@@ -56,10 +56,10 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::KinesisVideoClient
- *
  * \brief The KinesisVideoClient class provides access to the Amazon Kinesis Video Streams service.
  *
- * \ingroup KinesisVideo
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideo
  *
  */
 
@@ -117,6 +117,11 @@ KinesisVideoClient::KinesisVideoClient(
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * CreateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Kinesis video stream.
  *
  * </p
@@ -136,12 +141,6 @@ KinesisVideoClient::KinesisVideoClient(
  * </p
  *
  * You must have permissions for the <code>KinesisVideo:CreateStream</code>
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamRequest &request)
 {
@@ -149,6 +148,11 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DeleteStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a Kinesis video stream and the data contained in the stream.
  *
  * </p
@@ -167,12 +171,6 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
  * </p
  *
  * This operation requires permission for the <code>KinesisVideo:DeleteStream</code>
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -180,14 +178,13 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DescribeStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the most current information about the specified stream. You must specify either the <code>StreamName</code> or
  * the <code>StreamARN</code>.
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -195,6 +192,11 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * GetDataEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets an endpoint for a specified stream for either reading or writing. Use this endpoint in your application to read
  * from the specified stream (using the <code>GetMedia</code> or <code>GetMediaForFragmentList</code> operations) or write
  * to it (using the <code>PutMedia</code> operation).
@@ -206,12 +208,6 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
  * endpoint> </note>
  *
  * In the request, specify the stream either by <code>StreamName</code> or
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpointRequest &request)
 {
@@ -219,14 +215,13 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * ListStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns an array of <code>StreamInfo</code> objects. Each object describes a stream. To retrieve only streams that
  * satisfy a specific condition, you can specify a <code>StreamNameCondition</code>.
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &request)
 {
@@ -234,17 +229,16 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * ListTagsForStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of tags associated with the specified
  *
  * stream>
  *
  * In the request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
@@ -252,6 +246,11 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * TagStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define and
  * assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you
  * specify in the request. For more information, see <a
@@ -269,12 +268,6 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  * action>
  *
  * Kinesis video streams support up to 50
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
@@ -282,18 +275,17 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UntagStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more tags from a stream. In the request, specify only a tag key or keys; don't specify the value. If you
  * specify a tag key that does not exist, it's
  *
  * ignored>
  *
  * In the request, you must provide the <code>StreamName</code> or
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &request)
 {
@@ -301,6 +293,11 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UpdateDataRetentionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Increases or decreases the stream's data retention period by the value that you specify. To indicate whether you want to
  * increase or decrease the data retention period, specify the <code>Operation</code> parameter in the request body. In the
  * request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
@@ -327,12 +324,6 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
  * If the data retention period is decreased, existing data is retained for the new retention period. For example, if the
  * data retention period is decreased from seven hours to one hour, all existing data is retained for one hour, and any
  * data older than one hour is deleted
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
@@ -340,6 +331,11 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
 }
 
 /*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UpdateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates stream metadata, such as the device name and media
  *
  * type>
@@ -355,12 +351,6 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
  * </p
  *
  * <code>UpdateStream</code> is an asynchronous operation, and takes time to
- *
- * @param  request Request to send to Amazon Kinesis Video Streams.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamRequest &request)
 {
@@ -368,19 +358,16 @@ UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamReques
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::KinesisVideoClientPrivate
+ * \brief The KinesisVideoClientPrivate class provides private implementation for KinesisVideoClient.
+ * \internal
  *
- * @class  KinesisVideoClientPrivate
- *
- * @brief  Private implementation for KinesisVideoClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoClientPrivate object.
- *
- * @param  q  Pointer to this object's public KinesisVideoClient instance.
+ * Constructs a KinesisVideoClientPrivate object with public implementation \a q.
  */
 KinesisVideoClientPrivate::KinesisVideoClientPrivate(KinesisVideoClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

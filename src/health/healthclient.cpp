@@ -48,10 +48,10 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::HealthClient
- *
  * \brief The HealthClient class provides access to the AWS Health APIs and Notifications service.
  *
- * \ingroup Health
+ * \ingroup aws-clients
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -170,6 +170,11 @@ HealthClient::HealthClient(
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeAffectedEntitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a list of entities that have been affected by the specified events, based on the specified filter criteria.
  * Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on
  * the AWS service. Events that have impact beyond that of the affected entities, or where the extent of impact is unknown,
@@ -179,12 +184,6 @@ HealthClient::HealthClient(
  *
  * At least one event ARN is required. Results are sorted by the <code>lastUpdatedTime</code> of the entity, starting with
  * the most
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const DescribeAffectedEntitiesRequest &request)
 {
@@ -192,14 +191,13 @@ DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const 
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeEntityAggregatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the number of entities that are affected by each of the specified events. If no events are specified, the counts
  * of all affected entities are
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const DescribeEntityAggregatesRequest &request)
 {
@@ -207,14 +205,13 @@ DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const 
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeEventAggregatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter is
  * specified, the counts of all events in each category are
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const DescribeEventAggregatesRequest &request)
 {
@@ -222,6 +219,11 @@ DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const De
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeEventDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns detailed information about one or more specified events. Information includes standard event data (region,
  * service, etc., as returned by <a>DescribeEvents</a>), a detailed event description, and possible additional metadata
  * that depends upon the nature of the event. Affected entities are not included; to retrieve those, use the
@@ -230,12 +232,6 @@ DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const De
  * operation>
  *
  * If a specified event cannot be retrieved, an error message is returned for that
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventDetailsResponse * HealthClient::describeEventDetails(const DescribeEventDetailsRequest &request)
 {
@@ -243,14 +239,13 @@ DescribeEventDetailsResponse * HealthClient::describeEventDetails(const Describe
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeEventTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the event types that meet the specified filter criteria. If no filter criteria are specified, all event types
  * are returned, in no particular
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEventTypesRequest &request)
 {
@@ -258,6 +253,11 @@ DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEven
 }
 
 /*!
+ * Sends \a request to the HealthClient service, and returns a pointer to an
+ * DescribeEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about events that meet the specified filter criteria. Events are returned in a summary form and do
  * not include the detailed description, any additional metadata that depends on the event type, or any affected resources.
  * To retrieve that information, use the <a>DescribeEventDetails</a> and <a>DescribeAffectedEntities</a>
@@ -266,12 +266,6 @@ DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEven
  *
  * If no filter criteria are specified, all events are returned. Results are sorted by <code>lastModifiedTime</code>,
  * starting with the most
- *
- * @param  request Request to send to AWS Health APIs and Notifications.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * HealthClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -279,19 +273,16 @@ DescribeEventsResponse * HealthClient::describeEvents(const DescribeEventsReques
 }
 
 /*!
- * @internal
+ * \class QtAws::Health::HealthClientPrivate
+ * \brief The HealthClientPrivate class provides private implementation for HealthClient.
+ * \internal
  *
- * @class  HealthClientPrivate
- *
- * @brief  Private implementation for HealthClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HealthClientPrivate object.
- *
- * @param  q  Pointer to this object's public HealthClient instance.
+ * Constructs a HealthClientPrivate object with public implementation \a q.
  */
 HealthClientPrivate::HealthClientPrivate(HealthClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

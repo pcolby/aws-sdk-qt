@@ -50,10 +50,10 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::FirehoseClient
- *
  * \brief The FirehoseClient class provides access to the Amazon Kinesis Firehose service.
  *
- * \ingroup Firehose
+ * \ingroup aws-clients
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -115,6 +115,11 @@ FirehoseClient::FirehoseClient(
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * CreateDeliveryStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a delivery
  *
  * stream>
@@ -179,12 +184,6 @@ FirehoseClient::FirehoseClient(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3">Amazon S3 Bucket Access</a>
  * in the <i>Amazon Kinesis Firehose Developer
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const CreateDeliveryStreamRequest &request)
 {
@@ -192,6 +191,11 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * DeleteDeliveryStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a delivery stream and its
  *
  * data>
@@ -209,12 +213,6 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
  * While the delivery stream is <code>DELETING</code> state, the service may continue to accept the records, but the
  * service doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, you should first
  * stop any applications that are sending records before deleting a delivery
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const DeleteDeliveryStreamRequest &request)
 {
@@ -222,15 +220,14 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * DescribeDeliveryStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified delivery stream and gets the status. For example, after your delivery stream is created, call
  * <a>DescribeDeliveryStream</a> to see if the delivery stream is <code>ACTIVE</code> and therefore ready for data to be
  * sent to
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const DescribeDeliveryStreamRequest &request)
 {
@@ -238,6 +235,11 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * ListDeliveryStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your delivery
  *
  * streams>
@@ -247,12 +249,6 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
  * delivery streams to list, check the value of <b>HasMoreDeliveryStreams</b> in the output. If there are more delivery
  * streams to list, you can request them by specifying the name of the last delivery stream returned in the call in the
  * <b>ExclusiveStartDeliveryStreamName</b> parameter of a subsequent
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeliveryStreamsRequest &request)
 {
@@ -260,6 +256,11 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * PutRecordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Writes a single data record into an Amazon Kinesis Firehose delivery stream. To write multiple data records into a
  * delivery stream, use <a>PutRecordBatch</a>. Applications using these operations are referred to as
  *
@@ -298,12 +299,6 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
  * Data records sent to Kinesis Firehose are stored for 24 hours from the time they are added to a delivery stream as it
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
 {
@@ -311,6 +306,11 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * PutRecordBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Writes multiple data records into a delivery stream in a single call, which can achieve higher throughput per producer
  * than when writing single records. To write single data records into a delivery stream, use <a>PutRecord</a>.
  * Applications using these operations are referred to as
@@ -373,12 +373,6 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
  * Data records sent to Kinesis Firehose are stored for 24 hours from the time they are added to a delivery stream as it
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequest &request)
 {
@@ -386,6 +380,11 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
 }
 
 /*!
+ * Sends \a request to the FirehoseClient service, and returns a pointer to an
+ * UpdateDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the specified destination of the specified delivery
  *
  * stream>
@@ -419,12 +418,6 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
  * required field, and the service updates the configuration only if the existing configuration has a version ID that
  * matches. After the update is applied successfully, the version ID is updated, and can be retrieved using
  * <a>DescribeDeliveryStream</a>. Use the new version ID to set <b>CurrentDeliveryStreamVersionId</b> in the next
- *
- * @param  request Request to send to Amazon Kinesis Firehose.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestinationRequest &request)
 {
@@ -432,19 +425,16 @@ UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestin
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::FirehoseClientPrivate
+ * \brief The FirehoseClientPrivate class provides private implementation for FirehoseClient.
+ * \internal
  *
- * @class  FirehoseClientPrivate
- *
- * @brief  Private implementation for FirehoseClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FirehoseClientPrivate object.
- *
- * @param  q  Pointer to this object's public FirehoseClient instance.
+ * Constructs a FirehoseClientPrivate object with public implementation \a q.
  */
 FirehoseClientPrivate::FirehoseClientPrivate(FirehoseClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

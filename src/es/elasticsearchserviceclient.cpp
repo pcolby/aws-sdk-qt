@@ -62,10 +62,10 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ElasticsearchServiceClient
- *
  * \brief The ElasticsearchServiceClient class provides access to the Amazon Elasticsearch Service service.
  *
- * \ingroup ElasticsearchService
+ * \ingroup aws-clients
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -132,16 +132,15 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * AddTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches tags to an existing Elasticsearch domain. Tags are a set of case-sensitive key value pairs. An Elasticsearch
  * domain may have up to 10 tags. See <a
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-awsresorcetagging"
  * target="_blank"> Tagging Amazon Elasticsearch Service Domains for more
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &request)
 {
@@ -149,15 +148,14 @@ AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &requ
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * CreateElasticsearchDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new Elasticsearch domain. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains"
  * target="_blank">Creating Elasticsearch Domains</a> in the <i>Amazon Elasticsearch Service Developer
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsearchDomain(const CreateElasticsearchDomainRequest &request)
 {
@@ -165,13 +163,12 @@ CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsea
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DeleteElasticsearchDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Permanently deletes the specified Elasticsearch domain and all of its data. Once a domain is deleted, it cannot be
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request)
 {
@@ -179,16 +176,15 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DeleteElasticsearchServiceRoleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the service-linked role that Elasticsearch Service uses to manage and maintain VPC domains. Role deletion will
  * fail if any existing VPC domains use the role. You must delete any such Elasticsearch domains before deleting the role.
  * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
  * target="_blank">Deleting Elasticsearch Service Role</a> in <i>VPC Endpoints for Amazon Elasticsearch Service
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole()
 {
@@ -196,14 +192,13 @@ DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElast
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeElasticsearchDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain
  * endpoint, and domain
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request)
 {
@@ -211,14 +206,13 @@ DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasti
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeElasticsearchDomainConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date,
  * update version, and update date for cluster
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request)
 {
@@ -226,14 +220,13 @@ DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describe
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeElasticsearchDomainsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain
  * endpoint, and domain
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request)
 {
@@ -241,14 +234,13 @@ DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElast
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeElasticsearchInstanceTypeLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion. When modifying existing Domain, specify
  * the <code> <a>DomainName</a> </code> to know what Limits are supported for modifying.
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request)
 {
@@ -256,13 +248,12 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * ListDomainNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the name of all Elasticsearch domains owned by the current user's account.
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 {
@@ -270,13 +261,12 @@ ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * ListElasticsearchInstanceTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all Elasticsearch instance types that are supported for given
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request)
 {
@@ -284,13 +274,12 @@ ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElastic
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * ListElasticsearchVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List all supported Elasticsearch
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearchVersions(const ListElasticsearchVersionsRequest &request)
 {
@@ -298,13 +287,12 @@ ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearc
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all tags for the given Elasticsearch
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &request)
 {
@@ -312,13 +300,12 @@ ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &r
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * RemoveTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the specified set of tags from the specified Elasticsearch
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequest &request)
 {
@@ -326,14 +313,13 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * UpdateElasticsearchDomainConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the
  * number of instances.
- *
- * @param  request Request to send to Amazon Elasticsearch Service.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
 {
@@ -341,19 +327,16 @@ UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElas
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::ElasticsearchServiceClientPrivate
+ * \brief The ElasticsearchServiceClientPrivate class provides private implementation for ElasticsearchServiceClient.
+ * \internal
  *
- * @class  ElasticsearchServiceClientPrivate
- *
- * @brief  Private implementation for ElasticsearchServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticsearchServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public ElasticsearchServiceClient instance.
+ * Constructs a ElasticsearchServiceClientPrivate object with public implementation \a q.
  */
 ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

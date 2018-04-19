@@ -116,10 +116,10 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::CodeDeployClient
- *
  * \brief The CodeDeployClient class provides access to the AWS CodeDeploy service.
  *
- * \ingroup CodeDeploy
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -258,13 +258,12 @@ CodeDeployClient::CodeDeployClient(
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * AddTagsToOnPremisesInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds tags to on-premises
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInstances(const AddTagsToOnPremisesInstancesRequest &request)
 {
@@ -272,13 +271,12 @@ AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInst
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetApplicationRevisionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more application
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevisions(const BatchGetApplicationRevisionsRequest &request)
 {
@@ -286,13 +284,12 @@ BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevi
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const BatchGetApplicationsRequest &request)
 {
@@ -300,13 +297,12 @@ BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const Batc
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetDeploymentGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(const BatchGetDeploymentGroupsRequest &request)
 {
@@ -314,13 +310,12 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetDeploymentInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more instance that are part of a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
 {
@@ -328,13 +323,12 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetDeploymentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchGetDeploymentsRequest &request)
 {
@@ -342,13 +336,12 @@ BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchG
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetOnPremisesInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about one or more on-premises
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request)
 {
@@ -356,16 +349,15 @@ BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstan
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ContinueDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to
  * instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which
  * is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all
  * instances have a status of Ready.)
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const ContinueDeploymentRequest &request)
 {
@@ -373,13 +365,12 @@ ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const Continue
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * CreateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * CodeDeployClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -387,13 +378,12 @@ CreateApplicationResponse * CodeDeployClient::createApplication(const CreateAppl
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * CreateDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deploys an application revision through the specified deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -401,13 +391,12 @@ CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploy
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * CreateDeploymentConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const CreateDeploymentConfigRequest &request)
 {
@@ -415,13 +404,12 @@ CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const 
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * CreateDeploymentGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a deployment group to which application revisions will be
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const CreateDeploymentGroupRequest &request)
 {
@@ -429,13 +417,12 @@ CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const Cr
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeleteApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -443,17 +430,16 @@ DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteAppl
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeleteDeploymentConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a deployment
  *
  * configuration> <note>
  *
  * A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request)
 {
@@ -461,13 +447,12 @@ DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const 
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeleteDeploymentGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request)
 {
@@ -475,13 +460,12 @@ DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const De
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeleteGitHubAccountTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a GitHub account
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request)
 {
@@ -489,13 +473,12 @@ DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(co
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeregisterOnPremisesInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deregisters an on-premises
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request)
 {
@@ -503,13 +486,12 @@ DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesIns
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRequest &request)
 {
@@ -517,13 +499,12 @@ GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRe
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetApplicationRevisionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an application
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const GetApplicationRevisionRequest &request)
 {
@@ -531,13 +512,12 @@ GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const 
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentRequest &request)
 {
@@ -545,13 +525,12 @@ GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentReque
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetDeploymentConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDeploymentConfigRequest &request)
 {
@@ -559,13 +538,12 @@ GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDep
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetDeploymentGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeploymentGroupRequest &request)
 {
@@ -573,13 +551,12 @@ GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeplo
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetDeploymentInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an instance as part of a
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const GetDeploymentInstanceRequest &request)
 {
@@ -587,13 +564,12 @@ GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const Ge
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetOnPremisesInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about an on-premises
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const GetOnPremisesInstanceRequest &request)
 {
@@ -601,13 +577,12 @@ GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const Ge
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListApplicationRevisionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists information about revisions for an
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(const ListApplicationRevisionsRequest &request)
 {
@@ -615,13 +590,12 @@ ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(co
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the applications registered with the applicable IAM user or AWS
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -629,13 +603,12 @@ ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicat
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListDeploymentConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the deployment configurations with the applicable IAM user or AWS
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const ListDeploymentConfigsRequest &request)
 {
@@ -643,13 +616,12 @@ ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const Li
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListDeploymentGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the deployment groups for an application registered with the applicable IAM user or AWS
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const ListDeploymentGroupsRequest &request)
 {
@@ -657,13 +629,12 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListDeploymentInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the instance for a deployment associated with the applicable IAM user or AWS
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
 {
@@ -671,13 +642,12 @@ ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(cons
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListDeploymentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeploymentsRequest &request)
 {
@@ -685,13 +655,12 @@ ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeployment
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListGitHubAccountTokenNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the names of stored connections to GitHub
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNames(const ListGitHubAccountTokenNamesRequest &request)
 {
@@ -699,18 +668,17 @@ ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNa
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListOnPremisesInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a list of names for one or more on-premises
  *
  * instances>
  *
  * Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only
  * registered or deregistered on-premises instance names, use the registration status
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(const ListOnPremisesInstancesRequest &request)
 {
@@ -718,14 +686,13 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * PutLifecycleEventHookExecutionStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
  * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
 {
@@ -733,13 +700,12 @@ PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEve
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * RegisterApplicationRevisionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers with AWS CodeDeploy a revision for the specified
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevision(const RegisterApplicationRevisionRequest &request)
 {
@@ -747,17 +713,16 @@ RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevis
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * RegisterOnPremisesInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers an on-premises
  *
  * instance> <note>
  *
  * Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstance(const RegisterOnPremisesInstanceRequest &request)
 {
@@ -765,13 +730,12 @@ RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstanc
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * RemoveTagsFromOnPremisesInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes one or more tags from one or more on-premises
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPremisesInstances(const RemoveTagsFromOnPremisesInstancesRequest &request)
 {
@@ -779,14 +743,13 @@ RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPr
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * SkipWaitTimeForInstanceTerminationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the
  * traffic routing is
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForInstanceTermination(const SkipWaitTimeForInstanceTerminationRequest &request)
 {
@@ -794,13 +757,12 @@ SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForIn
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * StopDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attempts to stop an ongoing
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRequest &request)
 {
@@ -808,13 +770,12 @@ StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRe
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * UpdateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes the name of an
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -822,13 +783,12 @@ UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateAppl
 }
 
 /*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * UpdateDeploymentGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Changes information about a deployment
- *
- * @param  request Request to send to AWS CodeDeploy.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const UpdateDeploymentGroupRequest &request)
 {
@@ -836,19 +796,16 @@ UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const Up
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::CodeDeployClientPrivate
+ * \brief The CodeDeployClientPrivate class provides private implementation for CodeDeployClient.
+ * \internal
  *
- * @class  CodeDeployClientPrivate
- *
- * @brief  Private implementation for CodeDeployClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeDeployClientPrivate object.
- *
- * @param  q  Pointer to this object's public CodeDeployClient instance.
+ * Constructs a CodeDeployClientPrivate object with public implementation \a q.
  */
 CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

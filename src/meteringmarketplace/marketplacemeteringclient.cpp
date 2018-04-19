@@ -42,10 +42,10 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringClient
- *
  * \brief The MarketplaceMeteringClient class provides access to the AWSMarketplace Metering service.
  *
- * \ingroup MarketplaceMetering
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -133,6 +133,11 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
 }
 
 /*!
+ * Sends \a request to the MarketplaceMeteringClient service, and returns a pointer to an
+ * BatchMeterUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of
  *
  * customers>
@@ -147,12 +152,6 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
  * BatchMeterUsage>
  *
  * BatchMeterUsage can process up to 25 UsageRecords at a
- *
- * @param  request Request to send to AWSMarketplace Metering.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const BatchMeterUsageRequest &request)
 {
@@ -160,17 +159,16 @@ BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const Batch
 }
 
 /*!
+ * Sends \a request to the MarketplaceMeteringClient service, and returns a pointer to an
+ * MeterUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * API to emit metering records. For identical requests, the API is idempotent. It simply returns the metering record
  *
  * ID>
  *
  * MeterUsage is authenticated on the buyer's AWS account, generally when running from an EC2 instance on the AWS
- *
- * @param  request Request to send to AWSMarketplace Metering.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageRequest &request)
 {
@@ -178,15 +176,14 @@ MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageReque
 }
 
 /*!
+ * Sends \a request to the MarketplaceMeteringClient service, and returns a pointer to an
+ * ResolveCustomerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during
  * the registration process, the buyer submits a registration token through their browser. The registration token is
  * resolved through this API to obtain a CustomerIdentifier and product
- *
- * @param  request Request to send to AWSMarketplace Metering.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const ResolveCustomerRequest &request)
 {
@@ -194,19 +191,16 @@ ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const Resol
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceMetering::MarketplaceMeteringClientPrivate
+ * \brief The MarketplaceMeteringClientPrivate class provides private implementation for MarketplaceMeteringClient.
+ * \internal
  *
- * @class  MarketplaceMeteringClientPrivate
- *
- * @brief  Private implementation for MarketplaceMeteringClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceMeteringClientPrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceMeteringClient instance.
+ * Constructs a MarketplaceMeteringClientPrivate object with public implementation \a q.
  */
 MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

@@ -44,10 +44,10 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansClient
- *
  * \brief The AutoScalingPlansClient class provides access to the AWS Auto Scaling Plans service.
  *
- * \ingroup AutoScalingPlans
+ * \ingroup aws-clients
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -114,18 +114,17 @@ AutoScalingPlansClient::AutoScalingPlansClient(
 }
 
 /*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * CreateScalingPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a scaling
  *
  * plan>
  *
  * A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your
  * application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling
- *
- * @param  request Request to send to AWS Auto Scaling Plans.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
 {
@@ -133,13 +132,12 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
 }
 
 /*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * DeleteScalingPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified scaling
- *
- * @param  request Request to send to AWS Auto Scaling Plans.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const DeleteScalingPlanRequest &request)
 {
@@ -147,13 +145,12 @@ DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const Dele
 }
 
 /*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * DescribeScalingPlanResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the scalable resources in the specified scaling
- *
- * @param  request Request to send to AWS Auto Scaling Plans.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request)
 {
@@ -161,13 +158,12 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
 }
 
 /*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * DescribeScalingPlansResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified scaling plans or all of your scaling
- *
- * @param  request Request to send to AWS Auto Scaling Plans.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
 {
@@ -175,19 +171,16 @@ DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(cons
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScalingPlans::AutoScalingPlansClientPrivate
+ * \brief The AutoScalingPlansClientPrivate class provides private implementation for AutoScalingPlansClient.
+ * \internal
  *
- * @class  AutoScalingPlansClientPrivate
- *
- * @brief  Private implementation for AutoScalingPlansClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AutoScalingPlansClientPrivate object.
- *
- * @param  q  Pointer to this object's public AutoScalingPlansClient instance.
+ * Constructs a AutoScalingPlansClientPrivate object with public implementation \a q.
  */
 AutoScalingPlansClientPrivate::AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

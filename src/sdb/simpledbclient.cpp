@@ -56,10 +56,10 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::SimpleDBClient
- *
  * \brief The SimpleDBClient class provides access to the Amazon SimpleDB service.
  *
- * \ingroup SimpleDB
+ * \ingroup aws-clients
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -130,6 +130,11 @@ SimpleDBClient::SimpleDBClient(
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * BatchDeleteAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables
  * Amazon SimpleDB to optimize requests, which generally yields better throughput.
  *
@@ -137,12 +142,6 @@ SimpleDBClient::SimpleDBClient(
  *
  * The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per
  * BatchDeleteAttributes operation</li> </ul>
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const BatchDeleteAttributesRequest &request)
 {
@@ -150,6 +149,11 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * BatchPutAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this
  * operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in
  * round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput.
@@ -190,12 +194,6 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
  * The following limitations are enforced for this operation: <ul> <li>256 attribute name-value pairs per item</li> <li>1
  * MB request size</li> <li>1 billion attributes per domain</li> <li>10 GB of total user data storage per domain</li>
  * <li>25 item limit per <code>BatchPutAttributes</code> operation</li> </ul>
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAttributesRequest &request)
 {
@@ -203,6 +201,11 @@ BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAt
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * CreateDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>CreateDomain</code> operation creates a new domain. The domain name should be unique among the domains
  * associated with the Access Key ID provided in the request. The <code>CreateDomain</code> operation may take 10 or more
  * seconds to complete.
@@ -215,12 +218,6 @@ BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAt
  *
  * If the client requires additional domains, go to <a href="http://aws.amazon.com/contact-us/simpledb-limit-request/">
  * http://aws.amazon.com/contact-us/simpledb-limit-request/</a>.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &request)
 {
@@ -228,6 +225,11 @@ CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &r
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * DeleteAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted.
  *
  * </p
@@ -240,12 +242,6 @@ CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &r
  * Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a
  * <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or
  * <a>PutAttributes</a> operation (write) might not return updated item data.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttributesRequest &request)
 {
@@ -253,14 +249,13 @@ DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttribut
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * DeleteDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as
  * well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &request)
 {
@@ -268,14 +263,13 @@ DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &r
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * DomainMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns information about the domain, including when the domain was created, the number of items and attributes in the
  * domain, and the size of the attribute names and values.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequest &request)
 {
@@ -283,6 +277,11 @@ DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequ
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * GetAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to
  * one or more attributes by specifying an attribute name parameter.
  *
@@ -290,12 +289,6 @@ DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequ
  *
  * If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system
  * does not return an error as it cannot guarantee the item does not exist on other replicas.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest &request)
 {
@@ -303,17 +296,16 @@ GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * ListDomainsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up
  * to the limit set by <a href="#MaxNumberOfDomains">MaxNumberOfDomains</a>. A <a href="#NextToken">NextToken</a> is
  * returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive
  * times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more
  * domain names with each successive operation call.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &request)
 {
@@ -321,6 +313,11 @@ ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &requ
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * PutAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The PutAttributes operation creates or replaces attributes in an item. The client may specify new attributes using a
  * combination of the <code>Attribute.X.Name</code> and <code>Attribute.X.Value</code> parameters. The client specifies the
  * first attribute by the parameters <code>Attribute.0.Name</code> and <code>Attribute.0.Value</code>, the second attribute
@@ -356,12 +353,6 @@ ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &requ
  *
  * The following limitations are enforced for this operation: <ul> <li>256 total attribute name-value pairs per item</li>
  * <li>One billion attributes per domain</li> <li>10 GB of total user data storage per domain</li> </ul>
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest &request)
 {
@@ -369,6 +360,11 @@ PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest
 }
 
 /*!
+ * Sends \a request to the SimpleDBClient service, and returns a pointer to an
+ * SelectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The <code>Select</code> operation returns a set of attributes for <code>ItemNames</code> that match the select
  * expression. <code>Select</code> is similar to the standard SQL SELECT statement.
  *
@@ -383,12 +379,6 @@ PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest
  *
  * For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the
  * Developer Guide.
- *
- * @param  request Request to send to Amazon SimpleDB.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SelectResponse * SimpleDBClient::select(const SelectRequest &request)
 {
@@ -396,19 +386,16 @@ SelectResponse * SimpleDBClient::select(const SelectRequest &request)
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::SimpleDBClientPrivate
+ * \brief The SimpleDBClientPrivate class provides private implementation for SimpleDBClient.
+ * \internal
  *
- * @class  SimpleDBClientPrivate
- *
- * @brief  Private implementation for SimpleDBClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimpleDBClientPrivate object.
- *
- * @param  q  Pointer to this object's public SimpleDBClient instance.
+ * Constructs a SimpleDBClientPrivate object with public implementation \a q.
  */
 SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

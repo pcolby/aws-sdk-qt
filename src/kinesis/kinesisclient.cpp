@@ -82,10 +82,10 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::KinesisClient
- *
  * \brief The KinesisClient class provides access to the Amazon Kinesis service.
  *
- * \ingroup Kinesis
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -146,6 +146,11 @@ KinesisClient::KinesisClient(
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * AddTagsToStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds or updates tags for the specified Kinesis data stream. Each stream can have up to 10
  *
  * tags>
@@ -156,12 +161,6 @@ KinesisClient::KinesisClient(
  * keys>
  *
  * <a>AddTagsToStream</a> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRequest &request)
 {
@@ -169,6 +168,11 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * CreateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a Kinesis data stream. A stream captures and transports data records that are continuously emitted from
  * different data sources or <i>producers</i>. Scale-out within a stream is explicitly supported by means of shards, which
  * are uniquely identified groups of data records in a
@@ -220,12 +224,6 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  * <code>StreamStatus</code>>
  *
  * <a>CreateStream</a> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &request)
 {
@@ -233,6 +231,11 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DecreaseStreamRetentionPeriodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Decreases the Kinesis data stream's retention period, which is the length of time data records are accessible after they
  * are added to the stream. The minimum value of a stream's retention period is 24
  *
@@ -240,12 +243,6 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
  *
  * This operation may result in lost data. For example, if the stream's retention period is 48 hours and is decreased to 24
  * hours, any data already in the stream that is older than 24 hours is
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPeriod(const DecreaseStreamRetentionPeriodRequest &request)
 {
@@ -253,6 +250,11 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DeleteStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a Kinesis data stream and all its shards and data. You must shut down any applications that are operating on the
  * stream before you delete the stream. If an application attempts to operate on a deleted stream, it receives the
  * exception
@@ -278,12 +280,6 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
  * <code>StreamStatus</code>>
  *
  * <a>DeleteStream</a> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -291,6 +287,11 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DescribeLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the shard limits and usage for the
  *
  * account>
@@ -300,12 +301,6 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
  * minutes>
  *
  * This operation has a limit of one transaction per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsRequest &request)
 {
@@ -313,6 +308,11 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DescribeStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the specified Kinesis data
  *
  * stream>
@@ -337,12 +337,6 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
  * shard>
  *
  * This operation has a limit of 10 transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -350,18 +344,17 @@ DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamReque
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DescribeStreamSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provides a summarized description of the specified Kinesis data stream without the shard
  *
  * list>
  *
  * The information returned includes the stream name, Amazon Resource Name (ARN), status, record retention period,
  * approximate creation time, monitoring, encryption details, and open shard count.
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const DescribeStreamSummaryRequest &request)
 {
@@ -369,13 +362,12 @@ DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const Descr
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * DisableEnhancedMonitoringResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables enhanced
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(const DisableEnhancedMonitoringRequest &request)
 {
@@ -383,13 +375,12 @@ DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(con
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * EnableEnhancedMonitoringResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables enhanced Kinesis data stream monitoring for shard-level
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const EnableEnhancedMonitoringRequest &request)
 {
@@ -397,6 +388,11 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * GetRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets data records from a Kinesis data stream's
  *
  * shard>
@@ -450,12 +446,6 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
  * source putting data records into a stream, for example with <a>PutRecords</a>). The time stamp has millisecond
  * precision. There are no guarantees about the time stamp accuracy, or that the time stamp is always increasing. For
  * example, records in a shard or across a stream might have time stamps that are out of
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
 {
@@ -463,6 +453,11 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * GetShardIteratorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets an Amazon Kinesis shard iterator. A shard iterator expires five minutes after it is returned to the
  *
  * requester>
@@ -505,12 +500,6 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
  * <a>MergeShards</a>>
  *
  * <a>GetShardIterator</a> has a limit of five transactions per second per account per open
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIteratorRequest &request)
 {
@@ -518,6 +507,11 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * IncreaseStreamRetentionPeriodResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Increases the Kinesis data stream's retention period, which is the length of time data records are accessible after they
  * are added to the stream. The maximum value of a stream's retention period is 168 hours (7
  *
@@ -527,12 +521,6 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
  * not yet expired are accessible. However, it does not make previous, expired data (older than the stream's previous
  * retention period) accessible after the operation has been called. For example, if a stream's retention period is set to
  * 24 hours and is increased to 168 hours, any data that is older than 24 hours remains inaccessible to consumer
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPeriod(const IncreaseStreamRetentionPeriodRequest &request)
 {
@@ -540,6 +528,11 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * ListShardsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the shards in a stream and provides information about each
  *
  * shard> <b>
@@ -548,12 +541,6 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
  * policy that only allows specific operations, you must update your policy to allow calls to this API. For more
  * information, see <a href="https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html">Controlling Access to
  * Amazon Kinesis Data Streams Resources Using
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
 {
@@ -561,6 +548,11 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * ListStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your Kinesis data
  *
  * streams>
@@ -580,12 +572,6 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
  * </p
  *
  * <a>ListStreams</a> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &request)
 {
@@ -593,13 +579,12 @@ ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &reque
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * ListTagsForStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the tags for the specified Kinesis data stream. This operation has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
@@ -607,6 +592,11 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * MergeShardsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Merges two adjacent shards in a Kinesis data stream and combines them into a single shard to reduce the stream's
  * capacity to ingest and transport data. Two shards are considered adjacent if the union of the hash key ranges for the
  * two shards form a contiguous set with no gaps. For example, if you have two shards, one with a hash key range of
@@ -652,12 +642,6 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  * </p
  *
  * <code>MergeShards</code> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &request)
 {
@@ -665,6 +649,11 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * PutRecordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Writes a single data record into an Amazon Kinesis data stream. Call <code>PutRecord</code> to send data into the stream
  * for real-time ingestion and subsequent processing, one record at a time. Each shard can support writes up to 1,000
  * records per second, up to a maximum data write total of 1 MB per
@@ -716,12 +705,6 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
  *
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
 {
@@ -729,6 +712,11 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * PutRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Writes multiple data records into a Kinesis data stream in a single call (also referred to as a <code>PutRecords</code>
  * request). Use this operation to send data into the stream for data ingestion and processing.
  *
@@ -799,12 +787,6 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
  *
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
 {
@@ -812,6 +794,11 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * RemoveTagsFromStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes tags from the specified Kinesis data stream. Removed tags are deleted and cannot be recovered after this
  * operation successfully
  *
@@ -822,12 +809,6 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
  * ignored>
  *
  * <a>RemoveTagsFromStream</a> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveTagsFromStreamRequest &request)
 {
@@ -835,6 +816,11 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * SplitShardResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Splits a shard into two new shards in the Kinesis data stream, to increase the stream's capacity to ingest and transport
  * data. <code>SplitShard</code> is called when there is a need to increase the overall capacity of a stream because of an
  * expected increase in the volume of data records being ingested.
@@ -893,12 +879,6 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  * </p
  *
  * <code>SplitShard</code> has a limit of five transactions per second per
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
 {
@@ -906,6 +886,11 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * StartStreamEncryptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables or updates server-side encryption using an AWS KMS key for a specified stream.
  *
  * </p
@@ -926,12 +911,6 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  * Note: It can take up to five seconds after the stream is in an <code>ACTIVE</code> status before all records written to
  * the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting the API
  * response from <code>PutRecord</code> or
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const StartStreamEncryptionRequest &request)
 {
@@ -939,6 +918,11 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * StopStreamEncryptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables server-side encryption for a specified stream.
  *
  * </p
@@ -959,12 +943,6 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
  * Note: It can take up to five seconds after the stream is in an <code>ACTIVE</code> status before all records written to
  * the stream are no longer subject to encryption. After you disabled encryption, you can verify that encryption is not
  * applied by inspecting the API response from <code>PutRecord</code> or
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStreamEncryptionRequest &request)
 {
@@ -972,6 +950,11 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
 }
 
 /*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * UpdateShardCountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the shard count of the specified stream to the specified number of
  *
  * shards>
@@ -1022,12 +1005,6 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
  * Kinesis Data Streams Developer Guide</i>. To request an increase in the call rate limit, the shard limit for this API,
  * or your overall shard limit, use the <a
  * href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-kinesis">limits
- *
- * @param  request Request to send to Amazon Kinesis.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCountRequest &request)
 {
@@ -1035,19 +1012,16 @@ UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCoun
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::KinesisClientPrivate
+ * \brief The KinesisClientPrivate class provides private implementation for KinesisClient.
+ * \internal
  *
- * @class  KinesisClientPrivate
- *
- * @brief  Private implementation for KinesisClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisClientPrivate object.
- *
- * @param  q  Pointer to this object's public KinesisClient instance.
+ * Constructs a KinesisClientPrivate object with public implementation \a q.
  */
 KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

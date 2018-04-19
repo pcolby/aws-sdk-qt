@@ -42,10 +42,10 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClient
- *
  * \brief The CostandUsageReportServiceClient class provides access to the AWS Cost and Usage Report Service service.
  *
- * \ingroup CostandUsageReportService
+ * \ingroup aws-clients
+ * \inmodule QtAwsCostandUsageReportService
  *
  */
 
@@ -103,12 +103,11 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 }
 
 /*!
+ * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * DeleteReportDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Cost and Usage Report Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
 {
@@ -116,12 +115,11 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
 }
 
 /*!
+ * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * DescribeReportDefinitionsResponse object to track the result.
  *
- * @param  request Request to send to AWS Cost and Usage Report Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
 {
@@ -129,12 +127,11 @@ DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeRep
 }
 
 /*!
+ * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * PutReportDefinitionResponse object to track the result.
  *
- * @param  request Request to send to AWS Cost and Usage Report Service.
+ * \note The caller is to take responsbility for the resulting pointer.
  *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefinition(const PutReportDefinitionRequest &request)
 {
@@ -142,19 +139,16 @@ PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefiniti
 }
 
 /*!
- * @internal
+ * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClientPrivate
+ * \brief The CostandUsageReportServiceClientPrivate class provides private implementation for CostandUsageReportServiceClient.
+ * \internal
  *
- * @class  CostandUsageReportServiceClientPrivate
- *
- * @brief  Private implementation for CostandUsageReportServiceClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostandUsageReportServiceClientPrivate object.
- *
- * @param  q  Pointer to this object's public CostandUsageReportServiceClient instance.
+ * Constructs a CostandUsageReportServiceClientPrivate object with public implementation \a q.
  */
 CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

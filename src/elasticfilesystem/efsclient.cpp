@@ -58,10 +58,10 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::EfsClient
- *
  * \brief The EfsClient class provides access to the Amazon Elastic File System (EFS) service.
  *
- * \ingroup EFS
+ * \ingroup aws-clients
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -125,6 +125,11 @@ EfsClient::EfsClient(
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * CreateFileSystemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure
  * idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently
  * exist that is owned by the caller's AWS account with the specified creation token, this operation does the
@@ -179,12 +184,6 @@ EfsClient::EfsClient(
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:CreateFileSystem</code> action.
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemRequest &request)
 {
@@ -192,6 +191,11 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * CreateMountTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount
  *
  * target>
@@ -324,12 +328,6 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  * </p </li> <li>
  *
  * <code>ec2:CreateNetworkInterface</code>
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTargetRequest &request)
 {
@@ -337,6 +335,11 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * CreateTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the
  * request already exists on the file system, this operation overwrites its value with the value provided in the request.
  * If you add the <code>Name</code> tag to your file system, Amazon EFS returns it in the response to the
@@ -345,12 +348,6 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
  * </p
  *
  * This operation requires permission for the <code>elasticfilesystem:CreateTags</code>
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 {
@@ -358,6 +355,11 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteFileSystemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and
  * you can't access any contents of the deleted file
  *
@@ -376,12 +378,6 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
  * error> </note>
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteFileSystem</code>
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemRequest &request)
 {
@@ -389,6 +385,11 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteMountTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified mount
  *
  * target>
@@ -420,12 +421,6 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
  * interface> <ul> <li>
  *
  * <code>ec2:DeleteNetworkInterface</code>
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTargetRequest &request)
 {
@@ -433,6 +428,11 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that does not
  * exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see
  * <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
@@ -441,12 +441,6 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  * Guide</i>>
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteTags</code>
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -454,6 +448,11 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeFileSystemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the description of a specific Amazon EFS file system if either the file system <code>CreationToken</code> or the
  * <code>FileSystemId</code> is provided. Otherwise, it returns descriptions of all file systems owned by the caller's AWS
  * account in the AWS Region of the endpoint that you're
@@ -485,12 +484,6 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeFileSystems</code> action.
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileSystemsRequest &request)
 {
@@ -498,6 +491,11 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeMountTargetSecurityGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the security groups currently in effect for a mount target. This operation requires that the network interface
  * of the mount target has been created and the lifecycle state of the mount target is not
  *
@@ -512,12 +510,6 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
  * </p </li> <li>
  *
  * <code>ec2:DescribeNetworkInterfaceAttribute</code> action on the mount target's network interface.
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request)
 {
@@ -525,6 +517,11 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeMountTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When
  * requesting all of the current mount targets, the order of mount targets returned in the response is
  *
@@ -533,12 +530,6 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
  * This operation requires permissions for the <code>elasticfilesystem:DescribeMountTargets</code> action, on either the
  * file system ID that you specify in <code>FileSystemId</code>, or on the file system of the mount target that you specify
  * in
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMountTargetsRequest &request)
 {
@@ -546,6 +537,11 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns the tags associated with a file system. The order of tags returned in the response of one
  * <code>DescribeTags</code> call and the order of tags returned across the responses of a multi-call iteration (when using
  * pagination) is unspecified.
@@ -553,12 +549,6 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeTags</code> action.
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -566,6 +556,11 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
 }
 
 /*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * ModifyMountTargetSecurityGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Modifies the set of security groups in effect for a mount
  *
  * target>
@@ -587,12 +582,6 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
  * </p </li> <li>
  *
  * <code>ec2:ModifyNetworkInterfaceAttribute</code> action on the mount target's network interface.
- *
- * @param  request Request to send to Amazon Elastic File System.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {
@@ -600,19 +589,16 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
 }
 
 /*!
- * @internal
+ * \class QtAws::EFS::EfsClientPrivate
+ * \brief The EfsClientPrivate class provides private implementation for EfsClient.
+ * \internal
  *
- * @class  EfsClientPrivate
- *
- * @brief  Private implementation for EfsClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EfsClientPrivate object.
- *
- * @param  q  Pointer to this object's public EfsClient instance.
+ * Constructs a EfsClientPrivate object with public implementation \a q.
  */
 EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)

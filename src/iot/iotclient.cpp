@@ -282,10 +282,10 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::IoTClient
- *
  * \brief The IoTClient class provides access to the AWS IoT service.
  *
- * \ingroup IoT
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -354,17 +354,16 @@ IoTClient::IoTClient(
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AcceptCertificateTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Accepts a pending certificate transfer. The default state of the certificate is
  *
  * INACTIVE>
  *
  * To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const AcceptCertificateTransferRequest &request)
 {
@@ -372,13 +371,12 @@ AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const A
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AddThingToThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Adds a thing to a thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToThingGroupRequest &request)
 {
@@ -386,6 +384,11 @@ AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToT
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AssociateTargetsWithJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Associates a group with a continuous job. The following criteria must be met:
  *
  * </p <ul> <li>
@@ -399,12 +402,6 @@ AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToT
  * "IN_PROGRESS"> </li> <li>
  *
  * The total number of targets associated with a job must not exceed
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const AssociateTargetsWithJobRequest &request)
 {
@@ -412,13 +409,12 @@ AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const Assoc
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AttachPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches a policy to the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -426,17 +422,16 @@ AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AttachPrincipalPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches the specified policy to the specified principal (certificate or other
  *
  * credential)>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a>
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPrincipalPolicyRequest &request)
 {
@@ -444,13 +439,12 @@ AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPri
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * AttachThingPrincipalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Attaches the specified principal to the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThingPrincipalRequest &request)
 {
@@ -458,6 +452,11 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CancelCertificateTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a pending transfer for the specified
  *
  * certificate>
@@ -469,12 +468,6 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
  * cancelled>
  *
  * After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const CancelCertificateTransferRequest &request)
 {
@@ -482,13 +475,12 @@ CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const C
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CancelJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 {
@@ -496,13 +488,12 @@ CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ClearDefaultAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Clears the default
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDefaultAuthorizerRequest &request)
 {
@@ -510,13 +501,12 @@ ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDe
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
@@ -524,6 +514,11 @@ CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateCertificateFromCsrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an X.509 certificate using the specified certificate signing
  *
  * request>
@@ -582,12 +577,6 @@ CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerReq
  * is>
  *
  * &gt; forfiles /p my-csr-directory /c "cmd /c aws iot create-certificate-from-csr --certificate-signing-request
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const CreateCertificateFromCsrRequest &request)
 {
@@ -595,13 +584,12 @@ CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const Cre
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 {
@@ -609,18 +597,17 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateKeysAndCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public
  *
  * key>
  *
  * <b>Note</b> This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in
  * a secure
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const CreateKeysAndCertificateRequest &request)
 {
@@ -628,13 +615,12 @@ CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const Cre
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateOTAUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS IoT OTAUpdate on a target group of things or
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateRequest &request)
 {
@@ -642,18 +628,17 @@ CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreatePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates an AWS IoT
  *
  * policy>
  *
  * The created policy is the default version for the policy. This operation creates a policy version with a version
  * identifier of <b>1</b> and sets <b>1</b> as the policy's default
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -661,6 +646,11 @@ CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreatePolicyVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new version of the specified AWS IoT policy. To update a policy, create a new policy version. A managed policy
  * can have up to five versions. If the policy has five versions, you must use <a>DeletePolicyVersion</a> to delete an
  * existing version before you create a new
@@ -669,12 +659,6 @@ CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &reques
  *
  * Optionally, you can set the new version as the policy's default version. The default version is the operative version
  * (that is, the version that is in effect for the certificates to which the policy is
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
@@ -682,13 +666,12 @@ CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyV
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateRoleAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a role
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasRequest &request)
 {
@@ -696,17 +679,16 @@ CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or
  * blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a stream. The
  * total size of a file associated with the stream cannot exceed more than 2 MB. The stream will be created with version 0.
  * If a stream is created with the same streamID as a stream that existed and was deleted within last 90 days, we will
  * resurrect that old stream by incrementing the version by
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &request)
 {
@@ -714,13 +696,12 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a thing record in the thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 {
@@ -728,13 +709,12 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Create a thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
 {
@@ -742,13 +722,12 @@ CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateThingTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a new thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeRequest &request)
 {
@@ -756,14 +735,13 @@ CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be
  * able to access data processed by the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleRequest &request)
 {
@@ -771,13 +749,12 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes an
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
@@ -785,13 +762,12 @@ DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteCACertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a registered CA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACertificateRequest &request)
 {
@@ -799,6 +775,11 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * certificate>
@@ -806,12 +787,6 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
  * A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a
  * certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the
  * <a>UpdateCertificate</a> API to set the certificate to the INACTIVE
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -819,13 +794,12 @@ DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificate
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteOTAUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Delete an OTA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateRequest &request)
 {
@@ -833,6 +807,11 @@ DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeletePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
  *
  * policy>
@@ -847,12 +826,6 @@ DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateReques
  * policy>
  *
  * When a policy is deleted using DeletePolicy, its default version is deleted with
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -860,15 +833,14 @@ DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeletePolicyVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API.
  * To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as
  * the default version, use
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
@@ -876,13 +848,12 @@ DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyV
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteRegistrationCodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a CA certificate registration
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteRegistrationCodeRequest &request)
 {
@@ -890,13 +861,12 @@ DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteR
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteRoleAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a role
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasRequest &request)
 {
@@ -904,13 +874,12 @@ DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -918,13 +887,12 @@ DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 {
@@ -932,13 +900,12 @@ DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupRequest &request)
 {
@@ -946,16 +913,15 @@ DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteThingTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the specified thing type . You cannot delete a thing type if it has things associated with it. To delete a thing
  * type, first mark it as deprecated by calling <a>DeprecateThingType</a>, then remove any associated things by calling
  * <a>UpdateThing</a> to change the thing type on any associated thing, and finally use <a>DeleteThingType</a> to delete
  * the thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeRequest &request)
 {
@@ -963,13 +929,12 @@ DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleRequest &request)
 {
@@ -977,13 +942,12 @@ DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteV2LoggingLevelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deletes a logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2LoggingLevelRequest &request)
 {
@@ -991,13 +955,12 @@ DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2Log
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeprecateThingTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Deprecates a thing type. You can not associate new things with deprecated thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingTypeRequest &request)
 {
@@ -1005,13 +968,12 @@ DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingT
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes an
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthorizerRequest &request)
 {
@@ -1019,13 +981,12 @@ DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthori
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeCACertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a registered CA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeCACertificateRequest &request)
 {
@@ -1033,13 +994,12 @@ DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeC
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCertificateRequest &request)
 {
@@ -1047,13 +1007,12 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeDefaultAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes the default
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const DescribeDefaultAuthorizerRequest &request)
 {
@@ -1061,13 +1020,12 @@ DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const D
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Returns a unique endpoint specific to the AWS account making the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
@@ -1075,13 +1033,12 @@ DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeEventConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes event
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(const DescribeEventConfigurationsRequest &request)
 {
@@ -1089,13 +1046,12 @@ DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(con
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeIndexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a search
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &request)
 {
@@ -1103,13 +1059,12 @@ DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &req
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 {
@@ -1117,13 +1072,12 @@ DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a job
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
@@ -1131,13 +1085,12 @@ DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJob
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeRoleAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a role
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAliasRequest &request)
 {
@@ -1145,13 +1098,12 @@ DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAlias
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -1159,13 +1111,12 @@ DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &request)
 {
@@ -1173,13 +1124,12 @@ DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &req
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describe a thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGroupRequest &request)
 {
@@ -1187,13 +1137,12 @@ DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGr
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeThingRegistrationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Describes a bulk thing provisioning
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask(const DescribeThingRegistrationTaskRequest &request)
 {
@@ -1201,13 +1150,12 @@ DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeThingTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingTypeRequest &request)
 {
@@ -1215,13 +1163,12 @@ DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingType
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DetachPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches a policy from the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -1229,17 +1176,16 @@ DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DetachPrincipalPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Removes the specified policy from the specified
  *
  * certificate>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a>
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPrincipalPolicyRequest &request)
 {
@@ -1247,13 +1193,12 @@ DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPri
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DetachThingPrincipalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Detaches the specified principal from the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThingPrincipalRequest &request)
 {
@@ -1261,13 +1206,12 @@ DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThing
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DisableTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Disables the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleRequest &request)
 {
@@ -1275,13 +1219,12 @@ DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * EnableTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Enables the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleRequest &request)
 {
@@ -1289,13 +1232,12 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetEffectivePoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets effective
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectivePoliciesRequest &request)
 {
@@ -1303,13 +1245,12 @@ GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectiv
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetIndexingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the search
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const GetIndexingConfigurationRequest &request)
 {
@@ -1317,13 +1258,12 @@ GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const Get
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetJobDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a job
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &request)
 {
@@ -1331,13 +1271,12 @@ GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetLoggingOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptionsRequest &request)
 {
@@ -1345,13 +1284,12 @@ GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptions
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetOTAUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets an OTA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &request)
 {
@@ -1359,13 +1297,12 @@ GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified policy with the policy document of the default
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -1373,13 +1310,12 @@ GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetPolicyVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the specified policy
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
@@ -1387,13 +1323,12 @@ GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetRegistrationCodeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets a registration code used to register a CA certificate with AWS
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrationCodeRequest &request)
 {
@@ -1401,13 +1336,12 @@ GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrati
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets information about the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &request)
 {
@@ -1415,13 +1349,12 @@ GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetV2LoggingOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Gets the fine grained logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingOptionsRequest &request)
 {
@@ -1429,13 +1362,12 @@ GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingO
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListAttachedPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the policies attached to the specified thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttachedPoliciesRequest &request)
 {
@@ -1443,13 +1375,12 @@ ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttache
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListAuthorizersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the authorizers registered in your
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersRequest &request)
 {
@@ -1457,17 +1388,16 @@ ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListCACertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the CA certificates registered for your AWS
  *
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertificatesRequest &request)
 {
@@ -1475,17 +1405,16 @@ ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertifica
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the certificates registered in your AWS
  *
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesRequest &request)
 {
@@ -1493,13 +1422,12 @@ ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListCertificatesByCAResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List the device certificates signed by the specified CA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertificatesByCARequest &request)
 {
@@ -1507,13 +1435,12 @@ ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertifi
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListIndicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the search
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 {
@@ -1521,13 +1448,12 @@ ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListJobExecutionsForJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the job executions for a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJobExecutionsForJobRequest &request)
 {
@@ -1535,13 +1461,12 @@ ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJ
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListJobExecutionsForThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the job executions for the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const ListJobExecutionsForThingRequest &request)
 {
@@ -1549,13 +1474,12 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 {
@@ -1563,13 +1487,12 @@ ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListOTAUpdatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists OTA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &request)
 {
@@ -1577,13 +1500,12 @@ ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListOutgoingCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists certificates that are being transferred but not yet
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const ListOutgoingCertificatesRequest &request)
 {
@@ -1591,13 +1513,12 @@ ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const Lis
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -1605,17 +1526,16 @@ ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListPolicyPrincipalsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the principals associated with the specified
  *
  * policy>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>ListTargetsForPolicy</a>
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyPrincipalsRequest &request)
 {
@@ -1623,13 +1543,12 @@ ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyP
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListPolicyVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the versions of the specified policy and identifies the default
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
@@ -1637,6 +1556,11 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListPrincipalPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the policies attached to the specified principal. If you use an Cognito identity, the ID must be in <a
  * href="http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_GetCredentialsForIdentity.html#API_GetCredentialsForIdentity_RequestSyntax">AmazonCognito
  * Identity
@@ -1644,12 +1568,6 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
  * format</a>>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>ListAttachedPolicies</a>
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrincipalPoliciesRequest &request)
 {
@@ -1657,13 +1575,12 @@ ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrinc
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListPrincipalThingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the things associated with the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipalThingsRequest &request)
 {
@@ -1671,13 +1588,12 @@ ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipal
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListRoleAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the role aliases registered in your
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesRequest &request)
 {
@@ -1685,13 +1601,12 @@ ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists all of the streams in your AWS
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 {
@@ -1699,13 +1614,12 @@ ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListTargetsForPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List targets for the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
@@ -1713,13 +1627,12 @@ ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargets
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List the thing groups in your
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsRequest &request)
 {
@@ -1727,13 +1640,12 @@ ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingGroupsForThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List the thing groups to which the specified thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListThingGroupsForThingRequest &request)
 {
@@ -1741,13 +1653,12 @@ ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListT
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingPrincipalsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the principals associated with the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrincipalsRequest &request)
 {
@@ -1755,13 +1666,12 @@ ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrin
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingRegistrationTaskReportsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Information about the thing registration
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskReports(const ListThingRegistrationTaskReportsRequest &request)
 {
@@ -1769,13 +1679,12 @@ ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskR
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingRegistrationTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * List bulk thing provisioning
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const ListThingRegistrationTasksRequest &request)
 {
@@ -1783,13 +1692,12 @@ ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the existing thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &request)
 {
@@ -1797,15 +1705,14 @@ ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example,
  * calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry
  * that contain an attribute <b>Color</b> with the value <b>Red</b>.
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 {
@@ -1813,13 +1720,12 @@ ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListThingsInThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the things in the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThingsInThingGroupRequest &request)
 {
@@ -1827,13 +1733,12 @@ ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThi
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListTopicRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists the rules for the specific
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &request)
 {
@@ -1841,13 +1746,12 @@ ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListV2LoggingLevelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Lists logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2LoggingLevelsRequest &request)
 {
@@ -1855,17 +1759,16 @@ ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2Logging
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RegisterCACertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a CA certificate with AWS IoT. This CA certificate can then be used to sign device certificates, which can be
  * then registered with AWS IoT. You can register up to 10 CA certificates per AWS account that have the same subject
  * field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than
  * one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the
  * RegisterCertificate
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterCACertificateRequest &request)
 {
@@ -1873,14 +1776,13 @@ RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterC
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RegisterCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field,
  * you must specify the CA certificate that was used to sign the device certificate being
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCertificateRequest &request)
 {
@@ -1888,13 +1790,12 @@ RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCerti
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RegisterThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Provisions a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &request)
 {
@@ -1902,6 +1803,11 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RejectCertificateTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes
  * from <b>PENDING_TRANSFER</b> to
  *
@@ -1913,12 +1819,6 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
  *
  * This operation can only be called by the transfer destination. After it is called, the certificate will be returned to
  * the source's account in the INACTIVE
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const RejectCertificateTransferRequest &request)
 {
@@ -1926,13 +1826,12 @@ RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const R
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RemoveThingFromThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Remove the specified thing from the specified
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const RemoveThingFromThingGroupRequest &request)
 {
@@ -1940,14 +1839,13 @@ RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const R
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ReplaceTopicRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action.
  * Any user who has permission to create rules will be able to access data processed by the
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleRequest &request)
 {
@@ -1955,13 +1853,12 @@ ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SearchIndexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * The query search
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 {
@@ -1969,13 +1866,12 @@ SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SetDefaultAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the default authorizer. This will be used if a websocket connection is made without specifying an
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultAuthorizerRequest &request)
 {
@@ -1983,15 +1879,14 @@ SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultA
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SetDefaultPolicyVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all
  * certificates to which the policy is attached. To list the principals the policy is attached to, use the
  * ListPrincipalPolicy
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
@@ -1999,13 +1894,12 @@ SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDe
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SetLoggingOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptionsRequest &request)
 {
@@ -2013,13 +1907,12 @@ SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptions
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SetV2LoggingLevelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevelRequest &request)
 {
@@ -2027,13 +1920,12 @@ SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevel
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * SetV2LoggingOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Sets the logging options for the V2 logging
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingOptionsRequest &request)
 {
@@ -2041,13 +1933,12 @@ SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingO
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * StartThingRegistrationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Creates a bulk thing provisioning
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const StartThingRegistrationTaskRequest &request)
 {
@@ -2055,13 +1946,12 @@ StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * StopThingRegistrationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Cancels a bulk thing provisioning
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const StopThingRegistrationTaskRequest &request)
 {
@@ -2069,13 +1959,12 @@ StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const S
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * TestAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Test custom
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorizationRequest &request)
 {
@@ -2083,13 +1972,12 @@ TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorization
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * TestInvokeAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Invoke the specified custom authorizer for testing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
@@ -2097,6 +1985,11 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * TransferCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Transfers the specified certificate to the specified AWS
  *
  * account>
@@ -2114,12 +2007,6 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
  * it>
  *
  * The certificate must not have any policies attached to it. You can use the DetachPrincipalPolicy API to detach
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 TransferCertificateResponse * IoTClient::transferCertificate(const TransferCertificateRequest &request)
 {
@@ -2127,13 +2014,12 @@ TransferCertificateResponse * IoTClient::transferCertificate(const TransferCerti
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateAuthorizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
@@ -2141,13 +2027,12 @@ UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateCACertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a registered CA
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACertificateRequest &request)
 {
@@ -2155,6 +2040,11 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the status of the specified certificate. This operation is
  *
  * idempotent>
@@ -2165,12 +2055,6 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
  * reconnect>
  *
  * The ACTIVE state is required to authenticate devices connecting to AWS IoT using a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificateRequest &request)
 {
@@ -2178,13 +2062,12 @@ UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificate
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateEventConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the event
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const UpdateEventConfigurationsRequest &request)
 {
@@ -2192,13 +2075,12 @@ UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const U
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateIndexingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the search
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(const UpdateIndexingConfigurationRequest &request)
 {
@@ -2206,13 +2088,12 @@ UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(con
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateRoleAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates a role
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasRequest &request)
 {
@@ -2220,13 +2101,12 @@ UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasReques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates an existing stream. The stream version will be incremented by
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &request)
 {
@@ -2234,13 +2114,12 @@ UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &reques
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the data for a
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 {
@@ -2248,13 +2127,12 @@ UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateThingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Update a thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupRequest &request)
 {
@@ -2262,13 +2140,12 @@ UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupReq
 }
 
 /*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateThingGroupsForThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
  * Updates the groups to which the thing
- *
- * @param  request Request to send to AWS IoT.
- *
- * @return A pointer to a related response object.
- *
- * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const UpdateThingGroupsForThingRequest &request)
 {
@@ -2276,19 +2153,16 @@ UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const U
 }
 
 /*!
- * @internal
+ * \class QtAws::IoT::IoTClientPrivate
+ * \brief The IoTClientPrivate class provides private implementation for IoTClient.
+ * \internal
  *
- * @class  IoTClientPrivate
- *
- * @brief  Private implementation for IoTClient.
+ * \ingroup aws-clients
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTClientPrivate object.
- *
- * @param  q  Pointer to this object's public IoTClient instance.
+ * Constructs a IoTClientPrivate object with public implementation \a q.
  */
 IoTClientPrivate::IoTClientPrivate(IoTClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
