@@ -179,7 +179,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends a DeleteElasticsearchServiceRole request to the ElasticsearchServiceClient service, and returns a pointer to an
  * DeleteElasticsearchServiceRoleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -251,7 +251,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends a ListDomainNames request to the ElasticsearchServiceClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

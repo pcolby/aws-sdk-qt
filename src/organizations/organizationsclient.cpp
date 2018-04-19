@@ -622,7 +622,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
 }
 
 /*!
- * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * Sends a DeleteOrganization request to the OrganizationsClient service, and returns a pointer to an
  * DeleteOrganizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -729,7 +729,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
 }
 
 /*!
- * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * Sends a DescribeOrganization request to the OrganizationsClient service, and returns a pointer to an
  * DescribeOrganizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1025,7 +1025,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
 }
 
 /*!
- * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * Sends a LeaveOrganization request to the OrganizationsClient service, and returns a pointer to an
  * LeaveOrganizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

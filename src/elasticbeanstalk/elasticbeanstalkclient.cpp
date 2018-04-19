@@ -369,7 +369,7 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
 }
 
 /*!
- * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * Sends a CreateStorageLocation request to the ElasticBeanstalkClient service, and returns a pointer to an
  * CreateStorageLocationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -471,7 +471,7 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
 }
 
 /*!
- * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * Sends a DescribeAccountAttributes request to the ElasticBeanstalkClient service, and returns a pointer to an
  * DescribeAccountAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -667,7 +667,7 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
 }
 
 /*!
- * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * Sends a ListAvailableSolutionStacks request to the ElasticBeanstalkClient service, and returns a pointer to an
  * ListAvailableSolutionStacksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

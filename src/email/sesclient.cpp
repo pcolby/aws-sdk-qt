@@ -769,7 +769,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
 }
 
 /*!
- * Sends \a request to the SesClient service, and returns a pointer to an
+ * Sends a GetAccountSendingEnabled request to the SesClient service, and returns a pointer to an
  * GetAccountSendingEnabledResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -955,7 +955,7 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
 }
 
 /*!
- * Sends \a request to the SesClient service, and returns a pointer to an
+ * Sends a GetSendQuota request to the SesClient service, and returns a pointer to an
  * GetSendQuotaResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -972,7 +972,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
 }
 
 /*!
- * Sends \a request to the SesClient service, and returns a pointer to an
+ * Sends a GetSendStatistics request to the SesClient service, and returns a pointer to an
  * GetSendStatisticsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1164,7 +1164,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
 }
 
 /*!
- * Sends \a request to the SesClient service, and returns a pointer to an
+ * Sends a ListVerifiedEmailAddresses request to the SesClient service, and returns a pointer to an
  * ListVerifiedEmailAddressesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

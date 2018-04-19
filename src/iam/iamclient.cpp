@@ -973,7 +973,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
 }
 
 /*!
- * Sends \a request to the IamClient service, and returns a pointer to an
+ * Sends a DeleteAccountPasswordPolicy request to the IamClient service, and returns a pointer to an
  * DeleteAccountPasswordPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1452,7 +1452,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
 }
 
 /*!
- * Sends \a request to the IamClient service, and returns a pointer to an
+ * Sends a GenerateCredentialReport request to the IamClient service, and returns a pointer to an
  * GenerateCredentialReportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1508,7 +1508,7 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
 }
 
 /*!
- * Sends \a request to the IamClient service, and returns a pointer to an
+ * Sends a GetAccountPasswordPolicy request to the IamClient service, and returns a pointer to an
  * GetAccountPasswordPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1522,7 +1522,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
 }
 
 /*!
- * Sends \a request to the IamClient service, and returns a pointer to an
+ * Sends a GetAccountSummary request to the IamClient service, and returns a pointer to an
  * GetAccountSummaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1594,7 +1594,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
 }
 
 /*!
- * Sends \a request to the IamClient service, and returns a pointer to an
+ * Sends a GetCredentialReport request to the IamClient service, and returns a pointer to an
  * GetCredentialReportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

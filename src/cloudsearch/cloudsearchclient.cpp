@@ -482,7 +482,7 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
 }
 
 /*!
- * Sends \a request to the CloudSearchClient service, and returns a pointer to an
+ * Sends a ListDomainNames request to the CloudSearchClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

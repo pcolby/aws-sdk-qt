@@ -531,7 +531,7 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeAccountLimits request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAccountLimitsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -550,7 +550,7 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeAdjustmentTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAdjustmentTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -589,7 +589,7 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeAutoScalingNotificationTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAutoScalingNotificationTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -615,7 +615,7 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeLifecycleHookTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeLifecycleHookTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -672,7 +672,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeMetricCollectionTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeMetricCollectionTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -729,7 +729,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeScalingProcessTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeScalingProcessTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -780,7 +780,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
 }
 
 /*!
- * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * Sends a DescribeTerminationPolicyTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeTerminationPolicyTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

@@ -830,7 +830,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
 }
 
 /*!
- * Sends \a request to the S3Client service, and returns a pointer to an
+ * Sends a ListBuckets request to the S3Client service, and returns a pointer to an
  * ListBucketsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

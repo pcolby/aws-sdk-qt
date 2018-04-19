@@ -310,7 +310,7 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
 }
 
 /*!
- * Sends \a request to the InspectorClient service, and returns a pointer to an
+ * Sends a DescribeCrossAccountAccessRole request to the InspectorClient service, and returns a pointer to an
  * DescribeCrossAccountAccessRoleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

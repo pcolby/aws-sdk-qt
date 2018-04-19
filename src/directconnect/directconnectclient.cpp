@@ -924,7 +924,7 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
 }
 
 /*!
- * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * Sends a DescribeLocations request to the DirectConnectClient service, and returns a pointer to an
  * DescribeLocationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -951,7 +951,7 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
 }
 
 /*!
- * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * Sends a DescribeVirtualGateways request to the DirectConnectClient service, and returns a pointer to an
  * DescribeVirtualGatewaysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

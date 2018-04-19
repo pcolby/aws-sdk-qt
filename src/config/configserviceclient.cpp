@@ -686,7 +686,7 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
 }
 
 /*!
- * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * Sends a GetComplianceSummaryByConfigRule request to the ConfigServiceClient service, and returns a pointer to an
  * GetComplianceSummaryByConfigRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

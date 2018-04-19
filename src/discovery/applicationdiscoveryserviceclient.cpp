@@ -361,7 +361,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends a ExportConfigurations request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
  * ExportConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

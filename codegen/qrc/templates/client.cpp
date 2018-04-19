@@ -96,7 +96,11 @@ namespace {{NameSpaceName}} {
 
 {% for name,op in operations.items %}
 /*!
+{% if op.input.shape %}
  * Sends \a request to the {{ClassName}} service, and returns a pointer to an
+{% else %}
+ * Sends a {{name}} request to the {{ClassName}} service, and returns a pointer to an
+{% endif %}
  * {{name}}Response object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.

@@ -1030,7 +1030,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
 }
 
 /*!
- * Sends \a request to the OpsWorksClient service, and returns a pointer to an
+ * Sends a DescribeMyUserProfile request to the OpsWorksClient service, and returns a pointer to an
  * DescribeMyUserProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1049,7 +1049,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 }
 
 /*!
- * Sends \a request to the OpsWorksClient service, and returns a pointer to an
+ * Sends a DescribeOperatingSystems request to the OpsWorksClient service, and returns a pointer to an
  * DescribeOperatingSystemsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
