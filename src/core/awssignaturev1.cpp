@@ -85,44 +85,42 @@ AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSign
 }
 
 /*!
- * @internal
- *
- * @brief  Create an AWS Signature version 1 canonical query.
+ * Returns the AWS Signature version 1 canonical query string for \a query.
  *
  * This function returns a string containing all non-empty query parameters in
  * sorted order (case-insensitive), with no separators at all.
  *
  * For example, for the following SQS query string:
- *
+ * \code
  *     ?Action=CreateQueue&QueueName=queue2&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=1&Expires=2007-01-12T12:00:00Z&Version=2006-04-01
+ * \endcode
  *
  * this function will return the following canonical form:
- *
+ * \code
  *     ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01
+ * \endcode
  *
- * This function is very similar to AwsAbstractSignature::canonicalQuery(), except
+ * This function is very similar to AwsAbstractSignaturePrivate::canonicalQuery(), except
  * that:
- *   1. this function sorts case-insensitively, whereas AwsAbstractSignature::canonicalQuery()
- *      use a byte sort (ie is case sensitive); and
- *   2. this function excludes parameters with empty values, where
- *      AwsAbstractSignature::canonicalQuery() includes all query parameters, regardless
- *      of content; and
- *   3. this function does not use any separators in the generated string, whereas
- *      AwsAbstractSignature::canonicalQuery() uses `&` and `=` separators just as
- *      you would expect to see them in a typical query string; and
- *   4. this function does not perform any URL encoding of the query parameters,
- *      whereas AwsAbstractSignature::canonicalQuery() URL encodes both parameter
- *      keys and values.
+ * \list
+ * \li this function sorts case-insensitively, whereas
+ *     AwsAbstractSignaturePrivate::canonicalQuery() uses a byte sort (ie is
+ *     case sensitive); and
+ * \li this function excludes parameters with empty values, where
+ *     AwsAbstractSignaturePrivate::canonicalQuery() includes all query
+ *     parameters, regardless of content; and
+ * \li this function does not use any separators in the generated string,
+ *     whereas AwsAbstractSignaturePrivate::canonicalQuery() uses \c '&' and
+ *     \c '=' separators just as you would expect to see them in a typical
+ *     query string; and
+ * \li this function does not perform any URL encoding of the query parameters,
+ *     whereas AwsAbstractSignaturePrivate::canonicalQuery() URL encodes both
+ *     parameter keys and values.
+ * \endlist
  *
- * The AwsAbstractSignature::canonicalQuery() function is used by the later signature
+ * The AwsAbstractSignaturePrivate::canonicalQuery() function is used by the later signature
  * algorithms, such as AwsSignatureV2 and AwsSignatureV4, as required by Amazon. Instead
  * this function is specific to version 1 signatures.
- *
- * @param  query  Query to encode the HTTP query string from.
- *
- * @return An AWS Signature canonical query string.
- *
- * @see    http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html#CalculatingHMACSignature
  */
 QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
 {
@@ -138,17 +136,20 @@ QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
 }
 
 /*!
- * @internal
+ * \typedef AwsSignatureV1Private::QStringPair
  *
- * @brief  Is a key-value pair less than another key-value pair?
+ * Synonym for QPair<QString, QString>.
+ */
+
+/*!
+ * Returns \c true if if \a pair1 less than \a pair2, when ignoring case;
+ * \c false otherwise.
  *
- * This static function is used by the canonicalQuery function to sort query string
+ * Comparison is performed in a case-insenstive manner, on the keys of each
+ * pair first, then if equal, on the values of each pair.
+ *
+ * This static function is used by canonicalQuery() to sort query string
  * parameters in case-insensitive order, via Qt's qSort function.
- *
- * @param  pair1  The first key-value (query string parameter) pair.
- * @param  pair2  The second key-value (query string parameter) pair.
- *
- * @returns `true` if \a pair1 is less than \a pair2.
  */
 bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2)
 {

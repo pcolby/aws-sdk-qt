@@ -38,8 +38,8 @@ namespace Core {
  *
  * This class implements both \c AWS3 and \c AWS3-HTTPS varieties.
  *
- * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
- * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
+ * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html
+ * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
  */
 
 /*!
@@ -103,7 +103,7 @@ AwsSignatureV3Private::AwsSignatureV3Private(const QCryptographicHash::Algorithm
 }
 
 /*!
- * @brief  Create an AWS V3 Signature algorithm designation.
+ * Returns the AWS Signature version 3 algorithm designation for \a algorithm.
  *
  * This function returns an algorithm designation, as defined by Amazon, for use with
  * V3 signatures.
@@ -111,11 +111,7 @@ AwsSignatureV3Private::AwsSignatureV3Private(const QCryptographicHash::Algorithm
  * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
  * return `HmacSHA256`.
  *
- * @param  algorithm  The hash algorithm to get the canonical designation for.
- *
- * @return An AWS V3 Signature algorithm designation.
- *
- * @see    http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
+ * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
  */
 QByteArray AwsSignatureV3Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const
 {
@@ -129,21 +125,16 @@ QByteArray AwsSignatureV3Private::algorithmDesignation(const QCryptographicHash:
 }
 
 /*!
- * @brief  Create an AWS V3 Signature authorization header value.
+ * Returns the AWS Signature version 3 authorization header value for
+ * \a operation on \a request, with optional \c POST/ \c PUT \a payload,
+ * signed by \a credentials.
  *
  * This function builds a V3 signature, and returns it to the caller.  The returned
  * header value is then suitable for adding as an `Authorization` header in the HTTP
  * request, to be accepted by Amazon.
  *
- * @param  credentials  The AWS credentials to use to sign the request.
- * @param  operation    The HTTP method being used for the request.
- * @param  request      The network request to generate a signature for.
- * @param  payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
- *
- * @return  An AWS V3 Signature authorization header value.
- *
- * @see    http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
- * @see    setAuthorizationHeader
+ * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
+ * \sa setAuthorizationHeader
  */
 QByteArray AwsSignatureV3Private::authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                                            const QNetworkAccessManager::Operation operation,
@@ -168,9 +159,10 @@ QByteArray AwsSignatureV3Private::authorizationHeaderValue(const AwsAbstractCred
 }
 
 /*!
- * @brief  Create an AWS V3 Signature canonical header string.
+ * Returns the AWS Signature version 3 canonical header string for the header
+ * \a headerName with value \a headerValue.
  *
- * @note   Amazon documentation does not specify how to handle whitespace within
+ * \note   Amazon documentation does not specify how to handle whitespace within
  *         quotes for V3 signatures, so here we use the same approach as V3
  *         signatures.  That is:
  *
@@ -178,16 +170,11 @@ QByteArray AwsSignatureV3Private::authorizationHeaderValue(const AwsAbstractCred
  * separator, with all whitespace removed from both, _except_ for whitespace within
  * double-quotes.
  *
- * @note   This function is only applicable to the `AWS3` format, not `AWS3-HTTPS`.
+ * \note   This function is only applicable to the \c AWS3 format, not \c AWS3-HTTPS.
  *
- * @param  headerName   Name of the HTTP header to convert to canonical form.
- * @param  headerValue  Value of the HTTP header to convert to canonical form.
- *
- * @return  An AWS V3 Signature canonical header string.
- *
- * @see    http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html
- * @see    http://docs.aws.amazon.com/general/latest/gr/sigV4-create-canonical-request.html
- * @see    canonicalHeaders
+ * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html
+ * \sa http://docs.aws.amazon.com/general/latest/gr/sigV4-create-canonical-request.html
+ * \sa canonicalHeaders
  */
 QByteArray AwsSignatureV3Private::canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const
 {
@@ -216,27 +203,24 @@ QByteArray AwsSignatureV3Private::canonicalHeader(const QByteArray &headerName, 
 }
 
 /*!
- * @brief  Create an AWS V3 Signature canonical headers string.
+ * Returns the AWS Signature version 3 canonical headers string for \a request.
  *
  * This function constructs a canonical string containing all of the headers
  * in the given request.
  *
- * @note   \p request will typically not include a `Host` header at this stage,
+ * \note   \a request will typically not include a \c Host header at this stage,
  *         however Qt will add an appropriate `Host` header when the request is
- *         performed.  So, if \p request does not include a `Host` header yet,
- *         this function will include a derived `Host` header in the canonical
+ *         performed.  So, if \a request does not include a \c Host header yet,
+ *         this function will include a derived \c Host header in the canonical
  *         headers to allow for it.
  *
- * @note   This function is only applicable to the `AWS3` format, not `AWS3-HTTPS`.
+ * \note   This function is only applicable to the \c AWS3 format, not \c AWS3-HTTPS.
  *
- * @param[in]  request        The network request to fetch the canonical headers from.
- * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
- *                            included in the result.
+ * The \a signedHeaders parameter will be set to be semi-colon separated list
+ * of the names of all headers included in the result.
  *
- * @return  An AWS V3 Signature canonical headers string.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/sigV3-create-canonical-request.html
- * @see    canonicalHeader
+ * \sa http://docs.aws.amazon.com/general/latest/gr/sigV3-create-canonical-request.html
+ * \sa canonicalHeader
  */
 QByteArray AwsSignatureV3Private::canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const
 {
@@ -273,21 +257,17 @@ QByteArray AwsSignatureV3Private::canonicalHeaders(const QNetworkRequest &reques
 }
 
 /*!
- * @brief  Create an AWS V3 Signature canonical request.
+ * Returns the AWS Signature version 3 canonical request string for \a operation
+ * on \a request, including optional \c POST / \c PUT \a payload.
  *
- * Note, this function implments both `AWS3` and `AWS3-HTTPS` variants of the
+ * Note, this function implments both \c AWS3 and \c AWS3-HTTPS variants of the
  * AWS Signature version 3 - which are quite different.
  *
- * @param[in]  operation      The HTTP method being used for the request.
- * @param[in]  request        The network request to generate a canonical request for.
- * @param[in]  payload        Optional data being submitted in the request (eg for `PUT` and `POST` operations).
- * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
- *                            included in the result.
+ * The \a signedHeaders parameter will be set to be semi-colon separated list
+ * of the names of all headers included in the result.
  *
- * @return  An AWS V3 Signature canonical request.
- *
- * @see  http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
- * @see  http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
+ * \sa http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html
+ * \sa http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html
  */
 QByteArray AwsSignatureV3Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QNetworkRequest &request, const QByteArray &payload,
@@ -312,11 +292,7 @@ QByteArray AwsSignatureV3Private::canonicalRequest(const QNetworkAccessManager::
 }
 
 /*!
- * @brief  Does a request use the HTTPS scheme?
- *
- * @param  request  The network request to evaluate.
- *
- * @return `true` if \a request uses the HTTPS scheme, `false` otherwise.
+ * Returns \c true of \a request is using the \c HTTPS scheme; \c false otherwise.
  */
 bool AwsSignatureV3Private::isHttps(const QNetworkRequest &request)
 {
@@ -324,18 +300,15 @@ bool AwsSignatureV3Private::isHttps(const QNetworkRequest &request)
 }
 
 /*!
- * @brief  Set authorization header on a network request.
+ * Sets the authorization header on \a request, for \a operation on the
+ * \a request with optional \c PUT / \c POST \a payload, signed with \a
+ * credentials.
  *
  * This function will calculate the authorization header value and set it as the `Authorization`
- * HTTP header on \p request.
+ * HTTP header on \a request.
  *
- * @param[in]     credentials  The AWS credentials to use to sign the request.
- * @param[in]     operation    The HTTP method being used for the request.
- * @param[in,out] request      The network request to add the authorization header to.
- * @param[in]     payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/sigV3-signed-request-examples.html
- * @see    authorizationHeaderValue
+ * \sa http://docs.aws.amazon.com/general/latest/gr/sigV3-signed-request-examples.html
+ * \sa authorizationHeaderValue
  */
 void AwsSignatureV3Private::setAuthorizationHeader(const AwsAbstractCredentials &credentials,
                                                    const QNetworkAccessManager::Operation operation,
@@ -346,14 +319,13 @@ void AwsSignatureV3Private::setAuthorizationHeader(const AwsAbstractCredentials 
 }
 
 /*!
- * \brief Sets the AWS custom date header on \a request to \a dateTime.
+ * Sets the AWS custom date header on \a request to UTC \a dateTime.
  *
- * If \a request does not already contain an `x-amz-date` header, then this function
- * will set a custom `x-amz-date` header to the value of \p dateTime formatted like
- * "Fri, 09 Sep 2011 23:36:00 GMT".
+ * If \a request does not already contain an \c x-amz-date header, then this function
+ * will set a custom \c x-amz-date header to the value of \a dateTime formatted like
+ * \c {"Fri, 09 Sep 2011 23:36:00 GMT"}.
  *
- * @param   request   The network request to add the date header to.
- * @param   dateTime  The timestamp (in UTC) to set the date header's value to.
+ * \note \a dateTime must be in UTC, that is QDateTime::timeSpec() must be Qt::UTC.
  */
 void AwsSignatureV3Private::setDateHeader(QNetworkRequest &request, const QDateTime &dateTime) const
 {

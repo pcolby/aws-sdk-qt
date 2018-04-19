@@ -130,28 +130,26 @@ AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbst
 }
 
 /*!
- * @internal
- *
- * @brief  Add AWS Signature Version 0 adornments to an AWS request.
+ * Adds AWS Signature Version 0 adornments to a AWS \a request.
  *
  * In addition to service-specific request parameters, Amazon requires that version
  * 1 signatures contain a number of common query parameters.  This functions adds
  * those query parameters to \a request if they're not already present.
  *
  * The query parameters added by this function, as required by Amazon, are:
- *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
- *   * `SignatureVersion` - set to `0`.
- *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
- *                 `2013-10-30T12:34:56Z`, unless an `Expires` value is present,
- *                 in which case no `Timestamp` parameter is added.
+ * \table
+ * \header \li Parameter Name      \li Parameter Value
+ * \row    \li \c AWSAccessKeyId   \li The AWS Access Key ID from \a credentials.
+ * \row    \li \c SignatureVersion \li The version returned by AwsSignatureV0::version(); ie \c 0.
+ * \row    \li \c Timestamp
+ * \li Current UTC timestamp in ISO 8601 format, eg \c {2013-10-30T12:34:56Z}.
+ * \note If \a request includes an \c Expires parameter, then \c Timestamp is not added.
+ * \endtable
  *
- * @note   The `SignatureVersion` header is optional for version 0 signatures, but
- *         this function always includes it for clarity.
+ * \note The \c SignatureVersion header is optional for version 0 signatures,
+ * but this function always includes it for clarity.
  *
- * @param  request         Request to adorn.
- * @param  credentials     Credentials to use when adorning \a request.
- *
- * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+ * \sa AwsAbstractCredentials::accessKeyId()
  */
 void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
                                          const AwsAbstractCredentials &credentials) const
@@ -184,30 +182,23 @@ void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
 }
 
 /*!
- * @internal
+ * Returns the AWS Signature version 0 canonical query string for \a query.
  *
- * @brief  Create an AWS Signature version 0 canonical query.
- *
- * This function returns a string containing the concatenation of `Action` and
- * `timestamp` (or `Expires`) query parameters.
+ * This function returns a string containing the concatenation of \c Action and
+ * \c Timestamp (or \c Expires) query parameters.
  *
  * For example, for the following SQS query string:
- *
+ * \code
  *     ?Action=CreateQueue&QueueName=queue2&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=1&Expires=2007-01-12T12:00:00Z&Version=2006-04-01
+ * \endcode
  *
  * this function will return the following canonical form:
- *
+ * \code
  *     CreateQueue2007-01-12T12:00:00Z
+ * \endcode
  *
- * @param  query  Query to encode the HTTP query string from.
- *
- * @pre    \a query must already contain an `Action` and either a `Timestamp` or
- *         `Expires` query paramter.  See adornRequest().
- *
- * @return An AWS Signature canonical query string.
- *
- * @see    adornRequest()
- * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+ * \note \a query must already contain an \c Action and either a \c Timestamp
+ * or \c Expires query paramter. See adornRequest().
  */
 QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &query) const
 {

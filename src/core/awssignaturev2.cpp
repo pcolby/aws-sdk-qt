@@ -96,33 +96,29 @@ int AwsSignatureV2::version() const
 /*!
  * Constructs an AwsSignatureV2Private object with hash \a algorithm, and public implementation \a q.
  */
-AwsSignatureV2Private::AwsSignatureV2Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV2 * const q)
+AwsSignatureV2Private::AwsSignatureV2Private(const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
     : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)
 {
 
 }
 
 /*!
- * @internal
- *
- * @brief  Add AWS Signature Version 2 adornments to an AWS request.
+ * Adds AWS Signature Version 2 adornments to a AWS \a request.
  *
  * In addition to service-specific request parameters, Amazon requires that version
  * 2 signatures contain a number of common query parameters.  This functions adds
  * those query parameters to \a request if they're not already present.
  *
  * The query parameters added by this function, as required by Amazon, are:
- *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
- *   * `SignatureMethod` - set to `HMAC-SHA1` or `HMAC-SHA256`.
- *   * `SignatureVersion` - set to `2`.
- *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
- *                 `2013-10-30T12:34:56Z`.
- *
- * @param  request      Request to adorn.
- * @param  credentials  Credentials to use when adorning \a request.
- *
- * @see    signatureMethod
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * \table
+ * \header \li Parameter Name      \li Parameter Value
+ * \row    \li \c AWSAccessKeyId   \li The AWS Access Key ID from \a credentials.
+ * \row    \li \c SignatureMethod  \li The value returned by signatureMethod();
+ *                                     ie \c "HMAC-SHA1" or \c "HMAC-SHA256"
+ * \row    \li \c SignatureVersion \li \c "2".
+ * \row    \li \c Timestamp        \li Current UTC timestamp in ISO 8601 format,
+ *                                     eg \c {2013-10-30T12:34:56Z}.
+ * \endtable
  */
 void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
                                          const AwsAbstractCredentials &credentials) const
@@ -149,32 +145,28 @@ void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
 }
 
 /*!
- * @internal
- *
- * @brief  Create an AWS V2 Signature canonical request.
+ * Returns the AWS Signature version 2 canonical query string for \a operation
+ * on \a url.
  *
  * This function creates a canonical representation of an AWS request as defined by
  * Amazon's V2 signature specification.
  *
  * For example, for the following HTTP `GET` request:
- *
+ * \code
  *     https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&Version=2009-03-31&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30
+ * \endcode
  *
  * this function will return the following canonical form:
- *
+ * \code
  *     GET
  *     elasticmapreduce.amazonaws.com
  *     /
  *     AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31
+ * \endcode
  *
- * @note  All URL components are encoded to UTF-8, as required by Amazon.
+ * \note All URL components are encoded to UTF-8, as required by Amazon.
  *
- * @param  operation  The HTTP method being requested.
- * @param  url        The URL being request.
- *
- * @return An AWS V2 Signature canonical request.
- *
- * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * \sa http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QUrl &url) const
@@ -186,7 +178,7 @@ QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::
 }
 
 /*!
- * @brief  Create an AWS V2 Signature method designation.
+ * Returns an AWS V2 Signature method designation for \a algorithm.
  *
  * This function returns a signature method designation, as defined by Amazon, for
  * use with V2 signatures.
@@ -194,13 +186,9 @@ QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::
  * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
  * return `HmacSHA256`.
  *
- * @note   Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.
+ * \note Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.
  *
- * @param  algorithm  The hash algorithm to get the canonical designation for.
- *
- * @return An AWS V2 Signature method designation.
- *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * \sa http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algorithm algorithm) const
 {

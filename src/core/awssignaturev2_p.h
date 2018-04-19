@@ -37,7 +37,7 @@ class QTAWS_EXPORT AwsSignatureV2Private : public AwsAbstractSignaturePrivate {
 public:
     QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
 
-    AwsSignatureV2Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV2 * const q);
+    AwsSignatureV2Private(const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q);
 
     void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
 

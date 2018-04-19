@@ -379,7 +379,7 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
 }
 
 /*!
- * \typedef QtAws::Core::AwsEndpointPrivate::RegionServices
+ * \typedef AwsEndpointPrivate::RegionServices
  *
  * Synonym for QHash<QString, RegionEndpointInfo>.
  */
